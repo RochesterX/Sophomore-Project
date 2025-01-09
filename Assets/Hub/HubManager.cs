@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HubManager : MonoBehaviour
 {
+    public GameObject gameButtonsParent;
+
     public void LoadScene(string sceneName)
     {
         UnloadGameScene();
@@ -20,6 +23,8 @@ public class HubManager : MonoBehaviour
         {
             Debug.Log("No game scene to unload");
         }
+
+        ChangeGameButtonsInteractability(false);
     }
 
     private void Update()
@@ -27,6 +32,15 @@ public class HubManager : MonoBehaviour
         if (InputSystem.GetDevice<Keyboard>().escapeKey.wasPressedThisFrame)
         {
             UnloadGameScene();
+            ChangeGameButtonsInteractability(true);
+        }
+    }
+
+    private void ChangeGameButtonsInteractability(bool interactable)
+    {
+        foreach (Transform button in gameButtonsParent.transform)
+        {
+            button.GetComponent<Button>().interactable = interactable;
         }
     }
 }
