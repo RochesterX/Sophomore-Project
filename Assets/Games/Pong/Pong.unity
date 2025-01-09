@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 400
-  speedIncrement: 0.1
+  speedIncrement: 20
   resetDelay: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

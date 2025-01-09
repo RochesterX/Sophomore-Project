@@ -18,7 +18,7 @@ public class PongBallBehavior : MonoBehaviour
 
     public void IncreaseSpeed()
     {
-        rb.AddForce(rb.linearVelocity.normalized * speedIncrement, ForceMode2D.Impulse);
+        rb.AddForce(rb.linearVelocity.normalized * speedIncrement, ForceMode2D.Force);
     }
 
     private IEnumerator Reset()
