@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PongBallBehavior : MonoBehaviour
 {
-    public static Vector2 score;
+    public static Vector2 score; // Don't ask why I made the score a Vector, I just felt like it
 
     public float speed = 400f;
     public float speedIncrement = 0.1f;
@@ -12,6 +12,7 @@ public class PongBallBehavior : MonoBehaviour
 
     private void Start()
     {
+        score = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Reset());
     }
