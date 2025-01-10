@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pong Goal
   - Pong Paddle
+  - Platformer Hazard
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Platformer Ground
   - 
   - 
   - 
