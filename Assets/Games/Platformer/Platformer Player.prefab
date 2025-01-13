@@ -187,11 +187,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   walkSpeed: 5
+  walkSpeedFactor: 30
+  maxSpeed: 5
   virtualAxisX: 0
   virtualButtonJump: 0
   virtualButtonJumpLastFrame: 0
   turnaroundMultiplier: 2
-  walkSmooth: 0
+  walkSmooth: 0.98
   secondsToFullSpeed: 0
   jumpSpeed: 17
   coyoteTime: 0.1

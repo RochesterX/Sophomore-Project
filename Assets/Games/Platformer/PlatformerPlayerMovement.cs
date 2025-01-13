@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     public float walkSpeed;
+    public float walkSpeedFactor = 1f;
+    public float maxSpeed = 5f;
     public float virtualAxisX;
     public float virtualButtonJump;
     public float virtualButtonJumpLastFrame;
@@ -64,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         JumpPhysics();
 
         HorizontalMovement();
-
 
         Land();
     }
@@ -123,7 +124,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void HorizontalMovement()
     {
-        body.linearVelocity = new Vector2(virtualAxisX * walkSpeed, body.linearVelocity.y);
+        //body.linearVelocity = new Vector2(virtualAxisX * walkSpeed, body.linearVelocity.y);
+        body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
+
+        if (Mathf.Abs(body.linearVelocityX) >= maxSpeed)
+        {
+            body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+        }
+
+        //if (!IsPhysicallyGrounded())
+        //{
+            body.linearVelocityX *= walkSmooth;
+        //}
 
         if (transform.position == positionLastFrame && (InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x == 0))
         {
@@ -135,6 +147,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateVirtualAxis()
     {
+        virtualButtonJump = InputSystem.actions.FindAction($"Player {player} Action").ReadValue<float>();
+        virtualButtonJumpLastFrame = InputSystem.actions.FindAction($"Player {player} Action").WasPressedThisFrame() ? 1 : 0;
+
+        virtualAxisX = InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x;
+        return;
+
         // From https://discussions.unity.com/t/manually-smooth-input-getaxisraw/225141/4
         float basicallyRawAxis = InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x;
         float sensitivity = 3;
@@ -158,9 +176,6 @@ public class PlayerMovement : MonoBehaviour
         {
             turnaroundMultiplier = 1;
         }
-
-        virtualButtonJump = InputSystem.actions.FindAction($"Player {player} Action").ReadValue<float>();
-        virtualButtonJumpLastFrame = InputSystem.actions.FindAction($"Player {player} Action").WasPressedThisFrame() ? 1 : 0;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
