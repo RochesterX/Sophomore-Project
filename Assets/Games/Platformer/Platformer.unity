@@ -12158,7 +12158,7 @@ GameObject:
   - component: {fileID: 1355961160}
   - component: {fileID: 1355961159}
   m_Layer: 0
-  m_Name: Root
+  m_Name: Bones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
