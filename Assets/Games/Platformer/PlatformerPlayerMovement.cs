@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D body;
     private BoxCollider2D collide;
+    private PlayerInput input;
 
     private Vector2 spawnPosition;
 
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         body = GetComponent<Rigidbody2D>();
         collide = GetComponent<BoxCollider2D>();
+        input = GetComponent<PlayerInput>();
     }
 
     private void Update()
@@ -137,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
             body.linearVelocityX *= walkSmooth;
         //}
 
-        if (transform.position == positionLastFrame && (InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x == 0))
+        if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))
         {
             virtualAxisX = 0;
         }
@@ -147,36 +149,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateVirtualAxis()
     {
-        virtualButtonJump = InputSystem.actions.FindAction($"Player {player} Action").ReadValue<float>();
-        virtualButtonJumpLastFrame = InputSystem.actions.FindAction($"Player {player} Action").WasPressedThisFrame() ? 1 : 0;
+        virtualButtonJump = input.actions.FindAction("Action").ReadValue<float>();
+        virtualButtonJumpLastFrame = input.actions.FindAction("Action").WasPressedThisFrame() ? 1 : 0;
 
-        virtualAxisX = InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x;
+        virtualAxisX = input.actions.FindAction("Move").ReadValue<Vector2>().x;
         return;
-
-        // From https://discussions.unity.com/t/manually-smooth-input-getaxisraw/225141/4
-        float basicallyRawAxis = InputSystem.actions.FindAction($"Player {player} Move").ReadValue<Vector2>().x;
-        float sensitivity = 3;
-        float gravity = 3;
-        float time = Time.deltaTime;
-
-        if (basicallyRawAxis != 0)
-        {
-            virtualAxisX = Mathf.Clamp(virtualAxisX + basicallyRawAxis * sensitivity * time * turnaroundMultiplier, -1f, 1f);
-        }
-        else
-        {
-            virtualAxisX = Mathf.Clamp01(Mathf.Abs(virtualAxisX) - gravity * time) * Mathf.Sign(virtualAxisX);
-        }
-
-        if ((basicallyRawAxis > 0f && virtualAxisX < 0f) || (basicallyRawAxis < 0f && virtualAxisX > 0f))
-        {
-            turnaroundMultiplier = 2;
-        }
-        else
-        {
-            turnaroundMultiplier = 1;
-        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Platformer Hazard"))

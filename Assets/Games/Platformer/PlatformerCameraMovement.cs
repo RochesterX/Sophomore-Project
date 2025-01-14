@@ -17,6 +17,8 @@ public class PlatformerCameraMovement : MonoBehaviour
 
     private void Update()
     {
+        if (players.Count == 0) return;
+
         Vector3 playerAverage = Vector3.zero;
         foreach (GameObject player in players)
         {
