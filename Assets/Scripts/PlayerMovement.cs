@@ -1,14 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public string player;
-
     [Header("Ground Layers")]
     public LayerMask ground;
 
@@ -42,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float lastTimeOnGround;
 
+    public bool animate;
+    private AnimationPlayer animationPlayer;
+
     private Vector3 positionLastFrame;
 
     void Start()
@@ -51,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         collide = GetComponent<BoxCollider2D>();
         input = GetComponent<PlayerInput>();
+        if (animate) animationPlayer = GetComponent<AnimationPlayer>();
     }
 
     private void Update()
@@ -67,6 +67,29 @@ public class PlayerMovement : MonoBehaviour
         HorizontalMovement();
 
         Land();
+    }
+
+    private void LateUpdate()
+    {
+        if (animate) Animate();
+    }
+
+    private void Animate()
+    {
+        if (!IsPhysicallyGrounded())
+            animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
+        else
+        {
+            if (Mathf.Abs(body.linearVelocityX) >= 0.1f)
+                animationPlayer.SetState(AnimationPlayer.AnimationState.Run);
+            else
+                animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
+        }
+
+        if (body.linearVelocityX < 0)
+            animationPlayer.backwards = true;
+        else if (body.linearVelocityX > 0)
+            animationPlayer.backwards = false;
     }
 
     private void Land()
