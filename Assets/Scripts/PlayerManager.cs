@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     public List<GameObject> players;
     [SerializeField] private Vector2 spawnPosition;
 
-    private PlatformerCameraMovement playerCamera;
+    private PlayerCameraMovement playerCamera;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class PlayerManager : MonoBehaviour
         GetComponent<PlayerInputManager>().onPlayerJoined += OnPlayerJoined;
         GetComponent<PlayerInputManager>().onPlayerLeft += OnPlayerLeft;
 
-        playerCamera = FindFirstObjectByType<PlatformerCameraMovement>();
+        playerCamera = FindFirstObjectByType<PlayerCameraMovement>();
     }
 
     private void OnPlayerJoined(PlayerInput playerInput)

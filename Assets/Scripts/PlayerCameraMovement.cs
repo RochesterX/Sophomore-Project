@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformerCameraMovement : MonoBehaviour
+public class PlayerCameraMovement : MonoBehaviour
 {
     private Vector3 start;
     private Vector3 target;

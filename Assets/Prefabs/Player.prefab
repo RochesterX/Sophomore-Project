@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3406519100105273690}
   - component: {fileID: 251648003544978305}
   m_Layer: 0
-  m_Name: Platformer Player
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

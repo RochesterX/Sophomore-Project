@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1959672341225110449}
   - component: {fileID: 1277363986118001863}
   m_Layer: 0
-  m_Name: Platformer Camera
+  m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
