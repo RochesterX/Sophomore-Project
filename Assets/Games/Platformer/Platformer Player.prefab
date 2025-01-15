@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 5205514565969078994}
   - component: {fileID: 4323437100190106747}
   - component: {fileID: 9112988359646506999}
+  - component: {fileID: 8542321013335259419}
   - component: {fileID: 2791557175355662981}
   - component: {fileID: 3406519100105273690}
   - component: {fileID: 251648003544978305}
@@ -231,6 +232,20 @@ MonoBehaviour:
   jumpLenience: 0.1
   timeUnableToBeDeclaredNotJumping: 0.1
   groundCheckDistance: 0.1
+--- !u!114 &8542321013335259419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546762253351562952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce1d588594ee416e9ab629d0b8c07dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {x: 0, y: 0}
+  respawnTag: Platformer Hazard
 --- !u!61 &2791557175355662981
 BoxCollider2D:
   m_ObjectHideFlags: 0

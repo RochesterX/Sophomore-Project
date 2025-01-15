@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlatformerCameraMovement : MonoBehaviour
 {
-    public List<GameObject> players;
-
     private Vector3 start;
     private Vector3 target;
     public float weight;
@@ -17,7 +15,9 @@ public class PlatformerCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerManager.Instance.players.Count == 0) return;
+        List<GameObject> players = PlayerManager.Instance.players;
+
+        if (players.Count == 0) return;
 
         Vector3 playerAverage = Vector3.zero;
         foreach (GameObject player in players)

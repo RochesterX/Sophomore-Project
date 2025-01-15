@@ -31,9 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private BoxCollider2D collide;
     private PlayerInput input;
-
-    private Vector2 spawnPosition;
-
     private bool jumpInputStillValid = false;
     private float lastTimeJumpPressed;
 
@@ -49,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        spawnPosition = transform.position;
+        GetComponent<RespawnOnTriggerEnter>().spawnPoint = transform.position;
 
         body = GetComponent<Rigidbody2D>();
         collide = GetComponent<BoxCollider2D>();
@@ -154,20 +151,6 @@ public class PlayerMovement : MonoBehaviour
 
         virtualAxisX = input.actions.FindAction("Move").ReadValue<Vector2>().x;
         return;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Platformer Hazard"))
-        {
-            Respawn();
-        }
-    }
-
-    private void Respawn()
-    {
-        transform.position = spawnPosition;
-        body.linearVelocity = Vector2.zero;
     }
 
     public bool IsBasicallyGrounded()
