@@ -8,14 +8,9 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
 
     public List<GameObject> players;
-    [SerializeField] private Vector2 spawnPosition;
     [SerializeField] private InputActionAsset playerActions;
 
-
-    [Header("Debug")]
-    [SerializeField] private InputActionAsset player2Actions;
-
-    private PlayerCameraMovement playerCamera;
+    private Vector2 spawnPosition;
 
     private void Awake()
     {
@@ -26,8 +21,6 @@ public class PlayerManager : MonoBehaviour
     {
         GetComponent<PlayerInputManager>().onPlayerJoined += OnPlayerJoined;
         GetComponent<PlayerInputManager>().onPlayerLeft += OnPlayerLeft;
-
-        playerCamera = FindFirstObjectByType<PlayerCameraMovement>();
     }
 
     private void OnPlayerJoined(PlayerInput playerInput)
@@ -53,6 +46,9 @@ public class PlayerManager : MonoBehaviour
         else
         {
             print("A PlayerManager already exists.");
+            Destroy(this.gameObject);
         }
+
+        spawnPosition = transform.position;
     }
 }

@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   isPlayer1: 1
+  move: {fileID: -944628639613478452, guid: 6cbaae0ad99590d468c8b501c0452c36, type: 3}
 --- !u!60 &6715754573185558080
 PolygonCollider2D:
   m_ObjectHideFlags: 0
