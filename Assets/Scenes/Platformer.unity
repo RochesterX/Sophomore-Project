@@ -196,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   spawnPosition: {x: -2, y: 15}
+  playerActions: {fileID: -944628639613478452, guid: 6cbaae0ad99590d468c8b501c0452c36, type: 3}
+  player2Actions: {fileID: -944628639613478452, guid: 66bf446e230994f6cb8817e4943f9adf, type: 3}
 --- !u!114 &804358386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +213,7 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: -1
   m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_JoinBehavior: 2
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []

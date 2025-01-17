@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,11 @@ public class PlayerManager : MonoBehaviour
 
     public List<GameObject> players;
     [SerializeField] private Vector2 spawnPosition;
+    [SerializeField] private InputActionAsset playerActions;
+
+
+    [Header("Debug")]
+    [SerializeField] private InputActionAsset player2Actions;
 
     private PlayerCameraMovement playerCamera;
 
@@ -22,6 +28,19 @@ public class PlayerManager : MonoBehaviour
         GetComponent<PlayerInputManager>().onPlayerLeft += OnPlayerLeft;
 
         playerCamera = FindFirstObjectByType<PlayerCameraMovement>();
+    }
+
+    private void Update()
+    {
+        if (InputSystem.actions.FindAction("Join Player").WasPressedThisFrame())
+        {
+            JoinPlayer(playerActions);
+        }
+
+        if (Keyboard.current.periodKey.wasPressedThisFrame)
+        {
+            JoinPlayer(player2Actions);
+        }
     }
 
     private void OnPlayerJoined(PlayerInput playerInput)
@@ -48,5 +67,12 @@ public class PlayerManager : MonoBehaviour
         {
             print("A PlayerManager already exists.");
         }
+    }
+
+    private void JoinPlayer(InputActionAsset actions)
+    {
+        PlayerInput player = GetComponent<PlayerInputManager>().JoinPlayer(-1, -1, null, Keyboard.current);
+        print(player == null);
+        player.actions = actions;
     }
 }

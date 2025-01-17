@@ -1,12 +1,12 @@
 {
-    "name": "InputSystem_Actions",
+    "name": "Player 2 Actions",
     "maps": [
         {
             "name": "Player",
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "Player 1 Move",
+                    "name": "Move",
                     "type": "Value",
                     "id": "351f2ccd-1f9f-44bf-9bec-d62ac5c5f408",
                     "expectedControlType": "Vector2",
@@ -15,27 +15,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Player 2 Move",
-                    "type": "Value",
-                    "id": "c76e95e7-c558-47cc-a7bd-93f9ad6eba7f",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Player 1 Action",
+                    "name": "Action",
                     "type": "Button",
                     "id": "6c333d17-3450-4446-b7e0-a49595f68ba7",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Player 2 Action",
-                    "type": "Button",
-                    "id": "76071948-d107-4fd7-9e4a-196dda4c8871",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -44,178 +26,68 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Player 1 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "WASD",
+                    "name": "D-Pad",
                     "id": "00ca640b-d935-4593-8157-c05846ea39b3",
                     "path": "Dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Player 1 Move",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
                     "id": "e2062cb9-1b15-46a2-838c-2f8d72a0bdd9",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Player 1 Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
                     "id": "320bffee-a40b-4347-ac70-c210eb8bc73a",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Player 1 Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
                     "id": "d2581a9b-1d11-4566-b27d-b92aff5fabbc",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Player 1 Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
                     "id": "fcfe95b8-67b9-4526-84b5-5d0bc98d6400",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Player 1 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8",
-                    "path": "<XRController>/{Primary2DAxis}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "Player 1 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b8b0405a-1eaa-4be8-8a20-7358c20c2ec3",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Player 2 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "Arrow Keys",
-                    "id": "e957ec01-13b2-4284-a59c-3b7a2d0a5923",
-                    "path": "Dpad",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Player 2 Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "4af1d2bb-197b-49e3-a944-245927131501",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Player 2 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "169ba39e-4240-47ee-9c27-e11f3d7173db",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Player 2 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "be9ced23-2090-47a6-b377-e2f75339e846",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "Player 2 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "24e88854-20ad-469a-a3df-85306fff2b19",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Player 2 Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "fb5572f1-5733-47da-bd9d-bd8e0073784c",
-                    "path": "<XRController>/{Primary2DAxis}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "Player 2 Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6f8632d2-312f-4559-8fdd-d17a3c226436",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Player 1 Action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "55c1ccb7-7241-49e2-8cda-4758f50156f1",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Player 2 Action",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -86,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
                 animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
         }
 
-        if (body.linearVelocityX < 0)
+        if (body.linearVelocityX < -0.1f)
             animationPlayer.backwards = true;
-        else if (body.linearVelocityX > 0)
+        else if (body.linearVelocityX > 0.1f)
             animationPlayer.backwards = false;
     }
 
