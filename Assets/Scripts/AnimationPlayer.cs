@@ -28,4 +28,9 @@ public class AnimationPlayer : MonoBehaviour
     {
         this.state = state;
     }
+
+    public void Punch()
+    {
+        animator.SetTrigger("punch");
+    }
 }
