@@ -30,19 +30,6 @@ public class PlayerManager : MonoBehaviour
         playerCamera = FindFirstObjectByType<PlayerCameraMovement>();
     }
 
-    private void Update()
-    {
-        if (InputSystem.actions.FindAction("Join Player").WasPressedThisFrame())
-        {
-            JoinPlayer(playerActions);
-        }
-
-        if (Keyboard.current.periodKey.wasPressedThisFrame)
-        {
-            JoinPlayer(player2Actions);
-        }
-    }
-
     private void OnPlayerJoined(PlayerInput playerInput)
     {
         playerInput.transform.position = spawnPosition;
@@ -67,12 +54,5 @@ public class PlayerManager : MonoBehaviour
         {
             print("A PlayerManager already exists.");
         }
-    }
-
-    private void JoinPlayer(InputActionAsset actions)
-    {
-        PlayerInput player = GetComponent<PlayerInputManager>().JoinPlayer(-1, -1, null, Keyboard.current);
-        print(player == null);
-        player.actions = actions;
     }
 }
