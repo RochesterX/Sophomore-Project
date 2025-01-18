@@ -3,6 +3,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(AnimationPlayer))]
+[RequireComponent(typeof(Punch))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Ground Layers")]
@@ -12,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float walkSpeedFactor = 1f;
     public float maxSpeed = 5f;
+    public float slowdownMultiplier = 10f;
     public float virtualAxisX;
     public float virtualButtonJump;
     public float virtualButtonJumpLastFrame;
@@ -27,6 +33,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D body;
     private BoxCollider2D collide;
     private PlayerInput input;
+    private AnimationPlayer animationPlayer;
+    private Punch punch;
+
     private bool jumpInputStillValid = false;
     private float lastTimeJumpPressed;
 
@@ -38,9 +47,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float lastTimeOnGround;
 
-    public bool animate;
-    private AnimationPlayer animationPlayer;
-
     private Vector3 positionLastFrame;
 
     void Start()
@@ -50,7 +56,8 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         collide = GetComponent<BoxCollider2D>();
         input = GetComponent<PlayerInput>();
-        if (animate) animationPlayer = GetComponent<AnimationPlayer>();
+        animationPlayer = GetComponent<AnimationPlayer>();
+        punch = GetComponent<Punch>();
     }
 
     private void Update()
@@ -71,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (animate) Animate();
+        Animate();
     }
 
     private void Animate()
@@ -107,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        if (!punch.cancelable) return;
+
         if (virtualButtonJumpLastFrame == 1f)
         {
             jumpInputStillValid = true;
@@ -146,18 +155,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void HorizontalMovement()
     {
-        //body.linearVelocity = new Vector2(virtualAxisX * walkSpeed, body.linearVelocity.y);
+        if (!punch.cancelable) return;
+
         body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
 
         if (Mathf.Abs(body.linearVelocityX) >= maxSpeed)
         {
-            body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+            body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - maxSpeed) * slowdownMultiplier, 0));
         }
-
-        //if (!IsPhysicallyGrounded())
-        //{
-            body.linearVelocityX *= walkSmooth;
-        //}
 
         if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))
         {
@@ -212,5 +217,10 @@ public class PlayerMovement : MonoBehaviour
             boxCollider2D.bounds.center.x + (horizontal * boxCollider2D.bounds.extents.x),
             boxCollider2D.bounds.center.y + (vertical * boxCollider2D.bounds.extents.y)
         );
+    }
+
+    public void StopVelocity()
+    {
+        if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
     }
 }
