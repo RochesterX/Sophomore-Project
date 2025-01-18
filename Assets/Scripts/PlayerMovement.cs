@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -12,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Ground Layers")]
     public LayerMask ground;
+
+    public TextMeshProUGUI playerText;
 
     [Header("Movement")]
     public float walkSpeed;
@@ -58,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<PlayerInput>();
         animationPlayer = GetComponent<AnimationPlayer>();
         punch = GetComponent<Punch>();
+
+        playerText.text = input.playerIndex.ToString();
     }
 
     private void Update()

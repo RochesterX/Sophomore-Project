@@ -21,6 +21,7 @@ public class Damageable : MonoBehaviour
     private void Recoil(GameObject damageSource)
     {
         GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up) * damage, ForceMode2D.Force);
+        //damageSource.transform.localScale *= 1.1f;
     }
 
     private void Damage()
@@ -31,5 +32,6 @@ public class Damageable : MonoBehaviour
     public void ResetDamage()
     {
         damage = 0f;
+        //transform.localScale = Vector3.one;
     }
 }
