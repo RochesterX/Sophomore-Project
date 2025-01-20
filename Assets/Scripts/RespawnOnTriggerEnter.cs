@@ -23,6 +23,10 @@ public class RespawnOnTriggerEnter : MonoBehaviour
             {
                 rb.linearVelocity = Vector2.zero;
             }
+            if (TryGetComponent<Damageable>(out var damageable))
+            {
+                damageable.ResetDamage();
+            }
         }
     }
 }
