@@ -33,4 +33,9 @@ public class AnimationPlayer : MonoBehaviour
     {
         animator.SetTrigger("punch");
     }
+
+    public void Block()
+    {
+        animator.SetTrigger("Block");
+    }
 }
