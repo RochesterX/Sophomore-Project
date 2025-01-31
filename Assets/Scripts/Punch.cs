@@ -21,7 +21,7 @@ public class Punch : MonoBehaviour
     {
         if (actions.FindAction("Punch").ReadValue<float>() == 1f)
         {
-            if (!cancelable) return;
+            //if (!cancelable) return;
             GetComponent<AnimationPlayer>().Punch();
             DisableCancellation();
         }

@@ -12,9 +12,12 @@ public class Damageable : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Punch Hurtbox"))
         {
-            print($"{name}: Ouch");
-            Damage();
-            Recoil(collision.transform.parent.gameObject);
+            if (GetComponent<Block>().blocking)
+            {
+                collision.gameObject.GetComponent<Damageable>().Damage(gameObject);
+                return;
+            }
+            Damage(collision.transform.parent.gameObject);
         }
     }
 
@@ -24,9 +27,10 @@ public class Damageable : MonoBehaviour
         //damageSource.transform.localScale *= 1.1f;
     }
 
-    private void Damage()
+    public void Damage(GameObject source)
     {
         damage += force;
+        Recoil(source);
     }
 
     public void ResetDamage()

@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Animation))]
 public class Block : MonoBehaviour
 {
-    public bool cancelable = true;
+    //public bool cancelable = true;
     [SerializeField] private BoxCollider2D blockArea;
 
     private InputActionAsset actions;
     private Animation animationComponent;
+
+    public bool blocking = false;
 
     private void Start()
     {
@@ -21,13 +23,14 @@ public class Block : MonoBehaviour
     {
         var blockAction = actions.FindAction("Block");
 
-        if (blockAction.triggered)
+        if (blockAction.ReadValue<float>() == 1f)
         {
             Debug.Log("Block action triggered!");
 
-            if (!cancelable) return;
+            //if (!cancelable) return;
 
-            animationComponent.Play("Block");
+            //animationComponent.Play("Block");
+            GetComponent<AnimationPlayer>().Block();
 
             DisableCancellation();
             ActivateBlockArea();
@@ -50,12 +53,12 @@ public class Block : MonoBehaviour
 
     public void DisableCancellation()
     {
-        cancelable = false;
+        //cancelable = false;
     }
 
     public void EnableCancellation()
     {
-        cancelable = true;
+        //cancelable = true;
     }
 
     public bool IsBlocking()

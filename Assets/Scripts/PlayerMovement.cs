@@ -119,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (!punch.cancelable) return;
+        //if (!punch.cancelable) return;
 
         if (virtualButtonJumpLastFrame == 1f)
         {
@@ -160,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HorizontalMovement()
     {
-        if (!punch.cancelable) return;
+        //if (!punch.cancelable) return;
 
         body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
 
