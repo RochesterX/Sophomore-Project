@@ -271,6 +271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terminalVelocity: -15
+<<<<<<< Updated upstream
+=======
 --- !u!111 &6769589999303328011
 Animation:
   m_ObjectHideFlags: 0
@@ -301,6 +303,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockArea: {fileID: 4413221056628714154}
   blocking: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1648017802882051395
 GameObject:
   m_ObjectHideFlags: 0
