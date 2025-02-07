@@ -15,12 +15,11 @@ public class Punch : MonoBehaviour
     private void Start()
     {
         actions = GetComponent<PlayerInput>().actions;
-        cancelable = true;
     }
 
     private void Update()
     {
-        if (actions.FindAction("Punch").WasPressedThisFrame())
+        if (actions.FindAction("Punch").ReadValue<float>() == 1f)
         {
             if (!cancelable) return;
             GetComponent<AnimationPlayer>().Punch();

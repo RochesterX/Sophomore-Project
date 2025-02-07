@@ -232,17 +232,6 @@
                 },
                 {
                     "name": "",
-                    "id": "1393e0ca-9119-4acb-8e66-7c7a05602f26",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Join",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "579f259d-1883-4fa5-bb3f-e564431fd795",
                     "path": "<Keyboard>/e",
                     "interactions": "",
