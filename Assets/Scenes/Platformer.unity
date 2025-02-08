@@ -197,6 +197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   playerActions: {fileID: -944628639613478452, guid: 6cbaae0ad99590d468c8b501c0452c36, type: 3}
+  playerColors:
+  - {r: 0, g: 0.37328386, b: 1, a: 1}
+  - {r: 1, g: 0.15532212, b: 0, a: 1}
+  - {r: 1, g: 0.75347257, b: 0, a: 1}
+  - {r: 0.37995827, g: 1, b: 0, a: 1}
 --- !u!114 &804358386
 MonoBehaviour:
   m_ObjectHideFlags: 0

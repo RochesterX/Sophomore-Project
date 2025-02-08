@@ -62,7 +62,8 @@ MonoBehaviour:
   playerText: {fileID: 7508327662230183655}
   walkSpeed: 5
   walkSpeedFactor: 30
-  maxSpeed: 5
+  maxSpeed: 7
+  maxSpeedOverride: 7
   slowdownMultiplier: 40
   virtualAxisX: 0
   virtualButtonJump: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 200
   damage: 0
+  maxDamage: 800
 --- !u!114 &5200627265685207284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36267595aa66046ac9e2e140190bbc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terminalVelocity: -15
+  terminalVelocity: -25
 --- !u!1 &1648017802882051395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1962,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.38033098, y: 0}
+  m_Offset: {x: 0.38033104, y: -0.47152424}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1970,5 +1972,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.750043, y: 1.2534463}
+  m_Size: {x: 2.750043, y: 2.196495}
   m_EdgeRadius: 0

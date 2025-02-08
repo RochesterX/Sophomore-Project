@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float walkSpeedFactor = 1f;
     public float maxSpeed = 5f;
+    public float maxSpeedOverride;
     public float slowdownMultiplier = 10f;
     public float virtualAxisX;
     public float virtualButtonJump;
@@ -54,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        maxSpeedOverride = maxSpeed;
         GetComponent<RespawnOnTriggerEnter>().spawnPoint = transform.position;
 
         body = GetComponent<Rigidbody2D>();
@@ -119,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (!punch.cancelable) return;
+        //if (!punch.cancelable) return;
 
         if (virtualButtonJumpLastFrame == 1f)
         {
@@ -144,6 +147,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (body.linearVelocity.y < 0 || !IsPhysicallyGrounded()) body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
             body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            if (Mathf.Abs(body.linearVelocityX) > maxSpeed)
+            {
+                body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+            }
             jumpPhysics = false;
         }
 
@@ -160,13 +167,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void HorizontalMovement()
     {
-        if (!punch.cancelable) return;
+        float temporaryMax = IsPhysicallyGrounded() ? maxSpeedOverride : Mathf.Infinity;
+        float temporarySlowdown = IsPhysicallyGrounded() ? slowdownMultiplier : 1;
 
-        body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
-
-        if (Mathf.Abs(body.linearVelocityX) >= maxSpeed)
+        if (Mathf.Abs(body.linearVelocityX) <= maxSpeed || Mathf.Sign(body.linearVelocityX) != Mathf.Sign(virtualAxisX))
         {
-            body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - maxSpeed) * slowdownMultiplier, 0));
+            body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
+        }
+
+        if (Mathf.Abs(body.linearVelocityX) >= temporaryMax)
+        {
+            //body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * temporaryMax, body.linearVelocity.y);
+            body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - temporaryMax) * temporarySlowdown, 0));
         }
 
         if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))

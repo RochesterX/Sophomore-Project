@@ -19,12 +19,19 @@ public class Punch : MonoBehaviour
 
     private void Update()
     {
-        if (actions.FindAction("Punch").ReadValue<float>() == 1f)
+        if (actions.FindAction("Punch").WasPressedThisFrame())
         {
             if (!cancelable) return;
-            GetComponent<AnimationPlayer>().Punch();
-            DisableCancellation();
+            ExecutePunch();
         }
+    }
+
+    private void ExecutePunch()
+    {
+        print("Execution");
+        GetComponent<AnimationPlayer>().Punch();
+        DisableCancellation();
+        GetComponent<PlayerMovement>().maxSpeedOverride = 1f;
     }
 
     public void EnableHurtbox()
@@ -45,5 +52,10 @@ public class Punch : MonoBehaviour
     public void EnableCancellation()
     {
         cancelable = true;
+    }
+
+    public void ReturnToMaxSpeed()
+    {
+        GetComponent<PlayerMovement>().maxSpeedOverride = GetComponent<PlayerMovement>().maxSpeed;
     }
 }

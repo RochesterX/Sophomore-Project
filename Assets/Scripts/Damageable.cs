@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
 {
     public float force = 50f;
     public float damage = 0f;
+    public float maxDamage = 1000f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,13 +21,14 @@ public class Damageable : MonoBehaviour
 
     private void Recoil(GameObject damageSource)
     {
-        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up) * damage, ForceMode2D.Force);
+        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * damage, ForceMode2D.Force);
         //damageSource.transform.localScale *= 1.1f;
     }
 
     private void Damage()
     {
         damage += force;
+        damage = Mathf.Clamp(damage, 0f, maxDamage);
     }
 
     public void ResetDamage()

@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour
     public List<GameObject> players;
     [SerializeField] private InputActionAsset playerActions;
 
+    public List<Color> playerColors;
+
     private Vector2 spawnPosition;
 
     private void Awake()
@@ -27,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     {
         playerInput.transform.position = spawnPosition;
         players.Add(playerInput.gameObject);
+        Colorize(playerInput.gameObject);
         print("Player joined");
     }
 
@@ -50,5 +53,24 @@ public class PlayerManager : MonoBehaviour
         }
 
         spawnPosition = transform.position;
+    }
+
+    private void Colorize(GameObject player)
+    {
+        Color color = playerColors[(players.Count - 1) % playerColors.Count];
+        float tint = Mathf.Floor((players.Count - 1) / playerColors.Count);
+        color = (color + color + Color.white * tint) / (tint + 2);
+        
+        if (player.TryGetComponent<SpriteRenderer>(out _))
+        {
+            player.GetComponent<SpriteRenderer>().color = color;
+        }
+        foreach (Transform child in player.transform)
+        {
+            if (child.TryGetComponent<SpriteRenderer>(out _))
+            {
+                Colorize(child.gameObject);
+            }
+        }
     }
 }
