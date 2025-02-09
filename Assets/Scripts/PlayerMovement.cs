@@ -145,11 +145,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumpPhysics)
         {
-            if (body.linearVelocity.y < 0 || !IsPhysicallyGrounded()) body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
-            body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-            if (Mathf.Abs(body.linearVelocityX) > maxSpeed)
+            if (!GetComponent<Block>().blocking)
             {
-                body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+                if (body.linearVelocity.y < 0 || !IsPhysicallyGrounded()) body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
+                body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+                if (Mathf.Abs(body.linearVelocityX) > maxSpeed)
+                {
+                    body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+                }
             }
             jumpPhysics = false;
         }
@@ -170,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
         float temporaryMax = IsPhysicallyGrounded() ? maxSpeedOverride : Mathf.Infinity;
         float temporarySlowdown = IsPhysicallyGrounded() ? slowdownMultiplier : 1;
 
-        if (Mathf.Abs(body.linearVelocityX) <= maxSpeed || Mathf.Sign(body.linearVelocityX) != Mathf.Sign(virtualAxisX))
+        if (!GetComponent<Block>().blocking && (Mathf.Abs(body.linearVelocityX) <= maxSpeed || Mathf.Sign(body.linearVelocityX) != Mathf.Sign(virtualAxisX)))
         {
             body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
         }
@@ -184,6 +187,11 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))
         {
             virtualAxisX = 0;
+        }
+
+        if (GetComponent<Block>().blocking)
+        {
+            body.AddForce(new Vector2(-body.linearVelocityX * 0.8f, 0), ForceMode2D.Force);
         }
 
         positionLastFrame = transform.position;

@@ -8,6 +8,8 @@ public class AnimationPlayer : MonoBehaviour
 
     public bool backwards;
 
+    public bool block = false;
+
     public AnimationClip clip;
 
     private Animator animator;
@@ -22,6 +24,8 @@ public class AnimationPlayer : MonoBehaviour
     {
         animator.SetInteger("state", (int)state);
         transform.localScale = new Vector3(Mathf.Sign(backwards ? -1 : 1) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+        animator.SetBool("block", block);
     }
 
     public void SetState(AnimationState state)

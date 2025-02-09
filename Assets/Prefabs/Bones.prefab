@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 2344147968324054325}
   - component: {fileID: 8121950008105218343}
   - component: {fileID: 3303109471384786876}
+  - component: {fileID: 2241163702443050772}
+  - component: {fileID: 2813634395235005482}
   m_Layer: 0
   m_Name: Bones
   m_TagString: Untagged
@@ -63,7 +65,7 @@ MonoBehaviour:
   walkSpeed: 5
   walkSpeedFactor: 30
   maxSpeed: 7
-  maxSpeedOverride: 7
+  maxSpeedOverride: 0
   slowdownMultiplier: 40
   virtualAxisX: 0
   virtualButtonJump: 0
@@ -105,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   backwards: 0
+  block: 0
   clip: {fileID: 7400000, guid: 590f229c565f34c8296a875497c76553, type: 2}
 --- !u!114 &5190430079571461372
 MonoBehaviour:
@@ -134,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 200
   damage: 0
-  maxDamage: 800
+  maxDamage: 1000
 --- !u!114 &5200627265685207284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +276,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terminalVelocity: -25
+--- !u!111 &2241163702443050772
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375850422501237868}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &2813634395235005482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375850422501237868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c9288561905664eade3f6b2634fc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blocking: 0
 --- !u!1 &1648017802882051395
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5586015051149451479
 RectTransform:
   m_ObjectHideFlags: 0

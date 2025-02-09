@@ -28,7 +28,6 @@ public class Punch : MonoBehaviour
 
     private void ExecutePunch()
     {
-        print("Execution");
         GetComponent<AnimationPlayer>().Punch();
         DisableCancellation();
         GetComponent<PlayerMovement>().maxSpeedOverride = 1f;

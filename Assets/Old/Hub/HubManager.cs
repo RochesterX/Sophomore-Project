@@ -5,16 +5,24 @@ using UnityEngine.UI;
 
 public class HubManager : MonoBehaviour
 {
+    public GameObject hubCamera;
     public GameObject gameButtonsParent;
+
+    private void Start()
+    {
+        hubCamera.SetActive(true);
+    }
 
     public void LoadScene(string sceneName)
     {
+        hubCamera.SetActive(true);
         UnloadGameScene();
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 
     public void UnloadGameScene()
     {
+        hubCamera.SetActive(false);
         try
         {
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));

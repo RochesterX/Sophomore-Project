@@ -14,7 +14,7 @@ public class Damageable : MonoBehaviour
         if (collision.gameObject.CompareTag("Punch Hurtbox"))
         {
             print($"{name}: Ouch");
-            Damage();
+            Damage(collision.transform.parent.gameObject);
             Recoil(collision.transform.parent.gameObject);
         }
     }
@@ -25,9 +25,18 @@ public class Damageable : MonoBehaviour
         //damageSource.transform.localScale *= 1.1f;
     }
 
-    private void Damage()
+    private void Damage(GameObject damageSource)
     {
-        damage += force;
+        float actualForce = force;
+        // Recoil
+        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * damage, ForceMode2D.Force);
+
+        if (GetComponent<Block>().blocking)
+        {
+            damageSource.GetComponent<Damageable>().Damage(gameObject);
+            actualForce /= 4;
+        }
+        damage += actualForce;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
     }
 
