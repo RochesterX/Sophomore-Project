@@ -15,14 +15,14 @@ public class HubManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        hubCamera.SetActive(true);
         UnloadGameScene();
+        hubCamera.SetActive(false);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 
     public void UnloadGameScene()
     {
-        hubCamera.SetActive(false);
+        hubCamera.SetActive(true);
         try
         {
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));

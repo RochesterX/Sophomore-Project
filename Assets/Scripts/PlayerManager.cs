@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,9 +7,12 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
 
     public List<GameObject> players;
+    public List<PlayerJoinCard> cards;
     [SerializeField] private InputActionAsset playerActions;
 
     public List<Color> playerColors;
+
+    public GameObject playerSelect;
 
     private Vector2 spawnPosition;
 
@@ -27,9 +29,15 @@ public class PlayerManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
+        playerInput.transform.SetParent(transform);
+        
+        PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard(playerInput);
+        card.playerNumber = players.Count + 1;
+        cards.Add(card);
+
         playerInput.transform.position = spawnPosition;
         players.Add(playerInput.gameObject);
-        Colorize(playerInput.gameObject);
+        Colorize(players.Count - 1);
         print("Player joined");
     }
 
@@ -55,21 +63,45 @@ public class PlayerManager : MonoBehaviour
         spawnPosition = transform.position;
     }
 
-    private void Colorize(GameObject player)
+    public void StartGame()
     {
+        foreach (Camera camera in FindObjectsByType<Camera>(FindObjectsSortMode.None))
+        {
+            camera.enabled = !camera.enabled;
+        }
+
+        foreach (GameObject player in players)
+        {
+            player.transform.position = spawnPosition;
+            player.GetComponent<Damageable>().damage = 0f;
+        }
+
+        Destroy(playerSelect);
+    }
+
+    private void Colorize(int index)
+    {
+        GameObject player = players[index];
+
         Color color = playerColors[(players.Count - 1) % playerColors.Count];
         float tint = Mathf.Floor((players.Count - 1) / playerColors.Count);
         color = (color + color + Color.white * tint) / (tint + 2);
-        
-        if (player.TryGetComponent<SpriteRenderer>(out _))
+
+        ApplyColor(player, color);
+        ApplyColor(cards[players.IndexOf(player)].playerPreview, color);
+    }
+
+    private void ApplyColor(GameObject obj, Color color)
+    {        
+        if (obj.TryGetComponent<SpriteRenderer>(out _))
         {
-            player.GetComponent<SpriteRenderer>().color = color;
+            obj.GetComponent<SpriteRenderer>().color = color;
         }
-        foreach (Transform child in player.transform)
+        foreach (Transform child in obj.transform)
         {
             if (child.TryGetComponent<SpriteRenderer>(out _))
             {
-                Colorize(child.gameObject);
+                ApplyColor(child.gameObject, color);
             }
         }
     }

@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(AnimationPlayer))]
 public class Punch : MonoBehaviour
@@ -35,12 +34,12 @@ public class Punch : MonoBehaviour
 
     public void EnableHurtbox()
     {
-        hurtbox.enabled = true;
+        if (hurtbox != null) hurtbox.enabled = true;
     }
 
     public void DisableHurtbox()
     {
-        hurtbox.enabled = false;
+        if (hurtbox != null) hurtbox.enabled = false;
     }
 
     public void DisableCancellation()
