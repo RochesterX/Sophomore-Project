@@ -520,7 +520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &188638978
 RectTransform:
   m_ObjectHideFlags: 0
@@ -735,7 +735,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &330396140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -950,7 +950,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 704873500}
-  - {fileID: 488642363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1222,18 +1221,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488642362}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.58778524, w: -0.809017}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 45.5, y: 45.5, z: 45.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.3132792, y: 3.3132792, z: 0.19879675}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1845854392}
   - {fileID: 330396140}
-  m_Father: {fileID: 365391918}
+  m_Father: {fileID: 1227248456}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.18273926, y: -28.999998}
+  m_AnchoredPosition: {x: 34.15326, y: -9.043175}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &497558471
@@ -1485,7 +1484,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: d9cb880b0536e9b1000000005b1db26cc5506199835ec75c
+  m_ApplyToSortingLayers: d9cb880b0536e9b100000000c5506199835ec75c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1602,8 +1601,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704873499}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 85.51447, y: 85.51447, z: 85.51447}
+  m_LocalPosition: {x: 0, y: 0, z: 154.47}
+  m_LocalScale: {x: 129.35774, y: 129.35774, z: 129.35774}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1648216493}
@@ -1615,7 +1614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1182, y: -188}
+  m_AnchoredPosition: {x: -1986, y: -103}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &923954519
@@ -2086,6 +2085,7 @@ RectTransform:
   - {fileID: 93206449}
   - {fileID: 497558472}
   - {fileID: 188638978}
+  - {fileID: 488642363}
   m_Father: {fileID: 704873500}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 288}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2608,7 +2608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -378}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 59.252686, y: -48.909103}
+  m_AnchoredPosition: {x: 58.44, y: -49.18}
   m_SizeDelta: {x: 289.13, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845854393
@@ -2631,10 +2631,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Crash
+  m_text: Demo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: de346aa59149d4738ab67d7fad276100, type: 2}
-  m_sharedMaterial: {fileID: -3030853995991010543, guid: de346aa59149d4738ab67d7fad276100, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
+  m_sharedMaterial: {fileID: 560944918044722035, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2658,8 +2658,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 42.2
+  m_fontSizeBase: 42.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -51,6 +51,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bones
+    uniqueID: 1823612251
+    locked: 0
   - name: Hub Icons
     uniqueID: 2573291717
     locked: 0
