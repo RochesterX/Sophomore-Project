@@ -38,6 +38,20 @@ public class Damageable : MonoBehaviour
         }
         damage += actualForce;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
+
+        if (damage >= maxDamage)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        PlayerLives playerLives = GetComponent<PlayerLives>(); //add death animation trigger
+        if (playerLives != null)
+        {
+            playerLives.PlayerDied();
+        }
     }
 
     public void ResetDamage()
