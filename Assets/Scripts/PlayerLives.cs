@@ -4,11 +4,10 @@ public class PlayerLives : MonoBehaviour
 {
     public int maxLives = 3;
     public int currentLives; 
-    public string gameMode = "free-for-all";
 
     private void Start()
     {
-        if (gameMode == "free-for-all")
+        if (GameManager.gameMode == GameManager.GameMode.freeForAll)
         {
             currentLives = maxLives;
         }
@@ -19,7 +18,7 @@ public class PlayerLives : MonoBehaviour
     }
     public void PlayerDied()
     {
-        if (gameMode == "free-for-all")
+        if (GameManager.gameMode == GameManager.GameMode.freeForAll)
         {
             currentLives--;
             if (currentLives <= 0)
