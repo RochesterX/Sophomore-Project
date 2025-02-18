@@ -45,6 +45,12 @@ TagManager:
   - name: Sky
     uniqueID: 193514457
     locked: 0
+  - name: BehindClouds
+    uniqueID: 3695225525
+    locked: 0
+  - name: InfrontClouds
+    uniqueID: 1995452543
+    locked: 0
   - name: Decorations
     uniqueID: 2984850949
     locked: 0
