@@ -27,7 +27,7 @@ public class PlayerCameraMovement : MonoBehaviour
         playerAverage /= players.Count;
 
         target = start * weight + playerAverage * (1 - weight);
-        transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, transform.position.z), speed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 }

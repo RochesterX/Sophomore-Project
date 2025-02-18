@@ -5,8 +5,8 @@ public class GameManager : MonoBehaviour
     public enum GameMode
     {
         freeForAll,
-        teamDeathmatch,
-        captureTheFlag
+        keepAway,
+        obstacleCourse
     }
 
     public static GameMode gameMode = GameMode.freeForAll;
