@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerLives : MonoBehaviour
@@ -11,10 +12,15 @@ public class PlayerLives : MonoBehaviour
         {
             currentLives = maxLives;
         }
-        else //add more gamemodes and their lives here
+        if (GameManager.gameMode == GameManager.GameMode.keepAway)
         {
-            currentLives = 0; 
+            currentLives = 1;
         }
+        if (GameManager.gameMode == GameManager.GameMode.obstacleCourse)
+        {
+            currentLives = 1;
+        }
+        //add more gamemodes and their lives here
     }
     public void PlayerDied()
     {
@@ -29,6 +35,14 @@ public class PlayerLives : MonoBehaviour
             {
                 RespawnPlayer();
             }
+        }
+        if (GameManager.gameMode == GameManager.GameMode.keepAway)
+        {
+
+        }
+        if (GameManager.gameMode == GameManager.GameMode.obstacleCourse)
+        {
+
         }
     }
     private void RespawnPlayer()
