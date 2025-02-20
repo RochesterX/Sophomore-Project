@@ -6,15 +6,12 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
 
-    public List<GameObject> players;
     public List<PlayerJoinCard> cards;
     [SerializeField] private InputActionAsset playerActions;
 
     public List<Color> playerColors;
 
     public GameObject playerSelect;
-
-    private Vector2 spawnPosition;
 
     private void Awake()
     {
@@ -29,22 +26,24 @@ public class PlayerManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
-        playerInput.transform.SetParent(transform);
-        
-        PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard(playerInput);
-        card.playerNumber = players.Count + 1;
+                print("Player joined");
+
+        //playerInput.transform.SetParent(transform);
+        DontDestroyOnLoad(playerInput.gameObject);
+
+        PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard();
+        card.playerNumber = GameManager.players.Count + 1;
         cards.Add(card);
 
-        playerInput.transform.position = spawnPosition;
-        players.Add(playerInput.gameObject);
-        Colorize(players.Count - 1);
-        print("Player joined");
+        GameManager.players.Add(playerInput.gameObject);
+
+        Colorize(GameManager.players.Count - 1);
     }
 
     private void OnPlayerLeft(PlayerInput playerInput)
     {
         Destroy(playerInput.gameObject);
-        players.Remove(playerInput.gameObject);
+        GameManager.players.Remove(playerInput.gameObject);
         print("Player left");
     }
 
@@ -59,36 +58,23 @@ public class PlayerManager : MonoBehaviour
             print("A PlayerManager already exists.");
             Destroy(this.gameObject);
         }
-
-        spawnPosition = transform.position;
     }
 
     public void StartGame()
     {
-        foreach (Camera camera in FindObjectsByType<Camera>(FindObjectsSortMode.None))
-        {
-            camera.enabled = !camera.enabled;
-        }
-
-        foreach (GameObject player in players)
-        {
-            player.transform.position = spawnPosition;
-            player.GetComponent<Damageable>().damage = 0f;
-        }
-
-        Destroy(playerSelect);
+        HubManager.Instance.LoadScene(GameManager.map);
     }
 
     private void Colorize(int index)
     {
-        GameObject player = players[index];
+        GameObject player = GameManager.players[index];
 
-        Color color = playerColors[(players.Count - 1) % playerColors.Count];
-        float tint = Mathf.Floor((players.Count - 1) / playerColors.Count);
+        Color color = playerColors[(GameManager.players.Count - 1) % playerColors.Count];
+        float tint = Mathf.Floor((GameManager.players.Count - 1) / playerColors.Count);
         color = (color + color + Color.white * tint) / (tint + 2);
 
         ApplyColor(player, color);
-        ApplyColor(cards[players.IndexOf(player)].playerPreview, color);
+        ApplyColor(cards[GameManager.players.IndexOf(player)].playerPreview, color);
     }
 
     private void ApplyColor(GameObject obj, Color color)

@@ -5,18 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Old/Hub/Hub.unity
-    guid: 218f4d2e730ae4d5a8ac6b2a48440175
-  - enabled: 0
-    path: Assets/Old/Pong/Pong.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/Platformer.unity
-    guid: 38493d985d15144a7ba4c78a9e6b68f9
   - enabled: 1
     path: Assets/Scenes/Title Screen.unity
     guid: 058d7a4228c684a72b3ba88c80918819
+  - enabled: 1
+    path: Assets/Scenes/Player Select.unity
+    guid: c4687173f3c444edeb7ceed737239636
   - enabled: 1
     path: Assets/Scenes/Platformer With Headroom.unity
     guid: e7d298a99af7a4dfb947795f0e02e4f0

@@ -15,7 +15,7 @@ public class PlayerCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        List<GameObject> players = PlayerManager.Instance.players;
+        List<GameObject> players = GameManager.players;
 
         if (players.Count == 0) return;
 

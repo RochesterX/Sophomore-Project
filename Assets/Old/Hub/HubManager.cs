@@ -5,11 +5,22 @@ using UnityEngine.UI;
 
 public class HubManager : MonoBehaviour
 {
+    public static HubManager Instance;
+
     public GameObject hubCamera;
     public GameObject gameButtonsParent;
 
     private void Start()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.Log("A HubManager already exists.");
+            Destroy(this.gameObject);
+        }
         hubCamera.SetActive(true);
     }
 

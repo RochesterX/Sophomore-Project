@@ -16,7 +16,7 @@ public class PlayerCardCreator : MonoBehaviour
         }
     }
 
-    public PlayerJoinCard CreateCard(PlayerInput input)
+    public PlayerJoinCard CreateCard()
     {
         GameObject card = Instantiate(playerJoinCardPrefab, transform);
         return card.GetComponent<PlayerJoinCard>();
