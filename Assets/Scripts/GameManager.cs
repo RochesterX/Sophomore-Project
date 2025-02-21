@@ -1,22 +1,8 @@
-<<<<<<< Updated upstream
 using System.Collections.Generic;
-=======
-using Unity.VisualScripting;
->>>>>>> Stashed changes
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public  startGame
-    { 
-        if GameMode = GameMode.freeForAll(
-        Start freeForAll)
-        if GameMode = GameMode.freeForAll(
-        Start freeForAll)
-        if GameMode = GameMode.freeForAll(
-        Start freeForAll);
-    }
-
     public enum GameMode
     {
         freeForAll,
@@ -37,6 +23,14 @@ public class GameManager : MonoBehaviour
         foreach (GameObject player in players)
         {
             player.transform.position = spawnPosition;
+        }
+    }
+
+    public void StartGame()
+    {
+        if (gameMode == GameMode.freeForAll)
+        {
+            // Start free for all game
         }
     }
 }
