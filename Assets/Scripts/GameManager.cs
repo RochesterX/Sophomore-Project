@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< Updated upstream
-=======
-
     public void StartGame()
     {
         if (gameMode == GameMode.freeForAll)
@@ -22,7 +19,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
->>>>>>> Stashed changes
     public enum GameMode
     {
         freeForAll,
@@ -46,15 +42,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-<<<<<<< Updated upstream
-    public void StartGame()
-    {
-        if (gameMode == GameMode.freeForAll)
-        {
-            // Start free for all game
-        }
-    }
-=======
     private void StartKeepAway()
     {
         foreach (GameObject player in players)
@@ -69,10 +56,4 @@ public class GameManager : MonoBehaviour
             player.transform.position = spawnPosition;
         }
     }
-
-    private void Start()
-    {
-        StartGame();
-    }
->>>>>>> Stashed changes
 }
