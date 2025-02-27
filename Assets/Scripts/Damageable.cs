@@ -8,6 +8,16 @@ public class Damageable : MonoBehaviour
     public float force = 50f;
     public float damage = 0f;
     public float maxDamage = 1000f;
+    public HealthBar healthBar;
+
+    private void Start()
+    {
+        if (healthBar != null)
+        {
+            healthBar.SetMaxHealth(maxDamage);
+            healthBar.SetHealth(maxDamage - damage);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,30 +25,51 @@ public class Damageable : MonoBehaviour
         {
             print($"{name}: Ouch");
             Damage(collision.transform.parent.gameObject);
-            Recoil(collision.transform.parent.gameObject);
         }
-    }
-
-    private void Recoil(GameObject damageSource)
-    {
-        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * damage, ForceMode2D.Force);
-        //damageSource.transform.localScale *= 1.1f;
     }
 
     private void Damage(GameObject damageSource)
     {
         float actualForce = force;
-        // Recoil
-        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * damage, ForceMode2D.Force);
-
-        if (GetComponent<Block>().blocking)
+        Block blockComponent = GetComponent<Block>();
+        if (blockComponent != null && blockComponent.blocking)
         {
-            damageSource.GetComponent<Damageable>().Damage(gameObject);
-            actualForce /= 4;
+            if (blockComponent.IsParrying())
+            {
+                damageSource.GetComponent<Damageable>().SuccessfulParry(gameObject, actualForce);
+                return;
+            }
+            else
+            {
+                actualForce /= 4;
+                GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
+            }
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
         }
         damage += actualForce;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(maxDamage - damage);
+        }
+        if (damage >= maxDamage)
+        {
+            Die();
+        }
+    }
 
+    private void SuccessfulParry(GameObject damageSource, float force)
+    {
+        GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * force, ForceMode2D.Force);
+        damage += force;
+        damage = Mathf.Clamp(damage, 0f, maxDamage);
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(maxDamage - damage);
+        }
         if (damage >= maxDamage)
         {
             Die();
@@ -57,6 +88,10 @@ public class Damageable : MonoBehaviour
     public void ResetDamage()
     {
         damage = 0f;
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(maxDamage);
+        }
         //transform.localScale = Vector3.one;
     }
 }
