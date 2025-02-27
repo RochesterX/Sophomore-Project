@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
-                print("Player joined");
+        print("Player joined");
 
         //playerInput.transform.SetParent(transform);
         DontDestroyOnLoad(playerInput.gameObject);
