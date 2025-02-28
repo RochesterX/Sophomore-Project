@@ -127,6 +127,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4162490554469064066, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1678402538523344736}
+    - target: {fileID: 4162490554469064066, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507202815382103773, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300.80005
+      objectReference: {fileID: 0}
     - target: {fileID: 7581121400164956810, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
       propertyPath: m_Name
       value: Player Select
@@ -176,6 +188,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+--- !u!114 &1678402538523344736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3284257257135167210, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+  m_PrefabInstance: {fileID: 1678402538523344735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e0fad1e452e0140bc99e780d4dda4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

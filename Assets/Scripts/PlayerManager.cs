@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject playerSelect;
 
+    private bool gameStarted = false;
+
     private void Awake()
     {
         Init();
@@ -26,9 +28,15 @@ public class PlayerManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
-        print("Player joined");
-
         //playerInput.transform.SetParent(transform);
+        if (gameStarted)
+        {
+            Destroy(playerInput.gameObject);
+            return;
+        }
+
+        Debug.Log("Player joined");
+
         DontDestroyOnLoad(playerInput.gameObject);
 
         PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard();
@@ -44,7 +52,7 @@ public class PlayerManager : MonoBehaviour
     {
         Destroy(playerInput.gameObject);
         GameManager.players.Remove(playerInput.gameObject);
-        print("Player left");
+        Debug.Log("Player left");
     }
 
     private void Init()
@@ -55,13 +63,15 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            print("A PlayerManager already exists.");
+            Debug.Log("A PlayerManager already exists.");
             Destroy(this.gameObject);
         }
     }
 
     public void StartGame()
     {
+        gameStarted = true;
+        Debug.Log("Game started");
         HubManager.Instance.LoadScene(GameManager.map);
     }
 
@@ -78,7 +88,7 @@ public class PlayerManager : MonoBehaviour
     }
 
     private void ApplyColor(GameObject obj, Color color)
-    {        
+    {
         if (obj.TryGetComponent<SpriteRenderer>(out _))
         {
             obj.GetComponent<SpriteRenderer>().color = color;

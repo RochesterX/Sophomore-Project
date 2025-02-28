@@ -3,22 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public void StartGame()
-    {
-        if (gameMode == GameMode.freeForAll)
-        {
-            StartFreeForAll();
-        }
-        if (gameMode == GameMode.keepAway)
-        {
-            StartKeepAway();
-        }
-        if (gameMode == GameMode.obstacleCourse)
-        {
-            StartObstacleCourse();
-        }
-    }
-
+    public static GameManager Instance { get; private set; }
     public enum GameMode
     {
         freeForAll,
@@ -27,33 +12,63 @@ public class GameManager : MonoBehaviour
     }
 
     public static GameMode gameMode = GameMode.freeForAll;
-
-    public static string map = "Platformer With Headroom"; //is called for in playermanager but should probably be removed.
-
+    public static string map = "Platformer With Headroom";
     public static List<GameObject> players = new List<GameObject>();
-
     public Vector2 spawnPosition;
 
-    private void StartFreeForAll()
+    private Dictionary<GameObject, int> playerLives = new Dictionary<GameObject, int>();
+    public int maxLives = 3;
+
+    private void Start()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
     {
         foreach (GameObject player in players)
         {
+            if (gameMode == GameMode.freeForAll)
+            {
+                playerLives[player] = maxLives;
+            }
+            else
+            {
+                playerLives[player] = 1;
+            }
             player.transform.position = spawnPosition;
         }
     }
 
-    private void StartKeepAway()
+    public void PlayerDied(GameObject player)
     {
-        foreach (GameObject player in players)
+        if (gameMode == GameMode.freeForAll)
         {
-            player.transform.position = spawnPosition;
+            playerLives[player]--;
+            if (playerLives[player] <= 0)
+            {
+                GameOver(player);
+            }
+            else
+            {
+                RespawnPlayer(player);
+            }
         }
     }
-    private void StartObstacleCourse()
+
+    private void RespawnPlayer(GameObject player)
     {
-        foreach (GameObject player in players)
+        RespawnOnTriggerEnter respawnScript = player.GetComponent<RespawnOnTriggerEnter>();
+        if (respawnScript != null)
         {
-            player.transform.position = spawnPosition;
+            player.transform.position = respawnScript.spawnPoint;
+            player.GetComponent<Damageable>().ResetDamage();
         }
+    }
+
+    private void GameOver(GameObject player)
+    {
+        // Disable player controls and show game over screen
+        player.SetActive(false);
     }
 }

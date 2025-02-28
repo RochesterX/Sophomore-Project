@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Punch : MonoBehaviour
 {
     public bool cancelable = true;
+    public static event System.Action<GameObject> OnPlayerPunched;
 
     [SerializeField] private BoxCollider2D hurtbox;
 
@@ -30,6 +31,7 @@ public class Punch : MonoBehaviour
         GetComponent<AnimationPlayer>().Punch();
         DisableCancellation();
         GetComponent<PlayerMovement>().maxSpeedOverride = 1f;
+        OnPlayerPunched?.Invoke(gameObject);
     }
 
     public void EnableHurtbox()

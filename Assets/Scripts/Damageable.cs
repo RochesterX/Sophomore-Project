@@ -10,8 +10,12 @@ public class Damageable : MonoBehaviour
     public float maxDamage = 1000f;
     public HealthBar healthBar;
 
+    private GameManager gameManager;
+
     private void Start()
     {
+        gameManager = GameManager.Instance;
+
         if (healthBar != null)
         {
             healthBar.SetMaxHealth(maxDamage);
@@ -78,10 +82,9 @@ public class Damageable : MonoBehaviour
 
     private void Die()
     {
-        PlayerLives playerLives = GetComponent<PlayerLives>(); //add death animation trigger
-        if (playerLives != null)
+        if (gameManager != null)
         {
-            playerLives.PlayerDied();
+            gameManager.PlayerDied(gameObject); //add death animation trigger
         }
     }
 

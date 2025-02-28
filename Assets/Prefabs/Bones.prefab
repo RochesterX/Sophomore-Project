@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 1169583671018505929}
   - component: {fileID: 2344147968324054325}
   - component: {fileID: 8121950008105218343}
-  - component: {fileID: 3303109471384786876}
   - component: {fileID: 2813634395235005482}
   m_Layer: 0
   m_Name: Bones
@@ -137,6 +136,7 @@ MonoBehaviour:
   force: 200
   damage: 0
   maxDamage: 1000
+  healthBar: {fileID: 0}
 --- !u!114 &5200627265685207284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,19 +262,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.4505486, y: 1.9437933}
   m_EdgeRadius: 0
---- !u!114 &3303109471384786876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1375850422501237868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36267595aa66046ac9e2e140190bbc16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terminalVelocity: -25
 --- !u!114 &2813634395235005482
 MonoBehaviour:
   m_ObjectHideFlags: 0
