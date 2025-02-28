@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private void Start()
+    {
+        StartGame();
+    }
+
     public void StartGame()
     {
         if (gameMode == GameMode.freeForAll)
