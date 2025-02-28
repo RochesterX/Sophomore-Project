@@ -8,6 +8,8 @@ TagManager:
   - Pong Paddle
   - Platformer Hazard
   - Punch Hurtbox
+  - Teleporter
+  - FallPlatform
   layers:
   - Default
   - TransparentFX

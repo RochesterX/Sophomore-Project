@@ -19,9 +19,10 @@ GameObject:
   - component: {fileID: 2344147968324054325}
   - component: {fileID: 8121950008105218343}
   - component: {fileID: 2813634395235005482}
+  - component: {fileID: 6880649289615065196}
   m_Layer: 0
   m_Name: Bones
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,6 +276,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocking: 0
+--- !u!114 &6880649289615065196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375850422501237868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182a9e619d36aeb4592fb532d3c9db55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {x: -5, y: -10}
+  teleportTag: Teleporter
 --- !u!1 &1648017802882051395
 GameObject:
   m_ObjectHideFlags: 0
