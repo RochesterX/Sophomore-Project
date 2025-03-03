@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        print("Starting game with mode: " + gameMode + " and map: " + map);
         if (gameMode == GameMode.freeForAll)
         {
             currentLives = maxLives;
