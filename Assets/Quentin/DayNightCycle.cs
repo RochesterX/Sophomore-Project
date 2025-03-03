@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
@@ -86,6 +87,13 @@ public class DayNightCycle : MonoBehaviour
             Color color = sprite.color;
             color.a = alpha;
             sprite.color = color;
+            foreach (Transform child in sprite.transform)
+            {
+                if (child.TryGetComponent(out SpriteRenderer childSprite))
+                {
+                    childSprite.color = color;
+                }
+            }
         }
     }
 }
