@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e4599228c7142f9a5d65ab96f9fdc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   start: -72
   end: 72
 --- !u!1 &4881898880747686325
@@ -2113,7 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e4599228c7142f9a5d65ab96f9fdc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   start: -72
   end: 72
 --- !u!1 &7749521020466376931
