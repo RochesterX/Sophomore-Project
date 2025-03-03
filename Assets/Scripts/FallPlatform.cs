@@ -13,7 +13,7 @@ public class FallPlatform : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    private void OnCollisionEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!falling && collision.gameObject.CompareTag("Player"))
         {
