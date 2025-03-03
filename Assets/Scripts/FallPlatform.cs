@@ -15,7 +15,7 @@ public class FallPlatform : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!falling && collision.gameObject.CompareTag("Player"))
+        if (!falling/* && collision.gameObject.CompareTag("Player")*/)
         {
             StartCoroutine(FallAfterDelay());
         }
@@ -26,6 +26,7 @@ public class FallPlatform : MonoBehaviour
         falling = true;
         yield return new WaitForSeconds(fallDelay);
         rb.bodyType = RigidbodyType2D.Dynamic;
-        Destroy(gameObject, destroyDelay);
+        yield return new WaitForSeconds(destroyDelay);
+        Destroy(gameObject);
     }
 }
