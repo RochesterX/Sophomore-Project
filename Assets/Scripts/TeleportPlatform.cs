@@ -5,6 +5,10 @@ public class TeleportPlatform : MonoBehaviour
     public Vector2 teleportPoint;
     //public bool teleportPosition = false;
     public string teleportTag;
+    public string playerTag = "Player";
+
+
+    public bool isPlatform = true;
 
     //private void Start()
     //{
@@ -16,12 +20,26 @@ public class TeleportPlatform : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(teleportTag))
+        if (!isPlatform)
         {
-            transform.position = teleportPoint;
-            if (TryGetComponent<Rigidbody2D>(out var rb))
+            if (collision.CompareTag(teleportTag))
             {
-                rb.linearVelocity = Vector2.zero;
+                transform.position = teleportPoint;
+                if (TryGetComponent<Rigidbody2D>(out var rb))
+                {
+                    rb.linearVelocity = Vector2.zero;
+                }
+            }
+        }
+        else
+        {
+            if (collision.CompareTag(playerTag))
+            {
+                collision.transform.position = teleportPoint;
+                if (collision.TryGetComponent<Rigidbody2D>(out var rb))
+                {
+                    rb.linearVelocity = Vector2.zero;
+                }
             }
         }
     }
