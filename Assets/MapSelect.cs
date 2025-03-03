@@ -14,6 +14,5 @@ public class MapSelect : MonoBehaviour
     {
         Toggle toggle = maps.GetFirstActiveToggle();
         GameManager.map = toggle.name;
-        print(GameManager.map);
     }
 }

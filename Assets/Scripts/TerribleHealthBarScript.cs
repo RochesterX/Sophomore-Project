@@ -21,9 +21,12 @@ public class TerribleHealthBarScript : MonoBehaviour
     private Vector3 targetPosition;
     private Color targetActualColor;
 
+    private Damageable player;
+
     void Start()
     {
-        healthScript = transform.parent.GetComponent<Damageable>();
+
+        healthScript = player.GetComponent<Damageable>();
         initialScale = healthVisual.transform.localScale;
         initialPosition = healthVisual.transform.position;
         targetScale = initialScale;
@@ -42,12 +45,12 @@ public class TerribleHealthBarScript : MonoBehaviour
             transform.localScale = new Vector3(1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }//
 
-        float healthRatio = healthScript.damage / healthScript.maxDamage;
+        float healthRatio = (healthScript.maxDamage - healthScript.damage) / healthScript.maxDamage;
 
         targetActualColor = Color.Lerp(fullDeathColor, fullHealthColor, healthRatio);
         targetScale = new Vector3(Mathf.Lerp(0, 1, healthRatio) * initialScale.x, healthVisual.transform.localScale.y, healthVisual.transform.localScale.z);
         targetPosition = new Vector3(Mathf.Lerp(-0.5f, 0, healthRatio), healthVisual.transform.localPosition.y, healthVisual.transform.localPosition.z);
-        text.text = healthScript.damage.ToString() + "/" + healthScript.maxDamage.ToString();
+        text.text = (healthScript.maxDamage - healthScript.damage).ToString() + "/" + healthScript.maxDamage.ToString();
 
         actualHealthVisual.transform.localScale = targetScale;
         actualHealthVisual.transform.localPosition = targetPosition;

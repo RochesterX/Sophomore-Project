@@ -86,6 +86,21 @@ public class Damageable : MonoBehaviour
         {
             gameManager.PlayerDied(gameObject); //add death animation trigger
         }
+
+
+    }
+
+    public void Respawn()
+    {
+        transform.position = GameManager.Instance.spawnPosition;
+        if (TryGetComponent<Rigidbody2D>(out var rb))
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        if (TryGetComponent<Damageable>(out var damageable))
+        {
+            damageable.ResetDamage();
+        }
     }
 
     public void ResetDamage()

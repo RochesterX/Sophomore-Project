@@ -18,15 +18,7 @@ public class RespawnOnTriggerEnter : MonoBehaviour
     {
         if (other.CompareTag(respawnTag))
         {
-            transform.position = spawnPoint;
-            if (TryGetComponent<Rigidbody2D>(out var rb))
-            {
-                rb.linearVelocity = Vector2.zero;
-            }
-            if (TryGetComponent<Damageable>(out var damageable))
-            {
-                damageable.ResetDamage();
-            }
+            GetComponent<Damageable>().Respawn();
         }
     }
 }

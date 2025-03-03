@@ -1247,7 +1247,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_text
-      value: Platform the Third
+      value: 'Keep Away
+
+        Map Edition'
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name

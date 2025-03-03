@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Platformer With Headroom.unity
     guid: e7d298a99af7a4dfb947795f0e02e4f0
+  - enabled: 1
+    path: Assets/Scenes/Other/ObstanceWIP.unity
+    guid: c890809ff5759594e8f9509be5640913
+  - enabled: 1
+    path: Assets/Scenes/Other/Keep_Away.unity
+    guid: e9fc24bb9df988b4196fa7d9969a7515
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
