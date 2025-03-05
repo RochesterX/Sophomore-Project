@@ -7,7 +7,7 @@ public class Block : MonoBehaviour
     public bool blocking = false;
     private InputActionAsset actions;
     private float blockPressTime = 0f;
-    private float parryThreshold = 0.2f;
+    [SerializeField] private float parryThreshold = 0.2f;
     private bool isParrying = false;
 
     private void Start()

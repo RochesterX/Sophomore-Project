@@ -52,6 +52,10 @@ public class HubManager : MonoBehaviour
         {
             UnloadGameScene();
             ChangeGameButtonsInteractability(true);
+            foreach (PlayerMovement player in FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None))
+            {
+                Destroy(player.gameObject);
+            }
         }
     }
 
