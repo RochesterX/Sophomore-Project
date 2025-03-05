@@ -7,6 +7,18 @@ public class GameManager : MonoBehaviour
     public int maxLives = 3;
     public int currentLives;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         StartGame();
