@@ -52,9 +52,10 @@ public class HubManager : MonoBehaviour
         {
             UnloadGameScene();
             ChangeGameButtonsInteractability(true);
-            foreach (PlayerMovement player in FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None))
+            foreach (GameObject player in GameManager.players)
             {
-                Destroy(player.gameObject);
+                GameManager.players.Remove(player);
+                Destroy(player);
             }
         }
     }
