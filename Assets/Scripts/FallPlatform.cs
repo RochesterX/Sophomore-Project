@@ -8,12 +8,12 @@ public class FallPlatform : MonoBehaviour
 
     bool falling;
     Rigidbody2D rb;
-    //Vector3 position;
+    //Transform defposition;
 
     void Start()
     {
+        //defposition = gameObject.transform;
         rb = transform.parent.GetComponent<Rigidbody2D>();
-        //position = rb.transform.position;
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +29,13 @@ public class FallPlatform : MonoBehaviour
         falling = true;
         yield return new WaitForSeconds(fallDelay);
         rb.bodyType = RigidbodyType2D.Dynamic;
-        //yield return new WaitForSeconds(resetDelay);
-        
+        yield return new WaitForSeconds(resetDelay);
+        //Respawn();
     }
+
+    //private void Respawn()
+    //{
+        //rb.bodyType = RigidbodyType2D.Static;
+        //gameObject.transform.position = defposition.position;
+    //}
 }
