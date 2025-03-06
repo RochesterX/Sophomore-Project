@@ -18,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Platformer Ground
-  - 
+  - HealthBar
   - 
   - 
   - 
@@ -67,6 +67,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1556569731
+    locked: 0
+  - name: HealthBar
+    uniqueID: 1570397069
     locked: 0
   m_RenderingLayers:
   - Default

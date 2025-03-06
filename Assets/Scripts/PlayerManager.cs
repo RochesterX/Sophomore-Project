@@ -5,15 +5,12 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager Instance;
-
     public List<PlayerJoinCard> cards;
     [SerializeField] private InputActionAsset playerActions;
-
     public List<Color> playerColors;
-
     public GameObject playerSelect;
-
     private bool gameStarted = false;
+    private bool isStartPressed = false;
 
     private void Awake()
     {
@@ -34,17 +31,12 @@ public class PlayerManager : MonoBehaviour
             Destroy(playerInput.gameObject);
             return;
         }
-
         Debug.Log("Player joined");
-
         DontDestroyOnLoad(playerInput.gameObject);
-
         PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard();
         card.playerNumber = GameManager.players.Count + 1;
         cards.Add(card);
-
         GameManager.players.Add(playerInput.gameObject);
-
         Colorize(GameManager.players.Count - 1);
     }
 
@@ -63,26 +55,33 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("A PlayerManager already exists.");
             Destroy(this.gameObject);
         }
     }
 
     public void StartGame()
     {
-        gameStarted = true;
-        Debug.Log("Game started");
-        HubManager.Instance.LoadScene(GameManager.map);
+        if (GameManager.players.Count == 0)
+        {
+            return;
+        }
+        if (isStartPressed)
+        {
+            gameStarted = true;
+            HubManager.Instance.LoadScene(GameManager.map);
+        }
+        else
+        {
+            isStartPressed = true;
+        }
     }
 
     private void Colorize(int index)
     {
         GameObject player = GameManager.players[index];
-
         Color color = playerColors[(GameManager.players.Count - 1) % playerColors.Count];
         float tint = Mathf.Floor((GameManager.players.Count - 1) / playerColors.Count);
         color = (color + color + Color.white * tint) / (tint + 2);
-
         ApplyColor(player, color);
         ApplyColor(cards[GameManager.players.IndexOf(player)].playerPreview, color);
     }

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,7 +7,6 @@ using UnityEngine.UI;
 public class HubManager : MonoBehaviour
 {
     public static HubManager Instance;
-
     public GameObject hubCamera;
     public GameObject gameButtonsParent;
 
@@ -52,7 +52,8 @@ public class HubManager : MonoBehaviour
         {
             UnloadGameScene();
             ChangeGameButtonsInteractability(true);
-            foreach (GameObject player in GameManager.players)
+
+            foreach (GameObject player in GameManager.players.ToList())
             {
                 GameManager.players.Remove(player);
                 Destroy(player);

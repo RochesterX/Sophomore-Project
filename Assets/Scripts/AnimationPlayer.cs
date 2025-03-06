@@ -24,7 +24,6 @@ public class AnimationPlayer : MonoBehaviour
     {
         animator.SetInteger("state", (int)state);
         transform.localScale = new Vector3(Mathf.Sign(backwards ? -1 : 1) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
         animator.SetBool("block", block);
     }
 

@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public int maxLives = 3;
     public int currentLives;
+    public delegate void GameEvent();
+    public event GameEvent StartGameEvent;
+    public event GameEvent EndGameEvent;
+    public static List<GameObject> players = new List<GameObject>();
 
     private void Awake()
     {
@@ -26,21 +30,31 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        StartGameEvent?.Invoke();
         print("Starting game with mode: " + gameMode + " and map: " + map);
         if (gameMode == GameMode.freeForAll)
         {
             currentLives = maxLives;
-            StartFreeForAll();
+            foreach (GameObject player in players)
+            {
+                player.transform.position = spawnPosition;
+            }
         }
         if (gameMode == GameMode.keepAway)
         {
             currentLives = 1;
-            StartKeepAway();
+            foreach (GameObject player in players)
+            {
+                player.transform.position = spawnPosition;
+            }
         }
         if (gameMode == GameMode.obstacleCourse)
         {
             currentLives = 1;
-            StartObstacleCourse();
+            foreach (GameObject player in players)
+            {
+                player.transform.position = spawnPosition;
+            }
         }
     }
 
@@ -51,37 +65,9 @@ public class GameManager : MonoBehaviour
         obstacleCourse
     }
 
-    public static GameMode gameMode = GameMode.freeForAll;
-
-    public static string map = "Platformer With Headroom"; //called for in PlayerManager and should be changed to load from here instead
-
-    public static List<GameObject> players = new List<GameObject>();
-
+    public static GameMode gameMode = GameMode.freeForAll; // loads a default gamemode as a safety net
+    public static string map = "Platformer With Headroom"; // loads a default map as a safety net
     public Vector2 spawnPosition;
-
-    private void StartFreeForAll()
-    {
-        foreach (GameObject player in players)
-        {
-            player.transform.position = spawnPosition;
-        }
-    }
-
-    private void StartKeepAway()
-    {
-        foreach (GameObject player in players)
-        {
-            player.transform.position = spawnPosition;
-        }
-    }
-
-    private void StartObstacleCourse()
-    {
-        foreach (GameObject player in players)
-        {
-            player.transform.position = spawnPosition;
-        }
-    }
 
     public void PlayerDied(GameObject player)
     {
@@ -119,7 +105,8 @@ public class GameManager : MonoBehaviour
 
     private void GameOver(GameObject player)
     {
-        // Disable player controls and show game over screen
+        // Add game over screen
         player.SetActive(false);
+        EndGameEvent?.Invoke();
     }
 }

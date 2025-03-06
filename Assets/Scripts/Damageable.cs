@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -8,19 +10,13 @@ public class Damageable : MonoBehaviour
     public float force = 50f;
     public float damage = 0f;
     public float maxDamage = 1000f;
-    public HealthBar healthBar;
-
     private GameManager gameManager;
+    private Animator animator;
 
     private void Start()
     {
         gameManager = GameManager.Instance;
-
-        if (healthBar != null)
-        {
-            healthBar.SetMaxHealth(maxDamage);
-            healthBar.SetHealth(maxDamage - damage);
-        }
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,10 +51,6 @@ public class Damageable : MonoBehaviour
         }
         damage += actualForce;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
-        if (healthBar != null)
-        {
-            healthBar.SetHealth(maxDamage - damage);
-        }
         if (damage >= maxDamage)
         {
             Die();
@@ -70,10 +62,6 @@ public class Damageable : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * force, ForceMode2D.Force);
         damage += force;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
-        if (healthBar != null)
-        {
-            healthBar.SetHealth(maxDamage - damage);
-        }
         if (damage >= maxDamage)
         {
             Die();
@@ -82,12 +70,18 @@ public class Damageable : MonoBehaviour
 
     private void Die()
     {
+        Debug.Log($"{name}: MAKE THIS WORK.");
         if (gameManager != null)
         {
-            gameManager.PlayerDied(gameObject); //add death animation trigger
+            animator.SetTrigger("Die");
+            StartCoroutine(HandleDeath());
         }
+    }
 
-
+    private IEnumerator HandleDeath()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        gameManager.PlayerDied(gameObject);
     }
 
     public void Respawn()
@@ -96,6 +90,7 @@ public class Damageable : MonoBehaviour
         if (TryGetComponent<Rigidbody2D>(out var rb))
         {
             rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
         }
         if (TryGetComponent<Damageable>(out var damageable))
         {
@@ -106,10 +101,5 @@ public class Damageable : MonoBehaviour
     public void ResetDamage()
     {
         damage = 0f;
-        if (healthBar != null)
-        {
-            healthBar.SetHealth(maxDamage);
-        }
-        //transform.localScale = Vector3.one;
     }
 }

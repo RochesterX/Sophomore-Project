@@ -21,45 +21,64 @@ public class TerribleHealthBarScript : MonoBehaviour
     private Vector3 targetPosition;
     private Color targetActualColor;
 
-    private Damageable player;
+    public GameObject player;
 
     void Start()
     {
-
+        if (player == null)
+        {
+            return;
+        }
         healthScript = player.GetComponent<Damageable>();
-        initialScale = healthVisual.transform.localScale;
-        initialPosition = healthVisual.transform.position;
-        targetScale = initialScale;
-        targetPosition = initialPosition;
-        targetActualColor = actualHealthVisual.GetComponent<SpriteRenderer>().color;
+        if (healthScript == null)
+        {
+            return;
+        }
+        Initialize();
     }
 
     void Update()
     {
-        if (healthScript.gameObject.transform.localScale.x <= 0f)
+        if (player == null || healthScript == null)
         {
-            transform.localScale = new Vector3(-1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            return;
         }
-        else
-        {
-            transform.localScale = new Vector3(1 * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }//
-
         float healthRatio = (healthScript.maxDamage - healthScript.damage) / healthScript.maxDamage;
 
         targetActualColor = Color.Lerp(fullDeathColor, fullHealthColor, healthRatio);
         targetScale = new Vector3(Mathf.Lerp(0, 1, healthRatio) * initialScale.x, healthVisual.transform.localScale.y, healthVisual.transform.localScale.z);
         targetPosition = new Vector3(Mathf.Lerp(-0.5f, 0, healthRatio), healthVisual.transform.localPosition.y, healthVisual.transform.localPosition.z);
         text.text = (healthScript.maxDamage - healthScript.damage).ToString() + "/" + healthScript.maxDamage.ToString();
-
         actualHealthVisual.transform.localScale = targetScale;
         actualHealthVisual.transform.localPosition = targetPosition;
-
         healthVisual.transform.localScale = Vector3.Lerp(healthVisual.transform.localScale, targetScale, smoothSpeed);
         healthVisual.transform.localPosition = Vector3.Lerp(healthVisual.transform.localPosition, targetPosition, smoothSpeed);
-
         actualHealthVisual.GetComponent<SpriteRenderer>().color = Color.Lerp(actualHealthVisual.GetComponent<SpriteRenderer>().color, targetActualColor, smoothSpeed);
         deathVisual.GetComponent<SpriteRenderer>().color = Color.Lerp(deathVisual.GetComponent<SpriteRenderer>().color, targetActualColor * 0.5f, smoothSpeed);
         healthVisual.GetComponent<SpriteRenderer>().color = subtractionColor;
+    }
+
+    public void SetPlayer(GameObject player)
+    {
+        this.player = player;
+        if (this.player == null)
+        {
+            return;
+        }
+        healthScript = player.GetComponent<Damageable>();
+        if (healthScript == null)
+        {
+            return;
+        }
+        Initialize();
+    }
+
+    private void Initialize()
+    {
+        initialScale = healthVisual.transform.localScale;
+        initialPosition = healthVisual.transform.position;
+        targetScale = initialScale;
+        targetPosition = initialPosition;
+        targetActualColor = actualHealthVisual.GetComponent<SpriteRenderer>().color;
     }
 }
