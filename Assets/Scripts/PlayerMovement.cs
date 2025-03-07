@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (damageable.dying || GameManager.Instance.gameOver) return;
+        if (damageable.dying || (GameManager.Instance != null && GameManager.Instance.gameOver)) return;
 
         Jump();
 
