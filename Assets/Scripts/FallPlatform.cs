@@ -4,15 +4,15 @@ using UnityEngine;
 public class FallPlatform : MonoBehaviour
 {
     public float fallDelay = 2f;
-    public float resetDelay = 2f;
+    public float resetDelay = 4f;
 
     bool falling;
     Rigidbody2D rb;
-    //Transform defposition;
+    //Vector3 defposition;
 
     void Start()
     {
-        //defposition = gameObject.transform;
+        //defposition = transform.position;
         rb = transform.parent.GetComponent<Rigidbody2D>();
         
     }
@@ -33,9 +33,11 @@ public class FallPlatform : MonoBehaviour
         //Respawn();
     }
 
+    //only resets the object script is attached to, need to fix so platform will reset with fall trigger object
     //private void Respawn()
     //{
+        //falling = false;
         //rb.bodyType = RigidbodyType2D.Static;
-        //gameObject.transform.position = defposition.position;
+        //transform.position = defposition;
     //}
 }

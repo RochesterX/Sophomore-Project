@@ -174,11 +174,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3568111229033857730, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.411489
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3568111229033857730, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.3613772
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 3568111229033857730, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1793,7 +1793,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7151586480423111118, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: teleportPoint.x
-      value: 1
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151586480423111118, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
+      propertyPath: teleportPoint.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7637894232928800132, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: m_Name
@@ -1930,6 +1934,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7151586480423111118, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
+      propertyPath: teleportPoint.x
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151586480423111118, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
+      propertyPath: teleportPoint.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7637894232928800132, guid: fb6bfed040258479fb90fbbe9d408cc1, type: 3}
       propertyPath: m_Name
       value: Teleporting Platform_1
@@ -2063,6 +2075,10 @@ PrefabInstance:
     - target: {fileID: 4664891637007210485, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308997821520447826, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
+      propertyPath: field of view
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

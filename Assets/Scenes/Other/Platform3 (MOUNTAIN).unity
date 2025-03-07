@@ -4216,7 +4216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5094694631672972304, guid: 5ce441c5fe33344a292ef80ef22aaffd, type: 3}
       propertyPath: resetDelay
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5794044177371189323, guid: 5ce441c5fe33344a292ef80ef22aaffd, type: 3}
       propertyPath: m_LocalPosition.x
