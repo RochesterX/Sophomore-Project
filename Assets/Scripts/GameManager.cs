@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
         {
             EndGameEvent?.Invoke();
             print(AlivePlayers()[0].name + " is the winner");
+            FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
         }
     }
 

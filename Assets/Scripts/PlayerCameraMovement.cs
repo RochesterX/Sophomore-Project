@@ -29,7 +29,7 @@ public class PlayerCameraMovement : MonoBehaviour
             if (playerThatWon != null)
             {
                 target = playerThatWon.transform.position;
-                transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, target.z - 10), speed * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, target.z - 10), speed * 2 * Time.deltaTime);
             }
 
             return;

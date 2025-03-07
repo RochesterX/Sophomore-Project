@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 3092004571833081599}
   - component: {fileID: 8440686640694911780}
   - component: {fileID: 2097378836795367493}
+  - component: {fileID: 845789397527362766}
   m_Layer: 5
   m_Name: Player Box
   m_TagString: Untagged
@@ -1856,8 +1857,8 @@ RectTransform:
   - {fileID: 2340586454433308441}
   m_Father: {fileID: 6892066976245176997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 288}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2032,3 +2033,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &845789397527362766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8481467574557768995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617fdbd52246c4352be58c24aef4fd55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 539213549865726557}
+  speed: 5

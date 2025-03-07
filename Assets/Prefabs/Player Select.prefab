@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+    m_PressedColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -373,8 +373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 960, y: 146.14014}
-  m_SizeDelta: {x: 1756.7, y: 994.27}
+  m_AnchoredPosition: {x: 577.58, y: 146.14014}
+  m_SizeDelta: {x: 991.87, y: 994.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4398521839358101483
 MonoBehaviour:
@@ -1250,13 +1250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_text
-      value: 'Keep Away
-
-        Map Edition'
+      value: Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
-      value: Platform3
+      value: Platform3 (MOUNTAIN)
       objectReference: {fileID: 0}
     - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_IsOn
@@ -1668,9 +1666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_text
-      value: 'Platformer
-
-        (with Headroom)'
+      value: Clouds
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
@@ -2145,7 +2141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_text
-      value: Obstance
+      value: Ascent
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
@@ -2259,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8152264223886948235, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 929
+      value: 902
       objectReference: {fileID: 0}
     - target: {fileID: 8152264223886948235, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_AnchoredPosition.y
