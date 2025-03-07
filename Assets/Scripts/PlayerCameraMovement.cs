@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // This won scene thing is just duct taped on for the presentation.
-
 public class PlayerCameraMovement : MonoBehaviour
 {
     private Vector3 start;
@@ -22,33 +21,55 @@ public class PlayerCameraMovement : MonoBehaviour
     {
         if (winScene)
         {
-            if (playerThatWon == null) playerThatWon = GameManager.players[0];
-            target = playerThatWon.transform.position;
-            transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, target.z - 10), speed * Time.deltaTime);
+            if (playerThatWon == null || !playerThatWon.activeInHierarchy)
+            {
+                playerThatWon = FindWinner();
+            }
+
+            if (playerThatWon != null)
+            {
+                target = playerThatWon.transform.position;
+                transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, target.z - 10), speed * Time.deltaTime);
+            }
 
             return;
         }
-
         List<GameObject> players = GameManager.players;
-
         if (players.Count == 0) return;
-
         Vector3 playerAverage = Vector3.zero;
+        int activePlayers = 0;
         foreach (GameObject player in players)
         {
-            if (player.GetComponent<Damageable>().dying) continue;
+            if (player == null || !player.activeInHierarchy) continue;
+            Damageable damageable = player.GetComponent<Damageable>();
+            if (damageable != null && damageable.dying) continue;
             playerAverage += player.transform.position;
+            activePlayers++;
         }
-        playerAverage /= players.Count;
+
+        if (activePlayers == 0) return;
+
+        playerAverage /= activePlayers;
 
         target = start * weight + playerAverage * (1 - weight);
         transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, transform.position.z), speed * Time.deltaTime);
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     public void WinScene(GameObject player)
     {
         winScene = true;
         playerThatWon = player;
+    }
+
+    private GameObject FindWinner()
+    {
+        foreach (GameObject player in GameManager.players)
+        {
+            if (player != null && player.activeInHierarchy)
+            {
+                return player;
+            }
+        }
+        return null;
     }
 }

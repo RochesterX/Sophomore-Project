@@ -10,7 +10,6 @@ public class PlayerManager : MonoBehaviour
     public List<Color> playerColors;
     public GameObject playerSelect;
     private bool gameStarted = false;
-    private bool isStartPressed = false;
 
     private void Awake()
     {
@@ -40,6 +39,7 @@ public class PlayerManager : MonoBehaviour
         Colorize(GameManager.players.Count - 1);
     }
 
+
     private void OnPlayerLeft(PlayerInput playerInput)
     {
         Destroy(playerInput.gameObject);
@@ -65,15 +65,8 @@ public class PlayerManager : MonoBehaviour
         {
             return;
         }
-        if (isStartPressed)
-        {
-            gameStarted = true;
-            HubManager.Instance.LoadScene(GameManager.map);
-        }
-        else
-        {
-            isStartPressed = true;
-        }
+        gameStarted = true;
+        HubManager.Instance.LoadScene(GameManager.map);
     }
 
     private void Colorize(int index)

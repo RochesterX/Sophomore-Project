@@ -11,7 +11,6 @@ public class Damageable : MonoBehaviour
     public float damage = 0f;
     public float maxDamage = 1000f;
     public int lives = 3;
-    //private GameManager gameManager;
     private Animator animator;
 
     public bool damageSelfDebug = false;
@@ -20,7 +19,6 @@ public class Damageable : MonoBehaviour
 
     private void Start()
     {
-        //gameManager = GameManager.Instance;
         animator = GetComponent<Animator>();
     }
 
@@ -37,7 +35,7 @@ public class Damageable : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Punch Hurtbox"))
         {
-            print($"{name}: Ouch");
+            //print($"{name}: Ouch");
             Damage(collision.transform.parent.gameObject);
         }
     }
@@ -92,13 +90,11 @@ public class Damageable : MonoBehaviour
     }
 
     private void Die()
-    {
-        //Debug.Log($"{name}: MAKE THIS WORK.");
+    {;
         if (GameManager.Instance != null)
         {
             animator.SetTrigger("die");
             dying = true;
-            //StartCoroutine(HandleDeath()); // Handled by an animation event instead.
         }
     }
 

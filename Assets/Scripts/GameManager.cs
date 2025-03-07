@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
             if (player.lives <= 0)
             {
                 GameOver(player.gameObject);
+                Destroy(player.gameObject);
             }
             else
             {
@@ -106,7 +108,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver(GameObject player)
     {
-        // Add game over screen
+        Destroy(player);
         player.SetActive(false);
         if (AlivePlayers().Count <= 1)
         {
