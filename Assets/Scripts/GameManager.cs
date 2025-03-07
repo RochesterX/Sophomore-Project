@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public event GameEvent EndGameEvent;
     public static List<GameObject> players = new List<GameObject>();
     public static List<Color> playerColors = new List<Color>();
+    public float offset = 1f;
+
+    public bool gameOver = false;
 
     private void Awake()
     {
@@ -32,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        if (GameManager.players.Count == 0) return;
+
         StartGameEvent?.Invoke();
         print("Starting game with mode: " + gameMode + " and map: " + map);
         if (gameMode == GameMode.freeForAll)
@@ -39,7 +44,7 @@ public class GameManager : MonoBehaviour
             currentLives = maxLives;
             foreach (GameObject player in players)
             {
-                player.transform.position = spawnPosition;
+                player.transform.position = spawnPosition + (players.IndexOf(player) * Vector2.right * offset);
             }
         }
         if (gameMode == GameMode.keepAway)
@@ -113,6 +118,7 @@ public class GameManager : MonoBehaviour
         player.SetActive(false);
         if (AlivePlayers().Count <= 1)
         {
+            gameOver = true;
             EndGameEvent?.Invoke();
             print(AlivePlayers()[0].name + " is the winner");
             FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
