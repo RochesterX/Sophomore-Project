@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public event GameEvent StartGameEvent;
     public event GameEvent EndGameEvent;
     public static List<GameObject> players = new List<GameObject>();
+    public static List<Color> playerColors = new List<Color>();
 
     private void Awake()
     {

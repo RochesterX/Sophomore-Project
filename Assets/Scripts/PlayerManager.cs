@@ -75,6 +75,7 @@ public class PlayerManager : MonoBehaviour
         Color color = playerColors[(GameManager.players.Count - 1) % playerColors.Count];
         float tint = Mathf.Floor((GameManager.players.Count - 1) / playerColors.Count);
         color = (color + color + Color.white * tint) / (tint + 2);
+        GameManager.playerColors.Add(color);
         ApplyColor(player, color);
         ApplyColor(cards[GameManager.players.IndexOf(player)].playerPreview, color);
     }
