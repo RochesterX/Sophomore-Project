@@ -24,7 +24,7 @@ public class HealthBarManager : MonoBehaviour
         {
             GameObject player = kvp.Key;
             GameObject healthBar = kvp.Value;
-            healthBar.GetComponent<TerribleHealthBarScript>().fullHealthColor = GameManager.playerColors[GameManager.players.IndexOf(player)];
+            //healthBar.GetComponent<TerribleHealthBarScript>().fullHealthColor = GameManager.playerColors[GameManager.players.IndexOf(player)]; // Color health bars
             healthBar.transform.SetPositionAndRotation(new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z), Quaternion.identity);
         }
     }

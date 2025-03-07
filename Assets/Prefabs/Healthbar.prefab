@@ -223,8 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c83fdf078a8b34ef7bb2829a58c1a545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealthColor: {r: 0.21915412, g: 1, b: 0, a: 1}
-  fullDeathColor: {r: 1, g: 0, b: 0, a: 1}
+  fullHealthColor: {r: 0.19843106, g: 0.9056604, b: 0, a: 1}
+  fullDeathColor: {r: 0.9528302, g: 0, b: 0, a: 1}
   subtractionColor: {r: 1, g: 1, b: 1, a: 1}
   healthVisual: {fileID: 210773656934484425}
   actualHealthVisual: {fileID: 904379579236604940}
