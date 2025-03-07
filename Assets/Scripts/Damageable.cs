@@ -43,7 +43,7 @@ public class Damageable : MonoBehaviour
     private void Damage(GameObject damageSource)
     {
         if (dying) return;
-        
+
         float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
         if (blockComponent != null && blockComponent.blocking)
@@ -95,7 +95,7 @@ public class Damageable : MonoBehaviour
     {;
         if (GameManager.Instance != null)
         {
-            animator.SetTrigger("die");
+            animator.SetBool("die", true);
             dying = true;
         }
     }
@@ -103,6 +103,7 @@ public class Damageable : MonoBehaviour
     public void HandleDeath()
     {
         GameManager.Instance.PlayerDied(this);
+        animator.SetBool("die", false);
         dying = false;
     }
 
