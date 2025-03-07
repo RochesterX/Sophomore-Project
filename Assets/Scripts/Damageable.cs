@@ -42,6 +42,8 @@ public class Damageable : MonoBehaviour
 
     private void Damage(GameObject damageSource)
     {
+        if (dying) return;
+        
         float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
         if (blockComponent != null && blockComponent.blocking)

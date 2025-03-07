@@ -21,7 +21,7 @@ public class ModeSelect : MonoBehaviour
         {
             GameManager.gameMode = GameManager.GameMode.keepAway;
         }
-        else if (toggle.name == "Obstacle-Course")
+        else if (toggle.name == "Obstacle Course")
         {
             GameManager.gameMode = GameManager.GameMode.obstacleCourse;
         }
