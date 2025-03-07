@@ -14,10 +14,23 @@ public class Damageable : MonoBehaviour
     //private GameManager gameManager;
     private Animator animator;
 
+    public bool damageSelfDebug = false;
+
+    public bool dying = false;
+
     private void Start()
     {
         //gameManager = GameManager.Instance;
         animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (damageSelfDebug)
+        {
+            damageSelfDebug = false;
+            Damage(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +44,7 @@ public class Damageable : MonoBehaviour
 
     private void Damage(GameObject damageSource)
     {
-        float actualForce = force;
+        float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
         if (blockComponent != null && blockComponent.blocking)
         {
@@ -48,7 +61,7 @@ public class Damageable : MonoBehaviour
         }
         else
         {
-            GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
+            GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce * (1 + (damage / maxDamage) * 3), ForceMode2D.Force);
         }
         damage += actualForce;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
@@ -83,16 +96,16 @@ public class Damageable : MonoBehaviour
         //Debug.Log($"{name}: MAKE THIS WORK.");
         if (GameManager.Instance != null)
         {
-            animator.SetTrigger("Die");
-            StartCoroutine(HandleDeath());
+            animator.SetTrigger("die");
+            dying = true;
+            //StartCoroutine(HandleDeath()); // Handled by an animation event instead.
         }
     }
 
-    private IEnumerator HandleDeath()
+    public void HandleDeath()
     {
-        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        yield return new WaitForSeconds(0.5f);
         GameManager.Instance.PlayerDied(this);
+        dying = false;
     }
 
     public void Respawn()

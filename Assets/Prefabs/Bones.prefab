@@ -136,7 +136,7 @@ MonoBehaviour:
   force: 200
   damage: 0
   maxDamage: 1000
-  healthBar: {fileID: 0}
+  lives: 3
 --- !u!114 &5200627265685207284
 MonoBehaviour:
   m_ObjectHideFlags: 0

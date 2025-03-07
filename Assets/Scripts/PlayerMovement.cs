@@ -1,9 +1,7 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -40,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput input;
     private AnimationPlayer animationPlayer;
     private Punch punch;
+    private Damageable damageable;
 
     private bool jumpInputStillValid = false;
     private float lastTimeJumpPressed;
@@ -64,12 +63,15 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<PlayerInput>();
         animationPlayer = GetComponent<AnimationPlayer>();
         punch = GetComponent<Punch>();
+        damageable = GetComponent<Damageable>();
 
         playerText.text = input.playerIndex.ToString();
     }
 
     private void Update()
     {
+        if (damageable.dying) return;
+
         Jump();
 
         UpdateVirtualAxis();

@@ -36,6 +36,7 @@ public class PlayerCameraMovement : MonoBehaviour
         Vector3 playerAverage = Vector3.zero;
         foreach (GameObject player in players)
         {
+            if (player.GetComponent<Damageable>().dying) continue;
             playerAverage += player.transform.position;
         }
         playerAverage /= players.Count;
