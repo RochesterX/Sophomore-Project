@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8854999324873450215}
   - component: {fileID: 2969848973824835786}
   - component: {fileID: 3624532704509464281}
+  - component: {fileID: 733246688550133770}
   m_Layer: 6
   m_Name: Falling Platform
   m_TagString: Untagged
@@ -183,6 +184,28 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!95 &733246688550133770
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077104818453282975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50a2075cc9e6e114ebefcdec52152a76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6715277133551784282
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,4 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallDelay: 0.2
-  destroyDelay: 10
+  resetDelay: 4
