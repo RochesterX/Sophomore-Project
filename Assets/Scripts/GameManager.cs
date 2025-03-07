@@ -69,18 +69,18 @@ public class GameManager : MonoBehaviour
     public static string map = "Platformer With Headroom"; // loads a default map as a safety net
     public Vector2 spawnPosition;
 
-    public void PlayerDied(GameObject player)
+    public void PlayerDied(Damageable player)
     {
         if (gameMode == GameMode.freeForAll)
         {
-            currentLives--;
-            if (currentLives <= 0)
+            player.lives--;
+            if (player.lives <= 0)
             {
-                GameOver(player);
+                GameOver(player.gameObject);
             }
             else
             {
-                RespawnPlayer(player);
+                RespawnPlayer(player.gameObject);
             }
         }
         if (gameMode == GameMode.keepAway)
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
         {
             player.transform.position = respawnScript.spawnPoint;
             player.GetComponent<Damageable>().ResetDamage();
+            player.GetComponent<Damageable>().Respawn();
         }
     }
 
@@ -107,6 +108,22 @@ public class GameManager : MonoBehaviour
     {
         // Add game over screen
         player.SetActive(false);
-        EndGameEvent?.Invoke();
+        if (AlivePlayers().Count <= 1)
+        {
+            EndGameEvent?.Invoke();
+            print(AlivePlayers()[0].name + " is the winner");
+        }
+    }
+
+    private List<GameObject> AlivePlayers()
+    {
+        List<GameObject> alivePlayers = new();
+
+        foreach (GameObject player in players)
+        {
+            if (player.activeInHierarchy) alivePlayers.Add(player);
+        }
+
+        return alivePlayers;
     }
 }

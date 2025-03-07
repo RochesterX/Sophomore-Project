@@ -10,12 +10,13 @@ public class Damageable : MonoBehaviour
     public float force = 50f;
     public float damage = 0f;
     public float maxDamage = 1000f;
-    private GameManager gameManager;
+    public int lives = 3;
+    //private GameManager gameManager;
     private Animator animator;
 
     private void Start()
     {
-        gameManager = GameManager.Instance;
+        //gameManager = GameManager.Instance;
         animator = GetComponent<Animator>();
     }
 
@@ -57,6 +58,15 @@ public class Damageable : MonoBehaviour
         }
     }
 
+    public void Damage(float damage)
+    {
+        this.damage += damage;
+        if (damage >= maxDamage)
+        {
+            Die();
+        }
+    }
+
     private void SuccessfulParry(GameObject damageSource, float force)
     {
         GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * force, ForceMode2D.Force);
@@ -70,8 +80,8 @@ public class Damageable : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log($"{name}: MAKE THIS WORK.");
-        if (gameManager != null)
+        //Debug.Log($"{name}: MAKE THIS WORK.");
+        if (GameManager.Instance != null)
         {
             animator.SetTrigger("Die");
             StartCoroutine(HandleDeath());
@@ -80,8 +90,9 @@ public class Damageable : MonoBehaviour
 
     private IEnumerator HandleDeath()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        gameManager.PlayerDied(gameObject);
+        //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(0.5f);
+        GameManager.Instance.PlayerDied(this);
     }
 
     public void Respawn()

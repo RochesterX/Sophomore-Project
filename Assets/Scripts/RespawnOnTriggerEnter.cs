@@ -18,7 +18,11 @@ public class RespawnOnTriggerEnter : MonoBehaviour
     {
         if (other.CompareTag(respawnTag))
         {
-            GetComponent<Damageable>().Respawn();
+            //GetComponent<Damageable>().Respawn();
+            if (TryGetComponent(out Damageable damageable))
+            {
+                damageable.Damage(9999f);
+            }
         }
     }
 }
