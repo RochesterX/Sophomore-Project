@@ -1975,8 +1975,8 @@ MonoBehaviour:
   dayFrontClouds: {fileID: 5167713703950484211}
   eveningFrontClouds: {fileID: 5130336266710968951}
   nightFrontClouds: {fileID: 4842171852287331600}
-  transitionDuration: 20
-  cycleDuration: 0
+  transitionDuration: 5
+  cycleDuration: 10
 --- !u!1 &7578286127223878208
 GameObject:
   m_ObjectHideFlags: 0
