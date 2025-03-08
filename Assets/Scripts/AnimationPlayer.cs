@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class AnimationPlayer : MonoBehaviour
 {
-    public enum AnimationState { Idle, Run, Jump };
+    public enum AnimationState { Idle, Run, Jump, Walk };
     public AnimationState state;
 
     public bool backwards;

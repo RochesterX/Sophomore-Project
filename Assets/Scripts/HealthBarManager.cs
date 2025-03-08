@@ -23,6 +23,8 @@ public class HealthBarManager : MonoBehaviour
         foreach (var kvp in playerHealthBars)
         {
             GameObject player = kvp.Key;
+            if (player == null) continue;
+
             GameObject healthBar = kvp.Value;
             //healthBar.GetComponent<TerribleHealthBarScript>().fullHealthColor = GameManager.playerColors[GameManager.players.IndexOf(player)]; // Color health bars
             healthBar.transform.SetPositionAndRotation(new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z), Quaternion.identity);

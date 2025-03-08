@@ -85,10 +85,13 @@ public class GameManager : MonoBehaviour
         if (gameMode == GameMode.freeForAll)
         {
             player.lives--;
-            if (player.lives <= 0)
+            if (player.lives <= 0 && !gameOver)
             {
-                GameOver(player.gameObject);
-                Destroy(player.gameObject);
+                player.gameObject.SetActive(false);
+                if (AlivePlayers().Count <= 1)
+                {
+                    GameOver();
+                }
             }
             else
             {
@@ -116,20 +119,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void GameOver(GameObject player)
+    private void GameOver()
     {
-        Destroy(player);
-        player.SetActive(false);
-        if (AlivePlayers().Count <= 1)
-        {
-            gameOver = true;
-            EndGameEvent?.Invoke();
-            print(AlivePlayers()[0].name + " is the winner");
-            FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
-        }
+        gameOver = true;
+        EndGameEvent?.Invoke();
+        print(AlivePlayers()[0].name + " is the winner");
+        FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
+        WinScreen.Instance.ShowWinScreen(players.IndexOf(AlivePlayers()[0]) + 1);
+        FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
     }
 
-    private List<GameObject> AlivePlayers()
+    public List<GameObject> AlivePlayers()
     {
         List<GameObject> alivePlayers = new();
 

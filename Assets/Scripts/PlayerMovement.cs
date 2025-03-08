@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -70,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (damageable.dying || (GameManager.Instance != null && GameManager.Instance.gameOver)) return;
+        if (GameManager.Instance.gameOver) maxSpeed = 0.1f;
+        if (damageable.dying/* || (GameManager.Instance != null && GameManager.Instance.gameOver)*/) return;
 
         Jump();
 
@@ -97,8 +99,8 @@ public class PlayerMovement : MonoBehaviour
             animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
         else
         {
-            if (Mathf.Abs(body.linearVelocityX) >= 0.1f)
-                animationPlayer.SetState(AnimationPlayer.AnimationState.Run);
+            if (Mathf.Abs(body.linearVelocityX) >= 0.5f)
+                animationPlayer.SetState(GameManager.Instance.gameOver ? AnimationPlayer.AnimationState.Walk : AnimationPlayer.AnimationState.Run);
             else
                 animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
         }

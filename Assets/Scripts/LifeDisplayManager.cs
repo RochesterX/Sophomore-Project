@@ -38,4 +38,9 @@ public class LifeDisplayManager : MonoBehaviour
             }
         }
     }
+
+    public void HideLifeDisplay()
+    {
+        players.SetActive(false);
+    }
 }
