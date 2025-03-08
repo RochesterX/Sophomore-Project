@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static List<GameObject> players = new List<GameObject>();
     public static List<Color> playerColors = new List<Color>();
     public float offset = 1f;
+
+    public static bool music = true;
 
     public bool gameOver = false;
 
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        MusicManager.Instance.StartPlaylist();
         StartGame();
     }
 

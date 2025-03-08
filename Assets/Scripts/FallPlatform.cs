@@ -17,7 +17,7 @@ public class FallPlatform : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!falling/* && collision.gameObject.CompareTag("Player")*/)
+        if (!falling && (collision.gameObject.CompareTag("Player") || collision.transform.GetChild(0).TryGetComponent(out FallPlatform _)))
         {
             StartCoroutine(FallAfterDelay());
         }

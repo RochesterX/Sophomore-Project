@@ -10,6 +10,7 @@ TagManager:
   - Punch Hurtbox
   - Teleporter
   - FallPlatform
+  - Transition
   layers:
   - Default
   - TransparentFX
