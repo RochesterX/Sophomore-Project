@@ -9,6 +9,7 @@ public class PlayerCameraMovement : MonoBehaviour
     public float weight;
     public float speed;
     private GameObject playerThatWon;
+    public float lowerBound;
 
     public bool winScene = false;
 
@@ -53,6 +54,7 @@ public class PlayerCameraMovement : MonoBehaviour
 
         target = start * weight + playerAverage * (1 - weight);
         transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, transform.position.z), speed * Time.deltaTime);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, lowerBound, Mathf.Infinity), transform.position.y, transform.position.z);
     }
 
     public void WinScene(GameObject player)
