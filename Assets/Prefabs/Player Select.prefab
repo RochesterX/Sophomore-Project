@@ -1270,6 +1270,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Mountain
       objectReference: {fileID: 0}
+    - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2717908991
+      objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
       value: Platform3 (MOUNTAIN)
@@ -1282,6 +1290,14 @@ PrefabInstance:
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 4832165329888967513}
+    - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6499686994533456919, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.8999996
@@ -1834,9 +1850,25 @@ PrefabInstance:
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 7205244122669623123}
+    - target: {fileID: 4140212601338232864, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140212601338232864, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_text
       value: Obstacle Course
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2717908991
       objectReference: {fileID: 0}
     - target: {fileID: 6079726739029090047, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_Name
@@ -2161,6 +2193,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Ascent
       objectReference: {fileID: 0}
+    - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507919156650283462, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2717908991
+      objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
       value: ObstanceWIP
@@ -2173,6 +2213,14 @@ PrefabInstance:
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 4832165329888967513}
+    - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6499686994533456919, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.8999996
@@ -2203,9 +2251,25 @@ PrefabInstance:
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 7205244122669623123}
+    - target: {fileID: 4140212601338232864, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140212601338232864, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_text
       value: Keep-Away
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.6313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204066422648502509, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2717908991
       objectReference: {fileID: 0}
     - target: {fileID: 6079726739029090047, guid: fb4bf85da5c66429d8a3d24fe0e44ef1, type: 3}
       propertyPath: m_Name
