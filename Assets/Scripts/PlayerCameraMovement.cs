@@ -31,6 +31,10 @@ public class PlayerCameraMovement : MonoBehaviour
             {
                 target = playerThatWon.transform.position;
                 transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, target.z - 10), speed * 12 * Time.deltaTime);
+                if (transform.position.y < lowerBound)
+                {
+                    transform.position = new Vector3(transform.position.x, lowerBound, transform.position.z);
+                }
             }
 
             return;
@@ -54,7 +58,10 @@ public class PlayerCameraMovement : MonoBehaviour
 
         target = start * weight + playerAverage * (1 - weight);
         transform.position = Vector3.Lerp(transform.position, new Vector3(target.x, target.y, transform.position.z), speed * Time.deltaTime);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, lowerBound, Mathf.Infinity), transform.position.y, transform.position.z);
+        if (transform.position.y < lowerBound)
+        {
+            transform.position = new Vector3(transform.position.x, lowerBound, transform.position.z);
+        }
     }
 
     public void WinScene(GameObject player)

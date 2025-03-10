@@ -72,6 +72,7 @@ public class HubManager : MonoBehaviour
 
             GameManager.players.Clear();
             GameManager.playerColors.Clear();
+            GameManager.Instance.gameOver = false;
 
             SceneManager.LoadScene("Title Screen");
         }
