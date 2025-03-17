@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210773657359985456}
   - component: {fileID: 7422290698914274434}
+  - component: {fileID: 8903748158046000670}
   m_Layer: 7
   m_Name: Healthbar
   m_TagString: Untagged
@@ -231,7 +232,20 @@ MonoBehaviour:
   deathVisual: {fileID: 210773656378718008}
   smoothSpeed: 0.05
   text: {fileID: 210773657480500664}
-  player: {fileID: 0}
+  player: {fileID: 1375850422501237868, guid: 1fd31b88e5609482ab7e8ab16a932947, type: 3}
+--- !u!114 &8903748158046000670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210773657359985459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80b536f823e50142b142b4e0b64ea97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarPrefab: {fileID: 210773657359985459}
 --- !u!1 &210773657480500666
 GameObject:
   m_ObjectHideFlags: 0

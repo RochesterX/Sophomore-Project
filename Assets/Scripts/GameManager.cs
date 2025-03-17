@@ -45,10 +45,10 @@ public class GameManager : MonoBehaviour
         print("Starting game with mode: " + gameMode + " and map: " + map);
         if (gameMode == GameMode.freeForAll)
         {
-            currentLives = maxLives;
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition + (players.IndexOf(player) * Vector2.right * offset);
+                player.GetComponent<Damageable>().lives = 5;
             }
         }
         if (gameMode == GameMode.keepAway)
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition;
+                player.GetComponent<Damageable>().lives = 0;
             }
         }
         if (gameMode == GameMode.obstacleCourse)
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
     public static GameMode gameMode = GameMode.freeForAll; // loads a default gamemode as a safety net
     public static string map = "Platformer With Headroom"; // loads a default map as a safety net
     public Vector2 spawnPosition;
+    public Vector2 hatSpawnPosition;
 
     public void PlayerDied(Damageable player)
     {
@@ -100,7 +102,7 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.keepAway)
         {
-
+            RespawnPlayer(player.gameObject);
         }
         if (gameMode == GameMode.obstacleCourse)
         {
