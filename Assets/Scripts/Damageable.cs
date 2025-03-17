@@ -17,6 +17,8 @@ public class Damageable : MonoBehaviour
 
     public bool dying = false;
 
+    public event System.Action<GameObject> OnPlayerPunched;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -46,6 +48,9 @@ public class Damageable : MonoBehaviour
 
         float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
+
+        GetComponentInChildren<UseItem>().DropItem();
+
         if (blockComponent != null && blockComponent.blocking)
         {
             if (blockComponent.IsParrying())
@@ -92,9 +97,10 @@ public class Damageable : MonoBehaviour
     }
 
     private void Die()
-    {;
+    {
         if (GameManager.Instance != null)
         {
+            GetComponent<UseItem>().DropItem();
             animator.SetBool("die", true);
             dying = true;
         }

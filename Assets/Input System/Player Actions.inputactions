@@ -285,6 +285,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c680f154-8519-430c-98ab-9e28bd096560",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2a504570-c560-4eaf-a3f0-49971e1b475a",
                     "path": "<Keyboard>/enter",
                     "interactions": "",

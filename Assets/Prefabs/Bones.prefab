@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 2344147968324054325}
   - component: {fileID: 8121950008105218343}
   - component: {fileID: 2813634395235005482}
+  - component: {fileID: 3838772665456314839}
   m_Layer: 0
   m_Name: Bones
   m_TagString: Player
@@ -43,6 +44,7 @@ Transform:
   - {fileID: 5586015051149451479}
   - {fileID: 2063840941502744053}
   - {fileID: 7290594200745798336}
+  - {fileID: 2464722400828814349}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4642513082199340961
@@ -279,6 +281,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocking: 0
   parryThreshold: 0.5
+--- !u!114 &3838772665456314839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375850422501237868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861b3bde023ca7f48a72c48ef9ee25d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTag: Hat
 --- !u!1 &1648017802882051395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,6 +1995,98 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.750043, y: 2.196495}
   m_EdgeRadius: 0
+--- !u!1 &8766628052651198462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2464722400828814349}
+  - component: {fileID: 3591739610359891571}
+  - component: {fileID: 6805231798249227393}
+  m_Layer: 0
+  m_Name: Item Hold Range
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2464722400828814349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8766628052651198462}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7009259675412950971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3591739610359891571
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8766628052651198462}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 1.6562337, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.2691138, y: 1.9620712}
+  m_EdgeRadius: 0
+--- !u!114 &6805231798249227393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8766628052651198462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861b3bde023ca7f48a72c48ef9ee25d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemTag: Hat
 --- !u!1 &8832061911781686718
 GameObject:
   m_ObjectHideFlags: 0

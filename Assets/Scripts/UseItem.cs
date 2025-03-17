@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UseItem : MonoBehaviour
 {
+    [SerializeField] private string itemTag;
     private GameObject heldItem;
     private bool isHoldingItem = false;
 
@@ -9,13 +10,13 @@ public class UseItem : MonoBehaviour
     {
         if (isHoldingItem)
         {
-            heldItem.transform.position = transform.position;
+            heldItem.transform.position = transform.position + Vector3.up;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Item") && !isHoldingItem)
+        if (collision.gameObject.CompareTag("Hat") && !isHoldingItem)
         {
             PickUpItem(collision.gameObject);
         }
@@ -26,6 +27,8 @@ public class UseItem : MonoBehaviour
         heldItem = item;
         isHoldingItem = true;
         item.GetComponent<Collider2D>().enabled = false;
+        item.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        item.transform.rotation = Quaternion.identity;
     }
 
     public void DropItem()
@@ -33,6 +36,7 @@ public class UseItem : MonoBehaviour
         if (isHoldingItem)
         {
             heldItem.GetComponent<Collider2D>().enabled = true;
+            heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             heldItem = null;
             isHoldingItem = false;
         }
@@ -40,19 +44,19 @@ public class UseItem : MonoBehaviour
 
     private void OnEnable()
     {
-        Punch.OnPlayerPunched += HandlePlayerPunched;
+        //Punch.OnPlayerPunched += HandlePlayerPunched;
     }
 
     private void OnDisable()
     {
-        Punch.OnPlayerPunched -= HandlePlayerPunched;
+        //Punch.OnPlayerPunched -= HandlePlayerPunched;
     }
-
+/*
     private void HandlePlayerPunched(GameObject punchedPlayer)
     {
         if (punchedPlayer == gameObject)
         {
             DropItem();
         }
-    }
+    }*/
 }
