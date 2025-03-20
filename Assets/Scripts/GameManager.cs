@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int maxLives = 3;
-    public int currentLives;
     public delegate void GameEvent();
     public event GameEvent StartGameEvent;
     public event GameEvent EndGameEvent;
@@ -18,6 +17,8 @@ public class GameManager : MonoBehaviour
     public static bool music = true;
 
     public bool gameOver = false;
+    public GameTimer gameTimer;
+    public static Dictionary<GameObject, float> playerHoldTimes = new Dictionary<GameObject, float>();
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        GameManager.playerHoldTimes.Clear();
         if (GameManager.players.Count == 0) return;
 
         StartGameEvent?.Invoke();
@@ -53,7 +55,7 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.keepAway)
         {
-            currentLives = 1;
+            gameTimer.StartTimer();
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition;
@@ -62,7 +64,6 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.obstacleCourse)
         {
-            currentLives = 1;
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition;
@@ -121,14 +122,37 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         gameOver = true;
         EndGameEvent?.Invoke();
-        print(AlivePlayers()[0].name + " is the winner");
-        FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
-        WinScreen.Instance.ShowWinScreen(players.IndexOf(AlivePlayers()[0]) + 1);
-        FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+        if (gameMode == GameMode.freeForAll)
+        {
+            print(AlivePlayers()[0].name + " is the winner");
+            FindFirstObjectByType<PlayerCameraMovement>().WinScene(AlivePlayers()[0]);
+            WinScreen.Instance.ShowWinScreen(players.IndexOf(AlivePlayers()[0]) + 1);
+            FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+        }
+        if (gameMode == GameMode.keepAway)
+        {
+            GameObject winner = null;
+            float maxHoldTime = 0f;
+            foreach (var player in GameManager.playerHoldTimes)
+            {
+                if (player.Value > maxHoldTime)
+                {
+                    maxHoldTime = player.Value;
+                    winner = player.Key;
+                }
+            }
+            if (winner != null)
+            {
+                print(winner.name + " is the winner with " + maxHoldTime + " seconds!");
+                FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
+                WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
+                FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+            }
+        }
     }
 
     public List<GameObject> AlivePlayers()
@@ -142,4 +166,12 @@ public class GameManager : MonoBehaviour
 
         return alivePlayers;
     }
+
+    public void UpdateLeaderboard()
+    {
+        List<KeyValuePair<GameObject, float>> sortedList =
+            new List<KeyValuePair<GameObject, float>>(playerHoldTimes);
+        sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
+    }
+
 }

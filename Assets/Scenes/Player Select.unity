@@ -259,9 +259,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6251332657995178420, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361983102188735562, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7581121400164956810, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
       propertyPath: m_Name
       value: Player Select
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309701520800111017, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
+      propertyPath: m_IsOn
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640926751425774204, guid: 52622bff9e983494eb206a8735b4dbbf, type: 3}
       propertyPath: m_LocalPosition.x

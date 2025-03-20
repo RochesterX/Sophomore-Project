@@ -5,12 +5,24 @@ public class UseItem : MonoBehaviour
     [SerializeField] private string itemTag;
     private GameObject heldItem;
     private bool isHoldingItem = false;
+    private float holdStartTime;
 
     void Update()
     {
         if (isHoldingItem)
         {
             heldItem.transform.position = transform.position + Vector3.up;
+            if (GameManager.gameMode == GameManager.GameMode.keepAway)
+            {
+                if (GameManager.playerHoldTimes.ContainsKey(gameObject))
+                {
+                    GameManager.playerHoldTimes[gameObject] += Time.deltaTime;
+                }
+                else
+                {
+                    GameManager.playerHoldTimes[gameObject] = Time.time - holdStartTime;
+                }
+            }
         }
     }
 
@@ -26,9 +38,14 @@ public class UseItem : MonoBehaviour
     {
         heldItem = item;
         isHoldingItem = true;
+        holdStartTime = Time.time;
         item.GetComponent<Collider2D>().enabled = false;
         item.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         item.transform.rotation = Quaternion.identity;
+        if (!GameManager.playerHoldTimes.ContainsKey(gameObject))
+        {
+            GameManager.playerHoldTimes[gameObject] = 0f;
+        }
     }
 
     public void DropItem()
@@ -40,6 +57,10 @@ public class UseItem : MonoBehaviour
             heldItem.transform.position += Vector3.up * 3f;
             heldItem = null;
             isHoldingItem = false;
+            if (GameManager.playerHoldTimes.ContainsKey(gameObject))
+            {
+                GameManager.playerHoldTimes.Remove(gameObject);
+            }
         }
     }
 

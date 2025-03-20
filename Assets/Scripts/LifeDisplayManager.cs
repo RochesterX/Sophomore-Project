@@ -12,19 +12,20 @@ public class LifeDisplayManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (GameObject player in GameManager.players)
+        if (GameManager.gameMode == GameManager.GameMode.freeForAll)
         {
-            Transform parent = Instantiate(playerPrefab, players.transform).transform;
-
-            List<GameObject> lives = new List<GameObject>();
-            for (int i = 0; i < player.GetComponent<Damageable>().lives; i++)
+            foreach (GameObject player in GameManager.players)
             {
-                GameObject life = Instantiate(lifePrefab, parent);
-                life.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
-                lives.Add(life);
+                Transform parent = Instantiate(playerPrefab, players.transform).transform;
+                List<GameObject> lives = new List<GameObject>();
+                for (int i = 0; i < player.GetComponent<Damageable>().lives; i++)
+                {
+                    GameObject life = Instantiate(lifePrefab, parent);
+                    life.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
+                    lives.Add(life);
+                }
+                lifeDisplays.Add(player.GetComponent<Damageable>(), lives);
             }
-
-            lifeDisplays.Add(player.GetComponent<Damageable>(), lives);
         }
     }
 
