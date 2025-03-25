@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,10 +9,12 @@ public class GameTimer : MonoBehaviour
     private bool timerRunning = false;
 
     public Text timerText;
+    [SerializeField] private TextMeshProUGUI timer;
 
     private void Start()
     {
         timeRemaining = startTime;
+        timer.text = "0:00.00";
         UpdateTimerDisplay();
     }
 
