@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.gameOver) maxSpeed = 1f;
+        if (GameManager.Instance != null && GameManager.Instance.gameOver) maxSpeed = 1f;
         if (damageable.dying/* || (GameManager.Instance != null && GameManager.Instance.gameOver)*/) return;
 
         Jump();

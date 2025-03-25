@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             foreach (GameObject player in players)
             {
-                player.transform.position = spawnPosition + (players.IndexOf(player) * Vector2.right * offset);
+                player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
                 player.GetComponent<Damageable>().lives = 5;
             }
         }
@@ -58,8 +58,9 @@ public class GameManager : MonoBehaviour
             gameTimer.StartTimer();
             foreach (GameObject player in players)
             {
-                player.transform.position = spawnPosition;
+                player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
                 player.GetComponent<Damageable>().lives = 0;
+                print("spawnder");
             }
         }
         if (gameMode == GameMode.obstacleCourse)
