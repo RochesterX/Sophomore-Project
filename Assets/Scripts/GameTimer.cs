@@ -14,7 +14,7 @@ public class GameTimer : MonoBehaviour
     private void Start()
     {
         timeRemaining = startTime;
-        timer.text = "0:00.00";
+        timer.text = "3:00.00";
         UpdateTimerDisplay();
     }
 
@@ -48,12 +48,11 @@ public class GameTimer : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(timeRemaining / 60);
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
-        timerText.text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+        timer.text = string.Format("{0}:{1:D2}", minutes, seconds);
     }
 
     private void OnTimerEnd()
     {
-        Debug.Log("Timer ended! KeepAway mode has finished.");
         GameManager.Instance.GameOver();
     }
 }

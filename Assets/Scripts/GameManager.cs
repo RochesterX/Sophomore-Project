@@ -168,11 +168,16 @@ public class GameManager : MonoBehaviour
         return alivePlayers;
     }
 
-    public void UpdateLeaderboard()
+    public void UpdatePlayerHoldTime(GameObject player, float holdTime)
     {
-        List<KeyValuePair<GameObject, float>> sortedList =
-            new List<KeyValuePair<GameObject, float>>(playerHoldTimes);
-        sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
+        if (playerHoldTimes.ContainsKey(player))
+        {
+            playerHoldTimes[player] = holdTime;
+        }
+        else
+        {
+            playerHoldTimes.Add(player, holdTime);
+        }
+        LeaderboardManager.Instance.UpdateLeaderboard();
     }
-
 }

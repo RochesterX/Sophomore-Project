@@ -1,0 +1,53 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LeaderboardManager : MonoBehaviour
+{
+    public static LeaderboardManager Instance { get; private set; }
+
+    [SerializeField] private GameObject playersParent; // The parent GameObject that holds the player icons
+    [SerializeField] private GameObject playerPrefab; // The prefab for the player icon
+
+    private Dictionary<GameObject, GameObject> playerIcons = new Dictionary<GameObject, GameObject>();
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        InitializeLeaderboard();
+    }
+
+    private void InitializeLeaderboard()
+    {
+        foreach (GameObject player in GameManager.players)
+        {
+            GameObject playerIcon = Instantiate(playerPrefab, playersParent.transform);
+            playerIcon.GetComponentInChildren<Text>().text = player.name;
+            playerIcon.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
+            playerIcons[player] = playerIcon;
+        }
+    }
+
+    public void UpdateLeaderboard()
+    {
+        List<KeyValuePair<GameObject, float>> sortedList =
+            new List<KeyValuePair<GameObject, float>>(GameManager.playerHoldTimes);
+        sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
+
+        foreach (var player in sortedList)
+        {
+            playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
+        }
+    }
+}

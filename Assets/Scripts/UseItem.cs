@@ -14,14 +14,8 @@ public class UseItem : MonoBehaviour
             heldItem.transform.position = transform.position + Vector3.up;
             if (GameManager.gameMode == GameManager.GameMode.keepAway)
             {
-                if (GameManager.playerHoldTimes.ContainsKey(gameObject))
-                {
-                    GameManager.playerHoldTimes[gameObject] += Time.deltaTime;
-                }
-                else
-                {
-                    GameManager.playerHoldTimes[gameObject] = Time.time - holdStartTime;
-                }
+                float holdTime = Time.time - holdStartTime;
+                GameManager.Instance.UpdatePlayerHoldTime(gameObject, holdTime);
             }
         }
     }
@@ -73,12 +67,12 @@ public class UseItem : MonoBehaviour
     {
         //Punch.OnPlayerPunched -= HandlePlayerPunched;
     }
-/*
-    private void HandlePlayerPunched(GameObject punchedPlayer)
-    {
-        if (punchedPlayer == gameObject)
+    /*
+        private void HandlePlayerPunched(GameObject punchedPlayer)
         {
-            DropItem();
-        }
-    }*/
+            if (punchedPlayer == gameObject)
+            {
+                DropItem();
+            }
+        }*/
 }
