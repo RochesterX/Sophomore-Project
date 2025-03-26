@@ -664,6 +664,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6496361325044708503, guid: 9d1aea173ff7d4db782e85393dccab09, type: 3}
   m_PrefabInstance: {fileID: 417750377}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &417750379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6050315616127366206, guid: 9d1aea173ff7d4db782e85393dccab09, type: 3}
+  m_PrefabInstance: {fileID: 417750377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421411298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2004,11 @@ PrefabInstance:
 --- !u!224 &1550880398 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3130525157782964738, guid: 24cb9445cb2ac4448b4c6f90bbd16518, type: 3}
+  m_PrefabInstance: {fileID: 1550880397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1550880399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 367874778634194597, guid: 24cb9445cb2ac4448b4c6f90bbd16518, type: 3}
   m_PrefabInstance: {fileID: 1550880397}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1639418690
@@ -5766,6 +5776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersParent: {fileID: 184367444}
+  playerPrefab: {fileID: 417750379}
+  lifePrefab: {fileID: 1550880399}
 --- !u!1 &2119246462
 GameObject:
   m_ObjectHideFlags: 0

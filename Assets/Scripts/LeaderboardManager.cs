@@ -6,8 +6,9 @@ public class LeaderboardManager : MonoBehaviour
 {
     public static LeaderboardManager Instance { get; private set; }
 
-    [SerializeField] private GameObject playersParent; // The parent GameObject that holds the player icons
-    [SerializeField] private GameObject playerPrefab; // The prefab for the player icon
+    [SerializeField] private GameObject playersParent;
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject lifePrefab;
 
     private Dictionary<GameObject, GameObject> playerIcons = new Dictionary<GameObject, GameObject>();
 
@@ -32,10 +33,10 @@ public class LeaderboardManager : MonoBehaviour
     {
         foreach (GameObject player in GameManager.players)
         {
-            GameObject playerIcon = Instantiate(playerPrefab, playersParent.transform);
-            playerIcon.GetComponentInChildren<Text>().text = player.name;
-            playerIcon.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
-            playerIcons[player] = playerIcon;
+            Transform parent = Instantiate(playerPrefab, playersParent.transform).transform;
+            GameObject life = Instantiate(lifePrefab, parent);
+            life.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
+            playerIcons[player] = parent.gameObject;
         }
     }
 
