@@ -40,7 +40,15 @@ public class MusicManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        StartCoroutine(PlayPlaylist(sceneToPlaylist[GetActiveSceneNotTitleScreen()]));
+        try
+        {
+            StartCoroutine(PlayPlaylist(sceneToPlaylist[GetActiveSceneNotTitleScreen()]));
+        }
+        catch (System.Exception)
+        {
+            
+            print("No playlist found for this scene: " + GetActiveSceneNotTitleScreen());
+        }
     }
 
     public void StartPlaylist(string scene)

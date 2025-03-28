@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int maxLives = 3;
+    public float time = 180f;
     public delegate void GameEvent();
     public event GameEvent StartGameEvent;
     public event GameEvent EndGameEvent;
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.keepAway)
         {
+            gameTimer.startTime = time;
             gameTimer.StartTimer();
             foreach (GameObject player in players)
             {

@@ -42,13 +42,23 @@ public class LeaderboardManager : MonoBehaviour
 
     public void UpdateLeaderboard()
     {
-        List<KeyValuePair<GameObject, float>> sortedList =
-            new List<KeyValuePair<GameObject, float>>(GameManager.playerHoldTimes);
+        List<KeyValuePair<GameObject, float>> sortedList = new List<KeyValuePair<GameObject, float>>(GameManager.playerHoldTimes);
         sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
+
+        foreach (var player in sortedList)
+        {
+            Debug.Log(player.Key.name + " : " + player.Value);
+        }
+        // Less fancy sorting system
 
         foreach (var player in sortedList)
         {
             playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
         }
+
+        //foreach (var key in GameManager.playerHoldTimes)
+        //{
+         //   print(key.Key.name + " : " + key.Value);
+       // }
     }
 }

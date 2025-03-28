@@ -6,6 +6,7 @@ public class UseItem : MonoBehaviour
     private GameObject heldItem;
     private bool isHoldingItem = false;
     private float holdStartTime;
+    public float holdTime;
 
     void Update()
     {
@@ -14,7 +15,7 @@ public class UseItem : MonoBehaviour
             heldItem.transform.position = transform.position + Vector3.up;
             if (GameManager.gameMode == GameManager.GameMode.keepAway)
             {
-                float holdTime = Time.time - holdStartTime;
+                holdTime += Time.deltaTime;
                 GameManager.Instance.UpdatePlayerHoldTime(gameObject, holdTime);
             }
         }

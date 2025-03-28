@@ -1765,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
-      value: ObstanceWIP
+      value: (CITY) Keep_Away2
       objectReference: {fileID: 0}
     - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_IsOn

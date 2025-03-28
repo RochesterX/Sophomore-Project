@@ -21,7 +21,7 @@ public class LifeDisplayManager : MonoBehaviour
                 for (int i = 0; i < player.GetComponent<Damageable>().lives; i++)
                 {
                     GameObject life = Instantiate(lifePrefab, parent);
-                    life.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
+                    life.transform.Find("LIFE").GetComponent<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
                     lives.Add(life);
                 }
                 lifeDisplays.Add(player.GetComponent<Damageable>(), lives);
