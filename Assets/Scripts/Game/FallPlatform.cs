@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class FallPlatform : MonoBehaviour
 {
-    public float fallDelay = 2f;
-    public float resetDelay = 4f;
+    public float fallDelay = 2f; // Delay before the platform falls
+    public float resetDelay = 4f; // Delay before the platform resets
 
     bool falling;
     Rigidbody2D rb;
@@ -15,7 +15,7 @@ public class FallPlatform : MonoBehaviour
         defposition = transform.parent.position;
         rb = transform.parent.GetComponent<Rigidbody2D>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // Makes platform fall when player or another platform touch it
     {
         if (!falling && (collision.gameObject.CompareTag("Player") || collision.transform.GetChild(0).TryGetComponent(out FallPlatform _)))
         {
@@ -23,7 +23,7 @@ public class FallPlatform : MonoBehaviour
         }
     }
 
-    private IEnumerator FallAfterDelay()
+    private IEnumerator FallAfterDelay() // Sets platform to fall and respawn
     {
         falling = true;
         yield return new WaitForSeconds(fallDelay);
@@ -36,7 +36,7 @@ public class FallPlatform : MonoBehaviour
 
     //only resets the object script is attached to, need to fix so platform will reset with fall trigger object
     // Use transform.parent to get the object it's attatched to
-    private void Respawn()
+    private void Respawn() // Resets the platform position
     {
         falling = false;
         rb.bodyType = RigidbodyType2D.Static;

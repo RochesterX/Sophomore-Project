@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// This won scene thing is just duct taped on for the presentation.
 public class PlayerCameraMovement : MonoBehaviour
 {
     private Vector3 start;
@@ -10,7 +9,6 @@ public class PlayerCameraMovement : MonoBehaviour
     public float speed;
     private GameObject playerThatWon;
     public float lowerBound;
-
     public bool winScene = false;
 
     private void Start()
@@ -20,7 +18,7 @@ public class PlayerCameraMovement : MonoBehaviour
 
     private void Update()
     {
-        if (winScene)
+        if (winScene) // If the game is over, the camera will follow the player that won
         {
             if (playerThatWon == null || !playerThatWon.activeInHierarchy)
             {
@@ -39,6 +37,7 @@ public class PlayerCameraMovement : MonoBehaviour
 
             return;
         }
+        // Moves the camera to follow the players
         List<GameObject> players = GameManager.players;
         if (players.Count == 0) return;
         Vector3 playerAverage = Vector3.zero;
@@ -70,7 +69,7 @@ public class PlayerCameraMovement : MonoBehaviour
         playerThatWon = player;
     }
 
-    private GameObject FindWinner()
+    private GameObject FindWinner() // Finds the player that won
     {
         foreach (GameObject player in GameManager.players)
         {

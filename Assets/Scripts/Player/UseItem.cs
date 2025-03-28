@@ -12,16 +12,18 @@ public class UseItem : MonoBehaviour
     {
         if (isHoldingItem)
         {
+            // Keeps hat on the player's head
             heldItem.transform.position = transform.position + Vector3.up;
             if (GameManager.gameMode == GameManager.GameMode.keepAway)
             {
+                // Adds time to the player's leaderboard standing
                 holdTime += Time.deltaTime;
                 GameManager.Instance.UpdatePlayerHoldTime(gameObject, holdTime);
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision) // Player automatically picks up hat when touching it
     {
         if (collision.gameObject.CompareTag("Hat") && !isHoldingItem)
         {
@@ -29,7 +31,7 @@ public class UseItem : MonoBehaviour
         }
     }
 
-    private void PickUpItem(GameObject item)
+    private void PickUpItem(GameObject item) // Player picks up hat and starts hold counter 
     {
         heldItem = item;
         isHoldingItem = true;
@@ -43,7 +45,7 @@ public class UseItem : MonoBehaviour
         }
     }
 
-    public void DropItem()
+    public void DropItem() // Player drops hat when hit
     {
         if (isHoldingItem)
         {
@@ -58,22 +60,4 @@ public class UseItem : MonoBehaviour
             }
         }
     }
-
-    private void OnEnable()
-    {
-        //Punch.OnPlayerPunched += HandlePlayerPunched;
-    }
-
-    private void OnDisable()
-    {
-        //Punch.OnPlayerPunched -= HandlePlayerPunched;
-    }
-    /*
-        private void HandlePlayerPunched(GameObject punchedPlayer)
-        {
-            if (punchedPlayer == gameObject)
-            {
-                DropItem();
-            }
-        }*/
 }

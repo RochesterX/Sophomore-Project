@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HatRespawn : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision) // Respawns the hat to the hat spawn position if it falls out of bounds
     {
         if (collision.gameObject.CompareTag("Platformer Hazard"))
         {

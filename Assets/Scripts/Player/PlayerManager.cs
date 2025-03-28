@@ -23,9 +23,8 @@ public class PlayerManager : MonoBehaviour
         GetComponent<PlayerInputManager>().onPlayerLeft += OnPlayerLeft;
     }
 
-    private void OnPlayerJoined(PlayerInput playerInput)
+    private void OnPlayerJoined(PlayerInput playerInput) // Adds a player when they join
     {
-        //playerInput.transform.SetParent(transform);
         if (gameStarted)
         {
             Destroy(playerInput.gameObject);
@@ -41,7 +40,7 @@ public class PlayerManager : MonoBehaviour
     }
 
 
-    private void OnPlayerLeft(PlayerInput playerInput)
+    private void OnPlayerLeft(PlayerInput playerInput) // Removes the player if they leave
     {
         Destroy(playerInput.gameObject);
         GameManager.players.Remove(playerInput.gameObject);
@@ -60,7 +59,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void StartGame()
+    public void StartGame() // Allows game to start after a player has joined
     {
         if (GameManager.players.Count == 0)
         {
@@ -70,7 +69,7 @@ public class PlayerManager : MonoBehaviour
         HubManager.Instance.LoadScene(GameManager.map);
     }
 
-    private void Colorize(int index)
+    private void Colorize(int index) // Pairs each player with a unique color
     {
         GameObject player = GameManager.players[index];
         Color color = playerColors[(GameManager.players.Count - 1) % playerColors.Count];
@@ -81,7 +80,7 @@ public class PlayerManager : MonoBehaviour
         ApplyColor(cards[GameManager.players.IndexOf(player)].playerPreview, color);
     }
 
-    private void ApplyColor(GameObject obj, Color color)
+    private void ApplyColor(GameObject obj, Color color) // Applies a color to each player
     {
         if (obj.TryGetComponent<SpriteRenderer>(out _))
         {

@@ -6,7 +6,7 @@ public class InfiniteScroll : MonoBehaviour
     public float start;
     public float end;
 
-    private void Update()
+    private void Update() // Moves the background
     {
         if (transform.position.x > end)
         {

@@ -25,19 +25,10 @@ public class TerribleHealthBarScript : MonoBehaviour
 
     void Start()
     {
-        if (player == null)
-        {
-            return;
-        }
-        healthScript = player.GetComponent<Damageable>();
-        if (healthScript == null)
-        {
-            return;
-        }
-        Initialize();
+        InitializePlayer(player);
     }
 
-    void Update()
+    void Update() // Updates each player's health bar to display their current health
     {
         if (player == null || healthScript == null)
         {
@@ -60,6 +51,11 @@ public class TerribleHealthBarScript : MonoBehaviour
 
     public void SetPlayer(GameObject player)
     {
+        InitializePlayer(player);
+    }
+
+    private void InitializePlayer(GameObject player) // Adds a health bar for each player
+    {
         this.player = player;
         if (this.player == null)
         {
@@ -73,7 +69,7 @@ public class TerribleHealthBarScript : MonoBehaviour
         Initialize();
     }
 
-    private void Initialize()
+    private void Initialize() // Sets up the health bars
     {
         initialScale = healthVisual.transform.localScale;
         initialPosition = healthVisual.transform.position;

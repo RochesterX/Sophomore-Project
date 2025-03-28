@@ -12,7 +12,7 @@ public class ObjectVisibility : MonoBehaviour
         UpdateVisibility();
     }
 
-    private void UpdateVisibility()
+    private void UpdateVisibility() // Sets object visible if playing keep away mode
     {
         if (GameManager.gameMode == GameManager.GameMode.keepAway)
         {

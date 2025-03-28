@@ -18,20 +18,20 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     public float walkSpeed;
-    public float walkSpeedFactor = 1f;
-    public float maxSpeed = 5f;
+    public float walkSpeedFactor = 1f;  // Sets walk speed
+    public float maxSpeed = 5f; // Sets max speed
     public float maxSpeedOverride;
-    public float slowdownMultiplier = 10f;
+    public float slowdownMultiplier = 10f; // Sets slow walk speed
     public float virtualAxisX;
     public float virtualButtonJump;
     public float virtualButtonJumpLastFrame;
-    public float turnaroundMultiplier = 2;
+    public float turnaroundMultiplier = 2; // Sets speed when turning around
     public float walkSmooth;
     public float secondsToFullSpeed;
     public float jumpSpeed;
     public float coyoteTime;
     public float jumpLenience;
-    public float timeUnableToBeDeclaredNotJumping = 0.1f;
+    public float timeUnableToBeDeclaredNotJumping = 0.1f; // Jump threshold
     public float groundCheckDistance;
 
     private Rigidbody2D body;
@@ -42,19 +42,15 @@ public class PlayerMovement : MonoBehaviour
     private Damageable damageable;
 
     private bool jumpInputStillValid = false;
-    private float lastTimeJumpPressed;
-
     private bool canBeDeclaredNotJumping = true;
-
     private bool jumpPhysics;
-
     private bool jumping;
-
+    private float lastTimeJumpPressed;
     private float lastTimeOnGround;
 
     private Vector3 positionLastFrame;
 
-    void Start()
+    void Start() // Sets up player components
     {
         maxSpeedOverride = maxSpeed;
         GetComponent<RespawnOnTriggerEnter>().spawnPoint = transform.position;
@@ -69,10 +65,10 @@ public class PlayerMovement : MonoBehaviour
         playerText.text = input.playerIndex.ToString();
     }
 
-    private void Update()
+    private void Update() // Updates player movement
     {
         if (GameManager.Instance != null && GameManager.Instance.gameOver) maxSpeed = 1f;
-        if (damageable.dying/* || (GameManager.Instance != null && GameManager.Instance.gameOver)*/) return;
+        if (damageable.dying) return;
 
         Jump();
 
@@ -88,12 +84,12 @@ public class PlayerMovement : MonoBehaviour
         Land();
     }
 
-    private void LateUpdate()
+    private void LateUpdate() 
     {
         Animate();
     }
 
-    private void Animate()
+    private void Animate() // Sets player animation
     {
         if (!IsPhysicallyGrounded())
             animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
@@ -111,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             animationPlayer.backwards = false;
     }
 
-    private void Land()
+    private void Land() // Stops jumping when player lands
     {
         if (body.linearVelocity.y >= 0f) return;
 
@@ -124,10 +120,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Jump()
+    private void Jump() // Player jumps when 'jump' is pressed
     {
-        //if (!punch.cancelable) return;
-
         if (virtualButtonJumpLastFrame == 1f)
         {
             jumpInputStillValid = true;
@@ -145,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void JumpPhysics()
+    private void JumpPhysics() // Applies jump physics
     {
         if (jumpPhysics)
         {
@@ -165,14 +159,14 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(Vector2.down * jumpSpeed);
     }
 
-    private IEnumerator NotJumpingDelay()
+    private IEnumerator NotJumpingDelay() // Sets jump threshold
     {
         canBeDeclaredNotJumping = false;
         yield return new WaitUntil(() => !IsBasicallyGrounded());
         canBeDeclaredNotJumping = true;
     }
 
-    private void HorizontalMovement()
+    private void HorizontalMovement() // Sets player horizontal movement
     {
         float temporaryMax = IsPhysicallyGrounded() ? maxSpeedOverride : Mathf.Infinity;
         float temporarySlowdown = IsPhysicallyGrounded() ? slowdownMultiplier : 1;
@@ -184,7 +178,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Mathf.Abs(body.linearVelocityX) >= temporaryMax)
         {
-            //body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * temporaryMax, body.linearVelocity.y);
             body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - temporaryMax) * temporarySlowdown, 0));
         }
 
@@ -201,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
         positionLastFrame = transform.position;
     }
 
-    private void UpdateVirtualAxis()
+    private void UpdateVirtualAxis() // Updates virtual axis
     {
         virtualButtonJump = input.actions.FindAction("Action").ReadValue<float>();
         virtualButtonJumpLastFrame = input.actions.FindAction("Action").WasPressedThisFrame() ? 1 : 0;
@@ -210,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
         return;
     }
 
-    public bool IsBasicallyGrounded()
+    public bool IsBasicallyGrounded() // Checks if player is on land within a threshold
     {
         if (IsPhysicallyGrounded())
         {
@@ -225,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    public bool IsPhysicallyGrounded()
+    public bool IsPhysicallyGrounded() // Checks if player is on land
     {
         RaycastHit2D leftCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, -1, -1), Vector2.down, groundCheckDistance, ground);
         RaycastHit2D rightCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, 1, -1), Vector2.down, groundCheckDistance, ground);
@@ -239,7 +232,7 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical)
+    public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical) 
     {
         return new Vector2
         (
@@ -248,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
-    public void StopVelocity()
+    public void StopVelocity() // Stops inertia when landed
     {
         if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
     }

@@ -18,7 +18,7 @@ public class GameTimer : MonoBehaviour
         UpdateTimerDisplay();
     }
 
-    private void Update()
+    private void Update() // Updates the timer to show the time remaining
     {
         if (timerRunning)
         {
@@ -35,7 +35,7 @@ public class GameTimer : MonoBehaviour
         }
     }
 
-    public void StartTimer()
+    public void StartTimer() // Starts the timer
     {
         if (!timerRunning)
         {
@@ -44,14 +44,14 @@ public class GameTimer : MonoBehaviour
         }
     }
 
-    private void UpdateTimerDisplay()
+    private void UpdateTimerDisplay() // Formats and sets the time remaining
     {
         int minutes = Mathf.FloorToInt(timeRemaining / 60);
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
         timer.text = string.Format("{0}:{1:D2}", minutes, seconds);
     }
 
-    private void OnTimerEnd()
+    private void OnTimerEnd() // Ends the game when the time runs out
     {
         GameManager.Instance.GameOver();
     }

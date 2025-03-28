@@ -10,7 +10,7 @@ public class MapSelect : MonoBehaviour
         maps = GetComponent<ToggleGroup>();
     }
 
-    void Update()
+    void Update() // Sets the map based on the selected toggle
     {
         Toggle toggle = maps.GetFirstActiveToggle();
         GameManager.map = toggle.name;

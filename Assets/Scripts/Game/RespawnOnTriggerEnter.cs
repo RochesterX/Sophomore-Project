@@ -6,7 +6,7 @@ public class RespawnOnTriggerEnter : MonoBehaviour
     public bool spawnPointIsInitialPosition = false;
     public string respawnTag;
 
-    private void Start()
+    private void Start() // Set the spawn point to the initial maps spawn point
     {
         if (spawnPointIsInitialPosition)
         {
@@ -18,7 +18,6 @@ public class RespawnOnTriggerEnter : MonoBehaviour
     {
         if (other.CompareTag(respawnTag))
         {
-            //GetComponent<Damageable>().Respawn();
             if (TryGetComponent(out Damageable damageable))
             {
                 damageable.Damage(9999f);

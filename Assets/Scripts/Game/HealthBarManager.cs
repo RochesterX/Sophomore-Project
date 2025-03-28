@@ -18,7 +18,7 @@ public class HealthBarManager : MonoBehaviour
         GameManager.Instance.EndGameEvent -= OnGameEnd;
     }
 
-    void Update()
+    void Update() // Updates position of health bars to follow each player
     {
         foreach (var kvp in playerHealthBars)
         {
@@ -26,12 +26,11 @@ public class HealthBarManager : MonoBehaviour
             if (player == null) continue;
 
             GameObject healthBar = kvp.Value;
-            //healthBar.GetComponent<TerribleHealthBarScript>().fullHealthColor = GameManager.playerColors[GameManager.players.IndexOf(player)]; // Color health bars
             healthBar.transform.SetPositionAndRotation(new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z), Quaternion.identity);
         }
     }
 
-    private void OnGameStart()
+    private void OnGameStart() // Creates health bars for each player
     {
         foreach (GameObject player in GameManager.players)
         {
@@ -45,7 +44,7 @@ public class HealthBarManager : MonoBehaviour
         }
     }
 
-    private void OnGameEnd()
+    private void OnGameEnd() // Destroys the health bars when the game ends
     {
         foreach (var kvp in playerHealthBars)
         {

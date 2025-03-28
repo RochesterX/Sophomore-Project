@@ -12,7 +12,7 @@ public class MusicManager : MonoBehaviour
     private Dictionary<string, Playlist> sceneToPlaylist = new Dictionary<string, Playlist>();
     public GameObject songPrefab;
 
-    private void Awake()
+    private void Awake() // Creates only one MusicManager instance at a time
     {
         if (Instance == null)
         {
@@ -32,7 +32,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void StartPlaylist()
+    public void StartPlaylist() // Starts music playlist for each scene
     {
         if (GetActiveSceneNotTitleScreen() == "Player Select") return;
         StopAllCoroutines();
@@ -51,7 +51,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void StartPlaylist(string scene)
+    public void StartPlaylist(string scene) // Sets music for Title Screen
     {
         if (GetActiveSceneNotTitleScreen() == "Player Select") return;
         StopAllCoroutines();
@@ -66,6 +66,7 @@ public class MusicManager : MonoBehaviour
     {
         while (true)
         {
+            // Shuffles the playlist
             List<AudioClip> randomized = new List<AudioClip>(playlist.songs);
             for (int i = 0; i < randomized.Count; i++)
             {
@@ -75,6 +76,7 @@ public class MusicManager : MonoBehaviour
                 randomized[randomIndex] = temp;
             }
 
+            // Starts the music in the playlist
             foreach (AudioClip song in randomized)
             {
                 AudioSource songInstance = Instantiate(songPrefab, transform).GetComponent<AudioSource>();
@@ -101,7 +103,7 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public static string GetActiveSceneNotTitleScreen()
+    public static string GetActiveSceneNotTitleScreen() // Finds the scene name besides Title Screen
     {
         for (int sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
         {

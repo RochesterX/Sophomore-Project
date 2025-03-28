@@ -7,16 +7,13 @@ using UnityEngine;
 [RequireComponent(typeof(RespawnOnTriggerEnter))]
 public class Damageable : MonoBehaviour
 {
-    public float force = 50f;
+    public float force = 50f; // Force applied when hit
     public float damage = 0f;
-    public float maxDamage = 1000f;
-    public int lives = 3;
+    public float maxDamage = 1000f; // Set max health
+    public int lives = 0;
     private Animator animator;
-
     public bool damageSelfDebug = false;
-
     public bool dying = false;
-
     public event System.Action<GameObject> OnPlayerPunched;
 
     private void Start()
@@ -33,38 +30,37 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // Calls Damage method when player is hit
     {
         if (collision.gameObject.CompareTag("Punch Hurtbox"))
         {
-            //print($"{name}: Ouch");
             Damage(collision.transform.parent.gameObject);
         }
     }
 
-    private void Damage(GameObject damageSource)
+    private void Damage(GameObject damageSource) // Damages player
     {
         if (dying) return;
 
         float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
 
-        GetComponentInChildren<UseItem>().DropItem();
+        GetComponentInChildren<UseItem>().DropItem(); // Drops hat if held
 
-        if (blockComponent != null && blockComponent.blocking)
+        if (blockComponent != null && blockComponent.blocking) 
         {
-            if (blockComponent.IsParrying())
+            if (blockComponent.IsParrying()) // Player receives damage if punching a parrying player
             {
                 damageSource.GetComponent<Damageable>().SuccessfulParry(gameObject, actualForce);
                 return;
             }
-            else
+            else // Player does less damage if punching a blocking player
             {
                 actualForce /= 4;
                 GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
             }
         }
-        else
+        else // Player does full damage to a non-blocking player
         {
             GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce * (1 + (damage / maxDamage) * 3), ForceMode2D.Force);
         }
@@ -76,7 +72,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage) // Adds damage to player when hit
     {
         this.damage += damage;
         if (damage >= maxDamage)
@@ -96,7 +92,7 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void Die() // Triggers death animation and sets player to dying state
     {
         if (GameManager.Instance != null)
         {
@@ -106,14 +102,14 @@ public class Damageable : MonoBehaviour
         }
     }
 
-    public void HandleDeath()
+    public void HandleDeath() // Removes player from dying state after respawn
     {
         GameManager.Instance.PlayerDied(this);
         animator.SetBool("die", false);
         dying = false;
     }
 
-    public void Respawn()
+    public void Respawn() // Respawns player to the spawnPosition and resets damage/health bar
     {
         transform.position = GameManager.Instance.spawnPosition;
         if (TryGetComponent<Rigidbody2D>(out var rb))

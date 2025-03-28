@@ -7,7 +7,7 @@ public class WinScreen : MonoBehaviour
     public static WinScreen Instance;
     public List<TextMeshProUGUI> playerTexts;
 
-    private void Awake()
+    private void Awake() // Ensures only one instance of WinScreen exists
     {
         if (Instance == null)
         {
@@ -19,7 +19,7 @@ public class WinScreen : MonoBehaviour
         }
     }
     
-    public void ShowWinScreen(int player)
+    public void ShowWinScreen(int player) // Triggers the win screen to appear
     {
         foreach (TextMeshProUGUI playerText in playerTexts)
         {

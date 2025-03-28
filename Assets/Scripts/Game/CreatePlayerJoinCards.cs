@@ -7,7 +7,7 @@ public class PlayerCardCreator : MonoBehaviour
 
     public GameObject playerJoinCardPrefab;
 
-    private void Awake()
+    private void Awake() // Ensures only one instance of PlayerCardCreator exists
     {
         if (Instance == null) Instance = this;
         else
@@ -16,7 +16,7 @@ public class PlayerCardCreator : MonoBehaviour
         }
     }
 
-    public PlayerJoinCard CreateCard()
+    public PlayerJoinCard CreateCard() // Creates a player join card
     {
         GameObject card = Instantiate(playerJoinCardPrefab, transform);
         return card.GetComponent<PlayerJoinCard>();

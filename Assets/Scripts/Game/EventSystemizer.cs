@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class EventSystemizer : MonoBehaviour
 {
-    private void Update()
+    private void Update() // Ensures only one instance of EventSystem exists
     {
         foreach (EventSystem system in FindObjectsByType<EventSystem>(FindObjectsSortMode.None))
         {

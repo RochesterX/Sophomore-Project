@@ -8,11 +8,11 @@ public class LeaderboardManager : MonoBehaviour
 
     [SerializeField] private GameObject playersParent;
     [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject lifePrefab;
+    [SerializeField] private GameObject leaderboardIconPrefab;
 
     private Dictionary<GameObject, GameObject> playerIcons = new Dictionary<GameObject, GameObject>();
 
-    private void Awake()
+    private void Awake() // Ensures only one instance of LeaderboardManager exists
     {
         if (Instance == null)
         {
@@ -29,36 +29,28 @@ public class LeaderboardManager : MonoBehaviour
         InitializeLeaderboard();
     }
 
-    private void InitializeLeaderboard()
+    private void InitializeLeaderboard() // Creates the leaderboard icons for each player
     {
         foreach (GameObject player in GameManager.players)
         {
             Transform parent = Instantiate(playerPrefab, playersParent.transform).transform;
-            GameObject life = Instantiate(lifePrefab, parent);
-            life.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
+            GameObject leaderboardIcon = Instantiate(leaderboardIconPrefab, parent);
+            leaderboardIcon.GetComponentInChildren<Image>().color = GameManager.playerColors[GameManager.players.IndexOf(player)];
             playerIcons[player] = parent.gameObject;
         }
     }
 
-    public void UpdateLeaderboard()
+    public void UpdateLeaderboard() // Sorts the leaderboard based on player hold times
     {
         List<KeyValuePair<GameObject, float>> sortedList = new List<KeyValuePair<GameObject, float>>(GameManager.playerHoldTimes);
         sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-
         foreach (var player in sortedList)
         {
             Debug.Log(player.Key.name + " : " + player.Value);
         }
-        // Less fancy sorting system
-
         foreach (var player in sortedList)
         {
             playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
         }
-
-        //foreach (var key in GameManager.playerHoldTimes)
-        //{
-         //   print(key.Key.name + " : " + key.Value);
-       // }
     }
 }

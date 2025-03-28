@@ -16,7 +16,7 @@ public class Punch : MonoBehaviour
         actions = GetComponent<PlayerInput>().actions;
     }
 
-    private void Update()
+    private void Update() // Executes punch when 'punch' is pressed
     {
         if (actions.FindAction("Punch").WasPressedThisFrame())
         {
@@ -25,12 +25,11 @@ public class Punch : MonoBehaviour
         }
     }
 
-    private void ExecutePunch()
+    private void ExecutePunch() // Triggers punch animation
     {
         GetComponent<AnimationPlayer>().Punch();
         DisableCancellation();
-        GetComponent<PlayerMovement>().maxSpeedOverride = 1f;
-        //OnPlayerPunched?.Invoke(gameObject);
+        GetComponent<PlayerMovement>().maxSpeedOverride = 1f; // Slows player down when punching
     }
 
     public void EnableHurtbox()
@@ -53,7 +52,7 @@ public class Punch : MonoBehaviour
         cancelable = true;
     }
 
-    public void ReturnToMaxSpeed()
+    public void ReturnToMaxSpeed() // Resets player speed after punch
     {
         GetComponent<PlayerMovement>().maxSpeedOverride = GetComponent<PlayerMovement>().maxSpeed;
     }

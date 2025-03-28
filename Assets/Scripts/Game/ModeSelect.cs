@@ -10,7 +10,7 @@ public class ModeSelect : MonoBehaviour
         maps = GetComponent<ToggleGroup>();
     }
 
-    void Update()
+    void Update() // Updates the game mode based on the selected toggle
     {
         Toggle toggle = maps.GetFirstActiveToggle();
         if (toggle.name == "Free-For-All")

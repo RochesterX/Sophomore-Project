@@ -4817,6 +4817,14 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 6442071445436727403}
+    - target: {fileID: 4907520530801696033, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907520530801696033, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.77
+      objectReference: {fileID: 0}
     - target: {fileID: 6537344883611667483, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4865,12 +4873,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7889484632530234123, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: leaderboardIconPrefab
+      value: 
+      objectReference: {fileID: 367874778634194597, guid: d9a95e84f7261408c84253a380f8af08, type: 3}
     - target: {fileID: 8079215911535814924, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_Name
       value: HealthCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4148327129846918965, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}

@@ -7,7 +7,7 @@ public class PlayerJoinCard : MonoBehaviour
     public int playerNumber;
     public TextMeshProUGUI playerNumberText;
 
-    void Start()
+    void Start() // Sets player number
     {
         playerNumberText.text = playerNumber.ToString();
     }

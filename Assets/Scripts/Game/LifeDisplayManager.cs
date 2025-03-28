@@ -7,10 +7,9 @@ public class LifeDisplayManager : MonoBehaviour
     public GameObject players;
     public GameObject playerPrefab;
     public GameObject lifePrefab;
-
     public Dictionary<Damageable, List<GameObject>> lifeDisplays = new Dictionary<Damageable, List<GameObject>>();
 
-    private void Start()
+    private void Start() // Creates life icons for each player
     {
         if (GameManager.gameMode == GameManager.GameMode.freeForAll)
         {
@@ -29,7 +28,7 @@ public class LifeDisplayManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void Update() // Updates the lives displayed based on player lives
     {
         foreach (Damageable damageable in lifeDisplays.Keys)
         {
@@ -40,7 +39,7 @@ public class LifeDisplayManager : MonoBehaviour
         }
     }
 
-    public void HideLifeDisplay()
+    public void HideLifeDisplay() // Hides life display
     {
         players.SetActive(false);
     }
