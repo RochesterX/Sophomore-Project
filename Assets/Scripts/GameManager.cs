@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour
             {
                 player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
                 player.GetComponent<Damageable>().lives = 0;
-                print("spawnder");
             }
         }
         if (gameMode == GameMode.obstacleCourse)
