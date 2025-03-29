@@ -96,11 +96,16 @@ public class Damageable : MonoBehaviour
     {
         if (GameManager.Instance != null)
         {
-            GetComponent<UseItem>().DropItem();
+            UseItem useItem = GetComponent<UseItem>();
+            if (useItem != null)
+            {
+                useItem.DropItem(); // Ensure the player drops the item before the death animation
+            }
             animator.SetBool("die", true);
             dying = true;
         }
     }
+
 
     public void HandleDeath() // Removes player from dying state after respawn
     {

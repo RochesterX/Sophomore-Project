@@ -33,7 +33,7 @@ public class LeaderboardManager : MonoBehaviour
     private void InitializeLeaderboard() // Creates the leaderboard icons for each player
     {
         RectTransform parentRectTransform = playersParent.GetComponent<RectTransform>();
-        parentRectTransform.anchoredPosition = new Vector2(-20f, 10f);
+        parentRectTransform.anchoredPosition = new Vector2(-10f, 10f);
 
         foreach (GameObject player in GameManager.players)
         {
@@ -44,27 +44,45 @@ public class LeaderboardManager : MonoBehaviour
         }
     }
 
-    public void UpdateLeaderboard() // Sorts the leaderboard based on player hold times
+    public void UpdateLeaderboard()
     {
         List<KeyValuePair<GameObject, float>> sortedList = new List<KeyValuePair<GameObject, float>>(GameManager.playerHoldTimes);
         sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
-        foreach (var player in sortedList)
-        {
-            playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
-        }
-    }
 
-    public void UpdatePlayerHoldTimeText(GameObject player, float holdTime) // Updates the hold times of each player shown on the leaderboard
-    {
-        if (playerIcons.ContainsKey(player))
+        for (int i = 0; i < sortedList.Count; i++)
         {
-            TextMeshProUGUI holdTimeText = playerIcons[player].GetComponentInChildren<TextMeshProUGUI>();
-            if (holdTimeText != null)
+            var player = sortedList[i];
+            playerIcons[player.Key].transform.SetSiblingIndex(i);
+
+            // Update the number text
+            TextMeshProUGUI[] textComponents = playerIcons[player.Key].GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (var textComponent in textComponents)
             {
-                int minutes = Mathf.FloorToInt(holdTime / 60F);
-                int seconds = Mathf.FloorToInt(holdTime % 60F);
-                holdTimeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+                if (textComponent.name == "Position Text")
+                {
+                    textComponent.text = "#" + (i + 1).ToString();
+                    break;
+                }
             }
         }
     }
+
+    public void UpdatePlayerHoldTimeText(GameObject player, float holdTime)
+    {
+        if (playerIcons.ContainsKey(player))
+        {
+            TextMeshProUGUI[] textComponents = playerIcons[player].GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (var textComponent in textComponents)
+            {
+                if (textComponent.name == "Text (TMP)")
+                {
+                    int minutes = Mathf.FloorToInt(holdTime / 60F);
+                    int seconds = Mathf.FloorToInt(holdTime % 60F);
+                    textComponent.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+                    break;
+                }
+            }
+        }
+    }
+
 }

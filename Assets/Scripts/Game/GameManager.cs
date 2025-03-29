@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public static string map = "Platformer With Headroom"; // loads a default map as a safety net
     public Vector2 spawnPosition;
     public Vector2 hatSpawnPosition;
+    public Canvas LeaderboardCanvas;
+    public Canvas TimerCanvas;
+    public GameObject hatObject;
     public enum GameMode
     {
         freeForAll,
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     private void Update() // Continuously updates player hold times
     {
+        if (gameOver) return;
+
         foreach (var player in players)
         {
             float holdTime = GetPlayerHoldTime(player);
@@ -101,6 +106,12 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDied(Damageable player) // Handles player deaths for the respective gamemode
     {
+        UseItem useItem = player.GetComponent<UseItem>(); // Drop the item the player is holding
+        if (useItem != null)
+        {
+            useItem.DropItem();
+        }
+
         if (gameMode == GameMode.freeForAll) // Respawns player if they have lives left
         {
             player.lives--;
@@ -127,6 +138,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     private void RespawnPlayer(GameObject player) // Respawns player at the spawn point and resets health
     {
         RespawnOnTriggerEnter respawnScript = player.GetComponent<RespawnOnTriggerEnter>();
@@ -142,6 +154,10 @@ public class GameManager : MonoBehaviour
     {
         gameOver = true;
         EndGameEvent?.Invoke();
+        LeaderboardCanvas.gameObject.SetActive(false);
+        TimerCanvas.gameObject.SetActive(false);
+        hatObject.SetActive(false);
+
         if (gameMode == GameMode.freeForAll) // Last player alive wins
         {
             GameObject winner = AlivePlayers()[0];
@@ -184,7 +200,7 @@ public class GameManager : MonoBehaviour
         return alivePlayers;
     }
 
-    public void UpdatePlayerHoldTime(GameObject player, float holdTime)
+    public void UpdatePlayerHoldTime(GameObject player, float holdTime) // Updates the player's hold time and leaderboard
     {
         bool shouldSort = false;
 
@@ -201,11 +217,7 @@ public class GameManager : MonoBehaviour
             playerHoldTimes.Add(player, holdTime);
             shouldSort = true;
         }
-
-        // Update the player's hold time text
         LeaderboardManager.Instance.UpdatePlayerHoldTimeText(player, holdTime);
-
-        // Sort the leaderboard if necessary
         if (shouldSort)
         {
             LeaderboardManager.Instance.UpdateLeaderboard();
