@@ -61,6 +61,7 @@ public class UseItem : MonoBehaviour
             heldItem.GetComponent<Collider2D>().enabled = true;
             heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             heldItem.transform.position += Vector3.up * 3f;
+            heldItem.GetComponent<HatRespawn>().OnHatDropped();
             heldItem = null;
             isHoldingItem = false;
             if (GameManager.playerHoldTimes.ContainsKey(gameObject))
@@ -69,4 +70,5 @@ public class UseItem : MonoBehaviour
             }
         }
     }
+
 }

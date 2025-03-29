@@ -40,14 +40,14 @@ public class Damageable : MonoBehaviour
 
     private void Damage(GameObject damageSource) // Damages player
     {
-        if (dying) return;
+        if (dying || damageSource.CompareTag("Hat")) return; // Exclude hat from taking damage
 
         float actualForce = damageSource.GetComponent<Damageable>().force;
         Block blockComponent = GetComponent<Block>();
 
         GetComponentInChildren<UseItem>().DropItem(); // Drops hat if held
 
-        if (blockComponent != null && blockComponent.blocking) 
+        if (blockComponent != null && blockComponent.blocking)
         {
             if (blockComponent.IsParrying()) // Player receives damage if punching a parrying player
             {
@@ -105,7 +105,6 @@ public class Damageable : MonoBehaviour
             dying = true;
         }
     }
-
 
     public void HandleDeath() // Removes player from dying state after respawn
     {
