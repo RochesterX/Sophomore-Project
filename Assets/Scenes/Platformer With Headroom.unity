@@ -4811,7 +4811,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: time
-      value: 10
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
+    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 560944918044722035, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
+    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185538254637364967, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185538254637364967, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185538254637364967, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4832072825095962115, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: timer
@@ -4832,6 +4856,14 @@ PrefabInstance:
     - target: {fileID: 7108908600032931545, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_Name
       value: Game Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577461774610221307, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_Spacing.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577461774610221307, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_CellSize.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7676803003410367555, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_LocalPosition.x

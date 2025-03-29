@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class LeaderboardManager : MonoBehaviour
@@ -31,6 +32,9 @@ public class LeaderboardManager : MonoBehaviour
 
     private void InitializeLeaderboard() // Creates the leaderboard icons for each player
     {
+        RectTransform parentRectTransform = playersParent.GetComponent<RectTransform>();
+        parentRectTransform.anchoredPosition = new Vector2(-20f, 10f);
+
         foreach (GameObject player in GameManager.players)
         {
             Transform parent = Instantiate(playerPrefab, playersParent.transform).transform;
@@ -46,11 +50,23 @@ public class LeaderboardManager : MonoBehaviour
         sortedList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
         foreach (var player in sortedList)
         {
-            Debug.Log(player.Key.name + " : " + player.Value);
-        }
-        foreach (var player in sortedList)
-        {
             playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
+            UpdatePlayerHoldTimeText(player.Key, player.Value);
+        }
+    }
+
+    private void UpdatePlayerHoldTimeText(GameObject player, float holdTime) // Updates the hold times of each player shown on the leaderboard
+    {
+        if (playerIcons.ContainsKey(player))
+        {
+            TextMeshProUGUI holdTimeText = playerIcons[player].GetComponentInChildren<TextMeshProUGUI>();
+            if (holdTimeText != null)
+            {
+                int minutes = Mathf.FloorToInt(holdTime / 60F);
+                int seconds = Mathf.FloorToInt(holdTime % 60F);
+                holdTimeText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+            }
         }
     }
 }
+

@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
         return alivePlayers;
     }
 
-    public void UpdatePlayerHoldTime(GameObject player, float holdTime) // Finds each players hold time and updates the leaderboard
+    public void UpdatePlayerHoldTime(GameObject player, float holdTime)
     {
         if (playerHoldTimes.ContainsKey(player))
         {
