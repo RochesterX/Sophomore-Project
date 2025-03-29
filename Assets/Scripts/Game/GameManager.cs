@@ -138,7 +138,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     private void RespawnPlayer(GameObject player) // Respawns player at the spawn point and resets health
     {
         RespawnOnTriggerEnter respawnScript = player.GetComponent<RespawnOnTriggerEnter>();
