@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class UseItem : MonoBehaviour
@@ -9,6 +10,8 @@ public class UseItem : MonoBehaviour
     public float holdTime;
     private Damageable damageable;
 
+    [SerializeField] private Transform head;
+
     private void Start()
     {
         damageable = GetComponent<Damageable>();
@@ -19,7 +22,7 @@ public class UseItem : MonoBehaviour
         if (isHoldingItem)
         {
             // Keeps hat on the player's head
-            heldItem.transform.position = transform.position + Vector3.up;
+            heldItem.transform.localPosition = Vector3.zero;
             if (GameManager.gameMode == GameManager.GameMode.keepAway)
             {
                 // Adds time to the player's leaderboard standing
@@ -40,14 +43,17 @@ public class UseItem : MonoBehaviour
     private void PickUpItem(GameObject item) // Player picks up hat and starts hold counter 
     {
         if (damageable.dying) return; // Prevent picking up items if the player is dying
+        if (HatRespawn.canBePickedUp == false) return; // Prevent picking up items if they are not interactable
 
         heldItem = item;
         isHoldingItem = true;
         holdStartTime = Time.time;
         item.GetComponent<Collider2D>().enabled = false;
         item.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        item.transform.rotation = Quaternion.identity;
         item.GetComponent<HatRespawn>().Interact();
+        item.transform.parent = head;
+        item.transform.localRotation = Quaternion.identity;
+        item.transform.localPosition = Vector3.zero;
         if (!GameManager.playerHoldTimes.ContainsKey(gameObject))
         {
             GameManager.playerHoldTimes[gameObject] = 0f;
@@ -59,9 +65,14 @@ public class UseItem : MonoBehaviour
         if (isHoldingItem)
         {
             heldItem.GetComponent<Collider2D>().enabled = true;
+            HatRespawn.canBePickedUp = false;
+            StartCoroutine(WaitForInteractability());
             heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            heldItem.transform.position += Vector3.up * 3f;
+            heldItem.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Random.Range(10f, 30f) + Vector2.right * Random.Range(-10, 10), ForceMode2D.Impulse);
+            heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-5, 5), ForceMode2D.Impulse);
+            //heldItem.transform.position += Vector3.up * 3f;
             heldItem.GetComponent<HatRespawn>().OnHatDropped();
+            heldItem.transform.parent = GameManager.Instance.transform;
             heldItem = null;
             isHoldingItem = false;
             if (GameManager.playerHoldTimes.ContainsKey(gameObject))
@@ -71,4 +82,9 @@ public class UseItem : MonoBehaviour
         }
     }
 
+    private IEnumerator WaitForInteractability()
+    {
+        yield return new WaitForSeconds(0.1f);
+        HatRespawn.canBePickedUp = true;
+    }
 }

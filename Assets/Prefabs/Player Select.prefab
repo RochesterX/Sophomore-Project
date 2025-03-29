@@ -1081,6 +1081,7 @@ GameObject:
   - component: {fileID: 1099574230288367331}
   - component: {fileID: 1459310887760468568}
   - component: {fileID: 6182059708516507441}
+  - component: {fileID: 4907196101794560390}
   m_Layer: 5
   m_Name: Player Select Canvas
   m_TagString: Untagged
@@ -1174,7 +1175,19 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
+--- !u!225 &4907196101794560390
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064111601199657204}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &378488714810919103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2055,7 +2068,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 845789397527362766, guid: e98314581589e49cf928afa2ae1398f2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

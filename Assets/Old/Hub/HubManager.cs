@@ -80,6 +80,7 @@ public class HubManager : MonoBehaviour
 
     private void ChangeGameButtonsInteractability(bool interactable)
     {
+        gameButtonsParent.transform.parent.gameObject.SetActive(interactable);
         foreach (Transform button in gameButtonsParent.transform)
         {
             button.GetComponent<Button>().interactable = interactable;
