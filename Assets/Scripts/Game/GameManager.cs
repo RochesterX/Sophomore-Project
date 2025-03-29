@@ -46,6 +46,25 @@ public class GameManager : MonoBehaviour
         StartGame();
     }
 
+    private void Update() // Continuously updates player hold times
+    {
+        foreach (var player in players)
+        {
+            float holdTime = GetPlayerHoldTime(player);
+            UpdatePlayerHoldTime(player, holdTime);
+        }
+    }
+
+    private float GetPlayerHoldTime(GameObject player)
+    {
+        UseItem useItem = player.GetComponent<UseItem>();
+        if (useItem != null)
+        {
+            return useItem.holdTime;
+        }
+        return 0f;
+    }
+
     public void StartGame() // Sets up the proper gamemode
     {
         GameManager.playerHoldTimes.Clear();
@@ -167,14 +186,29 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePlayerHoldTime(GameObject player, float holdTime)
     {
+        bool shouldSort = false;
+
         if (playerHoldTimes.ContainsKey(player))
         {
+            if (holdTime > playerHoldTimes[player])
+            {
+                shouldSort = true;
+            }
             playerHoldTimes[player] = holdTime;
         }
         else
         {
             playerHoldTimes.Add(player, holdTime);
+            shouldSort = true;
         }
-        LeaderboardManager.Instance.UpdateLeaderboard();
+
+        // Update the player's hold time text
+        LeaderboardManager.Instance.UpdatePlayerHoldTimeText(player, holdTime);
+
+        // Sort the leaderboard if necessary
+        if (shouldSort)
+        {
+            LeaderboardManager.Instance.UpdateLeaderboard();
+        }
     }
 }

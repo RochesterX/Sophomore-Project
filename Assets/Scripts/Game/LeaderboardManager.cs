@@ -51,11 +51,10 @@ public class LeaderboardManager : MonoBehaviour
         foreach (var player in sortedList)
         {
             playerIcons[player.Key].transform.SetSiblingIndex(sortedList.IndexOf(player));
-            UpdatePlayerHoldTimeText(player.Key, player.Value);
         }
     }
 
-    private void UpdatePlayerHoldTimeText(GameObject player, float holdTime) // Updates the hold times of each player shown on the leaderboard
+    public void UpdatePlayerHoldTimeText(GameObject player, float holdTime) // Updates the hold times of each player shown on the leaderboard
     {
         if (playerIcons.ContainsKey(player))
         {
@@ -69,4 +68,3 @@ public class LeaderboardManager : MonoBehaviour
         }
     }
 }
-
