@@ -11,6 +11,8 @@ public class PlayerCameraMovement : MonoBehaviour
     public float lowerBound;
     public bool winScene = false;
 
+    public bool staticCamera = false;
+
     private void Start()
     {
         start = transform.position;
@@ -52,6 +54,7 @@ public class PlayerCameraMovement : MonoBehaviour
         }
 
         if (activePlayers == 0) return;
+        if (staticCamera) return;
 
         playerAverage /= activePlayers;
 
