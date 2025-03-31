@@ -4522,14 +4522,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_text
-      value: Time left!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_margin.x
       value: -1.3713989
       objectReference: {fileID: 0}
@@ -4538,29 +4530,9 @@ PrefabInstance:
       value: -11.657684
       objectReference: {fileID: 0}
     - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_fontSizeBase
       value: 24
       objectReference: {fileID: 0}
-    - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 560944918044722035, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
     - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
@@ -4650,21 +4622,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_text
-      value: 3:00
-      objectReference: {fileID: 0}
-    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_margin.w
       value: 1357.2593
       objectReference: {fileID: 0}
-    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
-    - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 560944918044722035, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
     - target: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -4681,34 +4641,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 101.600006
-      objectReference: {fileID: 0}
-    - target: {fileID: 4682083114220027504, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -19.699997
-      objectReference: {fileID: 0}
-    - target: {fileID: 4832072825095962115, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: timer
-      value: 
-      objectReference: {fileID: 6442071445436727403}
     - target: {fileID: 4907520530801696033, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.35
@@ -4825,31 +4757,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8934960097828904141, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 218
-      objectReference: {fileID: 0}
-    - target: {fileID: 8934960097828904141, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -791
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4148327129846918965, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
---- !u!114 &6442071445436727403 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3636379526195672734, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-  m_PrefabInstance: {fileID: 6442071445436727402}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!223 &6442071445436727404 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 2989920920269489744, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
