@@ -1494,8 +1494,8 @@ MonoBehaviour:
   gameTimer: {fileID: 4832072825095962115}
   spawnPosition: {x: -10.25, y: 20}
   hatSpawnPositions: []
-  LeaderboardCanvas: {fileID: 0}
-  TimerCanvas: {fileID: 0}
+  LeaderboardCanvas: {fileID: 7061268803878077000}
+  TimerCanvas: {fileID: 2989920920269489744}
   hatObject: {fileID: 8102114527039450581}
 --- !u!114 &5255884573950249540
 MonoBehaviour:

@@ -53,10 +53,13 @@ public class GameManager : MonoBehaviour
     {
         if (gameOver) return;
 
-        foreach (var player in players)
+        if (gameMode == GameMode.keepAway)
         {
-            float holdTime = GetPlayerHoldTime(player);
-            UpdatePlayerHoldTime(player, holdTime);
+            foreach (var player in players)
+            {
+                float holdTime = GetPlayerHoldTime(player);
+                UpdatePlayerHoldTime(player, holdTime);
+            }
         }
     }
 
@@ -135,7 +138,7 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.obstacleCourse)
         {
-
+            RespawnPlayer(player.gameObject);
         }
     }
 

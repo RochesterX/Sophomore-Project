@@ -4546,14 +4546,6 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: TimerCanvas
-      value: 
-      objectReference: {fileID: 6442071445436727404}
-    - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      propertyPath: LeaderboardCanvas
-      value: 
-      objectReference: {fileID: 6442071445436727405}
-    - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: hatSpawnPositions.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -4763,16 +4755,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
---- !u!223 &6442071445436727404 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2989920920269489744, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-  m_PrefabInstance: {fileID: 6442071445436727402}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &6442071445436727405 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 7061268803878077000, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-  m_PrefabInstance: {fileID: 6442071445436727402}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8682934954266721942
 PrefabInstance:
   m_ObjectHideFlags: 0
