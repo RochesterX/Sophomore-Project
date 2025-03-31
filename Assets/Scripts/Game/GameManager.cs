@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition;
+                player.GetComponent<Damageable>().lives = 0;
             }
         }
     }
@@ -168,7 +169,7 @@ public class GameManager : MonoBehaviour
         if (gameMode == GameMode.keepAway) // Player with the most time holding the hat wins
         {
             GameObject winner = null;
-            float maxHoldTime = 0f;
+            float maxHoldTime = -1f;
             foreach (var player in GameManager.playerHoldTimes)
             {
                 if (player.Value > maxHoldTime)
@@ -184,6 +185,15 @@ public class GameManager : MonoBehaviour
                 WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
                 FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
             }
+        }
+        if (gameMode == GameMode.obstacleCourse)
+        {
+            GameObject winner = ObstacleCourse.playerWon;
+
+            print(winner.name + " is the winner!");
+            FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
+            WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
+            FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
         }
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class HatRespawn : MonoBehaviour
 {
     private float lastInteractionTime;
-    private const float respawnTime = 10f;
+    public const float respawnTime = 10f;
     private bool isDropped;
 
     public static bool canBePickedUp = true; // Flag to check if the hat can be picked up
