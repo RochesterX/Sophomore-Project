@@ -74,6 +74,8 @@ public class Damageable : MonoBehaviour
 
     public void Damage(float damage) // Adds damage to player when hit
     {
+        if (GameManager.Instance.gameOver) return; // Prevent damage after game is over
+
         this.damage += damage;
         if (damage >= maxDamage)
         {
@@ -94,7 +96,7 @@ public class Damageable : MonoBehaviour
 
     private void Die() // Triggers death animation and sets player to dying state
     {
-        if (GameManager.Instance != null)
+        if (GameManager.Instance != null && !GameManager.Instance.gameOver) // Prevent death after game is over
         {
             UseItem useItem = GetComponent<UseItem>();
             if (useItem != null)

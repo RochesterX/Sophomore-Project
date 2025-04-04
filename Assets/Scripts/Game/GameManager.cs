@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -113,7 +114,14 @@ public class GameManager : MonoBehaviour
         UseItem useItem = player.GetComponent<UseItem>(); // Drop the item the player is holding
         if (useItem != null)
         {
-            useItem.DropItem();
+            if (gameOver == false)
+            {
+                useItem.DropItem();
+            }
+            else
+            {
+                return; // Prevents winner from dropping the item if the game is over
+            }
         }
 
         if (gameMode == GameMode.freeForAll) // Respawns player if they have lives left
@@ -159,7 +167,6 @@ public class GameManager : MonoBehaviour
         EndGameEvent?.Invoke();
         LeaderboardCanvas.gameObject.SetActive(false);
         TimerCanvas.gameObject.SetActive(false);
-        hatObject.SetActive(false);
 
         if (gameMode == GameMode.freeForAll) // Last player alive wins
         {
@@ -187,9 +194,13 @@ public class GameManager : MonoBehaviour
                 FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
                 WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
                 FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+                StartCoroutine(MoveHatToWinner(winner));
+                hatObject.SetActive(true);
+                hatObject.GetComponent<Collider2D>().enabled = true;
+                hatObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
         }
-        if (gameMode == GameMode.obstacleCourse)
+        if (gameMode == GameMode.obstacleCourse) // Player who reached the end first wins
         {
             GameObject winner = ObstacleCourse.playerWon;
 
@@ -197,6 +208,15 @@ public class GameManager : MonoBehaviour
             FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
             WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
             FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+        }
+    }
+
+    private IEnumerator MoveHatToWinner(GameObject winner)
+    {
+        while (!winner.GetComponent<UseItem>().IsHoldingItem())
+        {
+            hatObject.transform.position = winner.transform.position + Vector3.up * 3/2;
+            yield return null;
         }
     }
 

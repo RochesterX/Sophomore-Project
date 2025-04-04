@@ -10,7 +10,7 @@ public class UseItem : MonoBehaviour
     public float holdTime;
     private Damageable damageable;
 
-    [SerializeField] private Transform head;
+    [SerializeField] public Transform head;
 
     private void Start()
     {
@@ -58,10 +58,13 @@ public class UseItem : MonoBehaviour
         {
             GameManager.playerHoldTimes[gameObject] = 0f;
         }
+        GameManager.Instance.StopCoroutine("MoveHatToWinner");
     }
 
     public void DropItem() // Player drops hat when hit
     {
+        if (GameManager.Instance.gameOver) return; // Prevent dropping items if the game is over
+
         if (isHoldingItem)
         {
             heldItem.GetComponent<Collider2D>().enabled = true;
@@ -70,7 +73,6 @@ public class UseItem : MonoBehaviour
             heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             heldItem.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Random.Range(10f, 30f) + Vector2.right * Random.Range(-10, 10), ForceMode2D.Impulse);
             heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-5, 5), ForceMode2D.Impulse);
-            //heldItem.transform.position += Vector3.up * 3f;
             heldItem.GetComponent<HatRespawn>().OnHatDropped();
             heldItem.transform.parent = GameManager.Instance.transform;
             heldItem = null;
@@ -86,5 +88,10 @@ public class UseItem : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         HatRespawn.canBePickedUp = true;
+    }
+
+    public bool IsHoldingItem()
+    {
+        return isHoldingItem;
     }
 }
