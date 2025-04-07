@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public static GameMode gameMode = GameMode.freeForAll; // loads a default gamemode as a safety net
     public static string map = "Platformer With Headroom"; // loads a default map as a safety net
     public Vector2 spawnPosition;
+    public Vector2 obstacleCourseSpawnPosition;
     public List<Vector2> hatSpawnPositions = new List<Vector2>();
     public Canvas LeaderboardCanvas;
     public Canvas TimerCanvas;
