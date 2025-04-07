@@ -17,9 +17,17 @@ public class FallPlatform : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision) // Makes platform fall when player or another platform touch it
     {
-        if (!falling && (collision.gameObject.CompareTag("Player") || collision.transform.GetChild(0).TryGetComponent(out FallPlatform _)))
+        try
         {
-            StartCoroutine(FallAfterDelay());
+            if (collision.transform.childCount != 0 && !falling && (collision.gameObject.CompareTag("Player") || collision.transform.GetChild(0).TryGetComponent(out FallPlatform _)))
+            {
+                StartCoroutine(FallAfterDelay());
+            }
+
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error in FallPlatform: " + e.Message);
         }
     }
 
