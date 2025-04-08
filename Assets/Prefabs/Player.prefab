@@ -94,6 +94,10 @@ GameObject:
   - component: {fileID: 2791557175355662981}
   - component: {fileID: 3406519100105273690}
   - component: {fileID: 251648003544978305}
+  - component: {fileID: 4135832890425447844}
+  - component: {fileID: 7967725481535243710}
+  - component: {fileID: 6370585510696338442}
+  - component: {fileID: -5768905494704828194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -214,13 +218,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b920f65db6650d4aa4858ad8a795d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 
   ground:
     serializedVersion: 2
     m_Bits: 64
+  playerText: {fileID: 0}
   walkSpeed: 5
   walkSpeedFactor: 30
   maxSpeed: 5
+  maxSpeedOverride: 0
+  slowdownMultiplier: 10
   virtualAxisX: 0
   virtualButtonJump: 0
   virtualButtonJumpLastFrame: 0
@@ -245,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: 0, y: 0}
+  spawnPointIsInitialPosition: 0
   respawnTag: Platformer Hazard
 --- !u!61 &2791557175355662981
 BoxCollider2D:
@@ -338,3 +345,71 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!95 &4135832890425447844
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546762253351562952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7967725481535243710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546762253351562952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9d01bde449c4d0fa146e06804d6a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  backwards: 0
+  block: 0
+  clip: {fileID: 0}
+--- !u!114 &6370585510696338442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546762253351562952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae332d743f1a42ce8ee7a958853bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cancelable: 1
+  hurtbox: {fileID: 0}
+--- !u!114 &-5768905494704828194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546762253351562952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182a9e619d36aeb4592fb532d3c9db55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPoint: {x: 0, y: 0}
+  teleportTag: Teleporter
+  playerTag: Player
+  isPlatform: 1

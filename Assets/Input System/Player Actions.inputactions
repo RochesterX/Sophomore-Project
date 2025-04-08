@@ -44,7 +44,7 @@
                 {
                     "name": "Block",
                     "type": "Button",
-                    "id": "be945856-bd8c-4925-8ed1-0555831d5f61",
+                    "id": "75f14324-856c-4219-b712-162d5f72a1b7",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -196,6 +196,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "fd2c8128-7e2a-414f-8b2c-42e74788f84e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fd2977dc-8070-47c4-a878-4f4b6cafb23d",
+                    "path": "<HID::8Bitdo SN30 Pro>/hat/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "2a7d8f86-0de3-4e61-b72d-3c36ba40d44a",
+                    "path": "<HID::8Bitdo SN30 Pro>/hat/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b2300d9f-d1c6-44b9-8c30-7044d061ada2",
+                    "path": "<HID::8Bitdo SN30 Pro>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e69e9186-0bac-4133-801d-0b9604123d3f",
+                    "path": "<HID::8Bitdo SN30 Pro>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "6f8632d2-312f-4559-8fdd-d17a3c226436",
                     "path": "<Keyboard>/space",
@@ -219,6 +274,28 @@
                 },
                 {
                     "name": "",
+                    "id": "5d590d5e-b1ea-451c-9b14-abb7d586244d",
+                    "path": "<HID::8Bitdo SN30 Pro>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c680f154-8519-430c-98ab-9e28bd096560",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2a504570-c560-4eaf-a3f0-49971e1b475a",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
@@ -234,7 +311,18 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "92e31e25-40f4-43ba-be0a-1b4fac05936a",
+                    "path": "<HID::8Bitdo SN30 Pro>/button8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
                     "action": "Join",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -245,7 +333,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -256,29 +344,40 @@
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "de623b7f-b30a-44d6-98ff-64faf7825d8f",
-                    "path": "<Keyboard>/q",
+                    "id": "b2508ee4-e0b6-4c99-a271-fc79e181ea51",
+                    "path": "<HID::8Bitdo SN30 Pro>/button3",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
+                    "action": "Punch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "068a8dc5-a90b-45c8-9515-e7bf9b98add0",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "215ac495-a903-4e41-b61a-6d505550788f",
+                    "id": "2a1dbb94-3989-45d0-85f0-04b4f58c431b",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -302,7 +401,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "7607c7b6-cd76-4816-beef-bd0341cfe950",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -658,6 +757,17 @@
                 },
                 {
                     "name": "",
+                    "id": "07044343-220c-4cc5-9d8a-bf32ec73c938",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
                     "path": "*/{Cancel}",
                     "interactions": "",
@@ -696,6 +806,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a554cf3-0f38-4864-8306-238775ba2346",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false

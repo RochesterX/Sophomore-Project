@@ -8,6 +8,10 @@ TagManager:
   - Pong Paddle
   - Platformer Hazard
   - Punch Hurtbox
+  - Teleporter
+  - FallPlatform
+  - Transition
+  - Hat
   layers:
   - Default
   - TransparentFX
@@ -16,8 +20,8 @@ TagManager:
   - Water
   - UI
   - Platformer Ground
-  - 
-  - 
+  - HealthBar
+  - Interactable UI
   - 
   - 
   - 
@@ -45,17 +49,29 @@ TagManager:
   - name: Sky
     uniqueID: 193514457
     locked: 0
+  - name: BehindClouds
+    uniqueID: 3695225525
+    locked: 0
+  - name: InfrontClouds
+    uniqueID: 1995452543
+    locked: 0
   - name: Decorations
     uniqueID: 2984850949
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bones
+    uniqueID: 1823612251
+    locked: 0
   - name: Hub Icons
     uniqueID: 2573291717
     locked: 0
   - name: Ground
     uniqueID: 1556569731
+    locked: 0
+  - name: HealthBar
+    uniqueID: 1570397069
     locked: 0
   m_RenderingLayers:
   - Default
