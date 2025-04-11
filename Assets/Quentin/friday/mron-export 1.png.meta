@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mron-export 1_0: 227420085124466077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
