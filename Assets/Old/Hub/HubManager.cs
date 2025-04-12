@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System.Collections;
 
 public class HubManager : MonoBehaviour
 {
