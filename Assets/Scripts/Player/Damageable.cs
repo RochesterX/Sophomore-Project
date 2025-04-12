@@ -52,16 +52,19 @@ public class Damageable : MonoBehaviour
             if (blockComponent.IsParrying()) // Player receives damage if punching a parrying player
             {
                 damageSource.GetComponent<Damageable>().SuccessfulParry(gameObject, actualForce);
+                AudioManager.Instance.PlaySound("Parry");
                 return;
             }
             else // Player does less damage if punching a blocking player
             {
+                AudioManager.Instance.PlaySound("Punch");
                 actualForce /= 4;
                 GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
             }
         }
         else // Player does full damage to a non-blocking player
         {
+            AudioManager.Instance.PlaySound("Punch");
             GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce * (1 + (damage / maxDamage) * 3), ForceMode2D.Force);
         }
         damage += actualForce;
@@ -88,6 +91,7 @@ public class Damageable : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * force, ForceMode2D.Force);
         damage += force;
         damage = Mathf.Clamp(damage, 0f, maxDamage);
+
         if (damage >= maxDamage)
         {
             Die();
@@ -105,6 +109,8 @@ public class Damageable : MonoBehaviour
             }
             animator.SetBool("die", true);
             dying = true;
+
+            AudioManager.Instance.PlaySound("Death Simple");
         }
     }
 

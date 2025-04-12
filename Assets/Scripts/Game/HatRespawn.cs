@@ -17,6 +17,7 @@ public class HatRespawn : MonoBehaviour
 
     void Update() // Checks if the hat has been inactive for too long
     {
+        if (GameManager.Instance.gameOver) GetComponent<BoxCollider2D>().enabled = false;
         if (isDropped && Time.time - lastInteractionTime > respawnTime)
         {
             RespawnHat();

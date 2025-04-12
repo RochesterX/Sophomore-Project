@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3780107421726398174}
   - component: {fileID: 2046340251710672081}
   - component: {fileID: 7583491847306130808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hat
   m_TagString: Hat
   m_Icon: {fileID: 0}

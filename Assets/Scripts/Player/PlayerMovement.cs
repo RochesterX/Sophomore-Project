@@ -132,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         if ((virtualButtonJumpLastFrame == 1f && isBasicallyGrounded && jumping == false) // Coyote Jump: Must have jump pressed this frame and be grounded in last time frame and not be actually jumping.
             || (jumpInputStillValid && Time.time - lastTimeJumpPressed <= jumpLenience && IsPhysicallyGrounded())) // Buffered Jump: Must have pressed jump in the last time frame and be jumping
         {
+            AudioManager.Instance.PlaySound("Jump");
             jumpPhysics = true;
             jumping = true;
             jumpInputStillValid = false;

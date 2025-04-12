@@ -40,7 +40,7 @@ public class UseItem : MonoBehaviour
         }
     }
 
-    private void PickUpItem(GameObject item) // Player picks up hat and starts hold counter 
+    public void PickUpItem(GameObject item) // Player picks up hat and starts hold counter 
     {
         if (damageable.dying) return; // Prevent picking up items if the player is dying
         if (HatRespawn.canBePickedUp == false) return; // Prevent picking up items if they are not interactable
@@ -58,6 +58,7 @@ public class UseItem : MonoBehaviour
         {
             GameManager.playerHoldTimes[gameObject] = 0f;
         }
+        AudioManager.Instance.PlaySound("Pickup Hat");
         GameManager.Instance.StopCoroutine("MoveHatToWinner");
     }
 

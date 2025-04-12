@@ -329,6 +329,17 @@
                 },
                 {
                     "name": "",
+                    "id": "518c81e8-0fbd-417b-8e0d-1369f419f06d",
+                    "path": "<HID::45E-2FD>/button12",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Join",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "579f259d-1883-4fa5-bb3f-e564431fd795",
                     "path": "<Keyboard>/e",
                     "interactions": "",

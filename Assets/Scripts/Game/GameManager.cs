@@ -217,6 +217,7 @@ public class GameManager : MonoBehaviour
         while (!winner.GetComponent<UseItem>().IsHoldingItem())
         {
             hatObject.transform.position = winner.transform.position + Vector3.up * 3/2;
+            winner.GetComponent<UseItem>().PickUpItem(hatObject);
             yield return null;
         }
     }
