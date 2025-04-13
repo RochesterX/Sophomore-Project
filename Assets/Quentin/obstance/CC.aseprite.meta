@@ -125,7 +125,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Frame_0
     originalName: 
-    pivot: {x: 0.515625, y: -1.2545455}
+    pivot: {x: 0.51538455, y: -1.2321429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -133,8 +133,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 300
-      width: 128
-      height: 55
+      width: 130
+      height: 56
     spriteID: 54ed1bc8272e6474282a61dc844680c3
     spriteBone: []
     spriteOutline: []
@@ -146,16 +146,16 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 300}
   - name: Frame_1
     originalName: 
-    pivot: {x: 0.515625, y: -1.2545455}
+    pivot: {x: 0.51538455, y: -1.2321429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 140
+      x: 142
       y: 300
-      width: 128
-      height: 55
+      width: 130
+      height: 56
     spriteID: 2af906e0e1f533347a93153262bca1f1
     spriteBone: []
     spriteOutline: []
@@ -164,19 +164,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 140, y: 300}
+    uvTransform: {x: 142, y: 300}
   - name: Frame_2
     originalName: 
-    pivot: {x: 0.515625, y: -1.2545455}
+    pivot: {x: 0.51538455, y: -1.2321429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 276
+      x: 280
       y: 300
-      width: 128
-      height: 55
+      width: 130
+      height: 56
     spriteID: 0f9510b9b460e184ea0cf4e48fb3ad20
     spriteBone: []
     spriteOutline: []
@@ -185,19 +185,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 276, y: 300}
+    uvTransform: {x: 280, y: 300}
   - name: Frame_3
     originalName: 
-    pivot: {x: 0.515625, y: -1.2545455}
+    pivot: {x: 0.51538455, y: -1.2321429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 363
-      width: 128
-      height: 55
+      y: 364
+      width: 130
+      height: 56
     spriteID: febf0bd5ff44acc40b78c227b25f9486
     spriteBone: []
     spriteOutline: []
@@ -206,10 +206,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 363}
+    uvTransform: {x: 4, y: 364}
   - name: Frame_4
     originalName: 
-    pivot: {x: 0.525, y: -0.041666664}
+    pivot: {x: 0.52369076, y: -0.041666664}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -217,7 +217,7 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 400
+      width: 401
       height: 288
     spriteID: 9e45b6c6b0e81ad46991ce1b81f91315
     spriteBone: []
@@ -241,37 +241,37 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 224
+        x: 223
         y: 69
-        width: 128
-        height: 55
+        width: 130
+        height: 56
       spriteId: 54ed1bc8272e6474282a61dc844680c3
     - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 224
+        x: 223
         y: 69
-        width: 128
-        height: 55
+        width: 130
+        height: 56
       spriteId: 2af906e0e1f533347a93153262bca1f1
     - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 224
+        x: 223
         y: 69
-        width: 128
-        height: 55
+        width: 130
+        height: 56
       spriteId: 0f9510b9b460e184ea0cf4e48fb3ad20
     - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 224
+        x: 223
         y: 69
-        width: 128
-        height: 55
+        width: 130
+        height: 56
       spriteId: febf0bd5ff44acc40b78c227b25f9486
     - name: Frame_4
       frameIndex: 4
@@ -279,7 +279,7 @@ ScriptedImporter:
       cellRect:
         x: 80
         y: 12
-        width: 400
+        width: 401
         height: 288
       spriteId: 9e45b6c6b0e81ad46991ce1b81f91315
     linkedCells: []
