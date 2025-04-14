@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-
+/// <summary>
+/// The GameManager class manages the overall game logic, including game modes, player states, 
+/// game events, and game-over conditions. It ensures a single instance exists and provides 
+/// functionality for starting, updating, and ending the game.
+/// </summary>
+/// <summary>
+/// Manages the overall game logic, including game modes, player states, game events, and game-over conditions.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -26,6 +33,10 @@ public class GameManager : MonoBehaviour
     public Canvas LeaderboardCanvas;
     public Canvas TimerCanvas;
     public GameObject hatObject;
+
+    /// <summary>
+    /// Enum representing the different game modes.
+    /// </summary>
     public enum GameMode
     {
         freeForAll,
@@ -33,7 +44,10 @@ public class GameManager : MonoBehaviour
         obstacleCourse
     }
 
-    private void Awake() // Ensures only one instance of GameManager exists
+    /// <summary>
+    /// Ensures only one instance of GameManager exists.
+    /// </summary>
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -45,13 +59,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start() // Starts the game and music
+    /// <summary>
+    /// Starts the game and initializes music.
+    /// </summary>
+    private void Start()
     {
         MusicManager.Instance.StartPlaylist();
         StartGame();
     }
 
-    private void Update() // Continuously updates player hold times
+    /// <summary>
+    /// Continuously updates player hold times during the game.
+    /// </summary>
+    private void Update()
     {
         if (gameOver) return;
 
@@ -65,6 +85,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Retrieves the hold time of a player.
+    /// </summary>
+    /// <param name="player">The player GameObject.</param>
+    /// <returns>The hold time of the player.</returns>
     private float GetPlayerHoldTime(GameObject player)
     {
         UseItem useItem = player.GetComponent<UseItem>();
@@ -75,14 +100,17 @@ public class GameManager : MonoBehaviour
         return 0f;
     }
 
-    public void StartGame() // Sets up the proper gamemode
+    /// <summary>
+    /// Sets up the game based on the selected game mode.
+    /// </summary>
+    public void StartGame()
     {
         GameManager.playerHoldTimes.Clear();
         if (GameManager.players.Count == 0) return;
 
         StartGameEvent?.Invoke();
         print("Starting game with mode: " + gameMode + " and map: " + map);
-        if (gameMode == GameMode.freeForAll) // Sets up the game for free for all mode
+        if (gameMode == GameMode.freeForAll)
         {
             foreach (GameObject player in players)
             {
@@ -90,7 +118,7 @@ public class GameManager : MonoBehaviour
                 player.GetComponent<Damageable>().lives = 5;
             }
         }
-        if (gameMode == GameMode.keepAway) // Sets up the game for keep away mode
+        if (gameMode == GameMode.keepAway)
         {
             gameTimer.startTime = time;
             gameTimer.StartTimer();
@@ -100,7 +128,7 @@ public class GameManager : MonoBehaviour
                 player.GetComponent<Damageable>().lives = 0;
             }
         }
-        if (gameMode == GameMode.obstacleCourse) // Sets up the game for obstacle course mode
+        if (gameMode == GameMode.obstacleCourse)
         {
             foreach (GameObject player in players)
             {
@@ -110,9 +138,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PlayerDied(Damageable player) // Handles player deaths for the respective gamemode
+    /// <summary>
+    /// Handles player deaths based on the current game mode.
+    /// </summary>
+    /// <param name="player">The player that died.</param>
+    public void PlayerDied(Damageable player)
     {
-        UseItem useItem = player.GetComponent<UseItem>(); // Drop the item the player is holding
+        UseItem useItem = player.GetComponent<UseItem>();
         if (useItem != null)
         {
             if (gameOver == false)
@@ -121,11 +153,11 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                return; // Prevents winner from dropping the item if the game is over
+                return;
             }
         }
 
-        if (gameMode == GameMode.freeForAll) // Respawns player if they have lives left
+        if (gameMode == GameMode.freeForAll)
         {
             player.lives--;
             if (player.lives <= 0 && !gameOver)
@@ -133,7 +165,7 @@ public class GameManager : MonoBehaviour
                 player.gameObject.SetActive(false);
                 if (AlivePlayers().Count <= 1)
                 {
-                    GameOver(); // Winner is called when only one player is left
+                    GameOver();
                 }
             }
             else
@@ -141,17 +173,17 @@ public class GameManager : MonoBehaviour
                 RespawnPlayer(player.gameObject);
             }
         }
-        if (gameMode == GameMode.keepAway) // Always respawns player regardless of lives
-        {
-            RespawnPlayer(player.gameObject);
-        }
-        if (gameMode == GameMode.obstacleCourse)
+        if (gameMode == GameMode.keepAway || gameMode == GameMode.obstacleCourse)
         {
             RespawnPlayer(player.gameObject);
         }
     }
 
-    private void RespawnPlayer(GameObject player) // Respawns player at the spawn point and resets health
+    /// <summary>
+    /// Respawns a player at their designated spawn point.
+    /// </summary>
+    /// <param name="player">The player GameObject to respawn.</param>
+    private void RespawnPlayer(GameObject player)
     {
         RespawnOnTriggerEnter respawnScript = player.GetComponent<RespawnOnTriggerEnter>();
         if (respawnScript != null)
@@ -162,14 +194,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver() // Ends game and displays winner
+    /// <summary>
+    /// Ends the game and determines the winner based on the game mode.
+    /// </summary>
+    public void GameOver()
     {
         gameOver = true;
         EndGameEvent?.Invoke();
         LeaderboardCanvas.gameObject.SetActive(false);
         TimerCanvas.gameObject.SetActive(false);
 
-        if (gameMode == GameMode.freeForAll) // Last player alive wins
+        if (gameMode == GameMode.freeForAll)
         {
             GameObject winner = AlivePlayers()[0];
             print(winner.name + " is the winner");
@@ -177,7 +212,7 @@ public class GameManager : MonoBehaviour
             WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
             FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
         }
-        if (gameMode == GameMode.keepAway) // Player with the most time holding the hat wins
+        if (gameMode == GameMode.keepAway)
         {
             GameObject winner = null;
             float maxHoldTime = -1f;
@@ -201,7 +236,7 @@ public class GameManager : MonoBehaviour
                 hatObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             }
         }
-        if (gameMode == GameMode.obstacleCourse) // Player who reached the end first wins
+        if (gameMode == GameMode.obstacleCourse)
         {
             GameObject winner = ObstacleCourse.playerWon;
 
@@ -212,17 +247,26 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Moves the hat to the winner in keep-away mode.
+    /// </summary>
+    /// <param name="winner">The winning player GameObject.</param>
+    /// <returns>An IEnumerator for coroutine execution.</returns>
     private IEnumerator MoveHatToWinner(GameObject winner)
     {
         while (!winner.GetComponent<UseItem>().IsHoldingItem())
         {
-            hatObject.transform.position = winner.transform.position + Vector3.up * 3/2;
+            hatObject.transform.position = winner.transform.position + Vector3.up * 3 / 2;
             winner.GetComponent<UseItem>().PickUpItem(hatObject);
             yield return null;
         }
     }
 
-    public List<GameObject> AlivePlayers() // Returns a list of all players that are alive
+    /// <summary>
+    /// Returns a list of all players that are currently alive.
+    /// </summary>
+    /// <returns>A list of alive player GameObjects.</returns>
+    public List<GameObject> AlivePlayers()
     {
         List<GameObject> alivePlayers = new();
 
@@ -234,7 +278,12 @@ public class GameManager : MonoBehaviour
         return alivePlayers;
     }
 
-    public void UpdatePlayerHoldTime(GameObject player, float holdTime) // Updates the player's hold time and leaderboard
+    /// <summary>
+    /// Updates the player's hold time and updates the leaderboard.
+    /// </summary>
+    /// <param name="player">The player GameObject.</param>
+    /// <param name="holdTime">The hold time to update.</param>
+    public void UpdatePlayerHoldTime(GameObject player, float holdTime)
     {
         bool shouldSort = false;
 
