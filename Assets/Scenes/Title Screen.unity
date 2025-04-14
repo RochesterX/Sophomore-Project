@@ -2739,67 +2739,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'User gude in game
-
-    More comments on the code
-
-    Art
-
-    Playtest
-
-    Reset
-    confirmation
-
-    Player Join screen update (clarify map select)
-
-    Sound effects
-    in game
-
-
-    Time left
-
-    Health bar persists after death
-
-    Player card
-    players
-
-    Keep away map
-
-    Join screen titles
-
-    Implement music
-
-    Mountain
-    music
-
-    Obstacle course end
-
-    Time limits keep away
-
-    Respawn after
-    game over (keep away)
-
-    Make city playable
-
-    One way platform mountain
-
-    Leaderboard
-    scaling city obstacle course
-
-    Get rid of placeholder start stop obstacle
-    course
-
-    Platform friction
-
-    Obstacle course flag
-
-    Obstacle course
-    end for mountain
-
-    Facing angle not velocity-based
-
-    Dead player constant
-    velocity'
+  m_text: "User gude in game\nMore comments on the code?\nReset confirmation\nPlayer
+    Join screen update (clarify map select)\nSound effects in game\nPlayer card players\nKeep
+    away map\nJoin screen titles\nImplement music\nMountain music\nMake city playable\nOne
+    way platform mountain\nLeaderboard scaling city obstacle course\nGet rid of placeholder
+    start stop obstacle course\nPlatform friction\nFacing angle not velocity-based\nDead
+    player constant velocity\n\nDylan will do:\nFix Time Left! text\nObstacle course
+    end only works on correct gamemode\nObstacle course end for mountain\nCorrect
+    time limits for keep away maps\nRespawn after game over (keep away)\n\nWill try
+    to complete: \nObstacle course flag\nHealth bar persists after death\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
