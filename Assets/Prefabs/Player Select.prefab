@@ -389,7 +389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 577.58, y: 116}
+  m_AnchoredPosition: {x: 577.5801, y: 116}
   m_SizeDelta: {x: 991.87, y: 994.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4398521839358101483
@@ -597,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -378}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300.8, y: -19}
+  m_AnchoredPosition: {x: 300.80005, y: -19}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6500631376098022988
@@ -1913,7 +1913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515670857758816212, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_Name
-      value: (CITY) Keep_Away2
+      value: Q2_(CITY) Keep_Away2
       objectReference: {fileID: 0}
     - target: {fileID: 6017258344494229771, guid: 379d0dd7636974e42bcfc11679f61cd0, type: 3}
       propertyPath: m_IsOn

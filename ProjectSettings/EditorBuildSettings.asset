@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Other/Keep_Away.unity
     guid: e9fc24bb9df988b4196fa7d9969a7515
   - enabled: 1
-    path: Assets/Scenes/(CITY) Keep_Away2.unity
+    path: Assets/Scenes/[OUTDATED](CITY) Keep_Away2.unity
     guid: 5b70a9ceb8960e04584c7d2e13993639
   - enabled: 1
     path: Assets/Scenes/Other/FerrisWheel.unity
@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Platform3 (MOUNTAIN).unity
     guid: a50be2ffc65f5834d8e69669daa4e7e9
+  - enabled: 1
+    path: Assets/Scenes/Q2_(CITY) Keep_Away2.unity
+    guid: 44997f63cfd2045428e6f0640b03150c
+  - enabled: 1
+    path: Assets/Scenes/QQ_ObstanceWIP.unity
+    guid: 02154a1e21aa5014c8672f4e478974cf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
