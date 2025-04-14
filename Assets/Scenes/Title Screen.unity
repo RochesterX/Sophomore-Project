@@ -2796,7 +2796,10 @@ MonoBehaviour:
     Obstacle course
     end for mountain
 
-    Facing angle not velocity-based'
+    Facing angle not velocity-based
+
+    Dead player constant
+    velocity'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3979,9 +3982,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: d117cd88229057f47b4372ff970f32ef, type: 3}
     shuffleTime: 60
     volume: 0.25
-  - trackName: Mountain
+  - trackName: Obstacle Course
     trackScenes:
-    - Platform3 (MOUNTAIN)
+    - ObstanceWIP
     songs:
     - {fileID: 8300000, guid: 0fc9737603d0bce469dd3261512c029c, type: 3}
     - {fileID: 8300000, guid: 1b9f01ade7d2aca4c97e213e541b2c28, type: 3}
