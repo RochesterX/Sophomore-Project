@@ -7481,7 +7481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1277363986118001863, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
       propertyPath: lowerBound
-      value: -1.1
+      value: -15.72
       objectReference: {fileID: 0}
     - target: {fileID: 1277363986118001863, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
       propertyPath: players.Array.size

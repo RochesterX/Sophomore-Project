@@ -2739,7 +2739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'User guide in game
+  m_text: 'User gude in game
 
     More comments on the code
 
@@ -2753,7 +2753,50 @@ MonoBehaviour:
     Player Join screen update (clarify map select)
 
     Sound effects
-    in game'
+    in game
+
+
+    Time left
+
+    Health bar persists after death
+
+    Player card
+    players
+
+    Keep away map
+
+    Join screen titles
+
+    Implement music
+
+    Mountain
+    music
+
+    Obstacle course end
+
+    Time limits keep away
+
+    Respawn after
+    game over (keep away)
+
+    Make city playable
+
+    One way platform mountain
+
+    Leaderboard
+    scaling city obstacle course
+
+    Get rid of placeholder start stop obstacle
+    course
+
+    Platform friction
+
+    Obstacle course flag
+
+    Obstacle course
+    end for mountain
+
+    Facing angle not velocity-based'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3911,7 +3954,40 @@ MonoBehaviour:
     songs:
     - {fileID: 8300000, guid: 0fc9737603d0bce469dd3261512c029c, type: 3}
     - {fileID: 8300000, guid: 1b9f01ade7d2aca4c97e213e541b2c28, type: 3}
-    - {fileID: 8300000, guid: e9c19b5a3d636f84d8d0dfa26b72bafc, type: 3}
+    - {fileID: 8300000, guid: 3ce76dbc38007e9449462299ca91ef6e, type: 3}
+    - {fileID: 8300000, guid: 999b36dec8888774e85f493d545d121c, type: 3}
+    shuffleTime: 60
+    volume: 0.25
+  - trackName: City
+    trackScenes:
+    - Q2_(CITY) Keep_Away
+    songs:
+    - {fileID: 8300000, guid: 0fc9737603d0bce469dd3261512c029c, type: 3}
+    - {fileID: 8300000, guid: 1b9f01ade7d2aca4c97e213e541b2c28, type: 3}
+    - {fileID: 8300000, guid: 3ce76dbc38007e9449462299ca91ef6e, type: 3}
+    - {fileID: 8300000, guid: 999b36dec8888774e85f493d545d121c, type: 3}
+    - {fileID: 8300000, guid: d117cd88229057f47b4372ff970f32ef, type: 3}
+    shuffleTime: 60
+    volume: 0.25
+  - trackName: Mountain
+    trackScenes:
+    - Platform3 (MOUNTAIN)
+    songs:
+    - {fileID: 8300000, guid: 0fc9737603d0bce469dd3261512c029c, type: 3}
+    - {fileID: 8300000, guid: 1b9f01ade7d2aca4c97e213e541b2c28, type: 3}
+    - {fileID: 8300000, guid: 999b36dec8888774e85f493d545d121c, type: 3}
+    - {fileID: 8300000, guid: d117cd88229057f47b4372ff970f32ef, type: 3}
+    shuffleTime: 60
+    volume: 0.25
+  - trackName: Mountain
+    trackScenes:
+    - Platform3 (MOUNTAIN)
+    songs:
+    - {fileID: 8300000, guid: 0fc9737603d0bce469dd3261512c029c, type: 3}
+    - {fileID: 8300000, guid: 1b9f01ade7d2aca4c97e213e541b2c28, type: 3}
+    - {fileID: 8300000, guid: 999b36dec8888774e85f493d545d121c, type: 3}
+    - {fileID: 8300000, guid: d117cd88229057f47b4372ff970f32ef, type: 3}
+    - {fileID: 8300000, guid: 3ce76dbc38007e9449462299ca91ef6e, type: 3}
     shuffleTime: 60
     volume: 0.25
   songPrefab: {fileID: 4106763810421620447, guid: 62e9537ddee724a40ba1a0e825087aee, type: 3}
