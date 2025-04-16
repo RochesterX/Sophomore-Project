@@ -1,5 +1,6 @@
-using UnityEngine;
-
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 public class ObjectVisibility : MonoBehaviour
 {
     void Start()
@@ -23,4 +24,5 @@ public class ObjectVisibility : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+}
 }

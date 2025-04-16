@@ -1,7 +1,9 @@
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using TMPro;
 using UnityEngine.UI;
+namespace Game
+{
 
 public class LeaderboardManager : MonoBehaviour
 {
@@ -85,4 +87,4 @@ public class LeaderboardManager : MonoBehaviour
         }
     }
 
-}
+}}

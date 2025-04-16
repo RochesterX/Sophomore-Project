@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player
+  commentId: N:Player
+  id: Player
+  children:
+  - Player.AnimationPlayer
+  - Player.AnimationPlayer.AnimationState
+  - Player.Block
+  - Player.Damageable
+  - Player.PlayerCameraMovement
+  - Player.PlayerManager
+  - Player.PlayerMovement
+  - Player.Punch
+  - Player.TeleportPlatform
+  - Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: Player
+  fullName: Player
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Player.Damageable
+  commentId: T:Player.Damageable
+  parent: Player
+  name: Damageable
+  nameWithType: Damageable
+  fullName: Player.Damageable
+- uid: Player.Punch
+  commentId: T:Player.Punch
+  name: Punch
+  nameWithType: Punch
+  fullName: Player.Punch
+- uid: Player.TeleportPlatform
+  commentId: T:Player.TeleportPlatform
+  name: TeleportPlatform
+  nameWithType: TeleportPlatform
+  fullName: Player.TeleportPlatform
+- uid: Player.PlayerManager
+  commentId: T:Player.PlayerManager
+  parent: Player
+  name: PlayerManager
+  nameWithType: PlayerManager
+  fullName: Player.PlayerManager
+- uid: Player.AnimationPlayer
+  commentId: T:Player.AnimationPlayer
+  name: AnimationPlayer
+  nameWithType: AnimationPlayer
+  fullName: Player.AnimationPlayer
+- uid: Player.AnimationPlayer.AnimationState
+  commentId: T:Player.AnimationPlayer.AnimationState
+  parent: Player
+  name: AnimationPlayer.AnimationState
+  nameWithType: AnimationPlayer.AnimationState
+  fullName: Player.AnimationPlayer.AnimationState
+  spec.csharp:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState
+  spec.vb:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState
+- uid: Player.Block
+  commentId: T:Player.Block
+  name: Block
+  nameWithType: Block
+  fullName: Player.Block
+- uid: Player.PlayerMovement
+  commentId: T:Player.PlayerMovement
+  name: PlayerMovement
+  nameWithType: PlayerMovement
+  fullName: Player.PlayerMovement
+- uid: Player.UseItem
+  commentId: T:Player.UseItem
+  name: UseItem
+  nameWithType: UseItem
+  fullName: Player.UseItem
+- uid: Player.PlayerCameraMovement
+  commentId: T:Player.PlayerCameraMovement
+  name: PlayerCameraMovement
+  nameWithType: PlayerCameraMovement
+  fullName: Player.PlayerCameraMovement
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player

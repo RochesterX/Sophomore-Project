@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.MusicManager
+  commentId: T:Music.MusicManager
+  id: MusicManager
+  parent: Music
+  children:
+  - Music.MusicManager.GetActiveSceneNotTitleScreen
+  - Music.MusicManager.Instance
+  - Music.MusicManager.playlists
+  - Music.MusicManager.songPrefab
+  - Music.MusicManager.StartPlaylist
+  - Music.MusicManager.StartPlaylist(System.String)
+  langs:
+  - csharp
+  - vb
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: Music.MusicManager
+  type: Class
+  source:
+    id: MusicManager
+    path: ''
+    startLine: 412
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: 'public class MusicManager : MonoBehaviour'
+    content.vb: Public Class MusicManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Music.MusicManager.Instance
+  commentId: F:Music.MusicManager.Instance
+  id: Instance
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MusicManager.Instance
+  fullName: Music.MusicManager.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 414
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public static MusicManager Instance
+    return:
+      type: Music.MusicManager
+    content.vb: Public Shared Instance As MusicManager
+- uid: Music.MusicManager.playlists
+  commentId: F:Music.MusicManager.playlists
+  id: playlists
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: playlists
+  nameWithType: MusicManager.playlists
+  fullName: Music.MusicManager.playlists
+  type: Field
+  source:
+    id: playlists
+    path: ''
+    startLine: 415
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public List<Playlist> playlists
+    return:
+      type: Global.List{Music.Playlist}
+    content.vb: Public playlists As List(Of Playlist)
+- uid: Music.MusicManager.songPrefab
+  commentId: F:Music.MusicManager.songPrefab
+  id: songPrefab
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: songPrefab
+  nameWithType: MusicManager.songPrefab
+  fullName: Music.MusicManager.songPrefab
+  type: Field
+  source:
+    id: songPrefab
+    path: ''
+    startLine: 417
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public GameObject songPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public songPrefab As GameObject
+- uid: Music.MusicManager.StartPlaylist
+  commentId: M:Music.MusicManager.StartPlaylist
+  id: StartPlaylist
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StartPlaylist()
+  nameWithType: MusicManager.StartPlaylist()
+  fullName: Music.MusicManager.StartPlaylist()
+  type: Method
+  source:
+    id: StartPlaylist
+    path: ''
+    startLine: 439
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public void StartPlaylist()
+    content.vb: Public Sub StartPlaylist()
+  overload: Music.MusicManager.StartPlaylist*
+- uid: Music.MusicManager.StartPlaylist(System.String)
+  commentId: M:Music.MusicManager.StartPlaylist(System.String)
+  id: StartPlaylist(System.String)
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: StartPlaylist(string)
+  nameWithType: MusicManager.StartPlaylist(string)
+  fullName: Music.MusicManager.StartPlaylist(string)
+  type: Method
+  source:
+    id: StartPlaylist
+    path: ''
+    startLine: 458
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public void StartPlaylist(string scene)
+    parameters:
+    - id: scene
+      type: System.String
+    content.vb: Public Sub StartPlaylist(scene As String)
+  overload: Music.MusicManager.StartPlaylist*
+  nameWithType.vb: MusicManager.StartPlaylist(String)
+  fullName.vb: Music.MusicManager.StartPlaylist(String)
+  name.vb: StartPlaylist(String)
+- uid: Music.MusicManager.GetActiveSceneNotTitleScreen
+  commentId: M:Music.MusicManager.GetActiveSceneNotTitleScreen
+  id: GetActiveSceneNotTitleScreen
+  parent: Music.MusicManager
+  langs:
+  - csharp
+  - vb
+  name: GetActiveSceneNotTitleScreen()
+  nameWithType: MusicManager.GetActiveSceneNotTitleScreen()
+  fullName: Music.MusicManager.GetActiveSceneNotTitleScreen()
+  type: Method
+  source:
+    id: GetActiveSceneNotTitleScreen
+    path: ''
+    startLine: 510
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public static string GetActiveSceneNotTitleScreen()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetActiveSceneNotTitleScreen() As String
+  overload: Music.MusicManager.GetActiveSceneNotTitleScreen*
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Music.MusicManager
+  commentId: T:Music.MusicManager
+  parent: Music
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: Music.MusicManager
+- uid: Global.List{Music.Playlist}
+  commentId: '!:Global.List{Music.Playlist}'
+  definition: Global.List`1
+  name: List<Playlist>
+  nameWithType: List<Playlist>
+  fullName: List<Music.Playlist>
+  nameWithType.vb: List(Of Playlist)
+  fullName.vb: List(Of Music.Playlist)
+  name.vb: List(Of Playlist)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Music.Playlist
+    name: Playlist
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Music.Playlist
+    name: Playlist
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Music.MusicManager.StartPlaylist*
+  commentId: Overload:Music.MusicManager.StartPlaylist
+  name: StartPlaylist
+  nameWithType: MusicManager.StartPlaylist
+  fullName: Music.MusicManager.StartPlaylist
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Music.MusicManager.GetActiveSceneNotTitleScreen*
+  commentId: Overload:Music.MusicManager.GetActiveSceneNotTitleScreen
+  name: GetActiveSceneNotTitleScreen
+  nameWithType: MusicManager.GetActiveSceneNotTitleScreen
+  fullName: Music.MusicManager.GetActiveSceneNotTitleScreen

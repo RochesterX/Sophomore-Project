@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player.Punch
+  commentId: T:Player.Punch
+  id: Punch
+  parent: Player
+  children:
+  - Player.Punch.cancelable
+  - Player.Punch.DisableCancellation
+  - Player.Punch.DisableHurtbox
+  - Player.Punch.EnableCancellation
+  - Player.Punch.EnableHurtbox
+  - Player.Punch.ReturnToMaxSpeed
+  langs:
+  - csharp
+  - vb
+  name: Punch
+  nameWithType: Punch
+  fullName: Player.Punch
+  type: Class
+  source:
+    id: Punch
+    path: ''
+    startLine: 2147
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: 'public class Punch : MonoBehaviour'
+    content.vb: Public Class Punch Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Player.Punch.cancelable
+  commentId: F:Player.Punch.cancelable
+  id: cancelable
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: cancelable
+  nameWithType: Punch.cancelable
+  fullName: Player.Punch.cancelable
+  type: Field
+  source:
+    id: cancelable
+    path: ''
+    startLine: 2151
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool cancelable
+    return:
+      type: System.Boolean
+    content.vb: Public cancelable As Boolean
+- uid: Player.Punch.EnableHurtbox
+  commentId: M:Player.Punch.EnableHurtbox
+  id: EnableHurtbox
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: EnableHurtbox()
+  nameWithType: Punch.EnableHurtbox()
+  fullName: Player.Punch.EnableHurtbox()
+  type: Method
+  source:
+    id: EnableHurtbox
+    path: ''
+    startLine: 2178
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void EnableHurtbox()
+    content.vb: Public Sub EnableHurtbox()
+  overload: Player.Punch.EnableHurtbox*
+- uid: Player.Punch.DisableHurtbox
+  commentId: M:Player.Punch.DisableHurtbox
+  id: DisableHurtbox
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: DisableHurtbox()
+  nameWithType: Punch.DisableHurtbox()
+  fullName: Player.Punch.DisableHurtbox()
+  type: Method
+  source:
+    id: DisableHurtbox
+    path: ''
+    startLine: 2183
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void DisableHurtbox()
+    content.vb: Public Sub DisableHurtbox()
+  overload: Player.Punch.DisableHurtbox*
+- uid: Player.Punch.DisableCancellation
+  commentId: M:Player.Punch.DisableCancellation
+  id: DisableCancellation
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: DisableCancellation()
+  nameWithType: Punch.DisableCancellation()
+  fullName: Player.Punch.DisableCancellation()
+  type: Method
+  source:
+    id: DisableCancellation
+    path: ''
+    startLine: 2188
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void DisableCancellation()
+    content.vb: Public Sub DisableCancellation()
+  overload: Player.Punch.DisableCancellation*
+- uid: Player.Punch.EnableCancellation
+  commentId: M:Player.Punch.EnableCancellation
+  id: EnableCancellation
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: EnableCancellation()
+  nameWithType: Punch.EnableCancellation()
+  fullName: Player.Punch.EnableCancellation()
+  type: Method
+  source:
+    id: EnableCancellation
+    path: ''
+    startLine: 2193
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void EnableCancellation()
+    content.vb: Public Sub EnableCancellation()
+  overload: Player.Punch.EnableCancellation*
+- uid: Player.Punch.ReturnToMaxSpeed
+  commentId: M:Player.Punch.ReturnToMaxSpeed
+  id: ReturnToMaxSpeed
+  parent: Player.Punch
+  langs:
+  - csharp
+  - vb
+  name: ReturnToMaxSpeed()
+  nameWithType: Punch.ReturnToMaxSpeed()
+  fullName: Player.Punch.ReturnToMaxSpeed()
+  type: Method
+  source:
+    id: ReturnToMaxSpeed
+    path: ''
+    startLine: 2198
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void ReturnToMaxSpeed()
+    content.vb: Public Sub ReturnToMaxSpeed()
+  overload: Player.Punch.ReturnToMaxSpeed*
+references:
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Player.Punch.EnableHurtbox*
+  commentId: Overload:Player.Punch.EnableHurtbox
+  name: EnableHurtbox
+  nameWithType: Punch.EnableHurtbox
+  fullName: Player.Punch.EnableHurtbox
+- uid: Player.Punch.DisableHurtbox*
+  commentId: Overload:Player.Punch.DisableHurtbox
+  name: DisableHurtbox
+  nameWithType: Punch.DisableHurtbox
+  fullName: Player.Punch.DisableHurtbox
+- uid: Player.Punch.DisableCancellation*
+  commentId: Overload:Player.Punch.DisableCancellation
+  name: DisableCancellation
+  nameWithType: Punch.DisableCancellation
+  fullName: Player.Punch.DisableCancellation
+- uid: Player.Punch.EnableCancellation*
+  commentId: Overload:Player.Punch.EnableCancellation
+  name: EnableCancellation
+  nameWithType: Punch.EnableCancellation
+  fullName: Player.Punch.EnableCancellation
+- uid: Player.Punch.ReturnToMaxSpeed*
+  commentId: Overload:Player.Punch.ReturnToMaxSpeed
+  name: ReturnToMaxSpeed
+  nameWithType: Punch.ReturnToMaxSpeed
+  fullName: Player.Punch.ReturnToMaxSpeed

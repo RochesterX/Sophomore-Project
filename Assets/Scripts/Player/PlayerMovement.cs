@@ -1,8 +1,10 @@
 using System.Collections;
 using TMPro;
 using Unity.IO.LowLevel.Unsafe;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
+namespace Player
+{
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -256,4 +258,5 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
     }
+}
 }

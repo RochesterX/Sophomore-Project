@@ -1,102 +1,90 @@
 ### YamlMime:TableOfContent
-- uid: Global
-  name: ''
+- uid: Game
+  name: Game
   items:
-  - uid: Global.AnimationPlayer
-    name: AnimationPlayer
-  - uid: Global.AnimationPlayer.AnimationState
-    name: AnimationPlayer.AnimationState
-  - uid: Global.AudioManager
-    name: AudioManager
-  - uid: Global.Block
-    name: Block
-  - uid: Global.Damageable
-    name: Damageable
-  - uid: Global.DayNightCycle
+  - uid: Game.DayNightCycle
     name: DayNightCycle
-  - uid: Global.EventSystemizer
+  - uid: Game.EventSystemizer
     name: EventSystemizer
-  - uid: Global.FallPlatform
+  - uid: Game.FallPlatform
     name: FallPlatform
-  - uid: Global.GameManager
+  - uid: Game.GameManager
     name: GameManager
-  - uid: Global.GameManager.GameEvent
+  - uid: Game.GameManager.GameEvent
     name: GameManager.GameEvent
-  - uid: Global.GameManager.GameMode
+  - uid: Game.GameManager.GameMode
     name: GameManager.GameMode
-  - uid: Global.GameManagerHelper
+  - uid: Game.GameManagerHelper
     name: GameManagerHelper
-  - uid: Global.GameTimer
+  - uid: Game.GameTimer
     name: GameTimer
-  - uid: Global.HatRespawn
+  - uid: Game.HatRespawn
     name: HatRespawn
-  - uid: Global.HealthBarManager
+  - uid: Game.HealthBarManager
     name: HealthBarManager
-  - uid: Global.HubManager
+  - uid: Game.HubManager
     name: HubManager
-  - uid: Global.HubPolygonCreator
-    name: HubPolygonCreator
-  - uid: Global.InfiniteScroll
+  - uid: Game.InfiniteScroll
     name: InfiniteScroll
-  - uid: Global.LeaderboardManager
+  - uid: Game.LeaderboardManager
     name: LeaderboardManager
-  - uid: Global.LifeDisplayManager
+  - uid: Game.LifeDisplayManager
     name: LifeDisplayManager
-  - uid: Global.MapSelect
+  - uid: Game.MapSelect
     name: MapSelect
-  - uid: Global.ModeSelect
+  - uid: Game.ModeSelect
     name: ModeSelect
-  - uid: Global.MovingPlatform
+  - uid: Game.MovingPlatform
     name: MovingPlatform
-  - uid: Global.MusicManager
-    name: MusicManager
-  - uid: Global.ObjectVisibility
+  - uid: Game.ObjectVisibility
     name: ObjectVisibility
-  - uid: Global.ObstacleCourse
+  - uid: Game.ObstacleCourse
     name: ObstacleCourse
-  - uid: Global.ParallaxBackground
-    name: ParallaxBackground
-  - uid: Global.ParallaxCamera
-    name: ParallaxCamera
-  - uid: Global.ParallaxCamera.ParallaxCameraDelegate
-    name: ParallaxCamera.ParallaxCameraDelegate
-  - uid: Global.ParallaxLayer
-    name: ParallaxLayer
-  - uid: Global.PlayerCameraMovement
-    name: PlayerCameraMovement
-  - uid: Global.PlayerCardCreator
+  - uid: Game.PlayerCardCreator
     name: PlayerCardCreator
-  - uid: Global.PlayerJoinCard
+  - uid: Game.PlayerJoinCard
     name: PlayerJoinCard
-  - uid: Global.PlayerManager
-    name: PlayerManager
-  - uid: Global.PlayerMovement
-    name: PlayerMovement
-  - uid: Global.Playlist
-    name: Playlist
-  - uid: Global.PongBallBehavior
-    name: PongBallBehavior
-  - uid: Global.PongPaddleBehavior
-    name: PongPaddleBehavior
-  - uid: Global.PongScorekeeper
-    name: PongScorekeeper
-  - uid: Global.Punch
-    name: Punch
-  - uid: Global.RespawnOnTriggerEnter
+  - uid: Game.RespawnOnTriggerEnter
     name: RespawnOnTriggerEnter
-  - uid: Global.SoundEffect
-    name: SoundEffect
-  - uid: Global.TeleportPlatform
-    name: TeleportPlatform
-  - uid: Global.TerribleHealthBarScript
+  - uid: Game.TerribleHealthBarScript
     name: TerribleHealthBarScript
-  - uid: Global.TrackLayer
-    name: TrackLayer
-  - uid: Global.TrackLayer.EnableTrigger
-    name: TrackLayer.EnableTrigger
-  - uid: Global.Trevor
-    name: Trevor
-  - uid: Global.UseItem
-    name: UseItem
-  - uid: Global.WinScreen
+  - uid: Game.WinScreen
     name: WinScreen
+- uid: Music
+  name: Music
+  items:
+  - uid: Music.AudioManager
+    name: AudioManager
+  - uid: Music.MusicManager
+    name: MusicManager
+  - uid: Music.Playlist
+    name: Playlist
+  - uid: Music.SoundEffect
+    name: SoundEffect
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - uid: Music.TrackLayer.EnableTrigger
+    name: TrackLayer.EnableTrigger
+- uid: Player
+  name: Player
+  items:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationPlayer.AnimationState
+  - uid: Player.Block
+    name: Block
+  - uid: Player.Damageable
+    name: Damageable
+  - uid: Player.PlayerCameraMovement
+    name: PlayerCameraMovement
+  - uid: Player.PlayerManager
+    name: PlayerManager
+  - uid: Player.PlayerMovement
+    name: PlayerMovement
+  - uid: Player.Punch
+    name: Punch
+  - uid: Player.TeleportPlatform
+    name: TeleportPlatform
+  - uid: Player.UseItem
+    name: UseItem

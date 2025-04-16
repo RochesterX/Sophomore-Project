@@ -1,0 +1,280 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.Playlist
+  commentId: T:Music.Playlist
+  id: Playlist
+  parent: Music
+  children:
+  - Music.Playlist.shuffleTime
+  - Music.Playlist.songs
+  - Music.Playlist.trackName
+  - Music.Playlist.trackScenes
+  - Music.Playlist.volume
+  langs:
+  - csharp
+  - vb
+  name: Playlist
+  nameWithType: Playlist
+  fullName: Music.Playlist
+  type: Class
+  source:
+    id: Playlist
+    path: ''
+    startLine: 918
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Playlist
+    content.vb: >-
+      <Serializable>
+
+      Public Class Playlist
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Music.Playlist.trackName
+  commentId: F:Music.Playlist.trackName
+  id: trackName
+  parent: Music.Playlist
+  langs:
+  - csharp
+  - vb
+  name: trackName
+  nameWithType: Playlist.trackName
+  fullName: Music.Playlist.trackName
+  type: Field
+  source:
+    id: trackName
+    path: ''
+    startLine: 921
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public string trackName
+    return:
+      type: System.String
+    content.vb: Public trackName As String
+- uid: Music.Playlist.trackScenes
+  commentId: F:Music.Playlist.trackScenes
+  id: trackScenes
+  parent: Music.Playlist
+  langs:
+  - csharp
+  - vb
+  name: trackScenes
+  nameWithType: Playlist.trackScenes
+  fullName: Music.Playlist.trackScenes
+  type: Field
+  source:
+    id: trackScenes
+    path: ''
+    startLine: 922
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public List<string> trackScenes
+    return:
+      type: Global.List{System.String}
+    content.vb: Public trackScenes As List(Of String)
+- uid: Music.Playlist.songs
+  commentId: F:Music.Playlist.songs
+  id: songs
+  parent: Music.Playlist
+  langs:
+  - csharp
+  - vb
+  name: songs
+  nameWithType: Playlist.songs
+  fullName: Music.Playlist.songs
+  type: Field
+  source:
+    id: songs
+    path: ''
+    startLine: 923
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public List<AudioClip> songs
+    return:
+      type: Global.List{AudioClip}
+    content.vb: Public songs As List(Of AudioClip)
+- uid: Music.Playlist.shuffleTime
+  commentId: F:Music.Playlist.shuffleTime
+  id: shuffleTime
+  parent: Music.Playlist
+  langs:
+  - csharp
+  - vb
+  name: shuffleTime
+  nameWithType: Playlist.shuffleTime
+  fullName: Music.Playlist.shuffleTime
+  type: Field
+  source:
+    id: shuffleTime
+    path: ''
+    startLine: 924
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public float shuffleTime
+    return:
+      type: System.Single
+    content.vb: Public shuffleTime As Single
+- uid: Music.Playlist.volume
+  commentId: F:Music.Playlist.volume
+  id: volume
+  parent: Music.Playlist
+  langs:
+  - csharp
+  - vb
+  name: volume
+  nameWithType: Playlist.volume
+  fullName: Music.Playlist.volume
+  type: Field
+  source:
+    id: volume
+    path: ''
+    startLine: 925
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public float volume
+    return:
+      type: System.Single
+    content.vb: Public volume As Single
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.List{System.String}
+  commentId: '!:Global.List{System.String}'
+  definition: Global.List`1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.List{AudioClip}
+  commentId: '!:Global.List{AudioClip}'
+  definition: Global.List`1
+  name: List<AudioClip>
+  nameWithType: List<AudioClip>
+  fullName: List<AudioClip>
+  nameWithType.vb: List(Of AudioClip)
+  fullName.vb: List(Of AudioClip)
+  name.vb: List(Of AudioClip)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.AudioClip
+    name: AudioClip
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.AudioClip
+    name: AudioClip
+    isExternal: true
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

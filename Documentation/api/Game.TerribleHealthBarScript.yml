@@ -1,0 +1,320 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.TerribleHealthBarScript
+  commentId: T:Game.TerribleHealthBarScript
+  id: TerribleHealthBarScript
+  parent: Game
+  children:
+  - Game.TerribleHealthBarScript.actualHealthVisual
+  - Game.TerribleHealthBarScript.deathVisual
+  - Game.TerribleHealthBarScript.fullDeathColor
+  - Game.TerribleHealthBarScript.fullHealthColor
+  - Game.TerribleHealthBarScript.healthVisual
+  - Game.TerribleHealthBarScript.player
+  - Game.TerribleHealthBarScript.SetPlayer(GameObject)
+  - Game.TerribleHealthBarScript.smoothSpeed
+  - Game.TerribleHealthBarScript.subtractionColor
+  - Game.TerribleHealthBarScript.text
+  langs:
+  - csharp
+  - vb
+  name: TerribleHealthBarScript
+  nameWithType: TerribleHealthBarScript
+  fullName: Game.TerribleHealthBarScript
+  type: Class
+  source:
+    id: TerribleHealthBarScript
+    path: ''
+    startLine: 1829
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class TerribleHealthBarScript : MonoBehaviour'
+    content.vb: Public Class TerribleHealthBarScript Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.TerribleHealthBarScript.fullHealthColor
+  commentId: F:Game.TerribleHealthBarScript.fullHealthColor
+  id: fullHealthColor
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: fullHealthColor
+  nameWithType: TerribleHealthBarScript.fullHealthColor
+  fullName: Game.TerribleHealthBarScript.fullHealthColor
+  type: Field
+  source:
+    id: fullHealthColor
+    path: ''
+    startLine: 1831
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Color fullHealthColor
+    return:
+      type: Global.Color
+    content.vb: Public fullHealthColor As Color
+- uid: Game.TerribleHealthBarScript.fullDeathColor
+  commentId: F:Game.TerribleHealthBarScript.fullDeathColor
+  id: fullDeathColor
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: fullDeathColor
+  nameWithType: TerribleHealthBarScript.fullDeathColor
+  fullName: Game.TerribleHealthBarScript.fullDeathColor
+  type: Field
+  source:
+    id: fullDeathColor
+    path: ''
+    startLine: 1832
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Color fullDeathColor
+    return:
+      type: Global.Color
+    content.vb: Public fullDeathColor As Color
+- uid: Game.TerribleHealthBarScript.subtractionColor
+  commentId: F:Game.TerribleHealthBarScript.subtractionColor
+  id: subtractionColor
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: subtractionColor
+  nameWithType: TerribleHealthBarScript.subtractionColor
+  fullName: Game.TerribleHealthBarScript.subtractionColor
+  type: Field
+  source:
+    id: subtractionColor
+    path: ''
+    startLine: 1833
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Color subtractionColor
+    return:
+      type: Global.Color
+    content.vb: Public subtractionColor As Color
+- uid: Game.TerribleHealthBarScript.healthVisual
+  commentId: F:Game.TerribleHealthBarScript.healthVisual
+  id: healthVisual
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: healthVisual
+  nameWithType: TerribleHealthBarScript.healthVisual
+  fullName: Game.TerribleHealthBarScript.healthVisual
+  type: Field
+  source:
+    id: healthVisual
+    path: ''
+    startLine: 1834
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject healthVisual
+    return:
+      type: Global.GameObject
+    content.vb: Public healthVisual As GameObject
+- uid: Game.TerribleHealthBarScript.actualHealthVisual
+  commentId: F:Game.TerribleHealthBarScript.actualHealthVisual
+  id: actualHealthVisual
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: actualHealthVisual
+  nameWithType: TerribleHealthBarScript.actualHealthVisual
+  fullName: Game.TerribleHealthBarScript.actualHealthVisual
+  type: Field
+  source:
+    id: actualHealthVisual
+    path: ''
+    startLine: 1835
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject actualHealthVisual
+    return:
+      type: Global.GameObject
+    content.vb: Public actualHealthVisual As GameObject
+- uid: Game.TerribleHealthBarScript.deathVisual
+  commentId: F:Game.TerribleHealthBarScript.deathVisual
+  id: deathVisual
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: deathVisual
+  nameWithType: TerribleHealthBarScript.deathVisual
+  fullName: Game.TerribleHealthBarScript.deathVisual
+  type: Field
+  source:
+    id: deathVisual
+    path: ''
+    startLine: 1836
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject deathVisual
+    return:
+      type: Global.GameObject
+    content.vb: Public deathVisual As GameObject
+- uid: Game.TerribleHealthBarScript.smoothSpeed
+  commentId: F:Game.TerribleHealthBarScript.smoothSpeed
+  id: smoothSpeed
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: smoothSpeed
+  nameWithType: TerribleHealthBarScript.smoothSpeed
+  fullName: Game.TerribleHealthBarScript.smoothSpeed
+  type: Field
+  source:
+    id: smoothSpeed
+    path: ''
+    startLine: 1837
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float smoothSpeed
+    return:
+      type: System.Single
+    content.vb: Public smoothSpeed As Single
+- uid: Game.TerribleHealthBarScript.text
+  commentId: F:Game.TerribleHealthBarScript.text
+  id: text
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: TerribleHealthBarScript.text
+  fullName: Game.TerribleHealthBarScript.text
+  type: Field
+  source:
+    id: text
+    path: ''
+    startLine: 1838
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public TextMeshProUGUI text
+    return:
+      type: Global.TextMeshProUGUI
+    content.vb: Public text As TextMeshProUGUI
+- uid: Game.TerribleHealthBarScript.player
+  commentId: F:Game.TerribleHealthBarScript.player
+  id: player
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: player
+  nameWithType: TerribleHealthBarScript.player
+  fullName: Game.TerribleHealthBarScript.player
+  type: Field
+  source:
+    id: player
+    path: ''
+    startLine: 1847
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject player
+    return:
+      type: Global.GameObject
+    content.vb: Public player As GameObject
+- uid: Game.TerribleHealthBarScript.SetPlayer(GameObject)
+  commentId: M:Game.TerribleHealthBarScript.SetPlayer(GameObject)
+  id: SetPlayer(GameObject)
+  parent: Game.TerribleHealthBarScript
+  langs:
+  - csharp
+  - vb
+  name: SetPlayer(GameObject)
+  nameWithType: TerribleHealthBarScript.SetPlayer(GameObject)
+  fullName: Game.TerribleHealthBarScript.SetPlayer(GameObject)
+  type: Method
+  source:
+    id: SetPlayer
+    path: ''
+    startLine: 1875
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void SetPlayer(GameObject player)
+    parameters:
+    - id: player
+      type: Global.GameObject
+    content.vb: Public Sub SetPlayer(player As GameObject)
+  overload: Game.TerribleHealthBarScript.SetPlayer*
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Color
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Color
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.TextMeshProUGUI
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TextMeshProUGUI
+- uid: Game.TerribleHealthBarScript.SetPlayer*
+  commentId: Overload:Game.TerribleHealthBarScript.SetPlayer
+  name: SetPlayer
+  nameWithType: TerribleHealthBarScript.SetPlayer
+  fullName: Game.TerribleHealthBarScript.SetPlayer

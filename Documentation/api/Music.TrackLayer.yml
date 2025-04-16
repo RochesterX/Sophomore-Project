@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.TrackLayer
+  commentId: T:Music.TrackLayer
+  id: TrackLayer
+  parent: Music
+  children:
+  - Music.TrackLayer.enableTrigger
+  - Music.TrackLayer.layerName
+  - Music.TrackLayer.layerScenes
+  - Music.TrackLayer.layerTrack
+  - Music.TrackLayer.triggerName
+  langs:
+  - csharp
+  - vb
+  name: TrackLayer
+  nameWithType: TrackLayer
+  fullName: Music.TrackLayer
+  type: Class
+  source:
+    id: TrackLayer
+    path: ''
+    startLine: 899
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class TrackLayer
+    content.vb: >-
+      <Serializable>
+
+      Public Class TrackLayer
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: Music.TrackLayer.layerName
+  commentId: F:Music.TrackLayer.layerName
+  id: layerName
+  parent: Music.TrackLayer
+  langs:
+  - csharp
+  - vb
+  name: layerName
+  nameWithType: TrackLayer.layerName
+  fullName: Music.TrackLayer.layerName
+  type: Field
+  source:
+    id: layerName
+    path: ''
+    startLine: 902
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public string layerName
+    return:
+      type: System.String
+    content.vb: Public layerName As String
+- uid: Music.TrackLayer.layerTrack
+  commentId: F:Music.TrackLayer.layerTrack
+  id: layerTrack
+  parent: Music.TrackLayer
+  langs:
+  - csharp
+  - vb
+  name: layerTrack
+  nameWithType: TrackLayer.layerTrack
+  fullName: Music.TrackLayer.layerTrack
+  type: Field
+  source:
+    id: layerTrack
+    path: ''
+    startLine: 903
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public AudioClip layerTrack
+    return:
+      type: Global.AudioClip
+    content.vb: Public layerTrack As AudioClip
+- uid: Music.TrackLayer.enableTrigger
+  commentId: F:Music.TrackLayer.enableTrigger
+  id: enableTrigger
+  parent: Music.TrackLayer
+  langs:
+  - csharp
+  - vb
+  name: enableTrigger
+  nameWithType: TrackLayer.enableTrigger
+  fullName: Music.TrackLayer.enableTrigger
+  type: Field
+  source:
+    id: enableTrigger
+    path: ''
+    startLine: 905
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public TrackLayer.EnableTrigger enableTrigger
+    return:
+      type: Music.TrackLayer.EnableTrigger
+    content.vb: Public enableTrigger As TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.layerScenes
+  commentId: F:Music.TrackLayer.layerScenes
+  id: layerScenes
+  parent: Music.TrackLayer
+  langs:
+  - csharp
+  - vb
+  name: layerScenes
+  nameWithType: TrackLayer.layerScenes
+  fullName: Music.TrackLayer.layerScenes
+  type: Field
+  source:
+    id: layerScenes
+    path: ''
+    startLine: 907
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public List<string> layerScenes
+    return:
+      type: Global.List{System.String}
+    content.vb: Public layerScenes As List(Of String)
+- uid: Music.TrackLayer.triggerName
+  commentId: F:Music.TrackLayer.triggerName
+  id: triggerName
+  parent: Music.TrackLayer
+  langs:
+  - csharp
+  - vb
+  name: triggerName
+  nameWithType: TrackLayer.triggerName
+  fullName: Music.TrackLayer.triggerName
+  type: Field
+  source:
+    id: triggerName
+    path: ''
+    startLine: 908
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public string triggerName
+    return:
+      type: System.String
+    content.vb: Public triggerName As String
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.AudioClip
+  commentId: '!:Global.AudioClip'
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: Music.TrackLayer.EnableTrigger
+  commentId: T:Music.TrackLayer.EnableTrigger
+  parent: Music
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: Music.TrackLayer.EnableTrigger
+  spec.csharp:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger
+  spec.vb:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger
+- uid: Global.List{System.String}
+  commentId: '!:Global.List{System.String}'
+  definition: Global.List`1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )

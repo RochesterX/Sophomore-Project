@@ -1,6 +1,6 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
-
+namespace Archaic{
 public class PongPaddleBehavior : MonoBehaviour
 {
     public float speed = 5f;
@@ -43,4 +43,5 @@ public class PongPaddleBehavior : MonoBehaviour
         }
         rb.linearVelocityY = direction * speed * Time.fixedDeltaTime;
     }
+}
 }

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.Assertions.Must;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+namespace Music
+{
 
 public class MusicManager : MonoBehaviour
 {
@@ -114,4 +116,5 @@ public class MusicManager : MonoBehaviour
         }
         return "Title Screen";
     }
+}
 }

@@ -1,7 +1,8 @@
 using System.Collections;
 using NUnit.Framework.Constraints;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 
+namespace Game{
 public class DayNightCycle : MonoBehaviour
 {
     public SpriteRenderer daySky, eveningSky, nightSky;
@@ -96,4 +97,5 @@ public class DayNightCycle : MonoBehaviour
             }
         }
     }
+}
 }

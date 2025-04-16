@@ -1,0 +1,964 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.GameManager
+  commentId: T:Game.GameManager
+  id: GameManager
+  parent: Game
+  children:
+  - Game.GameManager.AlivePlayers
+  - Game.GameManager.EndGameEvent
+  - Game.GameManager.gameMode
+  - Game.GameManager.gameOver
+  - Game.GameManager.GameOver
+  - Game.GameManager.gameTimer
+  - Game.GameManager.hatObject
+  - Game.GameManager.hatSpawnPositions
+  - Game.GameManager.Instance
+  - Game.GameManager.LeaderboardCanvas
+  - Game.GameManager.map
+  - Game.GameManager.music
+  - Game.GameManager.obstacleCourseSpawnPosition
+  - Game.GameManager.offset
+  - Game.GameManager.playerColors
+  - Game.GameManager.PlayerDied(Player.Damageable)
+  - Game.GameManager.playerHoldTimes
+  - Game.GameManager.players
+  - Game.GameManager.spawnPosition
+  - Game.GameManager.StartGame
+  - Game.GameManager.StartGameEvent
+  - Game.GameManager.time
+  - Game.GameManager.TimerCanvas
+  - Game.GameManager.UpdatePlayerHoldTime(GameObject,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: GameManager
+  nameWithType: GameManager
+  fullName: Game.GameManager
+  type: Class
+  source:
+    id: GameManager
+    path: ''
+    startLine: 1309
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nThe GameManager class manages the overall game logic, including game modes, player states, \ngame events, and game-over conditions. It ensures a single instance exists and provides \nfunctionality for starting, updating, and ending the game.\n"
+  example: []
+  syntax:
+    content: 'public class GameManager : MonoBehaviour'
+    content.vb: Public Class GameManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.GameManager.Instance
+  commentId: P:Game.GameManager.Instance
+  id: Instance
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GameManager.Instance
+  fullName: Game.GameManager.Instance
+  type: Property
+  source:
+    id: Instance
+    path: ''
+    startLine: 1311
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static GameManager Instance { get; }
+    parameters: []
+    return:
+      type: Game.GameManager
+    content.vb: Public Shared Property Instance As GameManager
+  overload: Game.GameManager.Instance*
+- uid: Game.GameManager.time
+  commentId: F:Game.GameManager.time
+  id: time
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: time
+  nameWithType: GameManager.time
+  fullName: Game.GameManager.time
+  type: Field
+  source:
+    id: time
+    path: ''
+    startLine: 1312
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float time
+    return:
+      type: System.Single
+    content.vb: Public time As Single
+- uid: Game.GameManager.StartGameEvent
+  commentId: E:Game.GameManager.StartGameEvent
+  id: StartGameEvent
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StartGameEvent
+  nameWithType: GameManager.StartGameEvent
+  fullName: Game.GameManager.StartGameEvent
+  type: Event
+  source:
+    id: StartGameEvent
+    path: ''
+    startLine: 1314
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public event GameManager.GameEvent StartGameEvent
+    return:
+      type: Game.GameManager.GameEvent
+    content.vb: Public Event StartGameEvent As GameManager.GameEvent
+- uid: Game.GameManager.EndGameEvent
+  commentId: E:Game.GameManager.EndGameEvent
+  id: EndGameEvent
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: EndGameEvent
+  nameWithType: GameManager.EndGameEvent
+  fullName: Game.GameManager.EndGameEvent
+  type: Event
+  source:
+    id: EndGameEvent
+    path: ''
+    startLine: 1315
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public event GameManager.GameEvent EndGameEvent
+    return:
+      type: Game.GameManager.GameEvent
+    content.vb: Public Event EndGameEvent As GameManager.GameEvent
+- uid: Game.GameManager.players
+  commentId: F:Game.GameManager.players
+  id: players
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: players
+  nameWithType: GameManager.players
+  fullName: Game.GameManager.players
+  type: Field
+  source:
+    id: players
+    path: ''
+    startLine: 1316
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static List<GameObject> players
+    return:
+      type: Global.List{GameObject}
+    content.vb: Public Shared players As List(Of GameObject)
+- uid: Game.GameManager.playerColors
+  commentId: F:Game.GameManager.playerColors
+  id: playerColors
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: playerColors
+  nameWithType: GameManager.playerColors
+  fullName: Game.GameManager.playerColors
+  type: Field
+  source:
+    id: playerColors
+    path: ''
+    startLine: 1317
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static List<Color> playerColors
+    return:
+      type: Global.List{Color}
+    content.vb: Public Shared playerColors As List(Of Color)
+- uid: Game.GameManager.offset
+  commentId: F:Game.GameManager.offset
+  id: offset
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: offset
+  nameWithType: GameManager.offset
+  fullName: Game.GameManager.offset
+  type: Field
+  source:
+    id: offset
+    path: ''
+    startLine: 1318
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float offset
+    return:
+      type: System.Single
+    content.vb: Public offset As Single
+- uid: Game.GameManager.music
+  commentId: F:Game.GameManager.music
+  id: music
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: music
+  nameWithType: GameManager.music
+  fullName: Game.GameManager.music
+  type: Field
+  source:
+    id: music
+    path: ''
+    startLine: 1319
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static bool music
+    return:
+      type: System.Boolean
+    content.vb: Public Shared music As Boolean
+- uid: Game.GameManager.gameOver
+  commentId: F:Game.GameManager.gameOver
+  id: gameOver
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: gameOver
+  nameWithType: GameManager.gameOver
+  fullName: Game.GameManager.gameOver
+  type: Field
+  source:
+    id: gameOver
+    path: ''
+    startLine: 1320
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public bool gameOver
+    return:
+      type: System.Boolean
+    content.vb: Public gameOver As Boolean
+- uid: Game.GameManager.gameTimer
+  commentId: F:Game.GameManager.gameTimer
+  id: gameTimer
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: gameTimer
+  nameWithType: GameManager.gameTimer
+  fullName: Game.GameManager.gameTimer
+  type: Field
+  source:
+    id: gameTimer
+    path: ''
+    startLine: 1321
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameTimer gameTimer
+    return:
+      type: Game.GameTimer
+    content.vb: Public gameTimer As GameTimer
+- uid: Game.GameManager.playerHoldTimes
+  commentId: F:Game.GameManager.playerHoldTimes
+  id: playerHoldTimes
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: playerHoldTimes
+  nameWithType: GameManager.playerHoldTimes
+  fullName: Game.GameManager.playerHoldTimes
+  type: Field
+  source:
+    id: playerHoldTimes
+    path: ''
+    startLine: 1322
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static Dictionary<GameObject, float> playerHoldTimes
+    return:
+      type: Global.Dictionary{GameObject,System.Single}
+    content.vb: Public Shared playerHoldTimes As Dictionary(Of GameObject, Single)
+- uid: Game.GameManager.gameMode
+  commentId: F:Game.GameManager.gameMode
+  id: gameMode
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: gameMode
+  nameWithType: GameManager.gameMode
+  fullName: Game.GameManager.gameMode
+  type: Field
+  source:
+    id: gameMode
+    path: ''
+    startLine: 1323
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static GameManager.GameMode gameMode
+    return:
+      type: Game.GameManager.GameMode
+    content.vb: Public Shared gameMode As GameManager.GameMode
+- uid: Game.GameManager.map
+  commentId: F:Game.GameManager.map
+  id: map
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: map
+  nameWithType: GameManager.map
+  fullName: Game.GameManager.map
+  type: Field
+  source:
+    id: map
+    path: ''
+    startLine: 1324
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static string map
+    return:
+      type: System.String
+    content.vb: Public Shared map As String
+- uid: Game.GameManager.spawnPosition
+  commentId: F:Game.GameManager.spawnPosition
+  id: spawnPosition
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: spawnPosition
+  nameWithType: GameManager.spawnPosition
+  fullName: Game.GameManager.spawnPosition
+  type: Field
+  source:
+    id: spawnPosition
+    path: ''
+    startLine: 1325
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Vector2 spawnPosition
+    return:
+      type: Global.Vector2
+    content.vb: Public spawnPosition As Vector2
+- uid: Game.GameManager.obstacleCourseSpawnPosition
+  commentId: F:Game.GameManager.obstacleCourseSpawnPosition
+  id: obstacleCourseSpawnPosition
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: obstacleCourseSpawnPosition
+  nameWithType: GameManager.obstacleCourseSpawnPosition
+  fullName: Game.GameManager.obstacleCourseSpawnPosition
+  type: Field
+  source:
+    id: obstacleCourseSpawnPosition
+    path: ''
+    startLine: 1326
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Vector2 obstacleCourseSpawnPosition
+    return:
+      type: Global.Vector2
+    content.vb: Public obstacleCourseSpawnPosition As Vector2
+- uid: Game.GameManager.hatSpawnPositions
+  commentId: F:Game.GameManager.hatSpawnPositions
+  id: hatSpawnPositions
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: hatSpawnPositions
+  nameWithType: GameManager.hatSpawnPositions
+  fullName: Game.GameManager.hatSpawnPositions
+  type: Field
+  source:
+    id: hatSpawnPositions
+    path: ''
+    startLine: 1327
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public List<Vector2> hatSpawnPositions
+    return:
+      type: Global.List{Vector2}
+    content.vb: Public hatSpawnPositions As List(Of Vector2)
+- uid: Game.GameManager.LeaderboardCanvas
+  commentId: F:Game.GameManager.LeaderboardCanvas
+  id: LeaderboardCanvas
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: LeaderboardCanvas
+  nameWithType: GameManager.LeaderboardCanvas
+  fullName: Game.GameManager.LeaderboardCanvas
+  type: Field
+  source:
+    id: LeaderboardCanvas
+    path: ''
+    startLine: 1328
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Canvas LeaderboardCanvas
+    return:
+      type: Global.Canvas
+    content.vb: Public LeaderboardCanvas As Canvas
+- uid: Game.GameManager.TimerCanvas
+  commentId: F:Game.GameManager.TimerCanvas
+  id: TimerCanvas
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: TimerCanvas
+  nameWithType: GameManager.TimerCanvas
+  fullName: Game.GameManager.TimerCanvas
+  type: Field
+  source:
+    id: TimerCanvas
+    path: ''
+    startLine: 1329
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Canvas TimerCanvas
+    return:
+      type: Global.Canvas
+    content.vb: Public TimerCanvas As Canvas
+- uid: Game.GameManager.hatObject
+  commentId: F:Game.GameManager.hatObject
+  id: hatObject
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: hatObject
+  nameWithType: GameManager.hatObject
+  fullName: Game.GameManager.hatObject
+  type: Field
+  source:
+    id: hatObject
+    path: ''
+    startLine: 1330
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject hatObject
+    return:
+      type: Global.GameObject
+    content.vb: Public hatObject As GameObject
+- uid: Game.GameManager.StartGame
+  commentId: M:Game.GameManager.StartGame
+  id: StartGame
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: StartGame()
+  nameWithType: GameManager.StartGame()
+  fullName: Game.GameManager.StartGame()
+  type: Method
+  source:
+    id: StartGame
+    path: ''
+    startLine: 1401
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nSets up the game based on the selected game mode.\n"
+  example: []
+  syntax:
+    content: public void StartGame()
+    content.vb: Public Sub StartGame()
+  overload: Game.GameManager.StartGame*
+- uid: Game.GameManager.PlayerDied(Player.Damageable)
+  commentId: M:Game.GameManager.PlayerDied(Player.Damageable)
+  id: PlayerDied(Player.Damageable)
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: PlayerDied(Damageable)
+  nameWithType: GameManager.PlayerDied(Damageable)
+  fullName: Game.GameManager.PlayerDied(Player.Damageable)
+  type: Method
+  source:
+    id: PlayerDied
+    path: ''
+    startLine: 1440
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nHandles player deaths based on the current game mode.\n"
+  example: []
+  syntax:
+    content: public void PlayerDied(Damageable player)
+    parameters:
+    - id: player
+      type: Player.Damageable
+      description: The player that died.
+    content.vb: Public Sub PlayerDied(player As Damageable)
+  overload: Game.GameManager.PlayerDied*
+- uid: Game.GameManager.GameOver
+  commentId: M:Game.GameManager.GameOver
+  id: GameOver
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: GameOver()
+  nameWithType: GameManager.GameOver()
+  fullName: Game.GameManager.GameOver()
+  type: Method
+  source:
+    id: GameOver
+    path: ''
+    startLine: 1495
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nEnds the game and determines the winner based on the game mode.\n"
+  example: []
+  syntax:
+    content: public void GameOver()
+    content.vb: Public Sub GameOver()
+  overload: Game.GameManager.GameOver*
+- uid: Game.GameManager.AlivePlayers
+  commentId: M:Game.GameManager.AlivePlayers
+  id: AlivePlayers
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: AlivePlayers()
+  nameWithType: GameManager.AlivePlayers()
+  fullName: Game.GameManager.AlivePlayers()
+  type: Method
+  source:
+    id: AlivePlayers
+    path: ''
+    startLine: 1564
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nReturns a list of all players that are currently alive.\n"
+  example: []
+  syntax:
+    content: public List<GameObject> AlivePlayers()
+    return:
+      type: Global.List{GameObject}
+      description: A list of alive player GameObjects.
+    content.vb: Public Function AlivePlayers() As List(Of GameObject)
+  overload: Game.GameManager.AlivePlayers*
+- uid: Game.GameManager.UpdatePlayerHoldTime(GameObject,System.Single)
+  commentId: M:Game.GameManager.UpdatePlayerHoldTime(GameObject,System.Single)
+  id: UpdatePlayerHoldTime(GameObject,System.Single)
+  parent: Game.GameManager
+  langs:
+  - csharp
+  - vb
+  name: UpdatePlayerHoldTime(GameObject, float)
+  nameWithType: GameManager.UpdatePlayerHoldTime(GameObject, float)
+  fullName: Game.GameManager.UpdatePlayerHoldTime(GameObject, float)
+  type: Method
+  source:
+    id: UpdatePlayerHoldTime
+    path: ''
+    startLine: 1581
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nUpdates the player&apos;s hold time and updates the leaderboard.\n"
+  example: []
+  syntax:
+    content: public void UpdatePlayerHoldTime(GameObject player, float holdTime)
+    parameters:
+    - id: player
+      type: Global.GameObject
+      description: The player GameObject.
+    - id: holdTime
+      type: System.Single
+      description: The hold time to update.
+    content.vb: Public Sub UpdatePlayerHoldTime(player As GameObject, holdTime As Single)
+  overload: Game.GameManager.UpdatePlayerHoldTime*
+  nameWithType.vb: GameManager.UpdatePlayerHoldTime(GameObject, Single)
+  fullName.vb: Game.GameManager.UpdatePlayerHoldTime(GameObject, Single)
+  name.vb: UpdatePlayerHoldTime(GameObject, Single)
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Game.GameManager.Instance*
+  commentId: Overload:Game.GameManager.Instance
+  name: Instance
+  nameWithType: GameManager.Instance
+  fullName: Game.GameManager.Instance
+- uid: Game.GameManager
+  commentId: T:Game.GameManager
+  parent: Game
+  name: GameManager
+  nameWithType: GameManager
+  fullName: Game.GameManager
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Game.GameManager.GameEvent
+  commentId: T:Game.GameManager.GameEvent
+  parent: Game
+  name: GameManager.GameEvent
+  nameWithType: GameManager.GameEvent
+  fullName: Game.GameManager.GameEvent
+  spec.csharp:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameEvent
+    name: GameEvent
+  spec.vb:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameEvent
+    name: GameEvent
+- uid: Global.List{GameObject}
+  commentId: '!:Global.List{GameObject}'
+  definition: Global.List`1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: List<GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: List(Of GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.List{Color}
+  commentId: '!:Global.List{Color}'
+  definition: Global.List`1
+  name: List<Color>
+  nameWithType: List<Color>
+  fullName: List<Color>
+  nameWithType.vb: List(Of Color)
+  fullName.vb: List(Of Color)
+  name.vb: List(Of Color)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.Color
+    name: Color
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.Color
+    name: Color
+    isExternal: true
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Game.GameTimer
+  commentId: T:Game.GameTimer
+  parent: Game
+  name: GameTimer
+  nameWithType: GameTimer
+  fullName: Game.GameTimer
+- uid: Global.Dictionary{GameObject,System.Single}
+  commentId: '!:Global.Dictionary{GameObject,System.Single}'
+  definition: Global.Dictionary`2
+  name: Dictionary<GameObject, float>
+  nameWithType: Dictionary<GameObject, float>
+  fullName: Dictionary<GameObject, float>
+  nameWithType.vb: Dictionary(Of GameObject, Single)
+  fullName.vb: Dictionary(Of GameObject, Single)
+  name.vb: Dictionary(Of GameObject, Single)
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+  - name: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Game.GameManager.GameMode
+  commentId: T:Game.GameManager.GameMode
+  parent: Game
+  name: GameManager.GameMode
+  nameWithType: GameManager.GameMode
+  fullName: Game.GameManager.GameMode
+  spec.csharp:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameMode
+    name: GameMode
+  spec.vb:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameMode
+    name: GameMode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
+- uid: Global.List{Vector2}
+  commentId: '!:Global.List{Vector2}'
+  definition: Global.List`1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: List<Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: List(Of Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: Global.Canvas
+  isExternal: true
+  name: Canvas
+  nameWithType: Canvas
+  fullName: Canvas
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Game.GameManager.StartGame*
+  commentId: Overload:Game.GameManager.StartGame
+  name: StartGame
+  nameWithType: GameManager.StartGame
+  fullName: Game.GameManager.StartGame
+- uid: Game.GameManager.PlayerDied*
+  commentId: Overload:Game.GameManager.PlayerDied
+  name: PlayerDied
+  nameWithType: GameManager.PlayerDied
+  fullName: Game.GameManager.PlayerDied
+- uid: Player.Damageable
+  commentId: T:Player.Damageable
+  parent: Player
+  name: Damageable
+  nameWithType: Damageable
+  fullName: Player.Damageable
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: Game.GameManager.GameOver*
+  commentId: Overload:Game.GameManager.GameOver
+  name: GameOver
+  nameWithType: GameManager.GameOver
+  fullName: Game.GameManager.GameOver
+- uid: Game.GameManager.AlivePlayers*
+  commentId: Overload:Game.GameManager.AlivePlayers
+  name: AlivePlayers
+  nameWithType: GameManager.AlivePlayers
+  fullName: Game.GameManager.AlivePlayers
+- uid: Game.GameManager.UpdatePlayerHoldTime*
+  commentId: Overload:Game.GameManager.UpdatePlayerHoldTime
+  name: UpdatePlayerHoldTime
+  nameWithType: GameManager.UpdatePlayerHoldTime
+  fullName: Game.GameManager.UpdatePlayerHoldTime

@@ -1,5 +1,7 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.UI;
+namespace Game
+{
 
 public class MapSelect : MonoBehaviour
 {
@@ -15,4 +17,5 @@ public class MapSelect : MonoBehaviour
         Toggle toggle = maps.GetFirstActiveToggle();
         GameManager.map = toggle.name;
     }
+}
 }

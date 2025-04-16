@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.SoundEffect
+  commentId: T:Music.SoundEffect
+  id: SoundEffect
+  parent: Music
+  children:
+  - Music.SoundEffect.#ctor(System.String,AudioSource)
+  - Music.SoundEffect.audioSource
+  - Music.SoundEffect.name
+  langs:
+  - csharp
+  - vb
+  name: SoundEffect
+  nameWithType: SoundEffect
+  fullName: Music.SoundEffect
+  type: Class
+  source:
+    id: SoundEffect
+    path: ''
+    startLine: 391
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public class SoundEffect
+    content.vb: Public Class SoundEffect
+  inheritance:
+  - System.Object
+- uid: Music.SoundEffect.name
+  commentId: F:Music.SoundEffect.name
+  id: name
+  parent: Music.SoundEffect
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: SoundEffect.name
+  fullName: Music.SoundEffect.name
+  type: Field
+  source:
+    id: name
+    path: ''
+    startLine: 393
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public string name
+    return:
+      type: System.String
+    content.vb: Public name As String
+- uid: Music.SoundEffect.audioSource
+  commentId: F:Music.SoundEffect.audioSource
+  id: audioSource
+  parent: Music.SoundEffect
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: SoundEffect.audioSource
+  fullName: Music.SoundEffect.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: ''
+    startLine: 394
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public AudioSource audioSource
+    return:
+      type: Global.AudioSource
+    content.vb: Public audioSource As AudioSource
+- uid: Music.SoundEffect.#ctor(System.String,AudioSource)
+  commentId: M:Music.SoundEffect.#ctor(System.String,AudioSource)
+  id: '#ctor(System.String,AudioSource)'
+  parent: Music.SoundEffect
+  langs:
+  - csharp
+  - vb
+  name: SoundEffect(string, AudioSource)
+  nameWithType: SoundEffect.SoundEffect(string, AudioSource)
+  fullName: Music.SoundEffect.SoundEffect(string, AudioSource)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 396
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public SoundEffect(string name, AudioSource audioSource)
+    parameters:
+    - id: name
+      type: System.String
+    - id: audioSource
+      type: Global.AudioSource
+    content.vb: Public Sub New(name As String, audioSource As AudioSource)
+  overload: Music.SoundEffect.#ctor*
+  nameWithType.vb: SoundEffect.New(String, AudioSource)
+  fullName.vb: Music.SoundEffect.New(String, AudioSource)
+  name.vb: New(String, AudioSource)
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Music.SoundEffect.#ctor*
+  commentId: Overload:Music.SoundEffect.#ctor
+  name: SoundEffect
+  nameWithType: SoundEffect.SoundEffect
+  fullName: Music.SoundEffect.SoundEffect
+  nameWithType.vb: SoundEffect.New
+  fullName.vb: Music.SoundEffect.New
+  name.vb: New

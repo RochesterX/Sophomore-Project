@@ -1,0 +1,237 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player.AnimationPlayer
+  commentId: T:Player.AnimationPlayer
+  id: AnimationPlayer
+  parent: Player
+  children:
+  - Player.AnimationPlayer.backwards
+  - Player.AnimationPlayer.block
+  - Player.AnimationPlayer.clip
+  - Player.AnimationPlayer.Punch
+  - Player.AnimationPlayer.SetState(Player.AnimationPlayer.AnimationState)
+  - Player.AnimationPlayer.state
+  langs:
+  - csharp
+  - vb
+  name: AnimationPlayer
+  nameWithType: AnimationPlayer
+  fullName: Player.AnimationPlayer
+  type: Class
+  source:
+    id: AnimationPlayer
+    path: ''
+    startLine: 2348
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: 'public class AnimationPlayer : MonoBehaviour'
+    content.vb: Public Class AnimationPlayer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Player.AnimationPlayer.state
+  commentId: F:Player.AnimationPlayer.state
+  id: state
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: state
+  nameWithType: AnimationPlayer.state
+  fullName: Player.AnimationPlayer.state
+  type: Field
+  source:
+    id: state
+    path: ''
+    startLine: 2352
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public AnimationPlayer.AnimationState state
+    return:
+      type: Player.AnimationPlayer.AnimationState
+    content.vb: Public state As AnimationPlayer.AnimationState
+- uid: Player.AnimationPlayer.backwards
+  commentId: F:Player.AnimationPlayer.backwards
+  id: backwards
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: backwards
+  nameWithType: AnimationPlayer.backwards
+  fullName: Player.AnimationPlayer.backwards
+  type: Field
+  source:
+    id: backwards
+    path: ''
+    startLine: 2353
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool backwards
+    return:
+      type: System.Boolean
+    content.vb: Public backwards As Boolean
+- uid: Player.AnimationPlayer.block
+  commentId: F:Player.AnimationPlayer.block
+  id: block
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: block
+  nameWithType: AnimationPlayer.block
+  fullName: Player.AnimationPlayer.block
+  type: Field
+  source:
+    id: block
+    path: ''
+    startLine: 2354
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool block
+    return:
+      type: System.Boolean
+    content.vb: Public block As Boolean
+- uid: Player.AnimationPlayer.clip
+  commentId: F:Player.AnimationPlayer.clip
+  id: clip
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: clip
+  nameWithType: AnimationPlayer.clip
+  fullName: Player.AnimationPlayer.clip
+  type: Field
+  source:
+    id: clip
+    path: ''
+    startLine: 2355
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public AnimationClip clip
+    return:
+      type: Global.AnimationClip
+    content.vb: Public clip As AnimationClip
+- uid: Player.AnimationPlayer.SetState(Player.AnimationPlayer.AnimationState)
+  commentId: M:Player.AnimationPlayer.SetState(Player.AnimationPlayer.AnimationState)
+  id: SetState(Player.AnimationPlayer.AnimationState)
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: SetState(AnimationState)
+  nameWithType: AnimationPlayer.SetState(AnimationPlayer.AnimationState)
+  fullName: Player.AnimationPlayer.SetState(Player.AnimationPlayer.AnimationState)
+  type: Method
+  source:
+    id: SetState
+    path: ''
+    startLine: 2371
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void SetState(AnimationPlayer.AnimationState state)
+    parameters:
+    - id: state
+      type: Player.AnimationPlayer.AnimationState
+    content.vb: Public Sub SetState(state As AnimationPlayer.AnimationState)
+  overload: Player.AnimationPlayer.SetState*
+- uid: Player.AnimationPlayer.Punch
+  commentId: M:Player.AnimationPlayer.Punch
+  id: Punch
+  parent: Player.AnimationPlayer
+  langs:
+  - csharp
+  - vb
+  name: Punch()
+  nameWithType: AnimationPlayer.Punch()
+  fullName: Player.AnimationPlayer.Punch()
+  type: Method
+  source:
+    id: Punch
+    path: ''
+    startLine: 2376
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void Punch()
+    content.vb: Public Sub Punch()
+  overload: Player.AnimationPlayer.Punch*
+references:
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Player.AnimationPlayer.AnimationState
+  commentId: T:Player.AnimationPlayer.AnimationState
+  parent: Player
+  name: AnimationPlayer.AnimationState
+  nameWithType: AnimationPlayer.AnimationState
+  fullName: Player.AnimationPlayer.AnimationState
+  spec.csharp:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState
+  spec.vb:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.AnimationClip
+  commentId: '!:Global.AnimationClip'
+  isExternal: true
+  name: AnimationClip
+  nameWithType: AnimationClip
+  fullName: AnimationClip
+- uid: Player.AnimationPlayer.SetState*
+  commentId: Overload:Player.AnimationPlayer.SetState
+  name: SetState
+  nameWithType: AnimationPlayer.SetState
+  fullName: Player.AnimationPlayer.SetState
+- uid: Player.AnimationPlayer.Punch*
+  commentId: Overload:Player.AnimationPlayer.Punch
+  name: Punch
+  nameWithType: AnimationPlayer.Punch
+  fullName: Player.AnimationPlayer.Punch

@@ -1,24 +1,28 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
 
-public class PlayerCardCreator : MonoBehaviour
+namespace Game
 {
-    public static PlayerCardCreator Instance;
 
-    public GameObject playerJoinCardPrefab;
-
-    private void Awake() // Ensures only one instance of PlayerCardCreator exists
+    public class PlayerCardCreator : MonoBehaviour
     {
-        if (Instance == null) Instance = this;
-        else
+        public static PlayerCardCreator Instance;
+
+        public GameObject playerJoinCardPrefab;
+
+        private void Awake() // Ensures only one instance of PlayerCardCreator exists
         {
-            Destroy(gameObject);
+            if (Instance == null) Instance = this;
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-    }
 
-    public PlayerJoinCard CreateCard() // Creates a player join card
-    {
-        GameObject card = Instantiate(playerJoinCardPrefab, transform);
-        return card.GetComponent<PlayerJoinCard>();
+        public PlayerJoinCard CreateCard() // Creates a player join card
+        {
+            GameObject card = Instantiate(playerJoinCardPrefab, transform);
+            return card.GetComponent<PlayerJoinCard>();
+        }
     }
 }

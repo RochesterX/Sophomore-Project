@@ -1,0 +1,327 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.DayNightCycle
+  commentId: T:Game.DayNightCycle
+  id: DayNightCycle
+  parent: Game
+  children:
+  - Game.DayNightCycle.cycleDuration
+  - Game.DayNightCycle.dayBackClouds
+  - Game.DayNightCycle.dayFrontClouds
+  - Game.DayNightCycle.daySky
+  - Game.DayNightCycle.eveningBackClouds
+  - Game.DayNightCycle.eveningFrontClouds
+  - Game.DayNightCycle.eveningSky
+  - Game.DayNightCycle.nightBackClouds
+  - Game.DayNightCycle.nightFrontClouds
+  - Game.DayNightCycle.nightSky
+  - Game.DayNightCycle.transitionDuration
+  langs:
+  - csharp
+  - vb
+  name: DayNightCycle
+  nameWithType: DayNightCycle
+  fullName: Game.DayNightCycle
+  type: Class
+  source:
+    id: DayNightCycle
+    path: ''
+    startLine: 5
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class DayNightCycle : MonoBehaviour'
+    content.vb: Public Class DayNightCycle Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.DayNightCycle.daySky
+  commentId: F:Game.DayNightCycle.daySky
+  id: daySky
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: daySky
+  nameWithType: DayNightCycle.daySky
+  fullName: Game.DayNightCycle.daySky
+  type: Field
+  source:
+    id: daySky
+    path: ''
+    startLine: 7
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer daySky
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public daySky As SpriteRenderer
+- uid: Game.DayNightCycle.eveningSky
+  commentId: F:Game.DayNightCycle.eveningSky
+  id: eveningSky
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: eveningSky
+  nameWithType: DayNightCycle.eveningSky
+  fullName: Game.DayNightCycle.eveningSky
+  type: Field
+  source:
+    id: eveningSky
+    path: ''
+    startLine: 7
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer eveningSky
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public eveningSky As SpriteRenderer
+- uid: Game.DayNightCycle.nightSky
+  commentId: F:Game.DayNightCycle.nightSky
+  id: nightSky
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: nightSky
+  nameWithType: DayNightCycle.nightSky
+  fullName: Game.DayNightCycle.nightSky
+  type: Field
+  source:
+    id: nightSky
+    path: ''
+    startLine: 7
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer nightSky
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public nightSky As SpriteRenderer
+- uid: Game.DayNightCycle.dayBackClouds
+  commentId: F:Game.DayNightCycle.dayBackClouds
+  id: dayBackClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: dayBackClouds
+  nameWithType: DayNightCycle.dayBackClouds
+  fullName: Game.DayNightCycle.dayBackClouds
+  type: Field
+  source:
+    id: dayBackClouds
+    path: ''
+    startLine: 8
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer dayBackClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public dayBackClouds As SpriteRenderer
+- uid: Game.DayNightCycle.eveningBackClouds
+  commentId: F:Game.DayNightCycle.eveningBackClouds
+  id: eveningBackClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: eveningBackClouds
+  nameWithType: DayNightCycle.eveningBackClouds
+  fullName: Game.DayNightCycle.eveningBackClouds
+  type: Field
+  source:
+    id: eveningBackClouds
+    path: ''
+    startLine: 8
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer eveningBackClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public eveningBackClouds As SpriteRenderer
+- uid: Game.DayNightCycle.nightBackClouds
+  commentId: F:Game.DayNightCycle.nightBackClouds
+  id: nightBackClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: nightBackClouds
+  nameWithType: DayNightCycle.nightBackClouds
+  fullName: Game.DayNightCycle.nightBackClouds
+  type: Field
+  source:
+    id: nightBackClouds
+    path: ''
+    startLine: 8
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer nightBackClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public nightBackClouds As SpriteRenderer
+- uid: Game.DayNightCycle.dayFrontClouds
+  commentId: F:Game.DayNightCycle.dayFrontClouds
+  id: dayFrontClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: dayFrontClouds
+  nameWithType: DayNightCycle.dayFrontClouds
+  fullName: Game.DayNightCycle.dayFrontClouds
+  type: Field
+  source:
+    id: dayFrontClouds
+    path: ''
+    startLine: 9
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer dayFrontClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public dayFrontClouds As SpriteRenderer
+- uid: Game.DayNightCycle.eveningFrontClouds
+  commentId: F:Game.DayNightCycle.eveningFrontClouds
+  id: eveningFrontClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: eveningFrontClouds
+  nameWithType: DayNightCycle.eveningFrontClouds
+  fullName: Game.DayNightCycle.eveningFrontClouds
+  type: Field
+  source:
+    id: eveningFrontClouds
+    path: ''
+    startLine: 9
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer eveningFrontClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public eveningFrontClouds As SpriteRenderer
+- uid: Game.DayNightCycle.nightFrontClouds
+  commentId: F:Game.DayNightCycle.nightFrontClouds
+  id: nightFrontClouds
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: nightFrontClouds
+  nameWithType: DayNightCycle.nightFrontClouds
+  fullName: Game.DayNightCycle.nightFrontClouds
+  type: Field
+  source:
+    id: nightFrontClouds
+    path: ''
+    startLine: 9
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public SpriteRenderer nightFrontClouds
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Public nightFrontClouds As SpriteRenderer
+- uid: Game.DayNightCycle.transitionDuration
+  commentId: F:Game.DayNightCycle.transitionDuration
+  id: transitionDuration
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: transitionDuration
+  nameWithType: DayNightCycle.transitionDuration
+  fullName: Game.DayNightCycle.transitionDuration
+  type: Field
+  source:
+    id: transitionDuration
+    path: ''
+    startLine: 11
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float transitionDuration
+    return:
+      type: System.Single
+    content.vb: Public transitionDuration As Single
+- uid: Game.DayNightCycle.cycleDuration
+  commentId: F:Game.DayNightCycle.cycleDuration
+  id: cycleDuration
+  parent: Game.DayNightCycle
+  langs:
+  - csharp
+  - vb
+  name: cycleDuration
+  nameWithType: DayNightCycle.cycleDuration
+  fullName: Game.DayNightCycle.cycleDuration
+  type: Field
+  source:
+    id: cycleDuration
+    path: ''
+    startLine: 12
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float cycleDuration
+    return:
+      type: System.Single
+    content.vb: Public cycleDuration As Single
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SpriteRenderer
+  isExternal: true
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: SpriteRenderer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

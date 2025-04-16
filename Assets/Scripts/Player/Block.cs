@@ -1,5 +1,7 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
+namespace Player
+{
 
 [RequireComponent(typeof(PlayerInput))]
 public class Block : MonoBehaviour
@@ -54,4 +56,5 @@ public class Block : MonoBehaviour
     {
         return isParrying;
     }
+}
 }

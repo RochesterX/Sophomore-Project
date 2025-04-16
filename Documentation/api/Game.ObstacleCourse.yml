@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.ObstacleCourse
+  commentId: T:Game.ObstacleCourse
+  id: ObstacleCourse
+  parent: Game
+  children:
+  - Game.ObstacleCourse.playerWon
+  langs:
+  - csharp
+  - vb
+  name: ObstacleCourse
+  nameWithType: ObstacleCourse
+  fullName: Game.ObstacleCourse
+  type: Class
+  source:
+    id: ObstacleCourse
+    path: ''
+    startLine: 318
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class ObstacleCourse : MonoBehaviour'
+    content.vb: Public Class ObstacleCourse Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.ObstacleCourse.playerWon
+  commentId: F:Game.ObstacleCourse.playerWon
+  id: playerWon
+  parent: Game.ObstacleCourse
+  langs:
+  - csharp
+  - vb
+  name: playerWon
+  nameWithType: ObstacleCourse.playerWon
+  fullName: Game.ObstacleCourse.playerWon
+  type: Field
+  source:
+    id: playerWon
+    path: ''
+    startLine: 320
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static GameObject playerWon
+    return:
+      type: Global.GameObject
+    content.vb: Public Shared playerWon As GameObject
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

@@ -1,6 +1,7 @@
 using System.Collections;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 
+namespace Archaic{
 public class PongBallBehavior : MonoBehaviour
 {
     public static Vector2 score; // Don't ask why I made the score a Vector, I just felt like it
@@ -52,4 +53,5 @@ public class PongBallBehavior : MonoBehaviour
             IncreaseSpeed();
         }
     }
+}
 }

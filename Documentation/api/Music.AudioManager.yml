@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.AudioManager
+  commentId: T:Music.AudioManager
+  id: AudioManager
+  parent: Music
+  children:
+  - Music.AudioManager.Instance
+  - Music.AudioManager.PlaySound(System.String)
+  - Music.AudioManager.soundEffects
+  langs:
+  - csharp
+  - vb
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Music.AudioManager
+  type: Class
+  source:
+    id: AudioManager
+    path: ''
+    startLine: 338
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: 'public class AudioManager : MonoBehaviour'
+    content.vb: Public Class AudioManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Music.AudioManager.soundEffects
+  commentId: F:Music.AudioManager.soundEffects
+  id: soundEffects
+  parent: Music.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: soundEffects
+  nameWithType: AudioManager.soundEffects
+  fullName: Music.AudioManager.soundEffects
+  type: Field
+  source:
+    id: soundEffects
+    path: ''
+    startLine: 340
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public List<SoundEffect> soundEffects
+    return:
+      type: Global.List{Music.SoundEffect}
+    content.vb: Public soundEffects As List(Of SoundEffect)
+- uid: Music.AudioManager.Instance
+  commentId: F:Music.AudioManager.Instance
+  id: Instance
+  parent: Music.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AudioManager.Instance
+  fullName: Music.AudioManager.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 342
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public static AudioManager Instance
+    return:
+      type: Music.AudioManager
+    content.vb: Public Shared Instance As AudioManager
+- uid: Music.AudioManager.PlaySound(System.String)
+  commentId: M:Music.AudioManager.PlaySound(System.String)
+  id: PlaySound(System.String)
+  parent: Music.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySound(string)
+  nameWithType: AudioManager.PlaySound(string)
+  fullName: Music.AudioManager.PlaySound(string)
+  type: Method
+  source:
+    id: PlaySound
+    path: ''
+    startLine: 368
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public void PlaySound(string soundName)
+    parameters:
+    - id: soundName
+      type: System.String
+    content.vb: Public Sub PlaySound(soundName As String)
+  overload: Music.AudioManager.PlaySound*
+  nameWithType.vb: AudioManager.PlaySound(String)
+  fullName.vb: Music.AudioManager.PlaySound(String)
+  name.vb: PlaySound(String)
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.List{Music.SoundEffect}
+  commentId: '!:Global.List{Music.SoundEffect}'
+  definition: Global.List`1
+  name: List<SoundEffect>
+  nameWithType: List<SoundEffect>
+  fullName: List<Music.SoundEffect>
+  nameWithType.vb: List(Of SoundEffect)
+  fullName.vb: List(Of Music.SoundEffect)
+  name.vb: List(Of SoundEffect)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Music.SoundEffect
+    name: SoundEffect
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Music.SoundEffect
+    name: SoundEffect
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Music.AudioManager
+  commentId: T:Music.AudioManager
+  parent: Music
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Music.AudioManager
+- uid: Music.AudioManager.PlaySound*
+  commentId: Overload:Music.AudioManager.PlaySound
+  name: PlaySound
+  nameWithType: AudioManager.PlaySound
+  fullName: Music.AudioManager.PlaySound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

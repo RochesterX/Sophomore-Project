@@ -1,11 +1,12 @@
 using System.Linq;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 
+namespace Game{
 public class HubManager : MonoBehaviour
 {
     public static HubManager Instance;
@@ -87,4 +88,5 @@ public class HubManager : MonoBehaviour
             button.GetComponent<Button>().interactable = interactable;
         }
     }
+}
 }

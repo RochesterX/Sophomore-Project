@@ -1,6 +1,8 @@
 using TMPro;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.UI;
+namespace Game
+{
 
 public class GameTimer : MonoBehaviour
 {
@@ -55,4 +57,5 @@ public class GameTimer : MonoBehaviour
     {
         GameManager.Instance.GameOver();
     }
+}
 }

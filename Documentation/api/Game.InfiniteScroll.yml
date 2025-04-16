@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.InfiniteScroll
+  commentId: T:Game.InfiniteScroll
+  id: InfiniteScroll
+  parent: Game
+  children:
+  - Game.InfiniteScroll.end
+  - Game.InfiniteScroll.speed
+  - Game.InfiniteScroll.start
+  langs:
+  - csharp
+  - vb
+  name: InfiniteScroll
+  nameWithType: InfiniteScroll
+  fullName: Game.InfiniteScroll
+  type: Class
+  source:
+    id: InfiniteScroll
+    path: ''
+    startLine: 1126
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class InfiniteScroll : MonoBehaviour'
+    content.vb: Public Class InfiniteScroll Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.InfiniteScroll.speed
+  commentId: F:Game.InfiniteScroll.speed
+  id: speed
+  parent: Game.InfiniteScroll
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: InfiniteScroll.speed
+  fullName: Game.InfiniteScroll.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 1128
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+- uid: Game.InfiniteScroll.start
+  commentId: F:Game.InfiniteScroll.start
+  id: start
+  parent: Game.InfiniteScroll
+  langs:
+  - csharp
+  - vb
+  name: start
+  nameWithType: InfiniteScroll.start
+  fullName: Game.InfiniteScroll.start
+  type: Field
+  source:
+    id: start
+    path: ''
+    startLine: 1129
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float start
+    return:
+      type: System.Single
+    content.vb: Public start As Single
+- uid: Game.InfiniteScroll.end
+  commentId: F:Game.InfiniteScroll.end
+  id: end
+  parent: Game.InfiniteScroll
+  langs:
+  - csharp
+  - vb
+  name: end
+  nameWithType: InfiniteScroll.end
+  fullName: Game.InfiniteScroll.end
+  type: Field
+  source:
+    id: end
+    path: ''
+    startLine: 1130
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float end
+    return:
+      type: System.Single
+    content.vb: Public [end] As Single
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

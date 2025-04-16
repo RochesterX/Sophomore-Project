@@ -1,5 +1,8 @@
 using System.Collections;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+
+namespace Game
+{
 
 public class FallPlatform : MonoBehaviour
 {
@@ -51,4 +54,5 @@ public class FallPlatform : MonoBehaviour
         transform.parent.position = defposition;
         transform.parent.rotation = Quaternion.identity;
     }
+}
 }

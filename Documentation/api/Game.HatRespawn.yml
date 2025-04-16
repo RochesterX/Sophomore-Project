@@ -1,0 +1,172 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.HatRespawn
+  commentId: T:Game.HatRespawn
+  id: HatRespawn
+  parent: Game
+  children:
+  - Game.HatRespawn.canBePickedUp
+  - Game.HatRespawn.Interact
+  - Game.HatRespawn.OnHatDropped
+  - Game.HatRespawn.respawnTime
+  langs:
+  - csharp
+  - vb
+  name: HatRespawn
+  nameWithType: HatRespawn
+  fullName: Game.HatRespawn
+  type: Class
+  source:
+    id: HatRespawn
+    path: ''
+    startLine: 1668
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class HatRespawn : MonoBehaviour'
+    content.vb: Public Class HatRespawn Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.HatRespawn.respawnTime
+  commentId: F:Game.HatRespawn.respawnTime
+  id: respawnTime
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: respawnTime
+  nameWithType: HatRespawn.respawnTime
+  fullName: Game.HatRespawn.respawnTime
+  type: Field
+  source:
+    id: respawnTime
+    path: ''
+    startLine: 1671
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public const float respawnTime = 10
+    return:
+      type: System.Single
+    content.vb: Public Const respawnTime As Single = 10
+- uid: Game.HatRespawn.canBePickedUp
+  commentId: F:Game.HatRespawn.canBePickedUp
+  id: canBePickedUp
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: canBePickedUp
+  nameWithType: HatRespawn.canBePickedUp
+  fullName: Game.HatRespawn.canBePickedUp
+  type: Field
+  source:
+    id: canBePickedUp
+    path: ''
+    startLine: 1674
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static bool canBePickedUp
+    return:
+      type: System.Boolean
+    content.vb: Public Shared canBePickedUp As Boolean
+- uid: Game.HatRespawn.Interact
+  commentId: M:Game.HatRespawn.Interact
+  id: Interact
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: Interact()
+  nameWithType: HatRespawn.Interact()
+  fullName: Game.HatRespawn.Interact()
+  type: Method
+  source:
+    id: Interact
+    path: ''
+    startLine: 1700
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void Interact()
+    content.vb: Public Sub Interact()
+  overload: Game.HatRespawn.Interact*
+- uid: Game.HatRespawn.OnHatDropped
+  commentId: M:Game.HatRespawn.OnHatDropped
+  id: OnHatDropped
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: OnHatDropped()
+  nameWithType: HatRespawn.OnHatDropped()
+  fullName: Game.HatRespawn.OnHatDropped()
+  type: Method
+  source:
+    id: OnHatDropped
+    path: ''
+    startLine: 1706
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void OnHatDropped()
+    content.vb: Public Sub OnHatDropped()
+  overload: Game.HatRespawn.OnHatDropped*
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Game.HatRespawn.Interact*
+  commentId: Overload:Game.HatRespawn.Interact
+  name: Interact
+  nameWithType: HatRespawn.Interact
+  fullName: Game.HatRespawn.Interact
+- uid: Game.HatRespawn.OnHatDropped*
+  commentId: Overload:Game.HatRespawn.OnHatDropped
+  name: OnHatDropped
+  nameWithType: HatRespawn.OnHatDropped
+  fullName: Game.HatRespawn.OnHatDropped

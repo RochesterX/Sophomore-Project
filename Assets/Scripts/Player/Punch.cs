@@ -1,5 +1,8 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
+
+namespace Player
+{
 
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(AnimationPlayer))]
@@ -56,4 +59,5 @@ public class Punch : MonoBehaviour
     {
         GetComponent<PlayerMovement>().maxSpeedOverride = GetComponent<PlayerMovement>().maxSpeed;
     }
+}
 }

@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 public class WinScreen : MonoBehaviour
 {
@@ -32,4 +34,5 @@ public class WinScreen : MonoBehaviour
 
         GetComponent<Animator>().SetTrigger("win");
     }
+}
 }

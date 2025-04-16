@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.MovingPlatform
+  commentId: T:Game.MovingPlatform
+  id: MovingPlatform
+  parent: Game
+  children:
+  - Game.MovingPlatform.platform
+  - Game.MovingPlatform.points
+  - Game.MovingPlatform.speed
+  - Game.MovingPlatform.startPoint
+  langs:
+  - csharp
+  - vb
+  name: MovingPlatform
+  nameWithType: MovingPlatform
+  fullName: Game.MovingPlatform
+  type: Class
+  source:
+    id: MovingPlatform
+    path: ''
+    startLine: 1065
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class MovingPlatform : MonoBehaviour'
+    content.vb: Public Class MovingPlatform Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.MovingPlatform.platform
+  commentId: F:Game.MovingPlatform.platform
+  id: platform
+  parent: Game.MovingPlatform
+  langs:
+  - csharp
+  - vb
+  name: platform
+  nameWithType: MovingPlatform.platform
+  fullName: Game.MovingPlatform.platform
+  type: Field
+  source:
+    id: platform
+    path: ''
+    startLine: 1067
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Transform platform
+    return:
+      type: Global.Transform
+    content.vb: Public platform As Transform
+- uid: Game.MovingPlatform.startPoint
+  commentId: F:Game.MovingPlatform.startPoint
+  id: startPoint
+  parent: Game.MovingPlatform
+  langs:
+  - csharp
+  - vb
+  name: startPoint
+  nameWithType: MovingPlatform.startPoint
+  fullName: Game.MovingPlatform.startPoint
+  type: Field
+  source:
+    id: startPoint
+    path: ''
+    startLine: 1068
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public int startPoint
+    return:
+      type: System.Int32
+    content.vb: Public startPoint As Integer
+- uid: Game.MovingPlatform.points
+  commentId: F:Game.MovingPlatform.points
+  id: points
+  parent: Game.MovingPlatform
+  langs:
+  - csharp
+  - vb
+  name: points
+  nameWithType: MovingPlatform.points
+  fullName: Game.MovingPlatform.points
+  type: Field
+  source:
+    id: points
+    path: ''
+    startLine: 1069
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Transform[] points
+    return:
+      type: Global.Transform[]
+    content.vb: Public points As Transform()
+- uid: Game.MovingPlatform.speed
+  commentId: F:Game.MovingPlatform.speed
+  id: speed
+  parent: Game.MovingPlatform
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: MovingPlatform.speed
+  fullName: Game.MovingPlatform.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 1070
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.Transform[]
+  isExternal: true
+  name: Transform[]
+  nameWithType: Transform[]
+  fullName: Transform[]
+  nameWithType.vb: Transform()
+  fullName.vb: Transform()
+  name.vb: Transform()
+  spec.csharp:
+  - uid: Global.Transform
+    name: Transform
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Global.Transform
+    name: Transform
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

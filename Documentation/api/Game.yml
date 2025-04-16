@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game
+  commentId: N:Game
+  id: Game
+  children:
+  - Game.DayNightCycle
+  - Game.EventSystemizer
+  - Game.FallPlatform
+  - Game.GameManager
+  - Game.GameManager.GameEvent
+  - Game.GameManager.GameMode
+  - Game.GameManagerHelper
+  - Game.GameTimer
+  - Game.HatRespawn
+  - Game.HealthBarManager
+  - Game.HubManager
+  - Game.InfiniteScroll
+  - Game.LeaderboardManager
+  - Game.LifeDisplayManager
+  - Game.MapSelect
+  - Game.ModeSelect
+  - Game.MovingPlatform
+  - Game.ObjectVisibility
+  - Game.ObstacleCourse
+  - Game.PlayerCardCreator
+  - Game.PlayerJoinCard
+  - Game.RespawnOnTriggerEnter
+  - Game.TerribleHealthBarScript
+  - Game.WinScreen
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: Game
+  fullName: Game
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Game.DayNightCycle
+  commentId: T:Game.DayNightCycle
+  name: DayNightCycle
+  nameWithType: DayNightCycle
+  fullName: Game.DayNightCycle
+- uid: Game.HubManager
+  commentId: T:Game.HubManager
+  parent: Game
+  name: HubManager
+  nameWithType: HubManager
+  fullName: Game.HubManager
+- uid: Game.ObstacleCourse
+  commentId: T:Game.ObstacleCourse
+  name: ObstacleCourse
+  nameWithType: ObstacleCourse
+  fullName: Game.ObstacleCourse
+- uid: Game.EventSystemizer
+  commentId: T:Game.EventSystemizer
+  name: EventSystemizer
+  nameWithType: EventSystemizer
+  fullName: Game.EventSystemizer
+- uid: Game.ModeSelect
+  commentId: T:Game.ModeSelect
+  name: ModeSelect
+  nameWithType: ModeSelect
+  fullName: Game.ModeSelect
+- uid: Game.WinScreen
+  commentId: T:Game.WinScreen
+  parent: Game
+  name: WinScreen
+  nameWithType: WinScreen
+  fullName: Game.WinScreen
+- uid: Game.PlayerJoinCard
+  commentId: T:Game.PlayerJoinCard
+  parent: Game
+  name: PlayerJoinCard
+  nameWithType: PlayerJoinCard
+  fullName: Game.PlayerJoinCard
+- uid: Game.PlayerCardCreator
+  commentId: T:Game.PlayerCardCreator
+  parent: Game
+  name: PlayerCardCreator
+  nameWithType: PlayerCardCreator
+  fullName: Game.PlayerCardCreator
+- uid: Game.MovingPlatform
+  commentId: T:Game.MovingPlatform
+  name: MovingPlatform
+  nameWithType: MovingPlatform
+  fullName: Game.MovingPlatform
+- uid: Game.ObjectVisibility
+  commentId: T:Game.ObjectVisibility
+  name: ObjectVisibility
+  nameWithType: ObjectVisibility
+  fullName: Game.ObjectVisibility
+- uid: Game.InfiniteScroll
+  commentId: T:Game.InfiniteScroll
+  name: InfiniteScroll
+  nameWithType: InfiniteScroll
+  fullName: Game.InfiniteScroll
+- uid: Game.GameManagerHelper
+  commentId: T:Game.GameManagerHelper
+  name: GameManagerHelper
+  nameWithType: GameManagerHelper
+  fullName: Game.GameManagerHelper
+- uid: Game.GameTimer
+  commentId: T:Game.GameTimer
+  parent: Game
+  name: GameTimer
+  nameWithType: GameTimer
+  fullName: Game.GameTimer
+- uid: Game.HealthBarManager
+  commentId: T:Game.HealthBarManager
+  name: HealthBarManager
+  nameWithType: HealthBarManager
+  fullName: Game.HealthBarManager
+- uid: Game.GameManager
+  commentId: T:Game.GameManager
+  parent: Game
+  name: GameManager
+  nameWithType: GameManager
+  fullName: Game.GameManager
+- uid: Game.GameManager.GameEvent
+  commentId: T:Game.GameManager.GameEvent
+  parent: Game
+  name: GameManager.GameEvent
+  nameWithType: GameManager.GameEvent
+  fullName: Game.GameManager.GameEvent
+  spec.csharp:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameEvent
+    name: GameEvent
+  spec.vb:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameEvent
+    name: GameEvent
+- uid: Game.GameManager.GameMode
+  commentId: T:Game.GameManager.GameMode
+  parent: Game
+  name: GameManager.GameMode
+  nameWithType: GameManager.GameMode
+  fullName: Game.GameManager.GameMode
+  spec.csharp:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameMode
+    name: GameMode
+  spec.vb:
+  - uid: Game.GameManager
+    name: GameManager
+  - name: .
+  - uid: Game.GameManager.GameMode
+    name: GameMode
+- uid: Game.FallPlatform
+  commentId: T:Game.FallPlatform
+  name: FallPlatform
+  nameWithType: FallPlatform
+  fullName: Game.FallPlatform
+- uid: Game.HatRespawn
+  commentId: T:Game.HatRespawn
+  name: HatRespawn
+  nameWithType: HatRespawn
+  fullName: Game.HatRespawn
+- uid: Game.RespawnOnTriggerEnter
+  commentId: T:Game.RespawnOnTriggerEnter
+  name: RespawnOnTriggerEnter
+  nameWithType: RespawnOnTriggerEnter
+  fullName: Game.RespawnOnTriggerEnter
+- uid: Game.MapSelect
+  commentId: T:Game.MapSelect
+  name: MapSelect
+  nameWithType: MapSelect
+  fullName: Game.MapSelect
+- uid: Game.LifeDisplayManager
+  commentId: T:Game.LifeDisplayManager
+  name: LifeDisplayManager
+  nameWithType: LifeDisplayManager
+  fullName: Game.LifeDisplayManager
+- uid: Game.TerribleHealthBarScript
+  commentId: T:Game.TerribleHealthBarScript
+  name: TerribleHealthBarScript
+  nameWithType: TerribleHealthBarScript
+  fullName: Game.TerribleHealthBarScript
+- uid: Game.LeaderboardManager
+  commentId: T:Game.LeaderboardManager
+  parent: Game
+  name: LeaderboardManager
+  nameWithType: LeaderboardManager
+  fullName: Game.LeaderboardManager
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game

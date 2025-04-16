@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.InputSystem;
+namespace Player
+{
 
 public class PlayerManager : MonoBehaviour
 {
@@ -94,4 +96,4 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-}
+}}

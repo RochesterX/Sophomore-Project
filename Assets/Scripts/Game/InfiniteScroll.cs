@@ -1,5 +1,6 @@
-using UnityEngine;
-
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 public class InfiniteScroll : MonoBehaviour
 {
     public float speed;
@@ -19,4 +20,5 @@ public class InfiniteScroll : MonoBehaviour
 
         transform.position += speed * Time.deltaTime * Vector3.right;
     }
+}
 }

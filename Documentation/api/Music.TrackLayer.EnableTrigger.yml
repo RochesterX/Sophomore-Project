@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music.TrackLayer.EnableTrigger
+  commentId: T:Music.TrackLayer.EnableTrigger
+  id: TrackLayer.EnableTrigger
+  parent: Music
+  children:
+  - Music.TrackLayer.EnableTrigger.Button
+  - Music.TrackLayer.EnableTrigger.Collectible
+  - Music.TrackLayer.EnableTrigger.ConstantForce
+  - Music.TrackLayer.EnableTrigger.ElectromagneticPulse
+  - Music.TrackLayer.EnableTrigger.EndOfLevel
+  - Music.TrackLayer.EnableTrigger.Goal
+  - Music.TrackLayer.EnableTrigger.Magnetism
+  - Music.TrackLayer.EnableTrigger.Movement
+  - Music.TrackLayer.EnableTrigger.Scene
+  - Music.TrackLayer.EnableTrigger.Toggle
+  langs:
+  - csharp
+  - vb
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: Music.TrackLayer.EnableTrigger
+  type: Enum
+  source:
+    id: EnableTrigger
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: public enum TrackLayer.EnableTrigger
+    content.vb: Public Enum TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Scene
+  commentId: F:Music.TrackLayer.EnableTrigger.Scene
+  id: Scene
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: TrackLayer.EnableTrigger.Scene
+  fullName: Music.TrackLayer.EnableTrigger.Scene
+  type: Field
+  source:
+    id: Scene
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Scene = 0
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Magnetism
+  commentId: F:Music.TrackLayer.EnableTrigger.Magnetism
+  id: Magnetism
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Magnetism
+  nameWithType: TrackLayer.EnableTrigger.Magnetism
+  fullName: Music.TrackLayer.EnableTrigger.Magnetism
+  type: Field
+  source:
+    id: Magnetism
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Magnetism = 1
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Goal
+  commentId: F:Music.TrackLayer.EnableTrigger.Goal
+  id: Goal
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Goal
+  nameWithType: TrackLayer.EnableTrigger.Goal
+  fullName: Music.TrackLayer.EnableTrigger.Goal
+  type: Field
+  source:
+    id: Goal
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Goal = 2
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Button
+  commentId: F:Music.TrackLayer.EnableTrigger.Button
+  id: Button
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Button
+  nameWithType: TrackLayer.EnableTrigger.Button
+  fullName: Music.TrackLayer.EnableTrigger.Button
+  type: Field
+  source:
+    id: Button
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Button = 3
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Toggle
+  commentId: F:Music.TrackLayer.EnableTrigger.Toggle
+  id: Toggle
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Toggle
+  nameWithType: TrackLayer.EnableTrigger.Toggle
+  fullName: Music.TrackLayer.EnableTrigger.Toggle
+  type: Field
+  source:
+    id: Toggle
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Toggle = 4
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Movement
+  commentId: F:Music.TrackLayer.EnableTrigger.Movement
+  id: Movement
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Movement
+  nameWithType: TrackLayer.EnableTrigger.Movement
+  fullName: Music.TrackLayer.EnableTrigger.Movement
+  type: Field
+  source:
+    id: Movement
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Movement = 5
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.ConstantForce
+  commentId: F:Music.TrackLayer.EnableTrigger.ConstantForce
+  id: ConstantForce
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: ConstantForce
+  nameWithType: TrackLayer.EnableTrigger.ConstantForce
+  fullName: Music.TrackLayer.EnableTrigger.ConstantForce
+  type: Field
+  source:
+    id: ConstantForce
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: ConstantForce = 6
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.EndOfLevel
+  commentId: F:Music.TrackLayer.EnableTrigger.EndOfLevel
+  id: EndOfLevel
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: EndOfLevel
+  nameWithType: TrackLayer.EnableTrigger.EndOfLevel
+  fullName: Music.TrackLayer.EnableTrigger.EndOfLevel
+  type: Field
+  source:
+    id: EndOfLevel
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: EndOfLevel = 7
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.ElectromagneticPulse
+  commentId: F:Music.TrackLayer.EnableTrigger.ElectromagneticPulse
+  id: ElectromagneticPulse
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: ElectromagneticPulse
+  nameWithType: TrackLayer.EnableTrigger.ElectromagneticPulse
+  fullName: Music.TrackLayer.EnableTrigger.ElectromagneticPulse
+  type: Field
+  source:
+    id: ElectromagneticPulse
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: ElectromagneticPulse = 8
+    return:
+      type: Music.TrackLayer.EnableTrigger
+- uid: Music.TrackLayer.EnableTrigger.Collectible
+  commentId: F:Music.TrackLayer.EnableTrigger.Collectible
+  id: Collectible
+  parent: Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Collectible
+  nameWithType: TrackLayer.EnableTrigger.Collectible
+  fullName: Music.TrackLayer.EnableTrigger.Collectible
+  type: Field
+  source:
+    id: Collectible
+    path: ''
+    startLine: 904
+  assemblies:
+  - cs.temp.dll
+  namespace: Music
+  syntax:
+    content: Collectible = 9
+    return:
+      type: Music.TrackLayer.EnableTrigger
+references:
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music
+- uid: Music.TrackLayer.EnableTrigger
+  commentId: T:Music.TrackLayer.EnableTrigger
+  parent: Music
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: Music.TrackLayer.EnableTrigger
+  spec.csharp:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger
+  spec.vb:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger

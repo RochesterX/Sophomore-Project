@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.SceneManagement;
+namespace Music
+{
 
 public class TrackManager : MonoBehaviour
 {
@@ -362,5 +364,5 @@ public class TrackManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
-}
+}}
 #endif

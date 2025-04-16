@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.GameManager.GameEvent
+  commentId: T:Game.GameManager.GameEvent
+  id: GameManager.GameEvent
+  parent: Game
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GameManager.GameEvent
+  nameWithType: GameManager.GameEvent
+  fullName: Game.GameManager.GameEvent
+  type: Delegate
+  source:
+    id: GameEvent
+    path: ''
+    startLine: 1313
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public delegate void GameManager.GameEvent()
+    content.vb: Public Delegate Sub GameManager.GameEvent()
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game

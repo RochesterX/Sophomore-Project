@@ -3,8 +3,23 @@ apiRules:
     uidRegex: ^UnityEngine
     type: Namespace
 - include:
-    uidRegex: ^Global
+    uidRegex: ^Player
+    type: Namespace
+- include:
+    uidRegex: ^Music
+    type: Namespace
+- include:
+    uidRegex: ^Game
     type: Namespace
 - exclude:
     uidRegex: .*
+    type: Namespace
+- exclude:
+    uidRegex: ^Archaic
+    type: Namespace
+- exclude:
+    uidRegex: ^Trevor
+    type: Namespace
+- exclude:
+    uidRegex: ^Global
     type: Namespace

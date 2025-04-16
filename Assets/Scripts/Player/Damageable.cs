@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Player
+{
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
@@ -139,4 +141,5 @@ public class Damageable : MonoBehaviour
     {
         damage = 0f;
     }
+}
 }

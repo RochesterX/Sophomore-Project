@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.PlayerJoinCard
+  commentId: T:Game.PlayerJoinCard
+  id: PlayerJoinCard
+  parent: Game
+  children:
+  - Game.PlayerJoinCard.playerNumber
+  - Game.PlayerJoinCard.playerNumberText
+  - Game.PlayerJoinCard.playerPreview
+  langs:
+  - csharp
+  - vb
+  name: PlayerJoinCard
+  nameWithType: PlayerJoinCard
+  fullName: Game.PlayerJoinCard
+  type: Class
+  source:
+    id: PlayerJoinCard
+    path: ''
+    startLine: 1020
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class PlayerJoinCard : MonoBehaviour'
+    content.vb: Public Class PlayerJoinCard Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.PlayerJoinCard.playerPreview
+  commentId: F:Game.PlayerJoinCard.playerPreview
+  id: playerPreview
+  parent: Game.PlayerJoinCard
+  langs:
+  - csharp
+  - vb
+  name: playerPreview
+  nameWithType: PlayerJoinCard.playerPreview
+  fullName: Game.PlayerJoinCard.playerPreview
+  type: Field
+  source:
+    id: playerPreview
+    path: ''
+    startLine: 1022
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject playerPreview
+    return:
+      type: Global.GameObject
+    content.vb: Public playerPreview As GameObject
+- uid: Game.PlayerJoinCard.playerNumber
+  commentId: F:Game.PlayerJoinCard.playerNumber
+  id: playerNumber
+  parent: Game.PlayerJoinCard
+  langs:
+  - csharp
+  - vb
+  name: playerNumber
+  nameWithType: PlayerJoinCard.playerNumber
+  fullName: Game.PlayerJoinCard.playerNumber
+  type: Field
+  source:
+    id: playerNumber
+    path: ''
+    startLine: 1023
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public int playerNumber
+    return:
+      type: System.Int32
+    content.vb: Public playerNumber As Integer
+- uid: Game.PlayerJoinCard.playerNumberText
+  commentId: F:Game.PlayerJoinCard.playerNumberText
+  id: playerNumberText
+  parent: Game.PlayerJoinCard
+  langs:
+  - csharp
+  - vb
+  name: playerNumberText
+  nameWithType: PlayerJoinCard.playerNumberText
+  fullName: Game.PlayerJoinCard.playerNumberText
+  type: Field
+  source:
+    id: playerNumberText
+    path: ''
+    startLine: 1024
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public TextMeshProUGUI playerNumberText
+    return:
+      type: Global.TextMeshProUGUI
+    content.vb: Public playerNumberText As TextMeshProUGUI
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Global.TextMeshProUGUI
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TextMeshProUGUI

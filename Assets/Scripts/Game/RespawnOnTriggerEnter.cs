@@ -1,5 +1,6 @@
-using UnityEngine;
-
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 public class RespawnOnTriggerEnter : MonoBehaviour
 {
     public Vector2 spawnPoint;
@@ -25,4 +26,4 @@ public class RespawnOnTriggerEnter : MonoBehaviour
             }
         }
     }
-}
+}}

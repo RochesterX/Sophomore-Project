@@ -1,6 +1,8 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.EventSystems;
 
+namespace Game
+{
 public class EventSystemizer : MonoBehaviour
 {
     private void Update() // Ensures only one instance of EventSystem exists
@@ -11,4 +13,5 @@ public class EventSystemizer : MonoBehaviour
             Destroy(system.gameObject);
         }
     }
+}
 }

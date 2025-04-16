@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+
+namespace Game
+{
+
 /// <summary>
 /// The GameManager class manages the overall game logic, including game modes, player states, 
 /// game events, and game-over conditions. It ensures a single instance exists and provides 
@@ -306,4 +310,5 @@ public class GameManager : MonoBehaviour
             LeaderboardManager.Instance.UpdateLeaderboard();
         }
     }
+}
 }

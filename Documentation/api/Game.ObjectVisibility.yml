@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.ObjectVisibility
+  commentId: T:Game.ObjectVisibility
+  id: ObjectVisibility
+  parent: Game
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ObjectVisibility
+  nameWithType: ObjectVisibility
+  fullName: Game.ObjectVisibility
+  type: Class
+  source:
+    id: ObjectVisibility
+    path: ''
+    startLine: 1098
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class ObjectVisibility : MonoBehaviour'
+    content.vb: Public Class ObjectVisibility Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

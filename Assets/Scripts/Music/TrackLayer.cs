@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.Audio;
+namespace Music
+{
 
 [System.Serializable]
 public class TrackLayer
@@ -13,4 +15,5 @@ public class TrackLayer
 
     public List<string> layerScenes;
     public string triggerName;
+}
 }

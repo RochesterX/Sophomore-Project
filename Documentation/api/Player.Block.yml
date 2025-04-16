@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player.Block
+  commentId: T:Player.Block
+  id: Block
+  parent: Player
+  children:
+  - Player.Block.blocking
+  - Player.Block.IsParrying
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: Block
+  fullName: Player.Block
+  type: Class
+  source:
+    id: Block
+    path: ''
+    startLine: 2387
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: 'public class Block : MonoBehaviour'
+    content.vb: Public Class Block Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Player.Block.blocking
+  commentId: F:Player.Block.blocking
+  id: blocking
+  parent: Player.Block
+  langs:
+  - csharp
+  - vb
+  name: blocking
+  nameWithType: Block.blocking
+  fullName: Player.Block.blocking
+  type: Field
+  source:
+    id: blocking
+    path: ''
+    startLine: 2390
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool blocking
+    return:
+      type: System.Boolean
+    content.vb: Public blocking As Boolean
+- uid: Player.Block.IsParrying
+  commentId: M:Player.Block.IsParrying
+  id: IsParrying
+  parent: Player.Block
+  langs:
+  - csharp
+  - vb
+  name: IsParrying()
+  nameWithType: Block.IsParrying()
+  fullName: Player.Block.IsParrying()
+  type: Method
+  source:
+    id: IsParrying
+    path: ''
+    startLine: 2436
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool IsParrying()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsParrying() As Boolean
+  overload: Player.Block.IsParrying*
+references:
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Player.Block.IsParrying*
+  commentId: Overload:Player.Block.IsParrying
+  name: IsParrying
+  nameWithType: Block.IsParrying
+  fullName: Player.Block.IsParrying

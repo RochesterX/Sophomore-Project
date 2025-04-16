@@ -1,4 +1,6 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Player
+{
 
 [RequireComponent(typeof(Animator))]
 public class AnimationPlayer : MonoBehaviour
@@ -32,4 +34,5 @@ public class AnimationPlayer : MonoBehaviour
     {
         animator.SetTrigger("punch");
     }
+}
 }

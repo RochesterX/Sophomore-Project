@@ -1,4 +1,6 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 public class HatRespawn : MonoBehaviour
 {
@@ -53,4 +55,5 @@ public class HatRespawn : MonoBehaviour
         lastInteractionTime = Time.time; // Reset the timer after respawning
         isDropped = false;
     }
+}
 }

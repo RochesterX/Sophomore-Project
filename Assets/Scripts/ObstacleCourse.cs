@@ -1,4 +1,7 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+
+namespace Game
+{
 
 public class ObstacleCourse : MonoBehaviour
 {
@@ -12,4 +15,5 @@ public class ObstacleCourse : MonoBehaviour
             GameManager.Instance.GameOver();
         }
     }
+}
 }

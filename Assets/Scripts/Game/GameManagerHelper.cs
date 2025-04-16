@@ -1,4 +1,6 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 [ExecuteAlways]
 public class GameManagerHelper : MonoBehaviour
@@ -20,4 +22,5 @@ public class GameManagerHelper : MonoBehaviour
             GetComponent<GameManager>().spawnPosition = GameObject.Find("HELPER").transform.position;
         }
     }
+}
 }

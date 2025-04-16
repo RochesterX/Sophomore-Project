@@ -13,10 +13,12 @@
                 }
             ],
             "globalNamespaceId": "Global",
+            "filter": "filterConfig.yml",
             "dest": "api"
         }
     ],
     "build": {
+        "template": [ "default", "templates/unity"],
         "globalMetadata": {
             "_appTitle": "Example Unity documentation",
             "_appFooter": "Example Unity documentation footer",

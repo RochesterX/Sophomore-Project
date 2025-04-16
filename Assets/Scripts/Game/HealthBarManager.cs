@@ -1,5 +1,7 @@
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 public class HealthBarManager : MonoBehaviour
 {
@@ -52,4 +54,5 @@ public class HealthBarManager : MonoBehaviour
         }
         playerHealthBars.Clear();
     }
+}
 }

@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player.AnimationPlayer.AnimationState
+  commentId: T:Player.AnimationPlayer.AnimationState
+  id: AnimationPlayer.AnimationState
+  parent: Player
+  children:
+  - Player.AnimationPlayer.AnimationState.Idle
+  - Player.AnimationPlayer.AnimationState.Jump
+  - Player.AnimationPlayer.AnimationState.Run
+  - Player.AnimationPlayer.AnimationState.Walk
+  langs:
+  - csharp
+  - vb
+  name: AnimationPlayer.AnimationState
+  nameWithType: AnimationPlayer.AnimationState
+  fullName: Player.AnimationPlayer.AnimationState
+  type: Enum
+  source:
+    id: AnimationState
+    path: ''
+    startLine: 2351
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public enum AnimationPlayer.AnimationState
+    content.vb: Public Enum AnimationPlayer.AnimationState
+- uid: Player.AnimationPlayer.AnimationState.Idle
+  commentId: F:Player.AnimationPlayer.AnimationState.Idle
+  id: Idle
+  parent: Player.AnimationPlayer.AnimationState
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: AnimationPlayer.AnimationState.Idle
+  fullName: Player.AnimationPlayer.AnimationState.Idle
+  type: Field
+  source:
+    id: Idle
+    path: ''
+    startLine: 2351
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: Idle = 0
+    return:
+      type: Player.AnimationPlayer.AnimationState
+- uid: Player.AnimationPlayer.AnimationState.Run
+  commentId: F:Player.AnimationPlayer.AnimationState.Run
+  id: Run
+  parent: Player.AnimationPlayer.AnimationState
+  langs:
+  - csharp
+  - vb
+  name: Run
+  nameWithType: AnimationPlayer.AnimationState.Run
+  fullName: Player.AnimationPlayer.AnimationState.Run
+  type: Field
+  source:
+    id: Run
+    path: ''
+    startLine: 2351
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: Run = 1
+    return:
+      type: Player.AnimationPlayer.AnimationState
+- uid: Player.AnimationPlayer.AnimationState.Jump
+  commentId: F:Player.AnimationPlayer.AnimationState.Jump
+  id: Jump
+  parent: Player.AnimationPlayer.AnimationState
+  langs:
+  - csharp
+  - vb
+  name: Jump
+  nameWithType: AnimationPlayer.AnimationState.Jump
+  fullName: Player.AnimationPlayer.AnimationState.Jump
+  type: Field
+  source:
+    id: Jump
+    path: ''
+    startLine: 2351
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: Jump = 2
+    return:
+      type: Player.AnimationPlayer.AnimationState
+- uid: Player.AnimationPlayer.AnimationState.Walk
+  commentId: F:Player.AnimationPlayer.AnimationState.Walk
+  id: Walk
+  parent: Player.AnimationPlayer.AnimationState
+  langs:
+  - csharp
+  - vb
+  name: Walk
+  nameWithType: AnimationPlayer.AnimationState.Walk
+  fullName: Player.AnimationPlayer.AnimationState.Walk
+  type: Field
+  source:
+    id: Walk
+    path: ''
+    startLine: 2351
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: Walk = 3
+    return:
+      type: Player.AnimationPlayer.AnimationState
+references:
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: Player.AnimationPlayer.AnimationState
+  commentId: T:Player.AnimationPlayer.AnimationState
+  parent: Player
+  name: AnimationPlayer.AnimationState
+  nameWithType: AnimationPlayer.AnimationState
+  fullName: Player.AnimationPlayer.AnimationState
+  spec.csharp:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState
+  spec.vb:
+  - uid: Player.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Player.AnimationPlayer.AnimationState
+    name: AnimationState

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.Audio;
+namespace Music
+{
 
 [System.Serializable]
 public class Playlist
@@ -11,4 +13,5 @@ public class Playlist
     public List<AudioClip> songs;
     public float shuffleTime;
     public float volume;
+}
 }

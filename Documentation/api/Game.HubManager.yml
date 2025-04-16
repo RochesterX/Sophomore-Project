@@ -1,0 +1,203 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.HubManager
+  commentId: T:Game.HubManager
+  id: HubManager
+  parent: Game
+  children:
+  - Game.HubManager.gameButtonsParent
+  - Game.HubManager.hubCamera
+  - Game.HubManager.Instance
+  - Game.HubManager.LoadScene(System.String)
+  - Game.HubManager.UnloadGameScene
+  langs:
+  - csharp
+  - vb
+  name: HubManager
+  nameWithType: HubManager
+  fullName: Game.HubManager
+  type: Class
+  source:
+    id: HubManager
+    path: ''
+    startLine: 230
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class HubManager : MonoBehaviour'
+    content.vb: Public Class HubManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.HubManager.Instance
+  commentId: F:Game.HubManager.Instance
+  id: Instance
+  parent: Game.HubManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: HubManager.Instance
+  fullName: Game.HubManager.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 232
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public static HubManager Instance
+    return:
+      type: Game.HubManager
+    content.vb: Public Shared Instance As HubManager
+- uid: Game.HubManager.hubCamera
+  commentId: F:Game.HubManager.hubCamera
+  id: hubCamera
+  parent: Game.HubManager
+  langs:
+  - csharp
+  - vb
+  name: hubCamera
+  nameWithType: HubManager.hubCamera
+  fullName: Game.HubManager.hubCamera
+  type: Field
+  source:
+    id: hubCamera
+    path: ''
+    startLine: 233
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject hubCamera
+    return:
+      type: Global.GameObject
+    content.vb: Public hubCamera As GameObject
+- uid: Game.HubManager.gameButtonsParent
+  commentId: F:Game.HubManager.gameButtonsParent
+  id: gameButtonsParent
+  parent: Game.HubManager
+  langs:
+  - csharp
+  - vb
+  name: gameButtonsParent
+  nameWithType: HubManager.gameButtonsParent
+  fullName: Game.HubManager.gameButtonsParent
+  type: Field
+  source:
+    id: gameButtonsParent
+    path: ''
+    startLine: 234
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public GameObject gameButtonsParent
+    return:
+      type: Global.GameObject
+    content.vb: Public gameButtonsParent As GameObject
+- uid: Game.HubManager.LoadScene(System.String)
+  commentId: M:Game.HubManager.LoadScene(System.String)
+  id: LoadScene(System.String)
+  parent: Game.HubManager
+  langs:
+  - csharp
+  - vb
+  name: LoadScene(string)
+  nameWithType: HubManager.LoadScene(string)
+  fullName: Game.HubManager.LoadScene(string)
+  type: Method
+  source:
+    id: LoadScene
+    path: ''
+    startLine: 251
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void LoadScene(string sceneName)
+    parameters:
+    - id: sceneName
+      type: System.String
+    content.vb: Public Sub LoadScene(sceneName As String)
+  overload: Game.HubManager.LoadScene*
+  nameWithType.vb: HubManager.LoadScene(String)
+  fullName.vb: Game.HubManager.LoadScene(String)
+  name.vb: LoadScene(String)
+- uid: Game.HubManager.UnloadGameScene
+  commentId: M:Game.HubManager.UnloadGameScene
+  id: UnloadGameScene
+  parent: Game.HubManager
+  langs:
+  - csharp
+  - vb
+  name: UnloadGameScene()
+  nameWithType: HubManager.UnloadGameScene()
+  fullName: Game.HubManager.UnloadGameScene()
+  type: Method
+  source:
+    id: UnloadGameScene
+    path: ''
+    startLine: 260
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void UnloadGameScene()
+    content.vb: Public Sub UnloadGameScene()
+  overload: Game.HubManager.UnloadGameScene*
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Game.HubManager
+  commentId: T:Game.HubManager
+  parent: Game
+  name: HubManager
+  nameWithType: HubManager
+  fullName: Game.HubManager
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Game.HubManager.LoadScene*
+  commentId: Overload:Game.HubManager.LoadScene
+  name: LoadScene
+  nameWithType: HubManager.LoadScene
+  fullName: Game.HubManager.LoadScene
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Game.HubManager.UnloadGameScene*
+  commentId: Overload:Game.HubManager.UnloadGameScene
+  name: UnloadGameScene
+  nameWithType: HubManager.UnloadGameScene
+  fullName: Game.HubManager.UnloadGameScene

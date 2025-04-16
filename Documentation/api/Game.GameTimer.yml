@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.GameTimer
+  commentId: T:Game.GameTimer
+  id: GameTimer
+  parent: Game
+  children:
+  - Game.GameTimer.startTime
+  - Game.GameTimer.StartTimer
+  - Game.GameTimer.timerText
+  langs:
+  - csharp
+  - vb
+  name: GameTimer
+  nameWithType: GameTimer
+  fullName: Game.GameTimer
+  type: Class
+  source:
+    id: GameTimer
+    path: ''
+    startLine: 1179
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class GameTimer : MonoBehaviour'
+    content.vb: Public Class GameTimer Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.GameTimer.startTime
+  commentId: F:Game.GameTimer.startTime
+  id: startTime
+  parent: Game.GameTimer
+  langs:
+  - csharp
+  - vb
+  name: startTime
+  nameWithType: GameTimer.startTime
+  fullName: Game.GameTimer.startTime
+  type: Field
+  source:
+    id: startTime
+    path: ''
+    startLine: 1181
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float startTime
+    return:
+      type: System.Single
+    content.vb: Public startTime As Single
+- uid: Game.GameTimer.timerText
+  commentId: F:Game.GameTimer.timerText
+  id: timerText
+  parent: Game.GameTimer
+  langs:
+  - csharp
+  - vb
+  name: timerText
+  nameWithType: GameTimer.timerText
+  fullName: Game.GameTimer.timerText
+  type: Field
+  source:
+    id: timerText
+    path: ''
+    startLine: 1185
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public Text timerText
+    return:
+      type: Global.Text
+    content.vb: Public timerText As Text
+- uid: Game.GameTimer.StartTimer
+  commentId: M:Game.GameTimer.StartTimer
+  id: StartTimer
+  parent: Game.GameTimer
+  langs:
+  - csharp
+  - vb
+  name: StartTimer()
+  nameWithType: GameTimer.StartTimer()
+  fullName: Game.GameTimer.StartTimer()
+  type: Method
+  source:
+    id: StartTimer
+    path: ''
+    startLine: 1212
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public void StartTimer()
+    content.vb: Public Sub StartTimer()
+  overload: Game.GameTimer.StartTimer*
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.Text
+  commentId: '!:Global.Text'
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: Game.GameTimer.StartTimer*
+  commentId: Overload:Game.GameTimer.StartTimer
+  name: StartTimer
+  nameWithType: GameTimer.StartTimer
+  fullName: Game.GameTimer.StartTimer

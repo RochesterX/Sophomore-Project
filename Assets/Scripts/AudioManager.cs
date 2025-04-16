@@ -1,5 +1,8 @@
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+
+namespace Music
+{
 
 public class AudioManager : MonoBehaviour
 {
@@ -64,4 +67,5 @@ public class SoundEffect
         this.name = name;
         this.audioSource = audioSource;
     }
+}
 }

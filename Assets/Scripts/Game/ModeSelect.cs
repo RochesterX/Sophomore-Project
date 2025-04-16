@@ -1,5 +1,7 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using UnityEngine.UI;
+namespace Game
+{
 
 public class ModeSelect : MonoBehaviour
 {
@@ -26,4 +28,5 @@ public class ModeSelect : MonoBehaviour
             GameManager.gameMode = GameManager.GameMode.obstacleCourse;
         }
     }
+}
 }

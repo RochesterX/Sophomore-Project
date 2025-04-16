@@ -1,253 +1,218 @@
 {
-  "api/Global.AnimationPlayer.AnimationState.html": {
-    "href": "api/Global.AnimationPlayer.AnimationState.html",
-    "title": "Enum AnimationPlayer.AnimationState | Example Unity documentation",
-    "keywords": "Enum AnimationPlayer.AnimationState Namespace: Global Assembly: cs.temp.dll.dll Syntax public enum AnimationPlayer.AnimationState Fields Name Description Idle Jump Run Walk"
-  },
-  "api/Global.AnimationPlayer.html": {
-    "href": "api/Global.AnimationPlayer.html",
-    "title": "Class AnimationPlayer | Example Unity documentation",
-    "keywords": "Class AnimationPlayer Inheritance object AnimationPlayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class AnimationPlayer : MonoBehaviour Fields backwards Declaration public bool backwards Field Value Type Description bool block Declaration public bool block Field Value Type Description bool clip Declaration public AnimationClip clip Field Value Type Description AnimationClip state Declaration public AnimationPlayer.AnimationState state Field Value Type Description AnimationPlayer.AnimationState Methods Punch() Declaration public void Punch() SetState(AnimationState) Declaration public void SetState(AnimationPlayer.AnimationState state) Parameters Type Name Description AnimationPlayer.AnimationState state"
-  },
-  "api/Global.AudioManager.html": {
-    "href": "api/Global.AudioManager.html",
-    "title": "Class AudioManager | Example Unity documentation",
-    "keywords": "Class AudioManager Inheritance object AudioManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class AudioManager : MonoBehaviour Fields Instance Declaration public static AudioManager Instance Field Value Type Description AudioManager soundEffects Declaration public List<SoundEffect> soundEffects Field Value Type Description List<><SoundEffect> Methods PlaySound(string) Declaration public void PlaySound(string soundName) Parameters Type Name Description string soundName"
-  },
-  "api/Global.Block.html": {
-    "href": "api/Global.Block.html",
-    "title": "Class Block | Example Unity documentation",
-    "keywords": "Class Block Inheritance object Block Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Block : MonoBehaviour Fields blocking Declaration public bool blocking Field Value Type Description bool Methods IsParrying() Declaration public bool IsParrying() Returns Type Description bool"
-  },
-  "api/Global.Damageable.html": {
-    "href": "api/Global.Damageable.html",
-    "title": "Class Damageable | Example Unity documentation",
-    "keywords": "Class Damageable Inheritance object Damageable Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Damageable : MonoBehaviour Fields damage Declaration public float damage Field Value Type Description float damageSelfDebug Declaration public bool damageSelfDebug Field Value Type Description bool dying Declaration public bool dying Field Value Type Description bool force Declaration public float force Field Value Type Description float lives Declaration public int lives Field Value Type Description int maxDamage Declaration public float maxDamage Field Value Type Description float Methods Damage(float) Declaration public void Damage(float damage) Parameters Type Name Description float damage HandleDeath() Declaration public void HandleDeath() ResetDamage() Declaration public void ResetDamage() Respawn() Declaration public void Respawn() Events OnPlayerPunched Declaration public event Action<GameObject> OnPlayerPunched Event Type Type Description System.Action<T><GameObject>"
-  },
-  "api/Global.DayNightCycle.html": {
-    "href": "api/Global.DayNightCycle.html",
+  "api/Game.DayNightCycle.html": {
+    "href": "api/Game.DayNightCycle.html",
     "title": "Class DayNightCycle | Example Unity documentation",
-    "keywords": "Class DayNightCycle Inheritance object DayNightCycle Namespace: Global Assembly: cs.temp.dll.dll Syntax public class DayNightCycle : MonoBehaviour Fields cycleDuration Declaration public float cycleDuration Field Value Type Description float dayBackClouds Declaration public SpriteRenderer dayBackClouds Field Value Type Description SpriteRenderer dayFrontClouds Declaration public SpriteRenderer dayFrontClouds Field Value Type Description SpriteRenderer daySky Declaration public SpriteRenderer daySky Field Value Type Description SpriteRenderer eveningBackClouds Declaration public SpriteRenderer eveningBackClouds Field Value Type Description SpriteRenderer eveningFrontClouds Declaration public SpriteRenderer eveningFrontClouds Field Value Type Description SpriteRenderer eveningSky Declaration public SpriteRenderer eveningSky Field Value Type Description SpriteRenderer nightBackClouds Declaration public SpriteRenderer nightBackClouds Field Value Type Description SpriteRenderer nightFrontClouds Declaration public SpriteRenderer nightFrontClouds Field Value Type Description SpriteRenderer nightSky Declaration public SpriteRenderer nightSky Field Value Type Description SpriteRenderer transitionDuration Declaration public float transitionDuration Field Value Type Description float"
+    "keywords": "Class DayNightCycle Inheritance object DayNightCycle Namespace: Game Assembly: cs.temp.dll.dll Syntax public class DayNightCycle : MonoBehaviour Fields cycleDuration Declaration public float cycleDuration Field Value Type Description float dayBackClouds Declaration public SpriteRenderer dayBackClouds Field Value Type Description SpriteRenderer dayFrontClouds Declaration public SpriteRenderer dayFrontClouds Field Value Type Description SpriteRenderer daySky Declaration public SpriteRenderer daySky Field Value Type Description SpriteRenderer eveningBackClouds Declaration public SpriteRenderer eveningBackClouds Field Value Type Description SpriteRenderer eveningFrontClouds Declaration public SpriteRenderer eveningFrontClouds Field Value Type Description SpriteRenderer eveningSky Declaration public SpriteRenderer eveningSky Field Value Type Description SpriteRenderer nightBackClouds Declaration public SpriteRenderer nightBackClouds Field Value Type Description SpriteRenderer nightFrontClouds Declaration public SpriteRenderer nightFrontClouds Field Value Type Description SpriteRenderer nightSky Declaration public SpriteRenderer nightSky Field Value Type Description SpriteRenderer transitionDuration Declaration public float transitionDuration Field Value Type Description float"
   },
-  "api/Global.EventSystemizer.html": {
-    "href": "api/Global.EventSystemizer.html",
+  "api/Game.EventSystemizer.html": {
+    "href": "api/Game.EventSystemizer.html",
     "title": "Class EventSystemizer | Example Unity documentation",
-    "keywords": "Class EventSystemizer Inheritance object EventSystemizer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class EventSystemizer : MonoBehaviour"
+    "keywords": "Class EventSystemizer Inheritance object EventSystemizer Namespace: Game Assembly: cs.temp.dll.dll Syntax public class EventSystemizer : MonoBehaviour"
   },
-  "api/Global.FallPlatform.html": {
-    "href": "api/Global.FallPlatform.html",
+  "api/Game.FallPlatform.html": {
+    "href": "api/Game.FallPlatform.html",
     "title": "Class FallPlatform | Example Unity documentation",
-    "keywords": "Class FallPlatform Inheritance object FallPlatform Namespace: Global Assembly: cs.temp.dll.dll Syntax public class FallPlatform : MonoBehaviour Fields fallDelay Declaration public float fallDelay Field Value Type Description float resetDelay Declaration public float resetDelay Field Value Type Description float"
+    "keywords": "Class FallPlatform Inheritance object FallPlatform Namespace: Game Assembly: cs.temp.dll.dll Syntax public class FallPlatform : MonoBehaviour Fields fallDelay Declaration public float fallDelay Field Value Type Description float resetDelay Declaration public float resetDelay Field Value Type Description float"
   },
-  "api/Global.GameManager.GameEvent.html": {
-    "href": "api/Global.GameManager.GameEvent.html",
+  "api/Game.GameManager.GameEvent.html": {
+    "href": "api/Game.GameManager.GameEvent.html",
     "title": "Delegate GameManager.GameEvent | Example Unity documentation",
-    "keywords": "Delegate GameManager.GameEvent Namespace: Global Assembly: cs.temp.dll.dll Syntax public delegate void GameManager.GameEvent()"
+    "keywords": "Delegate GameManager.GameEvent Namespace: Game Assembly: cs.temp.dll.dll Syntax public delegate void GameManager.GameEvent()"
   },
-  "api/Global.GameManager.GameMode.html": {
-    "href": "api/Global.GameManager.GameMode.html",
+  "api/Game.GameManager.GameMode.html": {
+    "href": "api/Game.GameManager.GameMode.html",
     "title": "Enum GameManager.GameMode | Example Unity documentation",
-    "keywords": "Enum GameManager.GameMode Enum representing the different game modes. Namespace: Global Assembly: cs.temp.dll.dll Syntax public enum GameManager.GameMode Fields Name Description freeForAll keepAway obstacleCourse"
+    "keywords": "Enum GameManager.GameMode Enum representing the different game modes. Namespace: Game Assembly: cs.temp.dll.dll Syntax public enum GameManager.GameMode Fields Name Description freeForAll keepAway obstacleCourse"
   },
-  "api/Global.GameManager.html": {
-    "href": "api/Global.GameManager.html",
+  "api/Game.GameManager.html": {
+    "href": "api/Game.GameManager.html",
     "title": "Class GameManager | Example Unity documentation",
-    "keywords": "Class GameManager The GameManager class manages the overall game logic, including game modes, player states, game events, and game-over conditions. It ensures a single instance exists and provides functionality for starting, updating, and ending the game. Inheritance object GameManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class GameManager : MonoBehaviour Fields gameMode Declaration public static GameManager.GameMode gameMode Field Value Type Description GameManager.GameMode gameOver Declaration public bool gameOver Field Value Type Description bool gameTimer Declaration public GameTimer gameTimer Field Value Type Description GameTimer hatObject Declaration public GameObject hatObject Field Value Type Description GameObject hatSpawnPositions Declaration public List<Vector2> hatSpawnPositions Field Value Type Description List<><Vector2> LeaderboardCanvas Declaration public Canvas LeaderboardCanvas Field Value Type Description Canvas map Declaration public static string map Field Value Type Description string music Declaration public static bool music Field Value Type Description bool obstacleCourseSpawnPosition Declaration public Vector2 obstacleCourseSpawnPosition Field Value Type Description Vector2 offset Declaration public float offset Field Value Type Description float playerColors Declaration public static List<Color> playerColors Field Value Type Description List<><Color> playerHoldTimes Declaration public static Dictionary<GameObject, float> playerHoldTimes Field Value Type Description Dictionary<, ><GameObject, float> players Declaration public static List<GameObject> players Field Value Type Description List<><GameObject> spawnPosition Declaration public Vector2 spawnPosition Field Value Type Description Vector2 time Declaration public float time Field Value Type Description float TimerCanvas Declaration public Canvas TimerCanvas Field Value Type Description Canvas Properties Instance Declaration public static GameManager Instance { get; } Property Value Type Description GameManager Methods AlivePlayers() Returns a list of all players that are currently alive. Declaration public List<GameObject> AlivePlayers() Returns Type Description List<><GameObject> A list of alive player GameObjects. GameOver() Ends the game and determines the winner based on the game mode. Declaration public void GameOver() PlayerDied(Damageable) Handles player deaths based on the current game mode. Declaration public void PlayerDied(Damageable player) Parameters Type Name Description Damageable player The player that died. StartGame() Sets up the game based on the selected game mode. Declaration public void StartGame() UpdatePlayerHoldTime(GameObject, float) Updates the player's hold time and updates the leaderboard. Declaration public void UpdatePlayerHoldTime(GameObject player, float holdTime) Parameters Type Name Description GameObject player The player GameObject. float holdTime The hold time to update. Events EndGameEvent Declaration public event GameManager.GameEvent EndGameEvent Event Type Type Description GameManager.GameEvent StartGameEvent Declaration public event GameManager.GameEvent StartGameEvent Event Type Type Description GameManager.GameEvent"
+    "keywords": "Class GameManager The GameManager class manages the overall game logic, including game modes, player states, game events, and game-over conditions. It ensures a single instance exists and provides functionality for starting, updating, and ending the game. Inheritance object GameManager Namespace: Game Assembly: cs.temp.dll.dll Syntax public class GameManager : MonoBehaviour Fields gameMode Declaration public static GameManager.GameMode gameMode Field Value Type Description GameManager.GameMode gameOver Declaration public bool gameOver Field Value Type Description bool gameTimer Declaration public GameTimer gameTimer Field Value Type Description GameTimer hatObject Declaration public GameObject hatObject Field Value Type Description GameObject hatSpawnPositions Declaration public List<Vector2> hatSpawnPositions Field Value Type Description List<><Vector2> LeaderboardCanvas Declaration public Canvas LeaderboardCanvas Field Value Type Description Canvas map Declaration public static string map Field Value Type Description string music Declaration public static bool music Field Value Type Description bool obstacleCourseSpawnPosition Declaration public Vector2 obstacleCourseSpawnPosition Field Value Type Description Vector2 offset Declaration public float offset Field Value Type Description float playerColors Declaration public static List<Color> playerColors Field Value Type Description List<><Color> playerHoldTimes Declaration public static Dictionary<GameObject, float> playerHoldTimes Field Value Type Description Dictionary<, ><GameObject, float> players Declaration public static List<GameObject> players Field Value Type Description List<><GameObject> spawnPosition Declaration public Vector2 spawnPosition Field Value Type Description Vector2 time Declaration public float time Field Value Type Description float TimerCanvas Declaration public Canvas TimerCanvas Field Value Type Description Canvas Properties Instance Declaration public static GameManager Instance { get; } Property Value Type Description GameManager Methods AlivePlayers() Returns a list of all players that are currently alive. Declaration public List<GameObject> AlivePlayers() Returns Type Description List<><GameObject> A list of alive player GameObjects. GameOver() Ends the game and determines the winner based on the game mode. Declaration public void GameOver() PlayerDied(Damageable) Handles player deaths based on the current game mode. Declaration public void PlayerDied(Damageable player) Parameters Type Name Description Damageable player The player that died. StartGame() Sets up the game based on the selected game mode. Declaration public void StartGame() UpdatePlayerHoldTime(GameObject, float) Updates the player's hold time and updates the leaderboard. Declaration public void UpdatePlayerHoldTime(GameObject player, float holdTime) Parameters Type Name Description GameObject player The player GameObject. float holdTime The hold time to update. Events EndGameEvent Declaration public event GameManager.GameEvent EndGameEvent Event Type Type Description GameManager.GameEvent StartGameEvent Declaration public event GameManager.GameEvent StartGameEvent Event Type Type Description GameManager.GameEvent"
   },
-  "api/Global.GameManagerHelper.html": {
-    "href": "api/Global.GameManagerHelper.html",
+  "api/Game.GameManagerHelper.html": {
+    "href": "api/Game.GameManagerHelper.html",
     "title": "Class GameManagerHelper | Example Unity documentation",
-    "keywords": "Class GameManagerHelper Inheritance object GameManagerHelper Namespace: Global Assembly: cs.temp.dll.dll Syntax public class GameManagerHelper : MonoBehaviour Fields addHatPosition Declaration public bool addHatPosition Field Value Type Description bool addSpawnPosition Declaration public bool addSpawnPosition Field Value Type Description bool"
+    "keywords": "Class GameManagerHelper Inheritance object GameManagerHelper Namespace: Game Assembly: cs.temp.dll.dll Syntax public class GameManagerHelper : MonoBehaviour Fields addHatPosition Declaration public bool addHatPosition Field Value Type Description bool addSpawnPosition Declaration public bool addSpawnPosition Field Value Type Description bool"
   },
-  "api/Global.GameTimer.html": {
-    "href": "api/Global.GameTimer.html",
+  "api/Game.GameTimer.html": {
+    "href": "api/Game.GameTimer.html",
     "title": "Class GameTimer | Example Unity documentation",
-    "keywords": "Class GameTimer Inheritance object GameTimer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class GameTimer : MonoBehaviour Fields startTime Declaration public float startTime Field Value Type Description float timerText Declaration public Text timerText Field Value Type Description Text Methods StartTimer() Declaration public void StartTimer()"
+    "keywords": "Class GameTimer Inheritance object GameTimer Namespace: Game Assembly: cs.temp.dll.dll Syntax public class GameTimer : MonoBehaviour Fields startTime Declaration public float startTime Field Value Type Description float timerText Declaration public Text timerText Field Value Type Description Text Methods StartTimer() Declaration public void StartTimer()"
   },
-  "api/Global.HatRespawn.html": {
-    "href": "api/Global.HatRespawn.html",
+  "api/Game.HatRespawn.html": {
+    "href": "api/Game.HatRespawn.html",
     "title": "Class HatRespawn | Example Unity documentation",
-    "keywords": "Class HatRespawn Inheritance object HatRespawn Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HatRespawn : MonoBehaviour Fields canBePickedUp Declaration public static bool canBePickedUp Field Value Type Description bool respawnTime Declaration public const float respawnTime = 10 Field Value Type Description float Methods Interact() Declaration public void Interact() OnHatDropped() Declaration public void OnHatDropped()"
+    "keywords": "Class HatRespawn Inheritance object HatRespawn Namespace: Game Assembly: cs.temp.dll.dll Syntax public class HatRespawn : MonoBehaviour Fields canBePickedUp Declaration public static bool canBePickedUp Field Value Type Description bool respawnTime Declaration public const float respawnTime = 10 Field Value Type Description float Methods Interact() Declaration public void Interact() OnHatDropped() Declaration public void OnHatDropped()"
   },
-  "api/Global.HealthBarManager.html": {
-    "href": "api/Global.HealthBarManager.html",
+  "api/Game.HealthBarManager.html": {
+    "href": "api/Game.HealthBarManager.html",
     "title": "Class HealthBarManager | Example Unity documentation",
-    "keywords": "Class HealthBarManager Inheritance object HealthBarManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HealthBarManager : MonoBehaviour Fields healthBarPrefab Declaration public GameObject healthBarPrefab Field Value Type Description GameObject"
+    "keywords": "Class HealthBarManager Inheritance object HealthBarManager Namespace: Game Assembly: cs.temp.dll.dll Syntax public class HealthBarManager : MonoBehaviour Fields healthBarPrefab Declaration public GameObject healthBarPrefab Field Value Type Description GameObject"
   },
-  "api/Global.html": {
-    "href": "api/Global.html",
-    "title": "Namespace | Example Unity documentation",
-    "keywords": "Namespace Classes AnimationPlayer AudioManager Block Damageable DayNightCycle EventSystemizer FallPlatform GameManager The GameManager class manages the overall game logic, including game modes, player states, game events, and game-over conditions. It ensures a single instance exists and provides functionality for starting, updating, and ending the game. GameManagerHelper GameTimer HatRespawn HealthBarManager HubManager HubPolygonCreator InfiniteScroll LeaderboardManager LifeDisplayManager MapSelect ModeSelect MovingPlatform MusicManager ObjectVisibility ObstacleCourse ParallaxBackground ParallaxCamera ParallaxLayer PlayerCameraMovement PlayerCardCreator PlayerJoinCard PlayerManager PlayerMovement Playlist PongBallBehavior PongPaddleBehavior PongScorekeeper Punch RespawnOnTriggerEnter SoundEffect TeleportPlatform TerribleHealthBarScript TrackLayer Trevor UseItem WinScreen Enums AnimationPlayer.AnimationState GameManager.GameMode Enum representing the different game modes. TrackLayer.EnableTrigger Delegates GameManager.GameEvent ParallaxCamera.ParallaxCameraDelegate"
+  "api/Game.html": {
+    "href": "api/Game.html",
+    "title": "Namespace Game | Example Unity documentation",
+    "keywords": "Namespace Game Classes DayNightCycle EventSystemizer FallPlatform GameManager The GameManager class manages the overall game logic, including game modes, player states, game events, and game-over conditions. It ensures a single instance exists and provides functionality for starting, updating, and ending the game. GameManagerHelper GameTimer HatRespawn HealthBarManager HubManager InfiniteScroll LeaderboardManager LifeDisplayManager MapSelect ModeSelect MovingPlatform ObjectVisibility ObstacleCourse PlayerCardCreator PlayerJoinCard RespawnOnTriggerEnter TerribleHealthBarScript WinScreen Enums GameManager.GameMode Enum representing the different game modes. Delegates GameManager.GameEvent"
   },
-  "api/Global.HubManager.html": {
-    "href": "api/Global.HubManager.html",
+  "api/Game.HubManager.html": {
+    "href": "api/Game.HubManager.html",
     "title": "Class HubManager | Example Unity documentation",
-    "keywords": "Class HubManager Inheritance object HubManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HubManager : MonoBehaviour Fields gameButtonsParent Declaration public GameObject gameButtonsParent Field Value Type Description GameObject hubCamera Declaration public GameObject hubCamera Field Value Type Description GameObject Instance Declaration public static HubManager Instance Field Value Type Description HubManager Methods LoadScene(string) Declaration public void LoadScene(string sceneName) Parameters Type Name Description string sceneName UnloadGameScene() Declaration public void UnloadGameScene()"
+    "keywords": "Class HubManager Inheritance object HubManager Namespace: Game Assembly: cs.temp.dll.dll Syntax public class HubManager : MonoBehaviour Fields gameButtonsParent Declaration public GameObject gameButtonsParent Field Value Type Description GameObject hubCamera Declaration public GameObject hubCamera Field Value Type Description GameObject Instance Declaration public static HubManager Instance Field Value Type Description HubManager Methods LoadScene(string) Declaration public void LoadScene(string sceneName) Parameters Type Name Description string sceneName UnloadGameScene() Declaration public void UnloadGameScene()"
   },
-  "api/Global.HubPolygonCreator.html": {
-    "href": "api/Global.HubPolygonCreator.html",
-    "title": "Class HubPolygonCreator | Example Unity documentation",
-    "keywords": "Class HubPolygonCreator Inheritance object HubPolygonCreator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class HubPolygonCreator : MonoBehaviour Fields size Declaration public float size Field Value Type Description float vertices Declaration public List<GameObject> vertices Field Value Type Description List<><GameObject>"
-  },
-  "api/Global.InfiniteScroll.html": {
-    "href": "api/Global.InfiniteScroll.html",
+  "api/Game.InfiniteScroll.html": {
+    "href": "api/Game.InfiniteScroll.html",
     "title": "Class InfiniteScroll | Example Unity documentation",
-    "keywords": "Class InfiniteScroll Inheritance object InfiniteScroll Namespace: Global Assembly: cs.temp.dll.dll Syntax public class InfiniteScroll : MonoBehaviour Fields end Declaration public float end Field Value Type Description float speed Declaration public float speed Field Value Type Description float start Declaration public float start Field Value Type Description float"
+    "keywords": "Class InfiniteScroll Inheritance object InfiniteScroll Namespace: Game Assembly: cs.temp.dll.dll Syntax public class InfiniteScroll : MonoBehaviour Fields end Declaration public float end Field Value Type Description float speed Declaration public float speed Field Value Type Description float start Declaration public float start Field Value Type Description float"
   },
-  "api/Global.LeaderboardManager.html": {
-    "href": "api/Global.LeaderboardManager.html",
+  "api/Game.LeaderboardManager.html": {
+    "href": "api/Game.LeaderboardManager.html",
     "title": "Class LeaderboardManager | Example Unity documentation",
-    "keywords": "Class LeaderboardManager Inheritance object LeaderboardManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LeaderboardManager : MonoBehaviour Properties Instance Declaration public static LeaderboardManager Instance { get; } Property Value Type Description LeaderboardManager Methods UpdateLeaderboard() Declaration public void UpdateLeaderboard() UpdatePlayerHoldTimeText(GameObject, float) Declaration public void UpdatePlayerHoldTimeText(GameObject player, float holdTime) Parameters Type Name Description GameObject player float holdTime"
+    "keywords": "Class LeaderboardManager Inheritance object LeaderboardManager Namespace: Game Assembly: cs.temp.dll.dll Syntax public class LeaderboardManager : MonoBehaviour Properties Instance Declaration public static LeaderboardManager Instance { get; } Property Value Type Description LeaderboardManager Methods UpdateLeaderboard() Declaration public void UpdateLeaderboard() UpdatePlayerHoldTimeText(GameObject, float) Declaration public void UpdatePlayerHoldTimeText(GameObject player, float holdTime) Parameters Type Name Description GameObject player float holdTime"
   },
-  "api/Global.LifeDisplayManager.html": {
-    "href": "api/Global.LifeDisplayManager.html",
+  "api/Game.LifeDisplayManager.html": {
+    "href": "api/Game.LifeDisplayManager.html",
     "title": "Class LifeDisplayManager | Example Unity documentation",
-    "keywords": "Class LifeDisplayManager Inheritance object LifeDisplayManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class LifeDisplayManager : MonoBehaviour Fields lifeDisplays Declaration public Dictionary<Damageable, List<GameObject>> lifeDisplays Field Value Type Description Dictionary<, ><Damageable, List<><GameObject>> lifePrefab Declaration public GameObject lifePrefab Field Value Type Description GameObject playerPrefab Declaration public GameObject playerPrefab Field Value Type Description GameObject players Declaration public GameObject players Field Value Type Description GameObject Methods HideLifeDisplay() Declaration public void HideLifeDisplay()"
+    "keywords": "Class LifeDisplayManager Inheritance object LifeDisplayManager Namespace: Game Assembly: cs.temp.dll.dll Syntax public class LifeDisplayManager : MonoBehaviour Fields lifeDisplays Declaration public Dictionary<Damageable, List<GameObject>> lifeDisplays Field Value Type Description Dictionary<, ><Damageable, List<><GameObject>> lifePrefab Declaration public GameObject lifePrefab Field Value Type Description GameObject playerPrefab Declaration public GameObject playerPrefab Field Value Type Description GameObject players Declaration public GameObject players Field Value Type Description GameObject Methods HideLifeDisplay() Declaration public void HideLifeDisplay()"
   },
-  "api/Global.MapSelect.html": {
-    "href": "api/Global.MapSelect.html",
+  "api/Game.MapSelect.html": {
+    "href": "api/Game.MapSelect.html",
     "title": "Class MapSelect | Example Unity documentation",
-    "keywords": "Class MapSelect Inheritance object MapSelect Namespace: Global Assembly: cs.temp.dll.dll Syntax public class MapSelect : MonoBehaviour"
+    "keywords": "Class MapSelect Inheritance object MapSelect Namespace: Game Assembly: cs.temp.dll.dll Syntax public class MapSelect : MonoBehaviour"
   },
-  "api/Global.ModeSelect.html": {
-    "href": "api/Global.ModeSelect.html",
+  "api/Game.ModeSelect.html": {
+    "href": "api/Game.ModeSelect.html",
     "title": "Class ModeSelect | Example Unity documentation",
-    "keywords": "Class ModeSelect Inheritance object ModeSelect Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ModeSelect : MonoBehaviour"
+    "keywords": "Class ModeSelect Inheritance object ModeSelect Namespace: Game Assembly: cs.temp.dll.dll Syntax public class ModeSelect : MonoBehaviour"
   },
-  "api/Global.MovingPlatform.html": {
-    "href": "api/Global.MovingPlatform.html",
+  "api/Game.MovingPlatform.html": {
+    "href": "api/Game.MovingPlatform.html",
     "title": "Class MovingPlatform | Example Unity documentation",
-    "keywords": "Class MovingPlatform Inheritance object MovingPlatform Namespace: Global Assembly: cs.temp.dll.dll Syntax public class MovingPlatform : MonoBehaviour Fields platform Declaration public Transform platform Field Value Type Description Transform points Declaration public Transform[] points Field Value Type Description Transform[] speed Declaration public float speed Field Value Type Description float startPoint Declaration public int startPoint Field Value Type Description int"
+    "keywords": "Class MovingPlatform Inheritance object MovingPlatform Namespace: Game Assembly: cs.temp.dll.dll Syntax public class MovingPlatform : MonoBehaviour Fields platform Declaration public Transform platform Field Value Type Description Transform points Declaration public Transform[] points Field Value Type Description Transform[] speed Declaration public float speed Field Value Type Description float startPoint Declaration public int startPoint Field Value Type Description int"
   },
-  "api/Global.MusicManager.html": {
-    "href": "api/Global.MusicManager.html",
-    "title": "Class MusicManager | Example Unity documentation",
-    "keywords": "Class MusicManager Inheritance object MusicManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class MusicManager : MonoBehaviour Fields Instance Declaration public static MusicManager Instance Field Value Type Description MusicManager playlists Declaration public List<Playlist> playlists Field Value Type Description List<><Playlist> songPrefab Declaration public GameObject songPrefab Field Value Type Description GameObject Methods GetActiveSceneNotTitleScreen() Declaration public static string GetActiveSceneNotTitleScreen() Returns Type Description string StartPlaylist() Declaration public void StartPlaylist() StartPlaylist(string) Declaration public void StartPlaylist(string scene) Parameters Type Name Description string scene"
-  },
-  "api/Global.ObjectVisibility.html": {
-    "href": "api/Global.ObjectVisibility.html",
+  "api/Game.ObjectVisibility.html": {
+    "href": "api/Game.ObjectVisibility.html",
     "title": "Class ObjectVisibility | Example Unity documentation",
-    "keywords": "Class ObjectVisibility Inheritance object ObjectVisibility Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ObjectVisibility : MonoBehaviour"
+    "keywords": "Class ObjectVisibility Inheritance object ObjectVisibility Namespace: Game Assembly: cs.temp.dll.dll Syntax public class ObjectVisibility : MonoBehaviour"
   },
-  "api/Global.ObstacleCourse.html": {
-    "href": "api/Global.ObstacleCourse.html",
+  "api/Game.ObstacleCourse.html": {
+    "href": "api/Game.ObstacleCourse.html",
     "title": "Class ObstacleCourse | Example Unity documentation",
-    "keywords": "Class ObstacleCourse Inheritance object ObstacleCourse Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ObstacleCourse : MonoBehaviour Fields playerWon Declaration public static GameObject playerWon Field Value Type Description GameObject"
+    "keywords": "Class ObstacleCourse Inheritance object ObstacleCourse Namespace: Game Assembly: cs.temp.dll.dll Syntax public class ObstacleCourse : MonoBehaviour Fields playerWon Declaration public static GameObject playerWon Field Value Type Description GameObject"
   },
-  "api/Global.ParallaxBackground.html": {
-    "href": "api/Global.ParallaxBackground.html",
-    "title": "Class ParallaxBackground | Example Unity documentation",
-    "keywords": "Class ParallaxBackground Inheritance object ParallaxBackground Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ParallaxBackground : MonoBehaviour Fields parallaxCamera Declaration public ParallaxCamera parallaxCamera Field Value Type Description ParallaxCamera"
-  },
-  "api/Global.ParallaxCamera.html": {
-    "href": "api/Global.ParallaxCamera.html",
-    "title": "Class ParallaxCamera | Example Unity documentation",
-    "keywords": "Class ParallaxCamera Inheritance object ParallaxCamera Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ParallaxCamera : MonoBehaviour Fields onCameraTranslate Declaration public ParallaxCamera.ParallaxCameraDelegate onCameraTranslate Field Value Type Description ParallaxCamera.ParallaxCameraDelegate"
-  },
-  "api/Global.ParallaxCamera.ParallaxCameraDelegate.html": {
-    "href": "api/Global.ParallaxCamera.ParallaxCameraDelegate.html",
-    "title": "Delegate ParallaxCamera.ParallaxCameraDelegate | Example Unity documentation",
-    "keywords": "Delegate ParallaxCamera.ParallaxCameraDelegate Namespace: Global Assembly: cs.temp.dll.dll Syntax public delegate void ParallaxCamera.ParallaxCameraDelegate(float deltaMovement) Parameters Type Name Description float deltaMovement"
-  },
-  "api/Global.ParallaxLayer.html": {
-    "href": "api/Global.ParallaxLayer.html",
-    "title": "Class ParallaxLayer | Example Unity documentation",
-    "keywords": "Class ParallaxLayer Inheritance object ParallaxLayer Namespace: Global Assembly: cs.temp.dll.dll Syntax public class ParallaxLayer : MonoBehaviour Fields parallaxFactor Declaration public float parallaxFactor Field Value Type Description float Methods Move(float) Declaration public void Move(float delta) Parameters Type Name Description float delta"
-  },
-  "api/Global.PlayerCameraMovement.html": {
-    "href": "api/Global.PlayerCameraMovement.html",
-    "title": "Class PlayerCameraMovement | Example Unity documentation",
-    "keywords": "Class PlayerCameraMovement Inheritance object PlayerCameraMovement Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerCameraMovement : MonoBehaviour Fields lowerBound Declaration public float lowerBound Field Value Type Description float speed Declaration public float speed Field Value Type Description float staticCamera Declaration public bool staticCamera Field Value Type Description bool weight Declaration public float weight Field Value Type Description float winScene Declaration public bool winScene Field Value Type Description bool Methods WinScene(GameObject) Declaration public void WinScene(GameObject player) Parameters Type Name Description GameObject player"
-  },
-  "api/Global.PlayerCardCreator.html": {
-    "href": "api/Global.PlayerCardCreator.html",
+  "api/Game.PlayerCardCreator.html": {
+    "href": "api/Game.PlayerCardCreator.html",
     "title": "Class PlayerCardCreator | Example Unity documentation",
-    "keywords": "Class PlayerCardCreator Inheritance object PlayerCardCreator Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerCardCreator : MonoBehaviour Fields Instance Declaration public static PlayerCardCreator Instance Field Value Type Description PlayerCardCreator playerJoinCardPrefab Declaration public GameObject playerJoinCardPrefab Field Value Type Description GameObject Methods CreateCard() Declaration public PlayerJoinCard CreateCard() Returns Type Description PlayerJoinCard"
+    "keywords": "Class PlayerCardCreator Inheritance object PlayerCardCreator Namespace: Game Assembly: cs.temp.dll.dll Syntax public class PlayerCardCreator : MonoBehaviour Fields Instance Declaration public static PlayerCardCreator Instance Field Value Type Description PlayerCardCreator playerJoinCardPrefab Declaration public GameObject playerJoinCardPrefab Field Value Type Description GameObject Methods CreateCard() Declaration public PlayerJoinCard CreateCard() Returns Type Description PlayerJoinCard"
   },
-  "api/Global.PlayerJoinCard.html": {
-    "href": "api/Global.PlayerJoinCard.html",
+  "api/Game.PlayerJoinCard.html": {
+    "href": "api/Game.PlayerJoinCard.html",
     "title": "Class PlayerJoinCard | Example Unity documentation",
-    "keywords": "Class PlayerJoinCard Inheritance object PlayerJoinCard Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerJoinCard : MonoBehaviour Fields playerNumber Declaration public int playerNumber Field Value Type Description int playerNumberText Declaration public TextMeshProUGUI playerNumberText Field Value Type Description TextMeshProUGUI playerPreview Declaration public GameObject playerPreview Field Value Type Description GameObject"
+    "keywords": "Class PlayerJoinCard Inheritance object PlayerJoinCard Namespace: Game Assembly: cs.temp.dll.dll Syntax public class PlayerJoinCard : MonoBehaviour Fields playerNumber Declaration public int playerNumber Field Value Type Description int playerNumberText Declaration public TextMeshProUGUI playerNumberText Field Value Type Description TextMeshProUGUI playerPreview Declaration public GameObject playerPreview Field Value Type Description GameObject"
   },
-  "api/Global.PlayerManager.html": {
-    "href": "api/Global.PlayerManager.html",
-    "title": "Class PlayerManager | Example Unity documentation",
-    "keywords": "Class PlayerManager Inheritance object PlayerManager Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerManager : MonoBehaviour Fields cards Declaration public List<PlayerJoinCard> cards Field Value Type Description List<><PlayerJoinCard> Instance Declaration public static PlayerManager Instance Field Value Type Description PlayerManager playerColors Declaration public List<Color> playerColors Field Value Type Description List<><Color> playerSelect Declaration public GameObject playerSelect Field Value Type Description GameObject Methods StartGame() Declaration public void StartGame()"
-  },
-  "api/Global.PlayerMovement.html": {
-    "href": "api/Global.PlayerMovement.html",
-    "title": "Class PlayerMovement | Example Unity documentation",
-    "keywords": "Class PlayerMovement Inheritance object PlayerMovement Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PlayerMovement : MonoBehaviour Fields coyoteTime Declaration public float coyoteTime Field Value Type Description float ground Declaration public LayerMask ground Field Value Type Description LayerMask groundCheckDistance Declaration public float groundCheckDistance Field Value Type Description float jumpLenience Declaration public float jumpLenience Field Value Type Description float jumpSpeed Declaration public float jumpSpeed Field Value Type Description float maxSpeed Declaration public float maxSpeed Field Value Type Description float maxSpeedOverride Declaration public float maxSpeedOverride Field Value Type Description float playerText Declaration public TextMeshProUGUI playerText Field Value Type Description TextMeshProUGUI secondsToFullSpeed Declaration public float secondsToFullSpeed Field Value Type Description float slowdownMultiplier Declaration public float slowdownMultiplier Field Value Type Description float timeUnableToBeDeclaredNotJumping Declaration public float timeUnableToBeDeclaredNotJumping Field Value Type Description float turnaroundMultiplier Declaration public float turnaroundMultiplier Field Value Type Description float virtualAxisX Declaration public float virtualAxisX Field Value Type Description float virtualButtonJump Declaration public float virtualButtonJump Field Value Type Description float virtualButtonJumpLastFrame Declaration public float virtualButtonJumpLastFrame Field Value Type Description float walkSmooth Declaration public float walkSmooth Field Value Type Description float walkSpeed Declaration public float walkSpeed Field Value Type Description float walkSpeedFactor Declaration public float walkSpeedFactor Field Value Type Description float Methods GetPointInBoxCollider(BoxCollider2D, float, float) Declaration public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical) Parameters Type Name Description BoxCollider2D boxCollider2D float horizontal float vertical Returns Type Description Vector2 IsBasicallyGrounded() Declaration public bool IsBasicallyGrounded() Returns Type Description bool IsPhysicallyGrounded() Declaration public bool IsPhysicallyGrounded() Returns Type Description bool StopVelocity() Declaration public void StopVelocity()"
-  },
-  "api/Global.Playlist.html": {
-    "href": "api/Global.Playlist.html",
-    "title": "Class Playlist | Example Unity documentation",
-    "keywords": "Class Playlist Inheritance object Playlist Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Global Assembly: cs.temp.dll.dll Syntax [Serializable] public class Playlist Fields shuffleTime Declaration public float shuffleTime Field Value Type Description float songs Declaration public List<AudioClip> songs Field Value Type Description List<><AudioClip> trackName Declaration public string trackName Field Value Type Description string trackScenes Declaration public List<string> trackScenes Field Value Type Description List<><string> volume Declaration public float volume Field Value Type Description float"
-  },
-  "api/Global.PongBallBehavior.html": {
-    "href": "api/Global.PongBallBehavior.html",
-    "title": "Class PongBallBehavior | Example Unity documentation",
-    "keywords": "Class PongBallBehavior Inheritance object PongBallBehavior Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PongBallBehavior : MonoBehaviour Fields resetDelay Declaration public float resetDelay Field Value Type Description float score Declaration public static Vector2 score Field Value Type Description Vector2 speed Declaration public float speed Field Value Type Description float speedIncrement Declaration public float speedIncrement Field Value Type Description float Methods IncreaseSpeed() Declaration public void IncreaseSpeed()"
-  },
-  "api/Global.PongPaddleBehavior.html": {
-    "href": "api/Global.PongPaddleBehavior.html",
-    "title": "Class PongPaddleBehavior | Example Unity documentation",
-    "keywords": "Class PongPaddleBehavior Inheritance object PongPaddleBehavior Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PongPaddleBehavior : MonoBehaviour Fields isPlayer1 Declaration public bool isPlayer1 Field Value Type Description bool speed Declaration public float speed Field Value Type Description float"
-  },
-  "api/Global.PongScorekeeper.html": {
-    "href": "api/Global.PongScorekeeper.html",
-    "title": "Class PongScorekeeper | Example Unity documentation",
-    "keywords": "Class PongScorekeeper Inheritance object PongScorekeeper Namespace: Global Assembly: cs.temp.dll.dll Syntax public class PongScorekeeper : MonoBehaviour Fields player1Score Declaration public TextMeshProUGUI player1Score Field Value Type Description TextMeshProUGUI player2Score Declaration public TextMeshProUGUI player2Score Field Value Type Description TextMeshProUGUI"
-  },
-  "api/Global.Punch.html": {
-    "href": "api/Global.Punch.html",
-    "title": "Class Punch | Example Unity documentation",
-    "keywords": "Class Punch Inheritance object Punch Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Punch : MonoBehaviour Fields cancelable Declaration public bool cancelable Field Value Type Description bool Methods DisableCancellation() Declaration public void DisableCancellation() DisableHurtbox() Declaration public void DisableHurtbox() EnableCancellation() Declaration public void EnableCancellation() EnableHurtbox() Declaration public void EnableHurtbox() ReturnToMaxSpeed() Declaration public void ReturnToMaxSpeed()"
-  },
-  "api/Global.RespawnOnTriggerEnter.html": {
-    "href": "api/Global.RespawnOnTriggerEnter.html",
+  "api/Game.RespawnOnTriggerEnter.html": {
+    "href": "api/Game.RespawnOnTriggerEnter.html",
     "title": "Class RespawnOnTriggerEnter | Example Unity documentation",
-    "keywords": "Class RespawnOnTriggerEnter Inheritance object RespawnOnTriggerEnter Namespace: Global Assembly: cs.temp.dll.dll Syntax public class RespawnOnTriggerEnter : MonoBehaviour Fields respawnTag Declaration public string respawnTag Field Value Type Description string spawnPoint Declaration public Vector2 spawnPoint Field Value Type Description Vector2 spawnPointIsInitialPosition Declaration public bool spawnPointIsInitialPosition Field Value Type Description bool"
+    "keywords": "Class RespawnOnTriggerEnter Inheritance object RespawnOnTriggerEnter Namespace: Game Assembly: cs.temp.dll.dll Syntax public class RespawnOnTriggerEnter : MonoBehaviour Fields respawnTag Declaration public string respawnTag Field Value Type Description string spawnPoint Declaration public Vector2 spawnPoint Field Value Type Description Vector2 spawnPointIsInitialPosition Declaration public bool spawnPointIsInitialPosition Field Value Type Description bool"
   },
-  "api/Global.SoundEffect.html": {
-    "href": "api/Global.SoundEffect.html",
-    "title": "Class SoundEffect | Example Unity documentation",
-    "keywords": "Class SoundEffect Inheritance object SoundEffect Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Global Assembly: cs.temp.dll.dll Syntax public class SoundEffect Constructors SoundEffect(string, AudioSource) Declaration public SoundEffect(string name, AudioSource audioSource) Parameters Type Name Description string name AudioSource audioSource Fields audioSource Declaration public AudioSource audioSource Field Value Type Description AudioSource name Declaration public string name Field Value Type Description string"
-  },
-  "api/Global.TeleportPlatform.html": {
-    "href": "api/Global.TeleportPlatform.html",
-    "title": "Class TeleportPlatform | Example Unity documentation",
-    "keywords": "Class TeleportPlatform Inheritance object TeleportPlatform Namespace: Global Assembly: cs.temp.dll.dll Syntax public class TeleportPlatform : MonoBehaviour Fields isPlatform Declaration public bool isPlatform Field Value Type Description bool playerTag Declaration public string playerTag Field Value Type Description string teleportPoint Declaration public Vector2 teleportPoint Field Value Type Description Vector2 teleportTag Declaration public string teleportTag Field Value Type Description string"
-  },
-  "api/Global.TerribleHealthBarScript.html": {
-    "href": "api/Global.TerribleHealthBarScript.html",
+  "api/Game.TerribleHealthBarScript.html": {
+    "href": "api/Game.TerribleHealthBarScript.html",
     "title": "Class TerribleHealthBarScript | Example Unity documentation",
-    "keywords": "Class TerribleHealthBarScript Inheritance object TerribleHealthBarScript Namespace: Global Assembly: cs.temp.dll.dll Syntax public class TerribleHealthBarScript : MonoBehaviour Fields actualHealthVisual Declaration public GameObject actualHealthVisual Field Value Type Description GameObject deathVisual Declaration public GameObject deathVisual Field Value Type Description GameObject fullDeathColor Declaration public Color fullDeathColor Field Value Type Description Color fullHealthColor Declaration public Color fullHealthColor Field Value Type Description Color healthVisual Declaration public GameObject healthVisual Field Value Type Description GameObject player Declaration public GameObject player Field Value Type Description GameObject smoothSpeed Declaration public float smoothSpeed Field Value Type Description float subtractionColor Declaration public Color subtractionColor Field Value Type Description Color text Declaration public TextMeshProUGUI text Field Value Type Description TextMeshProUGUI Methods SetPlayer(GameObject) Declaration public void SetPlayer(GameObject player) Parameters Type Name Description GameObject player"
+    "keywords": "Class TerribleHealthBarScript Inheritance object TerribleHealthBarScript Namespace: Game Assembly: cs.temp.dll.dll Syntax public class TerribleHealthBarScript : MonoBehaviour Fields actualHealthVisual Declaration public GameObject actualHealthVisual Field Value Type Description GameObject deathVisual Declaration public GameObject deathVisual Field Value Type Description GameObject fullDeathColor Declaration public Color fullDeathColor Field Value Type Description Color fullHealthColor Declaration public Color fullHealthColor Field Value Type Description Color healthVisual Declaration public GameObject healthVisual Field Value Type Description GameObject player Declaration public GameObject player Field Value Type Description GameObject smoothSpeed Declaration public float smoothSpeed Field Value Type Description float subtractionColor Declaration public Color subtractionColor Field Value Type Description Color text Declaration public TextMeshProUGUI text Field Value Type Description TextMeshProUGUI Methods SetPlayer(GameObject) Declaration public void SetPlayer(GameObject player) Parameters Type Name Description GameObject player"
   },
-  "api/Global.TrackLayer.EnableTrigger.html": {
-    "href": "api/Global.TrackLayer.EnableTrigger.html",
-    "title": "Enum TrackLayer.EnableTrigger | Example Unity documentation",
-    "keywords": "Enum TrackLayer.EnableTrigger Namespace: Global Assembly: cs.temp.dll.dll Syntax public enum TrackLayer.EnableTrigger Fields Name Description Button Collectible ConstantForce ElectromagneticPulse EndOfLevel Goal Magnetism Movement Scene Toggle"
-  },
-  "api/Global.TrackLayer.html": {
-    "href": "api/Global.TrackLayer.html",
-    "title": "Class TrackLayer | Example Unity documentation",
-    "keywords": "Class TrackLayer Inheritance object TrackLayer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Global Assembly: cs.temp.dll.dll Syntax [Serializable] public class TrackLayer Fields enableTrigger Declaration public TrackLayer.EnableTrigger enableTrigger Field Value Type Description TrackLayer.EnableTrigger layerName Declaration public string layerName Field Value Type Description string layerScenes Declaration public List<string> layerScenes Field Value Type Description List<><string> layerTrack Declaration public AudioClip layerTrack Field Value Type Description AudioClip triggerName Declaration public string triggerName Field Value Type Description string"
-  },
-  "api/Global.Trevor.html": {
-    "href": "api/Global.Trevor.html",
-    "title": "Class Trevor | Example Unity documentation",
-    "keywords": "Class Trevor Inheritance object Trevor Namespace: Global Assembly: cs.temp.dll.dll Syntax public class Trevor : MonoBehaviour"
-  },
-  "api/Global.UseItem.html": {
-    "href": "api/Global.UseItem.html",
-    "title": "Class UseItem | Example Unity documentation",
-    "keywords": "Class UseItem Inheritance object UseItem Namespace: Global Assembly: cs.temp.dll.dll Syntax public class UseItem : MonoBehaviour Fields head Declaration public Transform head Field Value Type Description Transform holdTime Declaration public float holdTime Field Value Type Description float Methods DropItem() Declaration public void DropItem() IsHoldingItem() Declaration public bool IsHoldingItem() Returns Type Description bool PickUpItem(GameObject) Declaration public void PickUpItem(GameObject item) Parameters Type Name Description GameObject item"
-  },
-  "api/Global.WinScreen.html": {
-    "href": "api/Global.WinScreen.html",
+  "api/Game.WinScreen.html": {
+    "href": "api/Game.WinScreen.html",
     "title": "Class WinScreen | Example Unity documentation",
-    "keywords": "Class WinScreen Inheritance object WinScreen Namespace: Global Assembly: cs.temp.dll.dll Syntax public class WinScreen : MonoBehaviour Fields Instance Declaration public static WinScreen Instance Field Value Type Description WinScreen playerTexts Declaration public List<TextMeshProUGUI> playerTexts Field Value Type Description List<><TextMeshProUGUI> Methods ShowWinScreen(int) Declaration public void ShowWinScreen(int player) Parameters Type Name Description int player"
+    "keywords": "Class WinScreen Inheritance object WinScreen Namespace: Game Assembly: cs.temp.dll.dll Syntax public class WinScreen : MonoBehaviour Fields Instance Declaration public static WinScreen Instance Field Value Type Description WinScreen playerTexts Declaration public List<TextMeshProUGUI> playerTexts Field Value Type Description List<><TextMeshProUGUI> Methods ShowWinScreen(int) Declaration public void ShowWinScreen(int player) Parameters Type Name Description int player"
+  },
+  "api/Music.AudioManager.html": {
+    "href": "api/Music.AudioManager.html",
+    "title": "Class AudioManager | Example Unity documentation",
+    "keywords": "Class AudioManager Inheritance object AudioManager Namespace: Music Assembly: cs.temp.dll.dll Syntax public class AudioManager : MonoBehaviour Fields Instance Declaration public static AudioManager Instance Field Value Type Description AudioManager soundEffects Declaration public List<SoundEffect> soundEffects Field Value Type Description List<><SoundEffect> Methods PlaySound(string) Declaration public void PlaySound(string soundName) Parameters Type Name Description string soundName"
+  },
+  "api/Music.html": {
+    "href": "api/Music.html",
+    "title": "Namespace Music | Example Unity documentation",
+    "keywords": "Namespace Music Classes AudioManager MusicManager Playlist SoundEffect TrackLayer Enums TrackLayer.EnableTrigger"
+  },
+  "api/Music.MusicManager.html": {
+    "href": "api/Music.MusicManager.html",
+    "title": "Class MusicManager | Example Unity documentation",
+    "keywords": "Class MusicManager Inheritance object MusicManager Namespace: Music Assembly: cs.temp.dll.dll Syntax public class MusicManager : MonoBehaviour Fields Instance Declaration public static MusicManager Instance Field Value Type Description MusicManager playlists Declaration public List<Playlist> playlists Field Value Type Description List<><Playlist> songPrefab Declaration public GameObject songPrefab Field Value Type Description GameObject Methods GetActiveSceneNotTitleScreen() Declaration public static string GetActiveSceneNotTitleScreen() Returns Type Description string StartPlaylist() Declaration public void StartPlaylist() StartPlaylist(string) Declaration public void StartPlaylist(string scene) Parameters Type Name Description string scene"
+  },
+  "api/Music.Playlist.html": {
+    "href": "api/Music.Playlist.html",
+    "title": "Class Playlist | Example Unity documentation",
+    "keywords": "Class Playlist Inheritance object Playlist Namespace: Music Assembly: cs.temp.dll.dll Syntax [Serializable] public class Playlist Fields shuffleTime Declaration public float shuffleTime Field Value Type Description float songs Declaration public List<AudioClip> songs Field Value Type Description List<><AudioClip> trackName Declaration public string trackName Field Value Type Description string trackScenes Declaration public List<string> trackScenes Field Value Type Description List<><string> volume Declaration public float volume Field Value Type Description float"
+  },
+  "api/Music.SoundEffect.html": {
+    "href": "api/Music.SoundEffect.html",
+    "title": "Class SoundEffect | Example Unity documentation",
+    "keywords": "Class SoundEffect Inheritance object SoundEffect Namespace: Music Assembly: cs.temp.dll.dll Syntax public class SoundEffect Constructors SoundEffect(string, AudioSource) Declaration public SoundEffect(string name, AudioSource audioSource) Parameters Type Name Description string name AudioSource audioSource Fields audioSource Declaration public AudioSource audioSource Field Value Type Description AudioSource name Declaration public string name Field Value Type Description string"
+  },
+  "api/Music.TrackLayer.EnableTrigger.html": {
+    "href": "api/Music.TrackLayer.EnableTrigger.html",
+    "title": "Enum TrackLayer.EnableTrigger | Example Unity documentation",
+    "keywords": "Enum TrackLayer.EnableTrigger Namespace: Music Assembly: cs.temp.dll.dll Syntax public enum TrackLayer.EnableTrigger Fields Name Description Button Collectible ConstantForce ElectromagneticPulse EndOfLevel Goal Magnetism Movement Scene Toggle"
+  },
+  "api/Music.TrackLayer.html": {
+    "href": "api/Music.TrackLayer.html",
+    "title": "Class TrackLayer | Example Unity documentation",
+    "keywords": "Class TrackLayer Inheritance object TrackLayer Namespace: Music Assembly: cs.temp.dll.dll Syntax [Serializable] public class TrackLayer Fields enableTrigger Declaration public TrackLayer.EnableTrigger enableTrigger Field Value Type Description TrackLayer.EnableTrigger layerName Declaration public string layerName Field Value Type Description string layerScenes Declaration public List<string> layerScenes Field Value Type Description List<><string> layerTrack Declaration public AudioClip layerTrack Field Value Type Description AudioClip triggerName Declaration public string triggerName Field Value Type Description string"
+  },
+  "api/Player.AnimationPlayer.AnimationState.html": {
+    "href": "api/Player.AnimationPlayer.AnimationState.html",
+    "title": "Enum AnimationPlayer.AnimationState | Example Unity documentation",
+    "keywords": "Enum AnimationPlayer.AnimationState Namespace: Player Assembly: cs.temp.dll.dll Syntax public enum AnimationPlayer.AnimationState Fields Name Description Idle Jump Run Walk"
+  },
+  "api/Player.AnimationPlayer.html": {
+    "href": "api/Player.AnimationPlayer.html",
+    "title": "Class AnimationPlayer | Example Unity documentation",
+    "keywords": "Class AnimationPlayer Inheritance object AnimationPlayer Namespace: Player Assembly: cs.temp.dll.dll Syntax public class AnimationPlayer : MonoBehaviour Fields backwards Declaration public bool backwards Field Value Type Description bool block Declaration public bool block Field Value Type Description bool clip Declaration public AnimationClip clip Field Value Type Description AnimationClip state Declaration public AnimationPlayer.AnimationState state Field Value Type Description AnimationPlayer.AnimationState Methods Punch() Declaration public void Punch() SetState(AnimationState) Declaration public void SetState(AnimationPlayer.AnimationState state) Parameters Type Name Description AnimationPlayer.AnimationState state"
+  },
+  "api/Player.Block.html": {
+    "href": "api/Player.Block.html",
+    "title": "Class Block | Example Unity documentation",
+    "keywords": "Class Block Inheritance object Block Namespace: Player Assembly: cs.temp.dll.dll Syntax public class Block : MonoBehaviour Fields blocking Declaration public bool blocking Field Value Type Description bool Methods IsParrying() Declaration public bool IsParrying() Returns Type Description bool"
+  },
+  "api/Player.Damageable.html": {
+    "href": "api/Player.Damageable.html",
+    "title": "Class Damageable | Example Unity documentation",
+    "keywords": "Class Damageable Inheritance object Damageable Namespace: Player Assembly: cs.temp.dll.dll Syntax public class Damageable : MonoBehaviour Fields damage Declaration public float damage Field Value Type Description float damageSelfDebug Declaration public bool damageSelfDebug Field Value Type Description bool dying Declaration public bool dying Field Value Type Description bool force Declaration public float force Field Value Type Description float lives Declaration public int lives Field Value Type Description int maxDamage Declaration public float maxDamage Field Value Type Description float Methods Damage(float) Declaration public void Damage(float damage) Parameters Type Name Description float damage HandleDeath() Declaration public void HandleDeath() ResetDamage() Declaration public void ResetDamage() Respawn() Declaration public void Respawn() Events OnPlayerPunched Declaration public event Action<GameObject> OnPlayerPunched Event Type Type Description System.Action<T><GameObject>"
+  },
+  "api/Player.html": {
+    "href": "api/Player.html",
+    "title": "Namespace Player | Example Unity documentation",
+    "keywords": "Namespace Player Classes AnimationPlayer Block Damageable PlayerCameraMovement PlayerManager PlayerMovement Punch TeleportPlatform UseItem Enums AnimationPlayer.AnimationState"
+  },
+  "api/Player.PlayerCameraMovement.html": {
+    "href": "api/Player.PlayerCameraMovement.html",
+    "title": "Class PlayerCameraMovement | Example Unity documentation",
+    "keywords": "Class PlayerCameraMovement Inheritance object PlayerCameraMovement Namespace: Player Assembly: cs.temp.dll.dll Syntax public class PlayerCameraMovement : MonoBehaviour Fields lowerBound Declaration public float lowerBound Field Value Type Description float speed Declaration public float speed Field Value Type Description float staticCamera Declaration public bool staticCamera Field Value Type Description bool weight Declaration public float weight Field Value Type Description float winScene Declaration public bool winScene Field Value Type Description bool Methods WinScene(GameObject) Declaration public void WinScene(GameObject player) Parameters Type Name Description GameObject player"
+  },
+  "api/Player.PlayerManager.html": {
+    "href": "api/Player.PlayerManager.html",
+    "title": "Class PlayerManager | Example Unity documentation",
+    "keywords": "Class PlayerManager Inheritance object PlayerManager Namespace: Player Assembly: cs.temp.dll.dll Syntax public class PlayerManager : MonoBehaviour Fields cards Declaration public List<PlayerJoinCard> cards Field Value Type Description List<><PlayerJoinCard> Instance Declaration public static PlayerManager Instance Field Value Type Description PlayerManager playerColors Declaration public List<Color> playerColors Field Value Type Description List<><Color> playerSelect Declaration public GameObject playerSelect Field Value Type Description GameObject Methods StartGame() Declaration public void StartGame()"
+  },
+  "api/Player.PlayerMovement.html": {
+    "href": "api/Player.PlayerMovement.html",
+    "title": "Class PlayerMovement | Example Unity documentation",
+    "keywords": "Class PlayerMovement Inheritance object PlayerMovement Namespace: Player Assembly: cs.temp.dll.dll Syntax public class PlayerMovement : MonoBehaviour Fields coyoteTime Declaration public float coyoteTime Field Value Type Description float ground Declaration public LayerMask ground Field Value Type Description LayerMask groundCheckDistance Declaration public float groundCheckDistance Field Value Type Description float jumpLenience Declaration public float jumpLenience Field Value Type Description float jumpSpeed Declaration public float jumpSpeed Field Value Type Description float maxSpeed Declaration public float maxSpeed Field Value Type Description float maxSpeedOverride Declaration public float maxSpeedOverride Field Value Type Description float playerText Declaration public TextMeshProUGUI playerText Field Value Type Description TextMeshProUGUI secondsToFullSpeed Declaration public float secondsToFullSpeed Field Value Type Description float slowdownMultiplier Declaration public float slowdownMultiplier Field Value Type Description float timeUnableToBeDeclaredNotJumping Declaration public float timeUnableToBeDeclaredNotJumping Field Value Type Description float turnaroundMultiplier Declaration public float turnaroundMultiplier Field Value Type Description float virtualAxisX Declaration public float virtualAxisX Field Value Type Description float virtualButtonJump Declaration public float virtualButtonJump Field Value Type Description float virtualButtonJumpLastFrame Declaration public float virtualButtonJumpLastFrame Field Value Type Description float walkSmooth Declaration public float walkSmooth Field Value Type Description float walkSpeed Declaration public float walkSpeed Field Value Type Description float walkSpeedFactor Declaration public float walkSpeedFactor Field Value Type Description float Methods GetPointInBoxCollider(BoxCollider2D, float, float) Declaration public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical) Parameters Type Name Description BoxCollider2D boxCollider2D float horizontal float vertical Returns Type Description Vector2 IsBasicallyGrounded() Declaration public bool IsBasicallyGrounded() Returns Type Description bool IsPhysicallyGrounded() Declaration public bool IsPhysicallyGrounded() Returns Type Description bool StopVelocity() Declaration public void StopVelocity()"
+  },
+  "api/Player.Punch.html": {
+    "href": "api/Player.Punch.html",
+    "title": "Class Punch | Example Unity documentation",
+    "keywords": "Class Punch Inheritance object Punch Namespace: Player Assembly: cs.temp.dll.dll Syntax public class Punch : MonoBehaviour Fields cancelable Declaration public bool cancelable Field Value Type Description bool Methods DisableCancellation() Declaration public void DisableCancellation() DisableHurtbox() Declaration public void DisableHurtbox() EnableCancellation() Declaration public void EnableCancellation() EnableHurtbox() Declaration public void EnableHurtbox() ReturnToMaxSpeed() Declaration public void ReturnToMaxSpeed()"
+  },
+  "api/Player.TeleportPlatform.html": {
+    "href": "api/Player.TeleportPlatform.html",
+    "title": "Class TeleportPlatform | Example Unity documentation",
+    "keywords": "Class TeleportPlatform Inheritance object TeleportPlatform Namespace: Player Assembly: cs.temp.dll.dll Syntax public class TeleportPlatform : MonoBehaviour Fields isPlatform Declaration public bool isPlatform Field Value Type Description bool playerTag Declaration public string playerTag Field Value Type Description string teleportPoint Declaration public Vector2 teleportPoint Field Value Type Description Vector2 teleportTag Declaration public string teleportTag Field Value Type Description string"
+  },
+  "api/Player.UseItem.html": {
+    "href": "api/Player.UseItem.html",
+    "title": "Class UseItem | Example Unity documentation",
+    "keywords": "Class UseItem Inheritance object UseItem Namespace: Player Assembly: cs.temp.dll.dll Syntax public class UseItem : MonoBehaviour Fields head Declaration public Transform head Field Value Type Description Transform holdTime Declaration public float holdTime Field Value Type Description float Methods DropItem() Declaration public void DropItem() IsHoldingItem() Declaration public bool IsHoldingItem() Returns Type Description bool PickUpItem(GameObject) Declaration public void PickUpItem(GameObject item) Parameters Type Name Description GameObject item"
   },
   "manual/coniunctis.html": {
     "href": "manual/coniunctis.html",

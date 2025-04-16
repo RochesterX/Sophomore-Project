@@ -1,5 +1,7 @@
 using TMPro;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 public class PlayerJoinCard : MonoBehaviour
 {
@@ -11,4 +13,5 @@ public class PlayerJoinCard : MonoBehaviour
     {
         playerNumberText.text = playerNumber.ToString();
     }
+}
 }

@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Music
+  commentId: N:Music
+  id: Music
+  children:
+  - Music.AudioManager
+  - Music.MusicManager
+  - Music.Playlist
+  - Music.SoundEffect
+  - Music.TrackLayer
+  - Music.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Music
+  nameWithType: Music
+  fullName: Music
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Music.AudioManager
+  commentId: T:Music.AudioManager
+  parent: Music
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Music.AudioManager
+- uid: Music.SoundEffect
+  commentId: T:Music.SoundEffect
+  name: SoundEffect
+  nameWithType: SoundEffect
+  fullName: Music.SoundEffect
+- uid: Music.MusicManager
+  commentId: T:Music.MusicManager
+  parent: Music
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: Music.MusicManager
+- uid: Music.TrackLayer
+  commentId: T:Music.TrackLayer
+  name: TrackLayer
+  nameWithType: TrackLayer
+  fullName: Music.TrackLayer
+- uid: Music.TrackLayer.EnableTrigger
+  commentId: T:Music.TrackLayer.EnableTrigger
+  parent: Music
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: Music.TrackLayer.EnableTrigger
+  spec.csharp:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger
+  spec.vb:
+  - uid: Music.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Music.TrackLayer.EnableTrigger
+    name: EnableTrigger
+- uid: Music.Playlist
+  commentId: T:Music.Playlist
+  name: Playlist
+  nameWithType: Playlist
+  fullName: Music.Playlist
+- uid: Music
+  commentId: N:Music
+  name: Music
+  nameWithType: Music
+  fullName: Music

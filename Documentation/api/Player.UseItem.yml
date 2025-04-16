@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Player.UseItem
+  commentId: T:Player.UseItem
+  id: UseItem
+  parent: Player
+  children:
+  - Player.UseItem.DropItem
+  - Player.UseItem.head
+  - Player.UseItem.holdTime
+  - Player.UseItem.IsHoldingItem
+  - Player.UseItem.PickUpItem(GameObject)
+  langs:
+  - csharp
+  - vb
+  name: UseItem
+  nameWithType: UseItem
+  fullName: Player.UseItem
+  type: Class
+  source:
+    id: UseItem
+    path: ''
+    startLine: 2709
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: 'public class UseItem : MonoBehaviour'
+    content.vb: Public Class UseItem Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Player.UseItem.holdTime
+  commentId: F:Player.UseItem.holdTime
+  id: holdTime
+  parent: Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: holdTime
+  nameWithType: UseItem.holdTime
+  fullName: Player.UseItem.holdTime
+  type: Field
+  source:
+    id: holdTime
+    path: ''
+    startLine: 2715
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public float holdTime
+    return:
+      type: System.Single
+    content.vb: Public holdTime As Single
+- uid: Player.UseItem.head
+  commentId: F:Player.UseItem.head
+  id: head
+  parent: Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: head
+  nameWithType: UseItem.head
+  fullName: Player.UseItem.head
+  type: Field
+  source:
+    id: head
+    path: ''
+    startLine: 2718
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public Transform head
+    return:
+      type: Global.Transform
+    content.vb: Public head As Transform
+- uid: Player.UseItem.PickUpItem(GameObject)
+  commentId: M:Player.UseItem.PickUpItem(GameObject)
+  id: PickUpItem(GameObject)
+  parent: Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: PickUpItem(GameObject)
+  nameWithType: UseItem.PickUpItem(GameObject)
+  fullName: Player.UseItem.PickUpItem(GameObject)
+  type: Method
+  source:
+    id: PickUpItem
+    path: ''
+    startLine: 2748
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void PickUpItem(GameObject item)
+    parameters:
+    - id: item
+      type: Global.GameObject
+    content.vb: Public Sub PickUpItem(item As GameObject)
+  overload: Player.UseItem.PickUpItem*
+- uid: Player.UseItem.DropItem
+  commentId: M:Player.UseItem.DropItem
+  id: DropItem
+  parent: Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: DropItem()
+  nameWithType: UseItem.DropItem()
+  fullName: Player.UseItem.DropItem()
+  type: Method
+  source:
+    id: DropItem
+    path: ''
+    startLine: 2770
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public void DropItem()
+    content.vb: Public Sub DropItem()
+  overload: Player.UseItem.DropItem*
+- uid: Player.UseItem.IsHoldingItem
+  commentId: M:Player.UseItem.IsHoldingItem
+  id: IsHoldingItem
+  parent: Player.UseItem
+  langs:
+  - csharp
+  - vb
+  name: IsHoldingItem()
+  nameWithType: UseItem.IsHoldingItem()
+  fullName: Player.UseItem.IsHoldingItem()
+  type: Method
+  source:
+    id: IsHoldingItem
+    path: ''
+    startLine: 2799
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  syntax:
+    content: public bool IsHoldingItem()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsHoldingItem() As Boolean
+  overload: Player.UseItem.IsHoldingItem*
+references:
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: Player.UseItem.PickUpItem*
+  commentId: Overload:Player.UseItem.PickUpItem
+  name: PickUpItem
+  nameWithType: UseItem.PickUpItem
+  fullName: Player.UseItem.PickUpItem
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Player.UseItem.DropItem*
+  commentId: Overload:Player.UseItem.DropItem
+  name: DropItem
+  nameWithType: UseItem.DropItem
+  fullName: Player.UseItem.DropItem
+- uid: Player.UseItem.IsHoldingItem*
+  commentId: Overload:Player.UseItem.IsHoldingItem
+  name: IsHoldingItem
+  nameWithType: UseItem.IsHoldingItem
+  fullName: Player.UseItem.IsHoldingItem
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

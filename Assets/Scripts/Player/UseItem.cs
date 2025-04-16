@@ -1,5 +1,7 @@
 using System.Collections;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Player
+{
 
 public class UseItem : MonoBehaviour
 {
@@ -95,4 +97,5 @@ public class UseItem : MonoBehaviour
     {
         return isHoldingItem;
     }
+}
 }

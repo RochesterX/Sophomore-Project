@@ -1,4 +1,6 @@
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
+namespace Game
+{
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -28,4 +30,4 @@ public class MovingPlatform : MonoBehaviour
        // transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         GetComponent<Rigidbody2D>().MovePosition(Vector2.MoveTowards(transform.position, points[i].position, speed * Time.fixedDeltaTime));
     }
-}
+}}

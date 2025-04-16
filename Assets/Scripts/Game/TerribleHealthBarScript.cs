@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; using Game; using Music; using Player;
 using TMPro;
+namespace Game
+{
 
 public class TerribleHealthBarScript : MonoBehaviour
 {
@@ -77,4 +79,5 @@ public class TerribleHealthBarScript : MonoBehaviour
         targetPosition = initialPosition;
         targetActualColor = actualHealthVisual.GetComponent<SpriteRenderer>().color;
     }
+}
 }

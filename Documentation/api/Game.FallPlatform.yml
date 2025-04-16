@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: Game.FallPlatform
+  commentId: T:Game.FallPlatform
+  id: FallPlatform
+  parent: Game
+  children:
+  - Game.FallPlatform.fallDelay
+  - Game.FallPlatform.resetDelay
+  langs:
+  - csharp
+  - vb
+  name: FallPlatform
+  nameWithType: FallPlatform
+  fullName: Game.FallPlatform
+  type: Class
+  source:
+    id: FallPlatform
+    path: ''
+    startLine: 1612
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: 'public class FallPlatform : MonoBehaviour'
+    content.vb: Public Class FallPlatform Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Game.FallPlatform.fallDelay
+  commentId: F:Game.FallPlatform.fallDelay
+  id: fallDelay
+  parent: Game.FallPlatform
+  langs:
+  - csharp
+  - vb
+  name: fallDelay
+  nameWithType: FallPlatform.fallDelay
+  fullName: Game.FallPlatform.fallDelay
+  type: Field
+  source:
+    id: fallDelay
+    path: ''
+    startLine: 1614
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float fallDelay
+    return:
+      type: System.Single
+    content.vb: Public fallDelay As Single
+- uid: Game.FallPlatform.resetDelay
+  commentId: F:Game.FallPlatform.resetDelay
+  id: resetDelay
+  parent: Game.FallPlatform
+  langs:
+  - csharp
+  - vb
+  name: resetDelay
+  nameWithType: FallPlatform.resetDelay
+  fullName: Game.FallPlatform.resetDelay
+  type: Field
+  source:
+    id: resetDelay
+    path: ''
+    startLine: 1615
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  syntax:
+    content: public float resetDelay
+    return:
+      type: System.Single
+    content.vb: Public resetDelay As Single
+references:
+- uid: Game
+  commentId: N:Game
+  name: Game
+  nameWithType: Game
+  fullName: Game
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
