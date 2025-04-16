@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.GameManager.GameMode
+  commentId: T:Global.GameManager.GameMode
+  id: GameManager.GameMode
+  parent: Global
+  children:
+  - Global.GameManager.GameMode.freeForAll
+  - Global.GameManager.GameMode.keepAway
+  - Global.GameManager.GameMode.obstacleCourse
+  langs:
+  - csharp
+  - vb
+  name: GameManager.GameMode
+  nameWithType: GameManager.GameMode
+  fullName: GameManager.GameMode
+  type: Enum
+  source:
+    id: GameMode
+    path: ''
+    startLine: 1399
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nEnum representing the different game modes.\n"
+  example: []
+  syntax:
+    content: public enum GameManager.GameMode
+    content.vb: Public Enum GameManager.GameMode
+- uid: Global.GameManager.GameMode.freeForAll
+  commentId: F:Global.GameManager.GameMode.freeForAll
+  id: freeForAll
+  parent: Global.GameManager.GameMode
+  langs:
+  - csharp
+  - vb
+  name: freeForAll
+  nameWithType: GameManager.GameMode.freeForAll
+  fullName: GameManager.GameMode.freeForAll
+  type: Field
+  source:
+    id: freeForAll
+    path: ''
+    startLine: 1401
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: freeForAll = 0
+    return:
+      type: Global.GameManager.GameMode
+- uid: Global.GameManager.GameMode.keepAway
+  commentId: F:Global.GameManager.GameMode.keepAway
+  id: keepAway
+  parent: Global.GameManager.GameMode
+  langs:
+  - csharp
+  - vb
+  name: keepAway
+  nameWithType: GameManager.GameMode.keepAway
+  fullName: GameManager.GameMode.keepAway
+  type: Field
+  source:
+    id: keepAway
+    path: ''
+    startLine: 1402
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: keepAway = 1
+    return:
+      type: Global.GameManager.GameMode
+- uid: Global.GameManager.GameMode.obstacleCourse
+  commentId: F:Global.GameManager.GameMode.obstacleCourse
+  id: obstacleCourse
+  parent: Global.GameManager.GameMode
+  langs:
+  - csharp
+  - vb
+  name: obstacleCourse
+  nameWithType: GameManager.GameMode.obstacleCourse
+  fullName: GameManager.GameMode.obstacleCourse
+  type: Field
+  source:
+    id: obstacleCourse
+    path: ''
+    startLine: 1403
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: obstacleCourse = 2
+    return:
+      type: Global.GameManager.GameMode
+references:
+- uid: Global
+- uid: Global.GameManager.GameMode
+  commentId: T:Global.GameManager.GameMode
+  name: GameManager.GameMode
+  nameWithType: GameManager.GameMode
+  fullName: GameManager.GameMode
+  spec.csharp:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameMode
+    name: GameMode
+  spec.vb:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameMode
+    name: GameMode

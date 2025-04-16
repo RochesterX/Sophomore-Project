@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace 
+ | Example Unity documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace 
+ | Example Unity documentation ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Global">
+
+  <h1 id="Global" data-uid="Global" class="text-break">Namespace 
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+</h3>
+      <h4><a class="xref" href="Global.AnimationPlayer.html">AnimationPlayer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.AudioManager.html">AudioManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.Block.html">Block</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.Damageable.html">Damageable</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.DayNightCycle.html">DayNightCycle</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.EventSystemizer.html">EventSystemizer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.FallPlatform.html">FallPlatform</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.GameManager.html">GameManager</a></h4>
+      <section><p sourcefile="api/Global.GameManager.yml" sourcestartlinenumber="2">The GameManager class manages the overall game logic, including game modes, player states,
+game events, and game-over conditions. It ensures a single instance exists and provides
+functionality for starting, updating, and ending the game.</p>
+</section>
+      <h4><a class="xref" href="Global.GameManagerHelper.html">GameManagerHelper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.GameTimer.html">GameTimer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.HatRespawn.html">HatRespawn</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.HealthBarManager.html">HealthBarManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.HubManager.html">HubManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.HubPolygonCreator.html">HubPolygonCreator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.InfiniteScroll.html">InfiniteScroll</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.LeaderboardManager.html">LeaderboardManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.LifeDisplayManager.html">LifeDisplayManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.MapSelect.html">MapSelect</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ModeSelect.html">ModeSelect</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.MovingPlatform.html">MovingPlatform</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.MusicManager.html">MusicManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ObjectVisibility.html">ObjectVisibility</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ObstacleCourse.html">ObstacleCourse</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ParallaxBackground.html">ParallaxBackground</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ParallaxCamera.html">ParallaxCamera</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ParallaxLayer.html">ParallaxLayer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PlayerCameraMovement.html">PlayerCameraMovement</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PlayerCardCreator.html">PlayerCardCreator</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PlayerJoinCard.html">PlayerJoinCard</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PlayerManager.html">PlayerManager</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PlayerMovement.html">PlayerMovement</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.Playlist.html">Playlist</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PongBallBehavior.html">PongBallBehavior</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PongPaddleBehavior.html">PongPaddleBehavior</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.PongScorekeeper.html">PongScorekeeper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.Punch.html">Punch</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.RespawnOnTriggerEnter.html">RespawnOnTriggerEnter</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.SoundEffect.html">SoundEffect</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.TeleportPlatform.html">TeleportPlatform</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.TerribleHealthBarScript.html">TerribleHealthBarScript</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.TrackLayer.html">TrackLayer</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.Trevor.html">Trevor</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.UseItem.html">UseItem</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.WinScreen.html">WinScreen</a></h4>
+      <section></section>
+    <h3 id="enums">Enums
+</h3>
+      <h4><a class="xref" href="Global.AnimationPlayer.AnimationState.html">AnimationPlayer.AnimationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.GameManager.GameMode.html">GameManager.GameMode</a></h4>
+      <section><p sourcefile="api/Global.GameManager.GameMode.yml" sourcestartlinenumber="2">Enum representing the different game modes.</p>
+</section>
+      <h4><a class="xref" href="Global.TrackLayer.EnableTrigger.html">TrackLayer.EnableTrigger</a></h4>
+      <section></section>
+    <h3 id="delegates">Delegates
+</h3>
+      <h4><a class="xref" href="Global.GameManager.GameEvent.html">GameManager.GameEvent</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Global.ParallaxCamera.ParallaxCameraDelegate.html">ParallaxCamera.ParallaxCameraDelegate</a></h4>
+      <section></section>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Example Unity documentation footer
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

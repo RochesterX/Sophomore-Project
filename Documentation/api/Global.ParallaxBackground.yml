@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ParallaxBackground
+  commentId: T:Global.ParallaxBackground
+  id: ParallaxBackground
+  parent: Global
+  children:
+  - Global.ParallaxBackground.parallaxCamera
+  langs:
+  - csharp
+  - vb
+  name: ParallaxBackground
+  nameWithType: ParallaxBackground
+  fullName: ParallaxBackground
+  type: Class
+  source:
+    id: ParallaxBackground
+    path: ''
+    startLine: 149
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ParallaxBackground : MonoBehaviour'
+    content.vb: Public Class ParallaxBackground Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.ParallaxBackground.parallaxCamera
+  commentId: F:Global.ParallaxBackground.parallaxCamera
+  id: parallaxCamera
+  parent: Global.ParallaxBackground
+  langs:
+  - csharp
+  - vb
+  name: parallaxCamera
+  nameWithType: ParallaxBackground.parallaxCamera
+  fullName: ParallaxBackground.parallaxCamera
+  type: Field
+  source:
+    id: parallaxCamera
+    path: ''
+    startLine: 152
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ParallaxCamera parallaxCamera
+    return:
+      type: Global.ParallaxCamera
+    content.vb: Public parallaxCamera As ParallaxCamera
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ParallaxCamera
+  commentId: T:Global.ParallaxCamera
+  name: ParallaxCamera
+  nameWithType: ParallaxCamera
+  fullName: ParallaxCamera

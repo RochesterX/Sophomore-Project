@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ParallaxCamera
+  commentId: T:Global.ParallaxCamera
+  id: ParallaxCamera
+  parent: Global
+  children:
+  - Global.ParallaxCamera.onCameraTranslate
+  langs:
+  - csharp
+  - vb
+  name: ParallaxCamera
+  nameWithType: ParallaxCamera
+  fullName: ParallaxCamera
+  type: Class
+  source:
+    id: ParallaxCamera
+    path: ''
+    startLine: 119
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ParallaxCamera : MonoBehaviour'
+    content.vb: Public Class ParallaxCamera Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.ParallaxCamera.onCameraTranslate
+  commentId: F:Global.ParallaxCamera.onCameraTranslate
+  id: onCameraTranslate
+  parent: Global.ParallaxCamera
+  langs:
+  - csharp
+  - vb
+  name: onCameraTranslate
+  nameWithType: ParallaxCamera.onCameraTranslate
+  fullName: ParallaxCamera.onCameraTranslate
+  type: Field
+  source:
+    id: onCameraTranslate
+    path: ''
+    startLine: 123
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public ParallaxCamera.ParallaxCameraDelegate onCameraTranslate
+    return:
+      type: Global.ParallaxCamera.ParallaxCameraDelegate
+    content.vb: Public onCameraTranslate As ParallaxCamera.ParallaxCameraDelegate
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ParallaxCamera.ParallaxCameraDelegate
+  commentId: T:Global.ParallaxCamera.ParallaxCameraDelegate
+  name: ParallaxCamera.ParallaxCameraDelegate
+  nameWithType: ParallaxCamera.ParallaxCameraDelegate
+  fullName: ParallaxCamera.ParallaxCameraDelegate
+  spec.csharp:
+  - uid: Global.ParallaxCamera
+    name: ParallaxCamera
+  - name: .
+  - uid: Global.ParallaxCamera.ParallaxCameraDelegate
+    name: ParallaxCameraDelegate
+  spec.vb:
+  - uid: Global.ParallaxCamera
+    name: ParallaxCamera
+  - name: .
+  - uid: Global.ParallaxCamera.ParallaxCameraDelegate
+    name: ParallaxCameraDelegate

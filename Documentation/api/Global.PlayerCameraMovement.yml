@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PlayerCameraMovement
+  commentId: T:Global.PlayerCameraMovement
+  id: PlayerCameraMovement
+  parent: Global
+  children:
+  - Global.PlayerCameraMovement.lowerBound
+  - Global.PlayerCameraMovement.speed
+  - Global.PlayerCameraMovement.staticCamera
+  - Global.PlayerCameraMovement.weight
+  - Global.PlayerCameraMovement.winScene
+  - Global.PlayerCameraMovement.WinScene(GameObject)
+  langs:
+  - csharp
+  - vb
+  name: PlayerCameraMovement
+  nameWithType: PlayerCameraMovement
+  fullName: PlayerCameraMovement
+  type: Class
+  source:
+    id: PlayerCameraMovement
+    path: ''
+    startLine: 2840
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PlayerCameraMovement : MonoBehaviour'
+    content.vb: Public Class PlayerCameraMovement Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PlayerCameraMovement.weight
+  commentId: F:Global.PlayerCameraMovement.weight
+  id: weight
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: weight
+  nameWithType: PlayerCameraMovement.weight
+  fullName: PlayerCameraMovement.weight
+  type: Field
+  source:
+    id: weight
+    path: ''
+    startLine: 2844
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float weight
+    return:
+      type: System.Single
+    content.vb: Public weight As Single
+- uid: Global.PlayerCameraMovement.speed
+  commentId: F:Global.PlayerCameraMovement.speed
+  id: speed
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: PlayerCameraMovement.speed
+  fullName: PlayerCameraMovement.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 2845
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+- uid: Global.PlayerCameraMovement.lowerBound
+  commentId: F:Global.PlayerCameraMovement.lowerBound
+  id: lowerBound
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: lowerBound
+  nameWithType: PlayerCameraMovement.lowerBound
+  fullName: PlayerCameraMovement.lowerBound
+  type: Field
+  source:
+    id: lowerBound
+    path: ''
+    startLine: 2847
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float lowerBound
+    return:
+      type: System.Single
+    content.vb: Public lowerBound As Single
+- uid: Global.PlayerCameraMovement.winScene
+  commentId: F:Global.PlayerCameraMovement.winScene
+  id: winScene
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: winScene
+  nameWithType: PlayerCameraMovement.winScene
+  fullName: PlayerCameraMovement.winScene
+  type: Field
+  source:
+    id: winScene
+    path: ''
+    startLine: 2848
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool winScene
+    return:
+      type: System.Boolean
+    content.vb: Public winScene As Boolean
+- uid: Global.PlayerCameraMovement.staticCamera
+  commentId: F:Global.PlayerCameraMovement.staticCamera
+  id: staticCamera
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: staticCamera
+  nameWithType: PlayerCameraMovement.staticCamera
+  fullName: PlayerCameraMovement.staticCamera
+  type: Field
+  source:
+    id: staticCamera
+    path: ''
+    startLine: 2850
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool staticCamera
+    return:
+      type: System.Boolean
+    content.vb: Public staticCamera As Boolean
+- uid: Global.PlayerCameraMovement.WinScene(GameObject)
+  commentId: M:Global.PlayerCameraMovement.WinScene(GameObject)
+  id: WinScene(GameObject)
+  parent: Global.PlayerCameraMovement
+  langs:
+  - csharp
+  - vb
+  name: WinScene(GameObject)
+  nameWithType: PlayerCameraMovement.WinScene(GameObject)
+  fullName: PlayerCameraMovement.WinScene(GameObject)
+  type: Method
+  source:
+    id: WinScene
+    path: ''
+    startLine: 2905
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void WinScene(GameObject player)
+    parameters:
+    - id: player
+      type: Global.GameObject
+    content.vb: Public Sub WinScene(player As GameObject)
+  overload: Global.PlayerCameraMovement.WinScene*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.PlayerCameraMovement.WinScene*
+  commentId: Overload:Global.PlayerCameraMovement.WinScene
+  name: WinScene
+  nameWithType: PlayerCameraMovement.WinScene
+  fullName: PlayerCameraMovement.WinScene
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

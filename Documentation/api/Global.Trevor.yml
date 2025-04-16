@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Trevor
+  commentId: T:Global.Trevor
+  id: Trevor
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Trevor
+  nameWithType: Trevor
+  fullName: Trevor
+  type: Class
+  source:
+    id: Trevor
+    path: ''
+    startLine: 2927
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class Trevor : MonoBehaviour'
+    content.vb: Public Class Trevor Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

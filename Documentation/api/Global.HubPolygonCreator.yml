@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.HubPolygonCreator
+  commentId: T:Global.HubPolygonCreator
+  id: HubPolygonCreator
+  parent: Global
+  children:
+  - Global.HubPolygonCreator.size
+  - Global.HubPolygonCreator.vertices
+  langs:
+  - csharp
+  - vb
+  name: HubPolygonCreator
+  nameWithType: HubPolygonCreator
+  fullName: HubPolygonCreator
+  type: Class
+  source:
+    id: HubPolygonCreator
+    path: ''
+    startLine: 311
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class HubPolygonCreator : MonoBehaviour'
+    content.vb: Public Class HubPolygonCreator Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.HubPolygonCreator.vertices
+  commentId: F:Global.HubPolygonCreator.vertices
+  id: vertices
+  parent: Global.HubPolygonCreator
+  langs:
+  - csharp
+  - vb
+  name: vertices
+  nameWithType: HubPolygonCreator.vertices
+  fullName: HubPolygonCreator.vertices
+  type: Field
+  source:
+    id: vertices
+    path: ''
+    startLine: 314
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<GameObject> vertices
+    return:
+      type: Global.List{GameObject}
+    content.vb: Public vertices As List(Of GameObject)
+- uid: Global.HubPolygonCreator.size
+  commentId: F:Global.HubPolygonCreator.size
+  id: size
+  parent: Global.HubPolygonCreator
+  langs:
+  - csharp
+  - vb
+  name: size
+  nameWithType: HubPolygonCreator.size
+  fullName: HubPolygonCreator.size
+  type: Field
+  source:
+    id: size
+    path: ''
+    startLine: 315
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float size
+    return:
+      type: System.Single
+    content.vb: Public size As Single
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.List{GameObject}
+  commentId: '!:Global.List{GameObject}'
+  definition: Global.List`1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: List<GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: List(Of GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

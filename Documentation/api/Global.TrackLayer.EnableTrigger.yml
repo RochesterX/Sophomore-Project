@@ -1,0 +1,273 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TrackLayer.EnableTrigger
+  commentId: T:Global.TrackLayer.EnableTrigger
+  id: TrackLayer.EnableTrigger
+  parent: Global
+  children:
+  - Global.TrackLayer.EnableTrigger.Button
+  - Global.TrackLayer.EnableTrigger.Collectible
+  - Global.TrackLayer.EnableTrigger.ConstantForce
+  - Global.TrackLayer.EnableTrigger.ElectromagneticPulse
+  - Global.TrackLayer.EnableTrigger.EndOfLevel
+  - Global.TrackLayer.EnableTrigger.Goal
+  - Global.TrackLayer.EnableTrigger.Magnetism
+  - Global.TrackLayer.EnableTrigger.Movement
+  - Global.TrackLayer.EnableTrigger.Scene
+  - Global.TrackLayer.EnableTrigger.Toggle
+  langs:
+  - csharp
+  - vb
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: TrackLayer.EnableTrigger
+  type: Enum
+  source:
+    id: EnableTrigger
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public enum TrackLayer.EnableTrigger
+    content.vb: Public Enum TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Scene
+  commentId: F:Global.TrackLayer.EnableTrigger.Scene
+  id: Scene
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Scene
+  nameWithType: TrackLayer.EnableTrigger.Scene
+  fullName: TrackLayer.EnableTrigger.Scene
+  type: Field
+  source:
+    id: Scene
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Scene = 0
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Magnetism
+  commentId: F:Global.TrackLayer.EnableTrigger.Magnetism
+  id: Magnetism
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Magnetism
+  nameWithType: TrackLayer.EnableTrigger.Magnetism
+  fullName: TrackLayer.EnableTrigger.Magnetism
+  type: Field
+  source:
+    id: Magnetism
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Magnetism = 1
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Goal
+  commentId: F:Global.TrackLayer.EnableTrigger.Goal
+  id: Goal
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Goal
+  nameWithType: TrackLayer.EnableTrigger.Goal
+  fullName: TrackLayer.EnableTrigger.Goal
+  type: Field
+  source:
+    id: Goal
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Goal = 2
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Button
+  commentId: F:Global.TrackLayer.EnableTrigger.Button
+  id: Button
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Button
+  nameWithType: TrackLayer.EnableTrigger.Button
+  fullName: TrackLayer.EnableTrigger.Button
+  type: Field
+  source:
+    id: Button
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Button = 3
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Toggle
+  commentId: F:Global.TrackLayer.EnableTrigger.Toggle
+  id: Toggle
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Toggle
+  nameWithType: TrackLayer.EnableTrigger.Toggle
+  fullName: TrackLayer.EnableTrigger.Toggle
+  type: Field
+  source:
+    id: Toggle
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Toggle = 4
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Movement
+  commentId: F:Global.TrackLayer.EnableTrigger.Movement
+  id: Movement
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Movement
+  nameWithType: TrackLayer.EnableTrigger.Movement
+  fullName: TrackLayer.EnableTrigger.Movement
+  type: Field
+  source:
+    id: Movement
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Movement = 5
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.ConstantForce
+  commentId: F:Global.TrackLayer.EnableTrigger.ConstantForce
+  id: ConstantForce
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: ConstantForce
+  nameWithType: TrackLayer.EnableTrigger.ConstantForce
+  fullName: TrackLayer.EnableTrigger.ConstantForce
+  type: Field
+  source:
+    id: ConstantForce
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: ConstantForce = 6
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.EndOfLevel
+  commentId: F:Global.TrackLayer.EnableTrigger.EndOfLevel
+  id: EndOfLevel
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: EndOfLevel
+  nameWithType: TrackLayer.EnableTrigger.EndOfLevel
+  fullName: TrackLayer.EnableTrigger.EndOfLevel
+  type: Field
+  source:
+    id: EndOfLevel
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: EndOfLevel = 7
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.ElectromagneticPulse
+  commentId: F:Global.TrackLayer.EnableTrigger.ElectromagneticPulse
+  id: ElectromagneticPulse
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: ElectromagneticPulse
+  nameWithType: TrackLayer.EnableTrigger.ElectromagneticPulse
+  fullName: TrackLayer.EnableTrigger.ElectromagneticPulse
+  type: Field
+  source:
+    id: ElectromagneticPulse
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: ElectromagneticPulse = 8
+    return:
+      type: Global.TrackLayer.EnableTrigger
+- uid: Global.TrackLayer.EnableTrigger.Collectible
+  commentId: F:Global.TrackLayer.EnableTrigger.Collectible
+  id: Collectible
+  parent: Global.TrackLayer.EnableTrigger
+  langs:
+  - csharp
+  - vb
+  name: Collectible
+  nameWithType: TrackLayer.EnableTrigger.Collectible
+  fullName: TrackLayer.EnableTrigger.Collectible
+  type: Field
+  source:
+    id: Collectible
+    path: ''
+    startLine: 996
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: Collectible = 9
+    return:
+      type: Global.TrackLayer.EnableTrigger
+references:
+- uid: Global
+- uid: Global.TrackLayer.EnableTrigger
+  commentId: T:Global.TrackLayer.EnableTrigger
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: TrackLayer.EnableTrigger
+  spec.csharp:
+  - uid: Global.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Global.TrackLayer.EnableTrigger
+    name: EnableTrigger
+  spec.vb:
+  - uid: Global.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Global.TrackLayer.EnableTrigger
+    name: EnableTrigger

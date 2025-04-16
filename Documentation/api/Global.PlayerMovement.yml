@@ -1,0 +1,646 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PlayerMovement
+  commentId: T:Global.PlayerMovement
+  id: PlayerMovement
+  parent: Global
+  children:
+  - Global.PlayerMovement.coyoteTime
+  - Global.PlayerMovement.GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)
+  - Global.PlayerMovement.ground
+  - Global.PlayerMovement.groundCheckDistance
+  - Global.PlayerMovement.IsBasicallyGrounded
+  - Global.PlayerMovement.IsPhysicallyGrounded
+  - Global.PlayerMovement.jumpLenience
+  - Global.PlayerMovement.jumpSpeed
+  - Global.PlayerMovement.maxSpeed
+  - Global.PlayerMovement.maxSpeedOverride
+  - Global.PlayerMovement.playerText
+  - Global.PlayerMovement.secondsToFullSpeed
+  - Global.PlayerMovement.slowdownMultiplier
+  - Global.PlayerMovement.StopVelocity
+  - Global.PlayerMovement.timeUnableToBeDeclaredNotJumping
+  - Global.PlayerMovement.turnaroundMultiplier
+  - Global.PlayerMovement.virtualAxisX
+  - Global.PlayerMovement.virtualButtonJump
+  - Global.PlayerMovement.virtualButtonJumpLastFrame
+  - Global.PlayerMovement.walkSmooth
+  - Global.PlayerMovement.walkSpeed
+  - Global.PlayerMovement.walkSpeedFactor
+  langs:
+  - csharp
+  - vb
+  name: PlayerMovement
+  nameWithType: PlayerMovement
+  fullName: PlayerMovement
+  type: Class
+  source:
+    id: PlayerMovement
+    path: ''
+    startLine: 2484
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PlayerMovement : MonoBehaviour'
+    content.vb: Public Class PlayerMovement Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PlayerMovement.ground
+  commentId: F:Global.PlayerMovement.ground
+  id: ground
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: ground
+  nameWithType: PlayerMovement.ground
+  fullName: PlayerMovement.ground
+  type: Field
+  source:
+    id: ground
+    path: ''
+    startLine: 2492
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public LayerMask ground
+    return:
+      type: Global.LayerMask
+    content.vb: Public ground As LayerMask
+- uid: Global.PlayerMovement.playerText
+  commentId: F:Global.PlayerMovement.playerText
+  id: playerText
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: playerText
+  nameWithType: PlayerMovement.playerText
+  fullName: PlayerMovement.playerText
+  type: Field
+  source:
+    id: playerText
+    path: ''
+    startLine: 2494
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public TextMeshProUGUI playerText
+    return:
+      type: Global.TextMeshProUGUI
+    content.vb: Public playerText As TextMeshProUGUI
+- uid: Global.PlayerMovement.walkSpeed
+  commentId: F:Global.PlayerMovement.walkSpeed
+  id: walkSpeed
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: walkSpeed
+  nameWithType: PlayerMovement.walkSpeed
+  fullName: PlayerMovement.walkSpeed
+  type: Field
+  source:
+    id: walkSpeed
+    path: ''
+    startLine: 2497
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float walkSpeed
+    return:
+      type: System.Single
+    content.vb: Public walkSpeed As Single
+- uid: Global.PlayerMovement.walkSpeedFactor
+  commentId: F:Global.PlayerMovement.walkSpeedFactor
+  id: walkSpeedFactor
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: walkSpeedFactor
+  nameWithType: PlayerMovement.walkSpeedFactor
+  fullName: PlayerMovement.walkSpeedFactor
+  type: Field
+  source:
+    id: walkSpeedFactor
+    path: ''
+    startLine: 2498
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float walkSpeedFactor
+    return:
+      type: System.Single
+    content.vb: Public walkSpeedFactor As Single
+- uid: Global.PlayerMovement.maxSpeed
+  commentId: F:Global.PlayerMovement.maxSpeed
+  id: maxSpeed
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: maxSpeed
+  nameWithType: PlayerMovement.maxSpeed
+  fullName: PlayerMovement.maxSpeed
+  type: Field
+  source:
+    id: maxSpeed
+    path: ''
+    startLine: 2499
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxSpeed
+    return:
+      type: System.Single
+    content.vb: Public maxSpeed As Single
+- uid: Global.PlayerMovement.maxSpeedOverride
+  commentId: F:Global.PlayerMovement.maxSpeedOverride
+  id: maxSpeedOverride
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: maxSpeedOverride
+  nameWithType: PlayerMovement.maxSpeedOverride
+  fullName: PlayerMovement.maxSpeedOverride
+  type: Field
+  source:
+    id: maxSpeedOverride
+    path: ''
+    startLine: 2500
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxSpeedOverride
+    return:
+      type: System.Single
+    content.vb: Public maxSpeedOverride As Single
+- uid: Global.PlayerMovement.slowdownMultiplier
+  commentId: F:Global.PlayerMovement.slowdownMultiplier
+  id: slowdownMultiplier
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: slowdownMultiplier
+  nameWithType: PlayerMovement.slowdownMultiplier
+  fullName: PlayerMovement.slowdownMultiplier
+  type: Field
+  source:
+    id: slowdownMultiplier
+    path: ''
+    startLine: 2501
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float slowdownMultiplier
+    return:
+      type: System.Single
+    content.vb: Public slowdownMultiplier As Single
+- uid: Global.PlayerMovement.virtualAxisX
+  commentId: F:Global.PlayerMovement.virtualAxisX
+  id: virtualAxisX
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: virtualAxisX
+  nameWithType: PlayerMovement.virtualAxisX
+  fullName: PlayerMovement.virtualAxisX
+  type: Field
+  source:
+    id: virtualAxisX
+    path: ''
+    startLine: 2502
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float virtualAxisX
+    return:
+      type: System.Single
+    content.vb: Public virtualAxisX As Single
+- uid: Global.PlayerMovement.virtualButtonJump
+  commentId: F:Global.PlayerMovement.virtualButtonJump
+  id: virtualButtonJump
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: virtualButtonJump
+  nameWithType: PlayerMovement.virtualButtonJump
+  fullName: PlayerMovement.virtualButtonJump
+  type: Field
+  source:
+    id: virtualButtonJump
+    path: ''
+    startLine: 2503
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float virtualButtonJump
+    return:
+      type: System.Single
+    content.vb: Public virtualButtonJump As Single
+- uid: Global.PlayerMovement.virtualButtonJumpLastFrame
+  commentId: F:Global.PlayerMovement.virtualButtonJumpLastFrame
+  id: virtualButtonJumpLastFrame
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: virtualButtonJumpLastFrame
+  nameWithType: PlayerMovement.virtualButtonJumpLastFrame
+  fullName: PlayerMovement.virtualButtonJumpLastFrame
+  type: Field
+  source:
+    id: virtualButtonJumpLastFrame
+    path: ''
+    startLine: 2504
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float virtualButtonJumpLastFrame
+    return:
+      type: System.Single
+    content.vb: Public virtualButtonJumpLastFrame As Single
+- uid: Global.PlayerMovement.turnaroundMultiplier
+  commentId: F:Global.PlayerMovement.turnaroundMultiplier
+  id: turnaroundMultiplier
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: turnaroundMultiplier
+  nameWithType: PlayerMovement.turnaroundMultiplier
+  fullName: PlayerMovement.turnaroundMultiplier
+  type: Field
+  source:
+    id: turnaroundMultiplier
+    path: ''
+    startLine: 2505
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float turnaroundMultiplier
+    return:
+      type: System.Single
+    content.vb: Public turnaroundMultiplier As Single
+- uid: Global.PlayerMovement.walkSmooth
+  commentId: F:Global.PlayerMovement.walkSmooth
+  id: walkSmooth
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: walkSmooth
+  nameWithType: PlayerMovement.walkSmooth
+  fullName: PlayerMovement.walkSmooth
+  type: Field
+  source:
+    id: walkSmooth
+    path: ''
+    startLine: 2506
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float walkSmooth
+    return:
+      type: System.Single
+    content.vb: Public walkSmooth As Single
+- uid: Global.PlayerMovement.secondsToFullSpeed
+  commentId: F:Global.PlayerMovement.secondsToFullSpeed
+  id: secondsToFullSpeed
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: secondsToFullSpeed
+  nameWithType: PlayerMovement.secondsToFullSpeed
+  fullName: PlayerMovement.secondsToFullSpeed
+  type: Field
+  source:
+    id: secondsToFullSpeed
+    path: ''
+    startLine: 2507
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float secondsToFullSpeed
+    return:
+      type: System.Single
+    content.vb: Public secondsToFullSpeed As Single
+- uid: Global.PlayerMovement.jumpSpeed
+  commentId: F:Global.PlayerMovement.jumpSpeed
+  id: jumpSpeed
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: jumpSpeed
+  nameWithType: PlayerMovement.jumpSpeed
+  fullName: PlayerMovement.jumpSpeed
+  type: Field
+  source:
+    id: jumpSpeed
+    path: ''
+    startLine: 2508
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float jumpSpeed
+    return:
+      type: System.Single
+    content.vb: Public jumpSpeed As Single
+- uid: Global.PlayerMovement.coyoteTime
+  commentId: F:Global.PlayerMovement.coyoteTime
+  id: coyoteTime
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: coyoteTime
+  nameWithType: PlayerMovement.coyoteTime
+  fullName: PlayerMovement.coyoteTime
+  type: Field
+  source:
+    id: coyoteTime
+    path: ''
+    startLine: 2509
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float coyoteTime
+    return:
+      type: System.Single
+    content.vb: Public coyoteTime As Single
+- uid: Global.PlayerMovement.jumpLenience
+  commentId: F:Global.PlayerMovement.jumpLenience
+  id: jumpLenience
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: jumpLenience
+  nameWithType: PlayerMovement.jumpLenience
+  fullName: PlayerMovement.jumpLenience
+  type: Field
+  source:
+    id: jumpLenience
+    path: ''
+    startLine: 2510
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float jumpLenience
+    return:
+      type: System.Single
+    content.vb: Public jumpLenience As Single
+- uid: Global.PlayerMovement.timeUnableToBeDeclaredNotJumping
+  commentId: F:Global.PlayerMovement.timeUnableToBeDeclaredNotJumping
+  id: timeUnableToBeDeclaredNotJumping
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: timeUnableToBeDeclaredNotJumping
+  nameWithType: PlayerMovement.timeUnableToBeDeclaredNotJumping
+  fullName: PlayerMovement.timeUnableToBeDeclaredNotJumping
+  type: Field
+  source:
+    id: timeUnableToBeDeclaredNotJumping
+    path: ''
+    startLine: 2511
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float timeUnableToBeDeclaredNotJumping
+    return:
+      type: System.Single
+    content.vb: Public timeUnableToBeDeclaredNotJumping As Single
+- uid: Global.PlayerMovement.groundCheckDistance
+  commentId: F:Global.PlayerMovement.groundCheckDistance
+  id: groundCheckDistance
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: groundCheckDistance
+  nameWithType: PlayerMovement.groundCheckDistance
+  fullName: PlayerMovement.groundCheckDistance
+  type: Field
+  source:
+    id: groundCheckDistance
+    path: ''
+    startLine: 2512
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float groundCheckDistance
+    return:
+      type: System.Single
+    content.vb: Public groundCheckDistance As Single
+- uid: Global.PlayerMovement.IsBasicallyGrounded
+  commentId: M:Global.PlayerMovement.IsBasicallyGrounded
+  id: IsBasicallyGrounded
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: IsBasicallyGrounded()
+  nameWithType: PlayerMovement.IsBasicallyGrounded()
+  fullName: PlayerMovement.IsBasicallyGrounded()
+  type: Method
+  source:
+    id: IsBasicallyGrounded
+    path: ''
+    startLine: 2694
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsBasicallyGrounded()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsBasicallyGrounded() As Boolean
+  overload: Global.PlayerMovement.IsBasicallyGrounded*
+- uid: Global.PlayerMovement.IsPhysicallyGrounded
+  commentId: M:Global.PlayerMovement.IsPhysicallyGrounded
+  id: IsPhysicallyGrounded
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: IsPhysicallyGrounded()
+  nameWithType: PlayerMovement.IsPhysicallyGrounded()
+  fullName: PlayerMovement.IsPhysicallyGrounded()
+  type: Method
+  source:
+    id: IsPhysicallyGrounded
+    path: ''
+    startLine: 2709
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool IsPhysicallyGrounded()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsPhysicallyGrounded() As Boolean
+  overload: Global.PlayerMovement.IsPhysicallyGrounded*
+- uid: Global.PlayerMovement.GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)
+  commentId: M:Global.PlayerMovement.GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)
+  id: GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: GetPointInBoxCollider(BoxCollider2D, float, float)
+  nameWithType: PlayerMovement.GetPointInBoxCollider(BoxCollider2D, float, float)
+  fullName: PlayerMovement.GetPointInBoxCollider(BoxCollider2D, float, float)
+  type: Method
+  source:
+    id: GetPointInBoxCollider
+    path: ''
+    startLine: 2723
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical)
+    parameters:
+    - id: boxCollider2D
+      type: Global.BoxCollider2D
+    - id: horizontal
+      type: System.Single
+    - id: vertical
+      type: System.Single
+    return:
+      type: Global.Vector2
+    content.vb: Public Function GetPointInBoxCollider(boxCollider2D As BoxCollider2D, horizontal As Single, vertical As Single) As Vector2
+  overload: Global.PlayerMovement.GetPointInBoxCollider*
+  nameWithType.vb: PlayerMovement.GetPointInBoxCollider(BoxCollider2D, Single, Single)
+  fullName.vb: PlayerMovement.GetPointInBoxCollider(BoxCollider2D, Single, Single)
+  name.vb: GetPointInBoxCollider(BoxCollider2D, Single, Single)
+- uid: Global.PlayerMovement.StopVelocity
+  commentId: M:Global.PlayerMovement.StopVelocity
+  id: StopVelocity
+  parent: Global.PlayerMovement
+  langs:
+  - csharp
+  - vb
+  name: StopVelocity()
+  nameWithType: PlayerMovement.StopVelocity()
+  fullName: PlayerMovement.StopVelocity()
+  type: Method
+  source:
+    id: StopVelocity
+    path: ''
+    startLine: 2732
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void StopVelocity()
+    content.vb: Public Sub StopVelocity()
+  overload: Global.PlayerMovement.StopVelocity*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.LayerMask
+  commentId: '!:Global.LayerMask'
+  isExternal: true
+  name: LayerMask
+  nameWithType: LayerMask
+  fullName: LayerMask
+- uid: Global.TextMeshProUGUI
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TextMeshProUGUI
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.PlayerMovement.IsBasicallyGrounded*
+  commentId: Overload:Global.PlayerMovement.IsBasicallyGrounded
+  name: IsBasicallyGrounded
+  nameWithType: PlayerMovement.IsBasicallyGrounded
+  fullName: PlayerMovement.IsBasicallyGrounded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.PlayerMovement.IsPhysicallyGrounded*
+  commentId: Overload:Global.PlayerMovement.IsPhysicallyGrounded
+  name: IsPhysicallyGrounded
+  nameWithType: PlayerMovement.IsPhysicallyGrounded
+  fullName: PlayerMovement.IsPhysicallyGrounded
+- uid: Global.PlayerMovement.GetPointInBoxCollider*
+  commentId: Overload:Global.PlayerMovement.GetPointInBoxCollider
+  name: GetPointInBoxCollider
+  nameWithType: PlayerMovement.GetPointInBoxCollider
+  fullName: PlayerMovement.GetPointInBoxCollider
+- uid: Global.BoxCollider2D
+  commentId: '!:Global.BoxCollider2D'
+  isExternal: true
+  name: BoxCollider2D
+  nameWithType: BoxCollider2D
+  fullName: BoxCollider2D
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
+- uid: Global.PlayerMovement.StopVelocity*
+  commentId: Overload:Global.PlayerMovement.StopVelocity
+  name: StopVelocity
+  nameWithType: PlayerMovement.StopVelocity
+  fullName: PlayerMovement.StopVelocity

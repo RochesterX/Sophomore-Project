@@ -13,7 +13,7 @@ public class MovingPlatform : MonoBehaviour
         transform.position = points[startPoint].position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // If the platform is close to the target point, it starts moving to the next one
         if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
@@ -25,6 +25,7 @@ public class MovingPlatform : MonoBehaviour
             }
         }
         // Moves the platform towards the next point
-        transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+       // transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+        GetComponent<Rigidbody2D>().MovePosition(Vector2.MoveTowards(transform.position, points[i].position, speed * Time.fixedDeltaTime));
     }
 }

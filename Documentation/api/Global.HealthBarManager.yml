@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.HealthBarManager
+  commentId: T:Global.HealthBarManager
+  id: HealthBarManager
+  parent: Global
+  children:
+  - Global.HealthBarManager.healthBarPrefab
+  langs:
+  - csharp
+  - vb
+  name: HealthBarManager
+  nameWithType: HealthBarManager
+  fullName: HealthBarManager
+  type: Class
+  source:
+    id: HealthBarManager
+    path: ''
+    startLine: 1307
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class HealthBarManager : MonoBehaviour'
+    content.vb: Public Class HealthBarManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.HealthBarManager.healthBarPrefab
+  commentId: F:Global.HealthBarManager.healthBarPrefab
+  id: healthBarPrefab
+  parent: Global.HealthBarManager
+  langs:
+  - csharp
+  - vb
+  name: healthBarPrefab
+  nameWithType: HealthBarManager.healthBarPrefab
+  fullName: HealthBarManager.healthBarPrefab
+  type: Field
+  source:
+    id: healthBarPrefab
+    path: ''
+    startLine: 1309
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject healthBarPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public healthBarPrefab As GameObject
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject

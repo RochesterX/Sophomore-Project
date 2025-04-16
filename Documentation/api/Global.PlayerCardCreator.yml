@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PlayerCardCreator
+  commentId: T:Global.PlayerCardCreator
+  id: PlayerCardCreator
+  parent: Global
+  children:
+  - Global.PlayerCardCreator.CreateCard
+  - Global.PlayerCardCreator.Instance
+  - Global.PlayerCardCreator.playerJoinCardPrefab
+  langs:
+  - csharp
+  - vb
+  name: PlayerCardCreator
+  nameWithType: PlayerCardCreator
+  fullName: PlayerCardCreator
+  type: Class
+  source:
+    id: PlayerCardCreator
+    path: ''
+    startLine: 1117
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PlayerCardCreator : MonoBehaviour'
+    content.vb: Public Class PlayerCardCreator Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PlayerCardCreator.Instance
+  commentId: F:Global.PlayerCardCreator.Instance
+  id: Instance
+  parent: Global.PlayerCardCreator
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PlayerCardCreator.Instance
+  fullName: PlayerCardCreator.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 1119
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static PlayerCardCreator Instance
+    return:
+      type: Global.PlayerCardCreator
+    content.vb: Public Shared Instance As PlayerCardCreator
+- uid: Global.PlayerCardCreator.playerJoinCardPrefab
+  commentId: F:Global.PlayerCardCreator.playerJoinCardPrefab
+  id: playerJoinCardPrefab
+  parent: Global.PlayerCardCreator
+  langs:
+  - csharp
+  - vb
+  name: playerJoinCardPrefab
+  nameWithType: PlayerCardCreator.playerJoinCardPrefab
+  fullName: PlayerCardCreator.playerJoinCardPrefab
+  type: Field
+  source:
+    id: playerJoinCardPrefab
+    path: ''
+    startLine: 1121
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject playerJoinCardPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public playerJoinCardPrefab As GameObject
+- uid: Global.PlayerCardCreator.CreateCard
+  commentId: M:Global.PlayerCardCreator.CreateCard
+  id: CreateCard
+  parent: Global.PlayerCardCreator
+  langs:
+  - csharp
+  - vb
+  name: CreateCard()
+  nameWithType: PlayerCardCreator.CreateCard()
+  fullName: PlayerCardCreator.CreateCard()
+  type: Method
+  source:
+    id: CreateCard
+    path: ''
+    startLine: 1132
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public PlayerJoinCard CreateCard()
+    return:
+      type: Global.PlayerJoinCard
+    content.vb: Public Function CreateCard() As PlayerJoinCard
+  overload: Global.PlayerCardCreator.CreateCard*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.PlayerCardCreator
+  commentId: T:Global.PlayerCardCreator
+  name: PlayerCardCreator
+  nameWithType: PlayerCardCreator
+  fullName: PlayerCardCreator
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.PlayerCardCreator.CreateCard*
+  commentId: Overload:Global.PlayerCardCreator.CreateCard
+  name: CreateCard
+  nameWithType: PlayerCardCreator.CreateCard
+  fullName: PlayerCardCreator.CreateCard
+- uid: Global.PlayerJoinCard
+  commentId: T:Global.PlayerJoinCard
+  name: PlayerJoinCard
+  nameWithType: PlayerJoinCard
+  fullName: PlayerJoinCard

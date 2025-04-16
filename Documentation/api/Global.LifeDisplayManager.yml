@@ -1,0 +1,252 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.LifeDisplayManager
+  commentId: T:Global.LifeDisplayManager
+  id: LifeDisplayManager
+  parent: Global
+  children:
+  - Global.LifeDisplayManager.HideLifeDisplay
+  - Global.LifeDisplayManager.lifeDisplays
+  - Global.LifeDisplayManager.lifePrefab
+  - Global.LifeDisplayManager.playerPrefab
+  - Global.LifeDisplayManager.players
+  langs:
+  - csharp
+  - vb
+  name: LifeDisplayManager
+  nameWithType: LifeDisplayManager
+  fullName: LifeDisplayManager
+  type: Class
+  source:
+    id: LifeDisplayManager
+    path: ''
+    startLine: 1833
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class LifeDisplayManager : MonoBehaviour'
+    content.vb: Public Class LifeDisplayManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.LifeDisplayManager.players
+  commentId: F:Global.LifeDisplayManager.players
+  id: players
+  parent: Global.LifeDisplayManager
+  langs:
+  - csharp
+  - vb
+  name: players
+  nameWithType: LifeDisplayManager.players
+  fullName: LifeDisplayManager.players
+  type: Field
+  source:
+    id: players
+    path: ''
+    startLine: 1835
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject players
+    return:
+      type: Global.GameObject
+    content.vb: Public players As GameObject
+- uid: Global.LifeDisplayManager.playerPrefab
+  commentId: F:Global.LifeDisplayManager.playerPrefab
+  id: playerPrefab
+  parent: Global.LifeDisplayManager
+  langs:
+  - csharp
+  - vb
+  name: playerPrefab
+  nameWithType: LifeDisplayManager.playerPrefab
+  fullName: LifeDisplayManager.playerPrefab
+  type: Field
+  source:
+    id: playerPrefab
+    path: ''
+    startLine: 1836
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject playerPrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public playerPrefab As GameObject
+- uid: Global.LifeDisplayManager.lifePrefab
+  commentId: F:Global.LifeDisplayManager.lifePrefab
+  id: lifePrefab
+  parent: Global.LifeDisplayManager
+  langs:
+  - csharp
+  - vb
+  name: lifePrefab
+  nameWithType: LifeDisplayManager.lifePrefab
+  fullName: LifeDisplayManager.lifePrefab
+  type: Field
+  source:
+    id: lifePrefab
+    path: ''
+    startLine: 1837
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject lifePrefab
+    return:
+      type: Global.GameObject
+    content.vb: Public lifePrefab As GameObject
+- uid: Global.LifeDisplayManager.lifeDisplays
+  commentId: F:Global.LifeDisplayManager.lifeDisplays
+  id: lifeDisplays
+  parent: Global.LifeDisplayManager
+  langs:
+  - csharp
+  - vb
+  name: lifeDisplays
+  nameWithType: LifeDisplayManager.lifeDisplays
+  fullName: LifeDisplayManager.lifeDisplays
+  type: Field
+  source:
+    id: lifeDisplays
+    path: ''
+    startLine: 1838
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Dictionary<Damageable, List<GameObject>> lifeDisplays
+    return:
+      type: Global.Dictionary{Damageable,List{GameObject}}
+    content.vb: Public lifeDisplays As Dictionary(Of Damageable, List(Of GameObject))
+- uid: Global.LifeDisplayManager.HideLifeDisplay
+  commentId: M:Global.LifeDisplayManager.HideLifeDisplay
+  id: HideLifeDisplay
+  parent: Global.LifeDisplayManager
+  langs:
+  - csharp
+  - vb
+  name: HideLifeDisplay()
+  nameWithType: LifeDisplayManager.HideLifeDisplay()
+  fullName: LifeDisplayManager.HideLifeDisplay()
+  type: Method
+  source:
+    id: HideLifeDisplay
+    path: ''
+    startLine: 1870
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void HideLifeDisplay()
+    content.vb: Public Sub HideLifeDisplay()
+  overload: Global.LifeDisplayManager.HideLifeDisplay*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.Dictionary{Damageable,List{GameObject}}
+  commentId: '!:Global.Dictionary{Damageable,List{GameObject}}'
+  definition: Global.Dictionary`2
+  name: Dictionary<Damageable, List<GameObject>>
+  nameWithType: Dictionary<Damageable, List<GameObject>>
+  fullName: Dictionary<Damageable, List<GameObject>>
+  nameWithType.vb: Dictionary(Of Damageable, List(Of GameObject))
+  fullName.vb: Dictionary(Of Damageable, List(Of GameObject))
+  name.vb: Dictionary(Of Damageable, List(Of GameObject))
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - uid: Global.Damageable
+    name: Damageable
+  - name: ','
+  - name: " "
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.Damageable
+    name: Damageable
+  - name: ','
+  - name: " "
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+  - name: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: ','
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.LifeDisplayManager.HideLifeDisplay*
+  commentId: Overload:Global.LifeDisplayManager.HideLifeDisplay
+  name: HideLifeDisplay
+  nameWithType: LifeDisplayManager.HideLifeDisplay
+  fullName: LifeDisplayManager.HideLifeDisplay

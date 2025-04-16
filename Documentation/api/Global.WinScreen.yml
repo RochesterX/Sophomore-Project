@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.WinScreen
+  commentId: T:Global.WinScreen
+  id: WinScreen
+  parent: Global
+  children:
+  - Global.WinScreen.Instance
+  - Global.WinScreen.playerTexts
+  - Global.WinScreen.ShowWinScreen(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: WinScreen
+  nameWithType: WinScreen
+  fullName: WinScreen
+  type: Class
+  source:
+    id: WinScreen
+    path: ''
+    startLine: 1067
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class WinScreen : MonoBehaviour'
+    content.vb: Public Class WinScreen Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.WinScreen.Instance
+  commentId: F:Global.WinScreen.Instance
+  id: Instance
+  parent: Global.WinScreen
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: WinScreen.Instance
+  fullName: WinScreen.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 1069
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static WinScreen Instance
+    return:
+      type: Global.WinScreen
+    content.vb: Public Shared Instance As WinScreen
+- uid: Global.WinScreen.playerTexts
+  commentId: F:Global.WinScreen.playerTexts
+  id: playerTexts
+  parent: Global.WinScreen
+  langs:
+  - csharp
+  - vb
+  name: playerTexts
+  nameWithType: WinScreen.playerTexts
+  fullName: WinScreen.playerTexts
+  type: Field
+  source:
+    id: playerTexts
+    path: ''
+    startLine: 1070
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<TextMeshProUGUI> playerTexts
+    return:
+      type: Global.List{TextMeshProUGUI}
+    content.vb: Public playerTexts As List(Of TextMeshProUGUI)
+- uid: Global.WinScreen.ShowWinScreen(System.Int32)
+  commentId: M:Global.WinScreen.ShowWinScreen(System.Int32)
+  id: ShowWinScreen(System.Int32)
+  parent: Global.WinScreen
+  langs:
+  - csharp
+  - vb
+  name: ShowWinScreen(int)
+  nameWithType: WinScreen.ShowWinScreen(int)
+  fullName: WinScreen.ShowWinScreen(int)
+  type: Method
+  source:
+    id: ShowWinScreen
+    path: ''
+    startLine: 1084
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void ShowWinScreen(int player)
+    parameters:
+    - id: player
+      type: System.Int32
+    content.vb: Public Sub ShowWinScreen(player As Integer)
+  overload: Global.WinScreen.ShowWinScreen*
+  nameWithType.vb: WinScreen.ShowWinScreen(Integer)
+  fullName.vb: WinScreen.ShowWinScreen(Integer)
+  name.vb: ShowWinScreen(Integer)
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.WinScreen
+  commentId: T:Global.WinScreen
+  name: WinScreen
+  nameWithType: WinScreen
+  fullName: WinScreen
+- uid: Global.List{TextMeshProUGUI}
+  commentId: '!:Global.List{TextMeshProUGUI}'
+  definition: Global.List`1
+  name: List<TextMeshProUGUI>
+  nameWithType: List<TextMeshProUGUI>
+  fullName: List<TextMeshProUGUI>
+  nameWithType.vb: List(Of TextMeshProUGUI)
+  fullName.vb: List(Of TextMeshProUGUI)
+  name.vb: List(Of TextMeshProUGUI)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.TextMeshProUGUI
+    name: TextMeshProUGUI
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.TextMeshProUGUI
+    name: TextMeshProUGUI
+    isExternal: true
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.WinScreen.ShowWinScreen*
+  commentId: Overload:Global.WinScreen.ShowWinScreen
+  name: ShowWinScreen
+  nameWithType: WinScreen.ShowWinScreen
+  fullName: WinScreen.ShowWinScreen
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

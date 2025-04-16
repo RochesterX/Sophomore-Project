@@ -1,0 +1,415 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.Damageable
+  commentId: T:Global.Damageable
+  id: Damageable
+  parent: Global
+  children:
+  - Global.Damageable.damage
+  - Global.Damageable.Damage(System.Single)
+  - Global.Damageable.damageSelfDebug
+  - Global.Damageable.dying
+  - Global.Damageable.force
+  - Global.Damageable.HandleDeath
+  - Global.Damageable.lives
+  - Global.Damageable.maxDamage
+  - Global.Damageable.OnPlayerPunched
+  - Global.Damageable.ResetDamage
+  - Global.Damageable.Respawn
+  langs:
+  - csharp
+  - vb
+  name: Damageable
+  nameWithType: Damageable
+  fullName: Damageable
+  type: Class
+  source:
+    id: Damageable
+    path: ''
+    startLine: 2050
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class Damageable : MonoBehaviour'
+    content.vb: Public Class Damageable Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.Damageable.force
+  commentId: F:Global.Damageable.force
+  id: force
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: force
+  nameWithType: Damageable.force
+  fullName: Damageable.force
+  type: Field
+  source:
+    id: force
+    path: ''
+    startLine: 2055
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float force
+    return:
+      type: System.Single
+    content.vb: Public force As Single
+- uid: Global.Damageable.damage
+  commentId: F:Global.Damageable.damage
+  id: damage
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: damage
+  nameWithType: Damageable.damage
+  fullName: Damageable.damage
+  type: Field
+  source:
+    id: damage
+    path: ''
+    startLine: 2056
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float damage
+    return:
+      type: System.Single
+    content.vb: Public damage As Single
+- uid: Global.Damageable.maxDamage
+  commentId: F:Global.Damageable.maxDamage
+  id: maxDamage
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: maxDamage
+  nameWithType: Damageable.maxDamage
+  fullName: Damageable.maxDamage
+  type: Field
+  source:
+    id: maxDamage
+    path: ''
+    startLine: 2057
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float maxDamage
+    return:
+      type: System.Single
+    content.vb: Public maxDamage As Single
+- uid: Global.Damageable.lives
+  commentId: F:Global.Damageable.lives
+  id: lives
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: lives
+  nameWithType: Damageable.lives
+  fullName: Damageable.lives
+  type: Field
+  source:
+    id: lives
+    path: ''
+    startLine: 2058
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public int lives
+    return:
+      type: System.Int32
+    content.vb: Public lives As Integer
+- uid: Global.Damageable.damageSelfDebug
+  commentId: F:Global.Damageable.damageSelfDebug
+  id: damageSelfDebug
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: damageSelfDebug
+  nameWithType: Damageable.damageSelfDebug
+  fullName: Damageable.damageSelfDebug
+  type: Field
+  source:
+    id: damageSelfDebug
+    path: ''
+    startLine: 2060
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool damageSelfDebug
+    return:
+      type: System.Boolean
+    content.vb: Public damageSelfDebug As Boolean
+- uid: Global.Damageable.dying
+  commentId: F:Global.Damageable.dying
+  id: dying
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: dying
+  nameWithType: Damageable.dying
+  fullName: Damageable.dying
+  type: Field
+  source:
+    id: dying
+    path: ''
+    startLine: 2061
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool dying
+    return:
+      type: System.Boolean
+    content.vb: Public dying As Boolean
+- uid: Global.Damageable.OnPlayerPunched
+  commentId: E:Global.Damageable.OnPlayerPunched
+  id: OnPlayerPunched
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerPunched
+  nameWithType: Damageable.OnPlayerPunched
+  fullName: Damageable.OnPlayerPunched
+  type: Event
+  source:
+    id: OnPlayerPunched
+    path: ''
+    startLine: 2062
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public event Action<GameObject> OnPlayerPunched
+    return:
+      type: System.Action{GameObject}
+    content.vb: Public Event OnPlayerPunched As Action(Of GameObject)
+- uid: Global.Damageable.Damage(System.Single)
+  commentId: M:Global.Damageable.Damage(System.Single)
+  id: Damage(System.Single)
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: Damage(float)
+  nameWithType: Damageable.Damage(float)
+  fullName: Damageable.Damage(float)
+  type: Method
+  source:
+    id: Damage
+    path: ''
+    startLine: 2123
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Damage(float damage)
+    parameters:
+    - id: damage
+      type: System.Single
+    content.vb: Public Sub Damage(damage As Single)
+  overload: Global.Damageable.Damage*
+  nameWithType.vb: Damageable.Damage(Single)
+  fullName.vb: Damageable.Damage(Single)
+  name.vb: Damage(Single)
+- uid: Global.Damageable.HandleDeath
+  commentId: M:Global.Damageable.HandleDeath
+  id: HandleDeath
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: HandleDeath()
+  nameWithType: Damageable.HandleDeath()
+  fullName: Damageable.HandleDeath()
+  type: Method
+  source:
+    id: HandleDeath
+    path: ''
+    startLine: 2162
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void HandleDeath()
+    content.vb: Public Sub HandleDeath()
+  overload: Global.Damageable.HandleDeath*
+- uid: Global.Damageable.Respawn
+  commentId: M:Global.Damageable.Respawn
+  id: Respawn
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: Respawn()
+  nameWithType: Damageable.Respawn()
+  fullName: Damageable.Respawn()
+  type: Method
+  source:
+    id: Respawn
+    path: ''
+    startLine: 2169
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Respawn()
+    content.vb: Public Sub Respawn()
+  overload: Global.Damageable.Respawn*
+- uid: Global.Damageable.ResetDamage
+  commentId: M:Global.Damageable.ResetDamage
+  id: ResetDamage
+  parent: Global.Damageable
+  langs:
+  - csharp
+  - vb
+  name: ResetDamage()
+  nameWithType: Damageable.ResetDamage()
+  fullName: Damageable.ResetDamage()
+  type: Method
+  source:
+    id: ResetDamage
+    path: ''
+    startLine: 2183
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void ResetDamage()
+    content.vb: Public Sub ResetDamage()
+  overload: Global.Damageable.ResetDamage*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Action{GameObject}
+  commentId: T:System.Action{GameObject}
+  parent: System
+  definition: System.Action`1
+  name: Action<GameObject>
+  nameWithType: Action<GameObject>
+  fullName: System.Action<GameObject>
+  nameWithType.vb: Action(Of GameObject)
+  fullName.vb: System.Action(Of GameObject)
+  name.vb: Action(Of GameObject)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.GameObject
+    name: GameObject
+    isExternal: true
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Global.Damageable.Damage*
+  commentId: Overload:Global.Damageable.Damage
+  name: Damage
+  nameWithType: Damageable.Damage
+  fullName: Damageable.Damage
+- uid: Global.Damageable.HandleDeath*
+  commentId: Overload:Global.Damageable.HandleDeath
+  name: HandleDeath
+  nameWithType: Damageable.HandleDeath
+  fullName: Damageable.HandleDeath
+- uid: Global.Damageable.Respawn*
+  commentId: Overload:Global.Damageable.Respawn
+  name: Respawn
+  nameWithType: Damageable.Respawn
+  fullName: Damageable.Respawn
+- uid: Global.Damageable.ResetDamage*
+  commentId: Overload:Global.Damageable.ResetDamage
+  name: ResetDamage
+  nameWithType: Damageable.ResetDamage
+  fullName: Damageable.ResetDamage

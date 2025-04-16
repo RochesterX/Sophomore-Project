@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.RespawnOnTriggerEnter
+  commentId: T:Global.RespawnOnTriggerEnter
+  id: RespawnOnTriggerEnter
+  parent: Global
+  children:
+  - Global.RespawnOnTriggerEnter.respawnTag
+  - Global.RespawnOnTriggerEnter.spawnPoint
+  - Global.RespawnOnTriggerEnter.spawnPointIsInitialPosition
+  langs:
+  - csharp
+  - vb
+  name: RespawnOnTriggerEnter
+  nameWithType: RespawnOnTriggerEnter
+  fullName: RespawnOnTriggerEnter
+  type: Class
+  source:
+    id: RespawnOnTriggerEnter
+    path: ''
+    startLine: 1784
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class RespawnOnTriggerEnter : MonoBehaviour'
+    content.vb: Public Class RespawnOnTriggerEnter Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.RespawnOnTriggerEnter.spawnPoint
+  commentId: F:Global.RespawnOnTriggerEnter.spawnPoint
+  id: spawnPoint
+  parent: Global.RespawnOnTriggerEnter
+  langs:
+  - csharp
+  - vb
+  name: spawnPoint
+  nameWithType: RespawnOnTriggerEnter.spawnPoint
+  fullName: RespawnOnTriggerEnter.spawnPoint
+  type: Field
+  source:
+    id: spawnPoint
+    path: ''
+    startLine: 1786
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public Vector2 spawnPoint
+    return:
+      type: Global.Vector2
+    content.vb: Public spawnPoint As Vector2
+- uid: Global.RespawnOnTriggerEnter.spawnPointIsInitialPosition
+  commentId: F:Global.RespawnOnTriggerEnter.spawnPointIsInitialPosition
+  id: spawnPointIsInitialPosition
+  parent: Global.RespawnOnTriggerEnter
+  langs:
+  - csharp
+  - vb
+  name: spawnPointIsInitialPosition
+  nameWithType: RespawnOnTriggerEnter.spawnPointIsInitialPosition
+  fullName: RespawnOnTriggerEnter.spawnPointIsInitialPosition
+  type: Field
+  source:
+    id: spawnPointIsInitialPosition
+    path: ''
+    startLine: 1787
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool spawnPointIsInitialPosition
+    return:
+      type: System.Boolean
+    content.vb: Public spawnPointIsInitialPosition As Boolean
+- uid: Global.RespawnOnTriggerEnter.respawnTag
+  commentId: F:Global.RespawnOnTriggerEnter.respawnTag
+  id: respawnTag
+  parent: Global.RespawnOnTriggerEnter
+  langs:
+  - csharp
+  - vb
+  name: respawnTag
+  nameWithType: RespawnOnTriggerEnter.respawnTag
+  fullName: RespawnOnTriggerEnter.respawnTag
+  type: Field
+  source:
+    id: respawnTag
+    path: ''
+    startLine: 1788
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public string respawnTag
+    return:
+      type: System.String
+    content.vb: Public respawnTag As String
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

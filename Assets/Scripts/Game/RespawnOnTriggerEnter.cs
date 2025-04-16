@@ -20,6 +20,7 @@ public class RespawnOnTriggerEnter : MonoBehaviour
         {
             if (TryGetComponent(out Damageable damageable))
             {
+                print("Voided out " + other.name);
                 damageable.Damage(9999f);
             }
         }

@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.HatRespawn
+  commentId: T:Global.HatRespawn
+  id: HatRespawn
+  parent: Global
+  children:
+  - Global.HatRespawn.canBePickedUp
+  - Global.HatRespawn.Interact
+  - Global.HatRespawn.OnHatDropped
+  - Global.HatRespawn.respawnTime
+  langs:
+  - csharp
+  - vb
+  name: HatRespawn
+  nameWithType: HatRespawn
+  fullName: HatRespawn
+  type: Class
+  source:
+    id: HatRespawn
+    path: ''
+    startLine: 1727
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class HatRespawn : MonoBehaviour'
+    content.vb: Public Class HatRespawn Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.HatRespawn.respawnTime
+  commentId: F:Global.HatRespawn.respawnTime
+  id: respawnTime
+  parent: Global.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: respawnTime
+  nameWithType: HatRespawn.respawnTime
+  fullName: HatRespawn.respawnTime
+  type: Field
+  source:
+    id: respawnTime
+    path: ''
+    startLine: 1730
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public const float respawnTime = 10
+    return:
+      type: System.Single
+    content.vb: Public Const respawnTime As Single = 10
+- uid: Global.HatRespawn.canBePickedUp
+  commentId: F:Global.HatRespawn.canBePickedUp
+  id: canBePickedUp
+  parent: Global.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: canBePickedUp
+  nameWithType: HatRespawn.canBePickedUp
+  fullName: HatRespawn.canBePickedUp
+  type: Field
+  source:
+    id: canBePickedUp
+    path: ''
+    startLine: 1733
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static bool canBePickedUp
+    return:
+      type: System.Boolean
+    content.vb: Public Shared canBePickedUp As Boolean
+- uid: Global.HatRespawn.Interact
+  commentId: M:Global.HatRespawn.Interact
+  id: Interact
+  parent: Global.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: Interact()
+  nameWithType: HatRespawn.Interact()
+  fullName: HatRespawn.Interact()
+  type: Method
+  source:
+    id: Interact
+    path: ''
+    startLine: 1759
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Interact()
+    content.vb: Public Sub Interact()
+  overload: Global.HatRespawn.Interact*
+- uid: Global.HatRespawn.OnHatDropped
+  commentId: M:Global.HatRespawn.OnHatDropped
+  id: OnHatDropped
+  parent: Global.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: OnHatDropped()
+  nameWithType: HatRespawn.OnHatDropped()
+  fullName: HatRespawn.OnHatDropped()
+  type: Method
+  source:
+    id: OnHatDropped
+    path: ''
+    startLine: 1765
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnHatDropped()
+    content.vb: Public Sub OnHatDropped()
+  overload: Global.HatRespawn.OnHatDropped*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Global.HatRespawn.Interact*
+  commentId: Overload:Global.HatRespawn.Interact
+  name: Interact
+  nameWithType: HatRespawn.Interact
+  fullName: HatRespawn.Interact
+- uid: Global.HatRespawn.OnHatDropped*
+  commentId: Overload:Global.HatRespawn.OnHatDropped
+  name: OnHatDropped
+  nameWithType: HatRespawn.OnHatDropped
+  fullName: HatRespawn.OnHatDropped

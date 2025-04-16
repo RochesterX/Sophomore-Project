@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.GameManagerHelper
+  commentId: T:Global.GameManagerHelper
+  id: GameManagerHelper
+  parent: Global
+  children:
+  - Global.GameManagerHelper.addHatPosition
+  - Global.GameManagerHelper.addSpawnPosition
+  langs:
+  - csharp
+  - vb
+  name: GameManagerHelper
+  nameWithType: GameManagerHelper
+  fullName: GameManagerHelper
+  type: Class
+  source:
+    id: GameManagerHelper
+    path: ''
+    startLine: 1223
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class GameManagerHelper : MonoBehaviour'
+    content.vb: Public Class GameManagerHelper Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.GameManagerHelper.addHatPosition
+  commentId: F:Global.GameManagerHelper.addHatPosition
+  id: addHatPosition
+  parent: Global.GameManagerHelper
+  langs:
+  - csharp
+  - vb
+  name: addHatPosition
+  nameWithType: GameManagerHelper.addHatPosition
+  fullName: GameManagerHelper.addHatPosition
+  type: Field
+  source:
+    id: addHatPosition
+    path: ''
+    startLine: 1226
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool addHatPosition
+    return:
+      type: System.Boolean
+    content.vb: Public addHatPosition As Boolean
+- uid: Global.GameManagerHelper.addSpawnPosition
+  commentId: F:Global.GameManagerHelper.addSpawnPosition
+  id: addSpawnPosition
+  parent: Global.GameManagerHelper
+  langs:
+  - csharp
+  - vb
+  name: addSpawnPosition
+  nameWithType: GameManagerHelper.addSpawnPosition
+  fullName: GameManagerHelper.addSpawnPosition
+  type: Field
+  source:
+    id: addSpawnPosition
+    path: ''
+    startLine: 1227
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public bool addSpawnPosition
+    return:
+      type: System.Boolean
+    content.vb: Public addSpawnPosition As Boolean
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

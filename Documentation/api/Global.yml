@@ -1,0 +1,369 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global
+  id: Global
+  children:
+  - Global.AnimationPlayer
+  - Global.AnimationPlayer.AnimationState
+  - Global.AudioManager
+  - Global.Block
+  - Global.Damageable
+  - Global.DayNightCycle
+  - Global.EventSystemizer
+  - Global.FallPlatform
+  - Global.GameManager
+  - Global.GameManager.GameEvent
+  - Global.GameManager.GameMode
+  - Global.GameManagerHelper
+  - Global.GameTimer
+  - Global.HatRespawn
+  - Global.HealthBarManager
+  - Global.HubManager
+  - Global.HubPolygonCreator
+  - Global.InfiniteScroll
+  - Global.LeaderboardManager
+  - Global.LifeDisplayManager
+  - Global.MapSelect
+  - Global.ModeSelect
+  - Global.MovingPlatform
+  - Global.MusicManager
+  - Global.ObjectVisibility
+  - Global.ObstacleCourse
+  - Global.ParallaxBackground
+  - Global.ParallaxCamera
+  - Global.ParallaxCamera.ParallaxCameraDelegate
+  - Global.ParallaxLayer
+  - Global.PlayerCameraMovement
+  - Global.PlayerCardCreator
+  - Global.PlayerJoinCard
+  - Global.PlayerManager
+  - Global.PlayerMovement
+  - Global.Playlist
+  - Global.PongBallBehavior
+  - Global.PongPaddleBehavior
+  - Global.PongScorekeeper
+  - Global.Punch
+  - Global.RespawnOnTriggerEnter
+  - Global.SoundEffect
+  - Global.TeleportPlatform
+  - Global.TerribleHealthBarScript
+  - Global.TrackLayer
+  - Global.TrackLayer.EnableTrigger
+  - Global.Trevor
+  - Global.UseItem
+  - Global.WinScreen
+  langs:
+  - csharp
+  - vb
+  name: ''
+  nameWithType: ''
+  fullName: ''
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Global.ParallaxLayer
+  commentId: T:Global.ParallaxLayer
+  name: ParallaxLayer
+  nameWithType: ParallaxLayer
+  fullName: ParallaxLayer
+- uid: Global.DayNightCycle
+  commentId: T:Global.DayNightCycle
+  name: DayNightCycle
+  nameWithType: DayNightCycle
+  fullName: DayNightCycle
+- uid: Global.ParallaxCamera
+  commentId: T:Global.ParallaxCamera
+  name: ParallaxCamera
+  nameWithType: ParallaxCamera
+  fullName: ParallaxCamera
+- uid: Global.ParallaxCamera.ParallaxCameraDelegate
+  commentId: T:Global.ParallaxCamera.ParallaxCameraDelegate
+  name: ParallaxCamera.ParallaxCameraDelegate
+  nameWithType: ParallaxCamera.ParallaxCameraDelegate
+  fullName: ParallaxCamera.ParallaxCameraDelegate
+  spec.csharp:
+  - uid: Global.ParallaxCamera
+    name: ParallaxCamera
+  - name: .
+  - uid: Global.ParallaxCamera.ParallaxCameraDelegate
+    name: ParallaxCameraDelegate
+  spec.vb:
+  - uid: Global.ParallaxCamera
+    name: ParallaxCamera
+  - name: .
+  - uid: Global.ParallaxCamera.ParallaxCameraDelegate
+    name: ParallaxCameraDelegate
+- uid: Global.ParallaxBackground
+  commentId: T:Global.ParallaxBackground
+  name: ParallaxBackground
+  nameWithType: ParallaxBackground
+  fullName: ParallaxBackground
+- uid: Global.PongScorekeeper
+  commentId: T:Global.PongScorekeeper
+  name: PongScorekeeper
+  nameWithType: PongScorekeeper
+  fullName: PongScorekeeper
+- uid: Global.PongBallBehavior
+  commentId: T:Global.PongBallBehavior
+  name: PongBallBehavior
+  nameWithType: PongBallBehavior
+  fullName: PongBallBehavior
+- uid: Global.PongPaddleBehavior
+  commentId: T:Global.PongPaddleBehavior
+  name: PongPaddleBehavior
+  nameWithType: PongPaddleBehavior
+  fullName: PongPaddleBehavior
+- uid: Global.HubPolygonCreator
+  commentId: T:Global.HubPolygonCreator
+  name: HubPolygonCreator
+  nameWithType: HubPolygonCreator
+  fullName: HubPolygonCreator
+- uid: Global.HubManager
+  commentId: T:Global.HubManager
+  name: HubManager
+  nameWithType: HubManager
+  fullName: HubManager
+- uid: Global.ObstacleCourse
+  commentId: T:Global.ObstacleCourse
+  name: ObstacleCourse
+  nameWithType: ObstacleCourse
+  fullName: ObstacleCourse
+- uid: Global.AudioManager
+  commentId: T:Global.AudioManager
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: AudioManager
+- uid: Global.SoundEffect
+  commentId: T:Global.SoundEffect
+  name: SoundEffect
+  nameWithType: SoundEffect
+  fullName: SoundEffect
+- uid: Global.MusicManager
+  commentId: T:Global.MusicManager
+  name: MusicManager
+  nameWithType: MusicManager
+  fullName: MusicManager
+- uid: Global.TrackLayer
+  commentId: T:Global.TrackLayer
+  name: TrackLayer
+  nameWithType: TrackLayer
+  fullName: TrackLayer
+- uid: Global.TrackLayer.EnableTrigger
+  commentId: T:Global.TrackLayer.EnableTrigger
+  name: TrackLayer.EnableTrigger
+  nameWithType: TrackLayer.EnableTrigger
+  fullName: TrackLayer.EnableTrigger
+  spec.csharp:
+  - uid: Global.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Global.TrackLayer.EnableTrigger
+    name: EnableTrigger
+  spec.vb:
+  - uid: Global.TrackLayer
+    name: TrackLayer
+  - name: .
+  - uid: Global.TrackLayer.EnableTrigger
+    name: EnableTrigger
+- uid: Global.Playlist
+  commentId: T:Global.Playlist
+  name: Playlist
+  nameWithType: Playlist
+  fullName: Playlist
+- uid: Global.EventSystemizer
+  commentId: T:Global.EventSystemizer
+  name: EventSystemizer
+  nameWithType: EventSystemizer
+  fullName: EventSystemizer
+- uid: Global.ModeSelect
+  commentId: T:Global.ModeSelect
+  name: ModeSelect
+  nameWithType: ModeSelect
+  fullName: ModeSelect
+- uid: Global.WinScreen
+  commentId: T:Global.WinScreen
+  name: WinScreen
+  nameWithType: WinScreen
+  fullName: WinScreen
+- uid: Global.PlayerJoinCard
+  commentId: T:Global.PlayerJoinCard
+  name: PlayerJoinCard
+  nameWithType: PlayerJoinCard
+  fullName: PlayerJoinCard
+- uid: Global.PlayerCardCreator
+  commentId: T:Global.PlayerCardCreator
+  name: PlayerCardCreator
+  nameWithType: PlayerCardCreator
+  fullName: PlayerCardCreator
+- uid: Global.MovingPlatform
+  commentId: T:Global.MovingPlatform
+  name: MovingPlatform
+  nameWithType: MovingPlatform
+  fullName: MovingPlatform
+- uid: Global.ObjectVisibility
+  commentId: T:Global.ObjectVisibility
+  name: ObjectVisibility
+  nameWithType: ObjectVisibility
+  fullName: ObjectVisibility
+- uid: Global.InfiniteScroll
+  commentId: T:Global.InfiniteScroll
+  name: InfiniteScroll
+  nameWithType: InfiniteScroll
+  fullName: InfiniteScroll
+- uid: Global.GameManagerHelper
+  commentId: T:Global.GameManagerHelper
+  name: GameManagerHelper
+  nameWithType: GameManagerHelper
+  fullName: GameManagerHelper
+- uid: Global.GameTimer
+  commentId: T:Global.GameTimer
+  name: GameTimer
+  nameWithType: GameTimer
+  fullName: GameTimer
+- uid: Global.HealthBarManager
+  commentId: T:Global.HealthBarManager
+  name: HealthBarManager
+  nameWithType: HealthBarManager
+  fullName: HealthBarManager
+- uid: Global.GameManager
+  commentId: T:Global.GameManager
+  name: GameManager
+  nameWithType: GameManager
+  fullName: GameManager
+- uid: Global.GameManager.GameEvent
+  commentId: T:Global.GameManager.GameEvent
+  name: GameManager.GameEvent
+  nameWithType: GameManager.GameEvent
+  fullName: GameManager.GameEvent
+  spec.csharp:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameEvent
+    name: GameEvent
+  spec.vb:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameEvent
+    name: GameEvent
+- uid: Global.GameManager.GameMode
+  commentId: T:Global.GameManager.GameMode
+  name: GameManager.GameMode
+  nameWithType: GameManager.GameMode
+  fullName: GameManager.GameMode
+  spec.csharp:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameMode
+    name: GameMode
+  spec.vb:
+  - uid: Global.GameManager
+    name: GameManager
+  - name: .
+  - uid: Global.GameManager.GameMode
+    name: GameMode
+- uid: Global.FallPlatform
+  commentId: T:Global.FallPlatform
+  name: FallPlatform
+  nameWithType: FallPlatform
+  fullName: FallPlatform
+- uid: Global.HatRespawn
+  commentId: T:Global.HatRespawn
+  name: HatRespawn
+  nameWithType: HatRespawn
+  fullName: HatRespawn
+- uid: Global.RespawnOnTriggerEnter
+  commentId: T:Global.RespawnOnTriggerEnter
+  name: RespawnOnTriggerEnter
+  nameWithType: RespawnOnTriggerEnter
+  fullName: RespawnOnTriggerEnter
+- uid: Global.MapSelect
+  commentId: T:Global.MapSelect
+  name: MapSelect
+  nameWithType: MapSelect
+  fullName: MapSelect
+- uid: Global.LifeDisplayManager
+  commentId: T:Global.LifeDisplayManager
+  name: LifeDisplayManager
+  nameWithType: LifeDisplayManager
+  fullName: LifeDisplayManager
+- uid: Global.TerribleHealthBarScript
+  commentId: T:Global.TerribleHealthBarScript
+  name: TerribleHealthBarScript
+  nameWithType: TerribleHealthBarScript
+  fullName: TerribleHealthBarScript
+- uid: Global.LeaderboardManager
+  commentId: T:Global.LeaderboardManager
+  name: LeaderboardManager
+  nameWithType: LeaderboardManager
+  fullName: LeaderboardManager
+- uid: Global.Damageable
+  commentId: T:Global.Damageable
+  name: Damageable
+  nameWithType: Damageable
+  fullName: Damageable
+- uid: Global.Punch
+  commentId: T:Global.Punch
+  name: Punch
+  nameWithType: Punch
+  fullName: Punch
+- uid: Global.TeleportPlatform
+  commentId: T:Global.TeleportPlatform
+  name: TeleportPlatform
+  nameWithType: TeleportPlatform
+  fullName: TeleportPlatform
+- uid: Global.PlayerManager
+  commentId: T:Global.PlayerManager
+  name: PlayerManager
+  nameWithType: PlayerManager
+  fullName: PlayerManager
+- uid: Global.AnimationPlayer
+  commentId: T:Global.AnimationPlayer
+  name: AnimationPlayer
+  nameWithType: AnimationPlayer
+  fullName: AnimationPlayer
+- uid: Global.AnimationPlayer.AnimationState
+  commentId: T:Global.AnimationPlayer.AnimationState
+  name: AnimationPlayer.AnimationState
+  nameWithType: AnimationPlayer.AnimationState
+  fullName: AnimationPlayer.AnimationState
+  spec.csharp:
+  - uid: Global.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Global.AnimationPlayer.AnimationState
+    name: AnimationState
+  spec.vb:
+  - uid: Global.AnimationPlayer
+    name: AnimationPlayer
+  - name: .
+  - uid: Global.AnimationPlayer.AnimationState
+    name: AnimationState
+- uid: Global.Block
+  commentId: T:Global.Block
+  name: Block
+  nameWithType: Block
+  fullName: Block
+- uid: Global.PlayerMovement
+  commentId: T:Global.PlayerMovement
+  name: PlayerMovement
+  nameWithType: PlayerMovement
+  fullName: PlayerMovement
+- uid: Global.UseItem
+  commentId: T:Global.UseItem
+  name: UseItem
+  nameWithType: UseItem
+  fullName: UseItem
+- uid: Global.PlayerCameraMovement
+  commentId: T:Global.PlayerCameraMovement
+  name: PlayerCameraMovement
+  nameWithType: PlayerCameraMovement
+  fullName: PlayerCameraMovement
+- uid: Global.Trevor
+  commentId: T:Global.Trevor
+  name: Trevor
+  nameWithType: Trevor
+  fullName: Trevor

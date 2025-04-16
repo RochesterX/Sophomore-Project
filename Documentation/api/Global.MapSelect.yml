@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.MapSelect
+  commentId: T:Global.MapSelect
+  id: MapSelect
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MapSelect
+  nameWithType: MapSelect
+  fullName: MapSelect
+  type: Class
+  source:
+    id: MapSelect
+    path: ''
+    startLine: 1813
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class MapSelect : MonoBehaviour'
+    content.vb: Public Class MapSelect Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -77,7 +77,7 @@ public class Damageable : MonoBehaviour
 
     public void Damage(float damage) // Adds damage to player when hit
     {
-        if (GameManager.Instance.gameOver) return; // Prevent damage after game is over
+        //if (GameManager.Instance.gameOver) return; // Prevent damage after game is over
 
         this.damage += damage;
         if (damage >= maxDamage)

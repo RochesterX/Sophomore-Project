@@ -95,16 +95,26 @@ public class PlayerMovement : MonoBehaviour
             animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
         else
         {
-            if (Mathf.Abs(body.linearVelocityX) >= 0.05f)
+            if (Mathf.Abs(virtualAxisX) >= 0.05f)
                 animationPlayer.SetState(GameManager.Instance.gameOver ? AnimationPlayer.AnimationState.Walk : AnimationPlayer.AnimationState.Run);
             else
                 animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
         }
 
-        if (body.linearVelocityX < -0.1f)
-            animationPlayer.backwards = true;
-        else if (body.linearVelocityX > 0.1f)
-            animationPlayer.backwards = false;
+        if (true)
+        {
+            if (virtualAxisX < -0.01f)
+                animationPlayer.backwards = true;
+            else if (virtualAxisX > 0.01f)
+                animationPlayer.backwards = false;
+        }
+        else
+        {
+            if (body.linearVelocityX < -0.1f)
+                animationPlayer.backwards = true;
+            else if (body.linearVelocityX > 0.1f)
+                animationPlayer.backwards = false;
+        }
     }
 
     private void Land() // Stops jumping when player lands

@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ParallaxCamera.ParallaxCameraDelegate
+  commentId: T:Global.ParallaxCamera.ParallaxCameraDelegate
+  id: ParallaxCamera.ParallaxCameraDelegate
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ParallaxCamera.ParallaxCameraDelegate
+  nameWithType: ParallaxCamera.ParallaxCameraDelegate
+  fullName: ParallaxCamera.ParallaxCameraDelegate
+  type: Delegate
+  source:
+    id: ParallaxCameraDelegate
+    path: ''
+    startLine: 122
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public delegate void ParallaxCamera.ParallaxCameraDelegate(float deltaMovement)
+    parameters:
+    - id: deltaMovement
+      type: System.Single
+    content.vb: Public Delegate Sub ParallaxCamera.ParallaxCameraDelegate(deltaMovement As Single)
+references:
+- uid: Global
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

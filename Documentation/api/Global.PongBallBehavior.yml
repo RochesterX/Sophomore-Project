@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PongBallBehavior
+  commentId: T:Global.PongBallBehavior
+  id: PongBallBehavior
+  parent: Global
+  children:
+  - Global.PongBallBehavior.IncreaseSpeed
+  - Global.PongBallBehavior.resetDelay
+  - Global.PongBallBehavior.score
+  - Global.PongBallBehavior.speed
+  - Global.PongBallBehavior.speedIncrement
+  langs:
+  - csharp
+  - vb
+  name: PongBallBehavior
+  nameWithType: PongBallBehavior
+  fullName: PongBallBehavior
+  type: Class
+  source:
+    id: PongBallBehavior
+    path: ''
+    startLine: 208
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PongBallBehavior : MonoBehaviour'
+    content.vb: Public Class PongBallBehavior Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PongBallBehavior.score
+  commentId: F:Global.PongBallBehavior.score
+  id: score
+  parent: Global.PongBallBehavior
+  langs:
+  - csharp
+  - vb
+  name: score
+  nameWithType: PongBallBehavior.score
+  fullName: PongBallBehavior.score
+  type: Field
+  source:
+    id: score
+    path: ''
+    startLine: 210
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static Vector2 score
+    return:
+      type: Global.Vector2
+    content.vb: Public Shared score As Vector2
+- uid: Global.PongBallBehavior.speed
+  commentId: F:Global.PongBallBehavior.speed
+  id: speed
+  parent: Global.PongBallBehavior
+  langs:
+  - csharp
+  - vb
+  name: speed
+  nameWithType: PongBallBehavior.speed
+  fullName: PongBallBehavior.speed
+  type: Field
+  source:
+    id: speed
+    path: ''
+    startLine: 212
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speed
+    return:
+      type: System.Single
+    content.vb: Public speed As Single
+- uid: Global.PongBallBehavior.speedIncrement
+  commentId: F:Global.PongBallBehavior.speedIncrement
+  id: speedIncrement
+  parent: Global.PongBallBehavior
+  langs:
+  - csharp
+  - vb
+  name: speedIncrement
+  nameWithType: PongBallBehavior.speedIncrement
+  fullName: PongBallBehavior.speedIncrement
+  type: Field
+  source:
+    id: speedIncrement
+    path: ''
+    startLine: 213
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float speedIncrement
+    return:
+      type: System.Single
+    content.vb: Public speedIncrement As Single
+- uid: Global.PongBallBehavior.resetDelay
+  commentId: F:Global.PongBallBehavior.resetDelay
+  id: resetDelay
+  parent: Global.PongBallBehavior
+  langs:
+  - csharp
+  - vb
+  name: resetDelay
+  nameWithType: PongBallBehavior.resetDelay
+  fullName: PongBallBehavior.resetDelay
+  type: Field
+  source:
+    id: resetDelay
+    path: ''
+    startLine: 214
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public float resetDelay
+    return:
+      type: System.Single
+    content.vb: Public resetDelay As Single
+- uid: Global.PongBallBehavior.IncreaseSpeed
+  commentId: M:Global.PongBallBehavior.IncreaseSpeed
+  id: IncreaseSpeed
+  parent: Global.PongBallBehavior
+  langs:
+  - csharp
+  - vb
+  name: IncreaseSpeed()
+  nameWithType: PongBallBehavior.IncreaseSpeed()
+  fullName: PongBallBehavior.IncreaseSpeed()
+  type: Method
+  source:
+    id: IncreaseSpeed
+    path: ''
+    startLine: 224
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void IncreaseSpeed()
+    content.vb: Public Sub IncreaseSpeed()
+  overload: Global.PongBallBehavior.IncreaseSpeed*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Global.PongBallBehavior.IncreaseSpeed*
+  commentId: Overload:Global.PongBallBehavior.IncreaseSpeed
+  name: IncreaseSpeed
+  nameWithType: PongBallBehavior.IncreaseSpeed
+  fullName: PongBallBehavior.IncreaseSpeed

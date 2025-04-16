@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PlayerManager
+  commentId: T:Global.PlayerManager
+  id: PlayerManager
+  parent: Global
+  children:
+  - Global.PlayerManager.cards
+  - Global.PlayerManager.Instance
+  - Global.PlayerManager.playerColors
+  - Global.PlayerManager.playerSelect
+  - Global.PlayerManager.StartGame
+  langs:
+  - csharp
+  - vb
+  name: PlayerManager
+  nameWithType: PlayerManager
+  fullName: PlayerManager
+  type: Class
+  source:
+    id: PlayerManager
+    path: ''
+    startLine: 2292
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PlayerManager : MonoBehaviour'
+    content.vb: Public Class PlayerManager Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+- uid: Global.PlayerManager.Instance
+  commentId: F:Global.PlayerManager.Instance
+  id: Instance
+  parent: Global.PlayerManager
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PlayerManager.Instance
+  fullName: PlayerManager.Instance
+  type: Field
+  source:
+    id: Instance
+    path: ''
+    startLine: 2294
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public static PlayerManager Instance
+    return:
+      type: Global.PlayerManager
+    content.vb: Public Shared Instance As PlayerManager
+- uid: Global.PlayerManager.cards
+  commentId: F:Global.PlayerManager.cards
+  id: cards
+  parent: Global.PlayerManager
+  langs:
+  - csharp
+  - vb
+  name: cards
+  nameWithType: PlayerManager.cards
+  fullName: PlayerManager.cards
+  type: Field
+  source:
+    id: cards
+    path: ''
+    startLine: 2295
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<PlayerJoinCard> cards
+    return:
+      type: Global.List{PlayerJoinCard}
+    content.vb: Public cards As List(Of PlayerJoinCard)
+- uid: Global.PlayerManager.playerColors
+  commentId: F:Global.PlayerManager.playerColors
+  id: playerColors
+  parent: Global.PlayerManager
+  langs:
+  - csharp
+  - vb
+  name: playerColors
+  nameWithType: PlayerManager.playerColors
+  fullName: PlayerManager.playerColors
+  type: Field
+  source:
+    id: playerColors
+    path: ''
+    startLine: 2297
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public List<Color> playerColors
+    return:
+      type: Global.List{Color}
+    content.vb: Public playerColors As List(Of Color)
+- uid: Global.PlayerManager.playerSelect
+  commentId: F:Global.PlayerManager.playerSelect
+  id: playerSelect
+  parent: Global.PlayerManager
+  langs:
+  - csharp
+  - vb
+  name: playerSelect
+  nameWithType: PlayerManager.playerSelect
+  fullName: PlayerManager.playerSelect
+  type: Field
+  source:
+    id: playerSelect
+    path: ''
+    startLine: 2298
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public GameObject playerSelect
+    return:
+      type: Global.GameObject
+    content.vb: Public playerSelect As GameObject
+- uid: Global.PlayerManager.StartGame
+  commentId: M:Global.PlayerManager.StartGame
+  id: StartGame
+  parent: Global.PlayerManager
+  langs:
+  - csharp
+  - vb
+  name: StartGame()
+  nameWithType: PlayerManager.StartGame()
+  fullName: PlayerManager.StartGame()
+  type: Method
+  source:
+    id: StartGame
+    path: ''
+    startLine: 2348
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void StartGame()
+    content.vb: Public Sub StartGame()
+  overload: Global.PlayerManager.StartGame*
+references:
+- uid: Global
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.PlayerManager
+  commentId: T:Global.PlayerManager
+  name: PlayerManager
+  nameWithType: PlayerManager
+  fullName: PlayerManager
+- uid: Global.List{PlayerJoinCard}
+  commentId: '!:Global.List{PlayerJoinCard}'
+  definition: Global.List`1
+  name: List<PlayerJoinCard>
+  nameWithType: List<PlayerJoinCard>
+  fullName: List<PlayerJoinCard>
+  nameWithType.vb: List(Of PlayerJoinCard)
+  fullName.vb: List(Of PlayerJoinCard)
+  name.vb: List(Of PlayerJoinCard)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.PlayerJoinCard
+    name: PlayerJoinCard
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.PlayerJoinCard
+    name: PlayerJoinCard
+  - name: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - name: ''
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: ''
+  - name: )
+- uid: Global.List{Color}
+  commentId: '!:Global.List{Color}'
+  definition: Global.List`1
+  name: List<Color>
+  nameWithType: List<Color>
+  fullName: List<Color>
+  nameWithType.vb: List(Of Color)
+  fullName.vb: List(Of Color)
+  name.vb: List(Of Color)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: <
+  - uid: Global.Color
+    name: Color
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Global.Color
+    name: Color
+    isExternal: true
+  - name: )
+- uid: Global.GameObject
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.PlayerManager.StartGame*
+  commentId: Overload:Global.PlayerManager.StartGame
+  name: StartGame
+  nameWithType: PlayerManager.StartGame
+  fullName: PlayerManager.StartGame
