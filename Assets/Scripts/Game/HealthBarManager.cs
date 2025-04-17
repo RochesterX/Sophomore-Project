@@ -42,8 +42,8 @@ public class HealthBarManager : MonoBehaviour
 
                 // Subscribe to the player's death and respawn events
                 var damageable = player.GetComponent<Damageable>();
-                damageable.OnPlayerDeath += HandlePlayerDeath;
-                damageable.OnPlayerRespawn += HandlePlayerRespawn;
+                //damageable.OnPlayerDeath += HandlePlayerDeath;
+                //damageable.OnPlayerRespawn += HandlePlayerRespawn;
             }
         }
     }
@@ -86,8 +86,8 @@ public class HealthBarManager : MonoBehaviour
         {
             if (player != null && player.TryGetComponent<Damageable>(out var damageable))
             {
-                damageable.OnPlayerDeath -= HandlePlayerDeath;
-                damageable.OnPlayerRespawn -= HandlePlayerRespawn;
+                //damageable.OnPlayerDeath -= HandlePlayerDeath;
+                //damageable.OnPlayerRespawn -= HandlePlayerRespawn;
             }
         }
     }
