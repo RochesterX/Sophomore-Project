@@ -21,7 +21,7 @@ items:
   source:
     id: AnimationPlayer
     path: ''
-    startLine: 2348
+    startLine: 2416
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -44,7 +44,7 @@ items:
   source:
     id: state
     path: ''
-    startLine: 2352
+    startLine: 2420
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -67,7 +67,7 @@ items:
   source:
     id: backwards
     path: ''
-    startLine: 2353
+    startLine: 2421
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -90,7 +90,7 @@ items:
   source:
     id: block
     path: ''
-    startLine: 2354
+    startLine: 2422
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -113,7 +113,7 @@ items:
   source:
     id: clip
     path: ''
-    startLine: 2355
+    startLine: 2423
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -136,7 +136,7 @@ items:
   source:
     id: SetState
     path: ''
-    startLine: 2371
+    startLine: 2439
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -161,7 +161,7 @@ items:
   source:
     id: Punch
     path: ''
-    startLine: 2376
+    startLine: 2444
   assemblies:
   - cs.temp.dll
   namespace: Player

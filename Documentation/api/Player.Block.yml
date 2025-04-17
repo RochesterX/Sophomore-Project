@@ -17,7 +17,7 @@ items:
   source:
     id: Block
     path: ''
-    startLine: 2387
+    startLine: 2455
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -40,7 +40,7 @@ items:
   source:
     id: blocking
     path: ''
-    startLine: 2390
+    startLine: 2458
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -63,7 +63,7 @@ items:
   source:
     id: IsParrying
     path: ''
-    startLine: 2436
+    startLine: 2504
   assemblies:
   - cs.temp.dll
   namespace: Player

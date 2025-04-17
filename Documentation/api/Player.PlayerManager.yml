@@ -20,7 +20,7 @@ items:
   source:
     id: PlayerManager
     path: ''
-    startLine: 2252
+    startLine: 2320
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -43,7 +43,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 2254
+    startLine: 2322
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -66,7 +66,7 @@ items:
   source:
     id: cards
     path: ''
-    startLine: 2255
+    startLine: 2323
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -89,7 +89,7 @@ items:
   source:
     id: playerColors
     path: ''
-    startLine: 2257
+    startLine: 2325
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -112,7 +112,7 @@ items:
   source:
     id: playerSelect
     path: ''
-    startLine: 2258
+    startLine: 2326
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -135,7 +135,7 @@ items:
   source:
     id: StartGame
     path: ''
-    startLine: 2308
+    startLine: 2376
   assemblies:
   - cs.temp.dll
   namespace: Player

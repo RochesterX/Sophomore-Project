@@ -1,262 +1,432 @@
 using System.Collections;
 using TMPro;
 using Unity.IO.LowLevel.Unsafe;
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
 using UnityEngine.InputSystem;
 namespace Player
 {
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(BoxCollider2D))]
-[RequireComponent(typeof(PlayerInput))]
-[RequireComponent(typeof(AnimationPlayer))]
-[RequireComponent(typeof(Punch))]
-public class PlayerMovement : MonoBehaviour
-{
-    [Header("Ground Layers")]
-    public LayerMask ground;
-
-    public TextMeshProUGUI playerText;
-
-    [Header("Movement")]
-    public float walkSpeed;
-    public float walkSpeedFactor = 1f;  // Sets walk speed
-    public float maxSpeed = 5f; // Sets max speed
-    public float maxSpeedOverride;
-    public float slowdownMultiplier = 10f; // Sets slow walk speed
-    public float virtualAxisX;
-    public float virtualButtonJump;
-    public float virtualButtonJumpLastFrame;
-    public float turnaroundMultiplier = 2; // Sets speed when turning around
-    public float walkSmooth;
-    public float secondsToFullSpeed;
-    public float jumpSpeed;
-    public float coyoteTime;
-    public float jumpLenience;
-    public float timeUnableToBeDeclaredNotJumping = 0.1f; // Jump threshold
-    public float groundCheckDistance;
-
-    private Rigidbody2D body;
-    private BoxCollider2D collide;
-    private PlayerInput input;
-    private AnimationPlayer animationPlayer;
-    private Punch punch;
-    private Damageable damageable;
-
-    private bool jumpInputStillValid = false;
-    private bool canBeDeclaredNotJumping = true;
-    private bool jumpPhysics;
-    private bool jumping;
-    private float lastTimeJumpPressed;
-    private float lastTimeOnGround;
-
-    private Vector3 positionLastFrame;
-
-    void Start() // Sets up player components
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(PlayerInput))]
+    [RequireComponent(typeof(AnimationPlayer))]
+    [RequireComponent(typeof(Punch))]
+    public class PlayerMovement : MonoBehaviour
     {
-        maxSpeedOverride = maxSpeed;
-        GetComponent<RespawnOnTriggerEnter>().spawnPoint = transform.position;
 
-        body = GetComponent<Rigidbody2D>();
-        collide = GetComponent<BoxCollider2D>();
-        input = GetComponent<PlayerInput>();
-        animationPlayer = GetComponent<AnimationPlayer>();
-        punch = GetComponent<Punch>();
-        damageable = GetComponent<Damageable>();
+        /// <summary>
+        /// Layers considered as ground for the player.
+        /// </summary>
+        [Header("Ground Layers")]
+        public LayerMask ground;
 
-        playerText.text = input.playerIndex.ToString();
-    }
+        /// <summary>
+        /// Reference to the player's UI text displaying player index.
+        /// </summary>
+        public TextMeshProUGUI playerText;
 
-    private void Update() // Updates player movement
-    {
-        if (GameManager.Instance != null && GameManager.Instance.gameOver) maxSpeed = 1f;
-        if (damageable.dying) return;
+        /// <summary>
+        /// Base walk speed of the player.
+        /// </summary>
+        [Header("Movement")]
+        public float walkSpeed;
 
-        Jump();
+        /// <summary>
+        /// Multiplier applied to walk speed.
+        /// </summary>
+        public float walkSpeedFactor = 1f;
 
-        UpdateVirtualAxis();
-    }
+        /// <summary>
+        /// Maximum allowed horizontal speed for the player.
+        /// </summary>
+        public float maxSpeed = 5f;
 
-    private void FixedUpdate()
-    {
-        JumpPhysics();
+        /// <summary>
+        /// Runtime override for the maximum speed.
+        /// </summary>
+        public float maxSpeedOverride;
 
-        HorizontalMovement();
+        /// <summary>
+        /// Multiplier for slowing down the player when exceeding max speed.
+        /// </summary>
+        public float slowdownMultiplier = 10f;
 
-        Land();
-    }
+        /// <summary>
+        /// Current value of the horizontal movement axis.
+        /// </summary>
+        public float virtualAxisX;
 
-    private void LateUpdate() 
-    {
-        Animate();
-    }
+        /// <summary>
+        /// Current value of the jump button (pressed or not).
+        /// </summary>
+        public float virtualButtonJump;
 
-    private void Animate() // Sets player animation
-    {
-        if (!IsPhysicallyGrounded())
-            animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
-        else
+        /// <summary>
+        /// Value of the jump button in the previous frame.
+        /// </summary>
+        public float virtualButtonJumpLastFrame;
+
+        /// <summary>
+        /// Multiplier applied when turning around to adjust speed.
+        /// </summary>
+        public float turnaroundMultiplier = 2;
+
+        /// <summary>
+        /// Smoothing factor for walking movement.
+        /// </summary>
+        public float walkSmooth;
+
+        /// <summary>
+        /// Time in seconds to reach full speed from rest.
+        /// </summary>
+        public float secondsToFullSpeed;
+
+        /// <summary>
+        /// Force applied when jumping.
+        /// </summary>
+        public float jumpSpeed;
+
+        /// <summary>
+        /// Time window after leaving ground where jump is still allowed (coyote time).
+        /// </summary>
+        public float coyoteTime;
+
+        /// <summary>
+        /// Time window after pressing jump where jump is still buffered.
+        /// </summary>
+        public float jumpLenience;
+
+        /// <summary>
+        /// Minimum time before the player can be declared as not jumping.
+        /// </summary>
+        public float timeUnableToBeDeclaredNotJumping = 0.1f;
+
+        /// <summary>
+        /// Distance to check below the player for ground detection.
+        /// </summary>
+        public float groundCheckDistance;
+
+        /// <summary>
+        /// Reference to the Rigidbody2D component.
+        /// </summary>
+        private Rigidbody2D body;
+
+        /// <summary>
+        /// Reference to the BoxCollider2D component.
+        /// </summary>
+        private BoxCollider2D collide;
+
+        /// <summary>
+        /// Reference to the PlayerInput component.
+        /// </summary>
+        private PlayerInput input;
+
+        /// <summary>
+        /// Reference to the AnimationPlayer component.
+        /// </summary>
+        private AnimationPlayer animationPlayer;
+
+        /// <summary>
+        /// Reference to the Punch component.
+        /// </summary>
+        private Punch punch;
+
+        /// <summary>
+        /// Reference to the Damageable component.
+        /// </summary>
+        private Damageable damageable;
+
+        /// <summary>
+        /// Indicates if the jump input is still valid for buffered jumps.
+        /// </summary>
+        private bool jumpInputStillValid = false;
+
+        /// <summary>
+        /// Indicates if the player can be declared as not jumping.
+        /// </summary>
+        private bool canBeDeclaredNotJumping = true;
+
+        /// <summary>
+        /// Indicates if jump physics should be applied this frame.
+        /// </summary>
+        private bool jumpPhysics;
+
+        /// <summary>
+        /// Indicates if the player is currently jumping.
+        /// </summary>
+        private bool jumping;
+
+        /// <summary>
+        /// The last time the jump button was pressed.
+        /// </summary>
+        private float lastTimeJumpPressed;
+
+        /// <summary>
+        /// The last time the player was on the ground.
+        /// </summary>
+        private float lastTimeOnGround;
+
+        /// <summary>
+        /// The player's position in the previous frame.
+        /// </summary>
+        private Vector3 positionLastFrame;
+
+        /// <summary>
+        /// Initializes player components and sets up initial values.
+        /// </summary>
+        void Start()
         {
-            if (Mathf.Abs(virtualAxisX) >= 0.05f)
-                animationPlayer.SetState(GameManager.Instance.gameOver ? AnimationPlayer.AnimationState.Walk : AnimationPlayer.AnimationState.Run);
+            maxSpeedOverride = maxSpeed;
+            GetComponent<RespawnOnTriggerEnter>().spawnPoint = transform.position;
+
+            body = GetComponent<Rigidbody2D>();
+            collide = GetComponent<BoxCollider2D>();
+            input = GetComponent<PlayerInput>();
+            animationPlayer = GetComponent<AnimationPlayer>();
+            punch = GetComponent<Punch>();
+            damageable = GetComponent<Damageable>();
+
+            playerText.text = input.playerIndex.ToString();
+        }
+
+        /// <summary>
+        /// Handles per-frame updates for player movement and jump input.
+        /// </summary>
+        private void Update()
+        {
+            if (GameManager.Instance != null && GameManager.Instance.gameOver) maxSpeed = 1f;
+            UpdateVirtualAxis();
+            if (damageable.dying) return;
+            Jump();
+        }
+
+        /// <summary>
+        /// Handles physics-based updates for jumping and horizontal movement.
+        /// </summary>
+        private void FixedUpdate()
+        {
+            JumpPhysics();
+            HorizontalMovement();
+            Land();
+        }
+
+        /// <summary>
+        /// Handles late frame updates, such as animation.
+        /// </summary>
+        private void LateUpdate()
+        {
+            Animate();
+        }
+
+        /// <summary>
+        /// Updates the player's animation state based on movement and grounded status.
+        /// </summary>
+        private void Animate()
+        {
+            if (!IsPhysicallyGrounded())
+                animationPlayer.SetState(AnimationPlayer.AnimationState.Jump);
             else
-                animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
-        }
-
-        if (true)
-        {
-            if (virtualAxisX < -0.01f)
-                animationPlayer.backwards = true;
-            else if (virtualAxisX > 0.01f)
-                animationPlayer.backwards = false;
-        }
-        else
-        {
-            if (body.linearVelocityX < -0.1f)
-                animationPlayer.backwards = true;
-            else if (body.linearVelocityX > 0.1f)
-                animationPlayer.backwards = false;
-        }
-    }
-
-    private void Land() // Stops jumping when player lands
-    {
-        if (body.linearVelocity.y >= 0f) return;
-
-        if (IsPhysicallyGrounded())
-        {
-            if (canBeDeclaredNotJumping)
             {
-                jumping = false;
+                if (Mathf.Abs(virtualAxisX) >= 0.05f)
+                    animationPlayer.SetState(GameManager.Instance.gameOver ? AnimationPlayer.AnimationState.Walk : AnimationPlayer.AnimationState.Run);
+                else
+                    animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
+            }
+
+            if (true)
+            {
+                if (virtualAxisX < -0.01f)
+                    animationPlayer.backwards = true;
+                else if (virtualAxisX > 0.01f)
+                    animationPlayer.backwards = false;
+            }
+            else
+            {
+                if (body.linearVelocityX < -0.1f)
+                    animationPlayer.backwards = true;
+                else if (body.linearVelocityX > 0.1f)
+                    animationPlayer.backwards = false;
             }
         }
-    }
 
-    private void Jump() // Player jumps when 'jump' is pressed
-    {
-        if (virtualButtonJumpLastFrame == 1f)
+        /// <summary>
+        /// Handles logic for landing and stopping the jump state when grounded.
+        /// </summary>
+        private void Land()
         {
-            jumpInputStillValid = true;
-            lastTimeJumpPressed = Time.time;
-        }
+            if (body.linearVelocity.y >= 0f) return;
 
-        bool isBasicallyGrounded = IsBasicallyGrounded();
-        if ((virtualButtonJumpLastFrame == 1f && isBasicallyGrounded && jumping == false) // Coyote Jump: Must have jump pressed this frame and be grounded in last time frame and not be actually jumping.
-            || (jumpInputStillValid && Time.time - lastTimeJumpPressed <= jumpLenience && IsPhysicallyGrounded())) // Buffered Jump: Must have pressed jump in the last time frame and be jumping
-        {
-            AudioManager.Instance.PlaySound("Jump");
-            jumpPhysics = true;
-            jumping = true;
-            jumpInputStillValid = false;
-            StartCoroutine(NotJumpingDelay());
-        }
-    }
-
-    private void JumpPhysics() // Applies jump physics
-    {
-        if (jumpPhysics)
-        {
-            if (!GetComponent<Block>().blocking)
+            if (IsPhysicallyGrounded())
             {
-                if (body.linearVelocity.y < 0 || !IsPhysicallyGrounded()) body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
-                body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-                if (Mathf.Abs(body.linearVelocityX) > maxSpeed)
+                if (canBeDeclaredNotJumping)
                 {
-                    body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+                    jumping = false;
                 }
             }
-            jumpPhysics = false;
         }
 
-        if (!IsPhysicallyGrounded() && !(virtualButtonJump == 1f))
-            body.AddForce(Vector2.down * jumpSpeed);
-    }
-
-    private IEnumerator NotJumpingDelay() // Sets jump threshold
-    {
-        canBeDeclaredNotJumping = false;
-        yield return new WaitUntil(() => !IsBasicallyGrounded());
-        canBeDeclaredNotJumping = true;
-    }
-
-    private void HorizontalMovement() // Sets player horizontal movement
-    {
-        float temporaryMax = IsPhysicallyGrounded() ? maxSpeedOverride : Mathf.Infinity;
-        float temporarySlowdown = IsPhysicallyGrounded() ? slowdownMultiplier : 1;
-
-        if (!GetComponent<Block>().blocking && (Mathf.Abs(body.linearVelocityX) <= maxSpeed || Mathf.Sign(body.linearVelocityX) != Mathf.Sign(virtualAxisX)))
+        /// <summary>
+        /// Handles jump input and determines if a jump should be triggered.
+        /// </summary>
+        private void Jump()
         {
-            body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
+            if (virtualButtonJumpLastFrame == 1f)
+            {
+                jumpInputStillValid = true;
+                lastTimeJumpPressed = Time.time;
+            }
+
+            bool isBasicallyGrounded = IsBasicallyGrounded();
+            if ((virtualButtonJumpLastFrame == 1f && isBasicallyGrounded && jumping == false)
+                || (jumpInputStillValid && Time.time - lastTimeJumpPressed <= jumpLenience && IsPhysicallyGrounded()))
+            {
+                AudioManager.Instance.PlaySound("Jump");
+                jumpPhysics = true;
+                jumping = true;
+                jumpInputStillValid = false;
+                StartCoroutine(NotJumpingDelay());
+            }
         }
 
-        if (Mathf.Abs(body.linearVelocityX) >= temporaryMax)
+        /// <summary>
+        /// Applies jump physics and forces to the player.
+        /// </summary>
+        private void JumpPhysics()
         {
-            body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - temporaryMax) * temporarySlowdown, 0));
+            if (jumpPhysics)
+            {
+                if (!GetComponent<Block>().blocking)
+                {
+                    if (body.linearVelocity.y < 0 || !IsPhysicallyGrounded()) body.linearVelocity = new Vector2(body.linearVelocity.x, 0);
+                    body.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+                    if (Mathf.Abs(body.linearVelocityX) > maxSpeed)
+                    {
+                        body.linearVelocity = new Vector2(Mathf.Sign(body.linearVelocityX) * maxSpeed, body.linearVelocity.y);
+                    }
+                }
+                jumpPhysics = false;
+            }
+
+            if (!IsPhysicallyGrounded() && !(virtualButtonJump == 1f))
+                body.AddForce(Vector2.down * jumpSpeed);
         }
 
-        if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))
+        /// <summary>
+        /// Coroutine that delays the ability to declare the player as not jumping.
+        /// </summary>
+        private IEnumerator NotJumpingDelay()
         {
-            virtualAxisX = 0;
+            canBeDeclaredNotJumping = false;
+            yield return new WaitUntil(() => !IsBasicallyGrounded());
+            canBeDeclaredNotJumping = true;
         }
 
-        if (GetComponent<Block>().blocking)
+        /// <summary>
+        /// Handles horizontal movement, including acceleration, deceleration, and blocking.
+        /// </summary>
+        private void HorizontalMovement()
         {
-            body.AddForce(new Vector2(-body.linearVelocityX * 0.8f, 0), ForceMode2D.Force);
+            float temporaryMax = IsPhysicallyGrounded() ? maxSpeedOverride : Mathf.Infinity;
+            float temporarySlowdown = IsPhysicallyGrounded() ? slowdownMultiplier : 1;
+
+            if (!GetComponent<Block>().blocking && (Mathf.Abs(body.linearVelocityX) <= maxSpeed || Mathf.Sign(body.linearVelocityX) != Mathf.Sign(virtualAxisX)))
+            {
+                body.AddForce(new Vector2(virtualAxisX * walkSpeed * walkSpeedFactor, 0), ForceMode2D.Force);
+            }
+
+            if (Mathf.Abs(body.linearVelocityX) >= temporaryMax)
+            {
+                body.AddForce(new Vector2(-Mathf.Sign(body.linearVelocityX) * (Mathf.Abs(body.linearVelocityX) - temporaryMax) * temporarySlowdown, 0));
+            }
+
+            if (transform.position == positionLastFrame && (input.actions.FindAction("Move").ReadValue<Vector2>().x == 0))
+            {
+                virtualAxisX = 0;
+            }
+
+            if (GetComponent<Block>().blocking)
+            {
+                body.AddForce(new Vector2(-body.linearVelocityX * 0.8f, 0), ForceMode2D.Force);
+            }
+
+            positionLastFrame = transform.position;
         }
 
-        positionLastFrame = transform.position;
-    }
-
-    private void UpdateVirtualAxis() // Updates virtual axis
-    {
-        virtualButtonJump = input.actions.FindAction("Action").ReadValue<float>();
-        virtualButtonJumpLastFrame = input.actions.FindAction("Action").WasPressedThisFrame() ? 1 : 0;
-
-        virtualAxisX = input.actions.FindAction("Move").ReadValue<Vector2>().x;
-        return;
-    }
-
-    public bool IsBasicallyGrounded() // Checks if player is on land within a threshold
-    {
-        if (IsPhysicallyGrounded())
+        /// <summary>
+        /// Updates the virtual axis and button values from input actions.
+        /// </summary>
+        private void UpdateVirtualAxis()
         {
-            lastTimeOnGround = Time.time;
+            virtualButtonJump = input.actions.FindAction("Action").ReadValue<float>();
+            virtualButtonJumpLastFrame = input.actions.FindAction("Action").WasPressedThisFrame() ? 1 : 0;
+
+            virtualAxisX = input.actions.FindAction("Move").ReadValue<Vector2>().x;
+            return;
         }
 
-        if (Time.time - lastTimeOnGround < coyoteTime)
+        /// <summary>
+        /// Checks if the player is considered grounded, including coyote time.
+        /// </summary>
+        /// <returns>True if the player is basically grounded, otherwise false.</returns>
+        public bool IsBasicallyGrounded()
         {
-            return true;
+            if (IsPhysicallyGrounded())
+            {
+                lastTimeOnGround = Time.time;
+            }
+
+            if (Time.time - lastTimeOnGround < coyoteTime)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        return false;
-    }
-
-    public bool IsPhysicallyGrounded() // Checks if player is on land
-    {
-        RaycastHit2D leftCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, -1, -1), Vector2.down, groundCheckDistance, ground);
-        RaycastHit2D rightCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, 1, -1), Vector2.down, groundCheckDistance, ground);
-        RaycastHit2D midCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, 0, -1), Vector2.down, groundCheckDistance, ground);
-
-        if (leftCheck || rightCheck || midCheck)
+        /// <summary>
+        /// Checks if the player is physically touching the ground using raycasts.
+        /// </summary>
+        /// <returns>True if the player is physically grounded, otherwise false.</returns>
+        public bool IsPhysicallyGrounded()
         {
-            return true;
+            RaycastHit2D leftCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, -1, -1), Vector2.down, groundCheckDistance, ground);
+            RaycastHit2D rightCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, 1, -1), Vector2.down, groundCheckDistance, ground);
+            RaycastHit2D midCheck = Physics2D.Raycast(GetPointInBoxCollider(collide, 0, -1), Vector2.down, groundCheckDistance, ground);
+
+            if (leftCheck || rightCheck || midCheck)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        return false;
-    }
+        /// <summary>
+        /// Gets a point on the BoxCollider2D based on horizontal and vertical multipliers.
+        /// </summary>
+        /// <param name="boxCollider2D">The BoxCollider2D to use.</param>
+        /// <param name="horizontal">Horizontal offset (-1 for left, 1 for right, 0 for center).</param>
+        /// <param name="vertical">Vertical offset (-1 for bottom, 1 for top, 0 for center).</param>
+        /// <returns>The calculated point in world space.</returns>
+        public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical)
+        {
+            return new Vector2
+            (
+                boxCollider2D.bounds.center.x + (horizontal * boxCollider2D.bounds.extents.x),
+                boxCollider2D.bounds.center.y + (vertical * boxCollider2D.bounds.extents.y)
+            );
+        }
 
-    public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical) 
-    {
-        return new Vector2
-        (
-            boxCollider2D.bounds.center.x + (horizontal * boxCollider2D.bounds.extents.x),
-            boxCollider2D.bounds.center.y + (vertical * boxCollider2D.bounds.extents.y)
-        );
-    }
+        /// <summary>
+        /// Stops the player's velocity if grounded, removing inertia.
+        /// </summary>
+        public void StopVelocity()
+        {
+            if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
+        }
 
-    public void StopVelocity() // Stops inertia when landed
-    {
-        if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
     }
-}
 }
