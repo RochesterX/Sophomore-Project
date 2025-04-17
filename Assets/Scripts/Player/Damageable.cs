@@ -17,6 +17,8 @@ public class Damageable : MonoBehaviour
     public bool damageSelfDebug = false;
     public bool dying = false;
     public event System.Action<GameObject> OnPlayerPunched;
+    public event System.Action<GameObject> OnPlayerDeath;
+    public event System.Action<GameObject> OnPlayerRespawn;
 
     private void Start()
     {
@@ -111,7 +113,7 @@ public class Damageable : MonoBehaviour
             }
             animator.SetBool("die", true);
             dying = true;
-
+            OnPlayerDeath?.Invoke(gameObject);
             AudioManager.Instance.PlaySound("Death Simple");
         }
     }
@@ -135,6 +137,9 @@ public class Damageable : MonoBehaviour
         {
             damageable.ResetDamage();
         }
+
+        // Trigger the player respawn event
+        OnPlayerRespawn?.Invoke(gameObject);
     }
 
     public void ResetDamage()
