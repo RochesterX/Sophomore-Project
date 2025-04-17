@@ -2744,11 +2744,11 @@ MonoBehaviour:
     players\nKeep away map\n#Join screen titles\n#Implement music\n#Mountain music\n#Make
     city playable\n#One way platform mountain\nLeaderboard scaling city obstacle
     course\n#Get rid of placeholder start stop obstacle course\nPlatform friction\nFacing
-    angle not velocity-based\nDead player constant velocity\n\nDylan will do:\n#Fix
-    Time Left! text\n#Obstacle course end only works on correct gamemode\n#Obstacle
-    course end for mountain\n#Correct time limits for keep away maps\n\n*needs help*
-    Respawn after game over (ALL GAMEMODES)\n\nWill try to complete: \nObstacle course
-    flag\n#Health bar persists after death\n"
+    angle not velocity-based\nDead player constant velocity\n\n*needs help* Respawn
+    after game over (ALL GAMEMODES)\n\nDylan will do:\n#Fix Time Left! text\n#Obstacle
+    course end only works on correct gamemode\n#Obstacle course end for mountain\n#Correct
+    time limits for keep away maps \n#Obstacle course flag\n#Health bar persists
+    after death\n\nCreate white border on hat sprite\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
