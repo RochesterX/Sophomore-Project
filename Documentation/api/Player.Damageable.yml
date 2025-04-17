@@ -26,7 +26,7 @@ items:
   source:
     id: Damageable
     path: ''
-    startLine: 2002
+    startLine: 2005
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -49,10 +49,12 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2007
+    startLine: 2014
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe force applied to the player when hit.\n"
+  example: []
   syntax:
     content: public float force
     return:
@@ -72,10 +74,12 @@ items:
   source:
     id: damage
     path: ''
-    startLine: 2008
+    startLine: 2019
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe current accumulated damage of the player.\n"
+  example: []
   syntax:
     content: public float damage
     return:
@@ -95,10 +99,12 @@ items:
   source:
     id: maxDamage
     path: ''
-    startLine: 2009
+    startLine: 2024
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe maximum damage the player can take before dying.\n"
+  example: []
   syntax:
     content: public float maxDamage
     return:
@@ -118,10 +124,12 @@ items:
   source:
     id: lives
     path: ''
-    startLine: 2010
+    startLine: 2029
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe number of lives the player has.\n"
+  example: []
   syntax:
     content: public int lives
     return:
@@ -141,10 +149,12 @@ items:
   source:
     id: damageSelfDebug
     path: ''
-    startLine: 2012
+    startLine: 2036
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIf true, applies damage to self for debugging purposes.\n"
+  example: []
   syntax:
     content: public bool damageSelfDebug
     return:
@@ -164,10 +174,12 @@ items:
   source:
     id: dying
     path: ''
-    startLine: 2013
+    startLine: 2041
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIndicates whether the player is currently dying.\n"
+  example: []
   syntax:
     content: public bool dying
     return:
@@ -187,10 +199,12 @@ items:
   source:
     id: OnPlayerPunched
     path: ''
-    startLine: 2014
+    startLine: 2046
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nEvent triggered when the player is punched.\n"
+  example: []
   syntax:
     content: public event Action<GameObject> OnPlayerPunched
     return:
@@ -210,15 +224,18 @@ items:
   source:
     id: Damage
     path: ''
-    startLine: 2075
+    startLine: 2126
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nAdds a specified amount of damage to the player.\n"
+  example: []
   syntax:
     content: public void Damage(float damage)
     parameters:
     - id: damage
       type: System.Single
+      description: The amount of damage to add.
     content.vb: Public Sub Damage(damage As Single)
   overload: Player.Damageable.Damage*
   nameWithType.vb: Damageable.Damage(Single)
@@ -238,10 +255,12 @@ items:
   source:
     id: HandleDeath
     path: ''
-    startLine: 2114
+    startLine: 2176
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nHandles player state after death and resets dying state after respawn.\n"
+  example: []
   syntax:
     content: public void HandleDeath()
     content.vb: Public Sub HandleDeath()
@@ -260,10 +279,12 @@ items:
   source:
     id: Respawn
     path: ''
-    startLine: 2121
+    startLine: 2186
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nRespawns the player at the spawn position and resets damage/health bar.\n"
+  example: []
   syntax:
     content: public void Respawn()
     content.vb: Public Sub Respawn()
@@ -282,10 +303,12 @@ items:
   source:
     id: ResetDamage
     path: ''
-    startLine: 2135
+    startLine: 2203
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nResets the player&apos;s damage to zero.\n"
+  example: []
   syntax:
     content: public void ResetDamage()
     content.vb: Public Sub ResetDamage()

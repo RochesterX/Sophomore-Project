@@ -19,7 +19,7 @@ items:
   source:
     id: AnimationState
     path: ''
-    startLine: 2351
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -40,7 +40,7 @@ items:
   source:
     id: Idle
     path: ''
-    startLine: 2351
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -62,7 +62,7 @@ items:
   source:
     id: Run
     path: ''
-    startLine: 2351
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -84,7 +84,7 @@ items:
   source:
     id: Jump
     path: ''
-    startLine: 2351
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -106,7 +106,7 @@ items:
   source:
     id: Walk
     path: ''
-    startLine: 2351
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Player

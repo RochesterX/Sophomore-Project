@@ -37,7 +37,7 @@ items:
   source:
     id: PlayerMovement
     path: ''
-    startLine: 2450
+    startLine: 2521
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -60,10 +60,12 @@ items:
   source:
     id: ground
     path: ''
-    startLine: 2458
+    startLine: 2533
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nLayers considered as ground for the player.\n"
+  example: []
   syntax:
     content: public LayerMask ground
     return:
@@ -83,10 +85,12 @@ items:
   source:
     id: playerText
     path: ''
-    startLine: 2460
+    startLine: 2538
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nReference to the player&apos;s UI text displaying player index.\n"
+  example: []
   syntax:
     content: public TextMeshProUGUI playerText
     return:
@@ -106,10 +110,12 @@ items:
   source:
     id: walkSpeed
     path: ''
-    startLine: 2463
+    startLine: 2544
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nBase walk speed of the player.\n"
+  example: []
   syntax:
     content: public float walkSpeed
     return:
@@ -129,10 +135,12 @@ items:
   source:
     id: walkSpeedFactor
     path: ''
-    startLine: 2464
+    startLine: 2549
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nMultiplier applied to walk speed.\n"
+  example: []
   syntax:
     content: public float walkSpeedFactor
     return:
@@ -152,10 +160,12 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 2465
+    startLine: 2554
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nMaximum allowed horizontal speed for the player.\n"
+  example: []
   syntax:
     content: public float maxSpeed
     return:
@@ -175,10 +185,12 @@ items:
   source:
     id: maxSpeedOverride
     path: ''
-    startLine: 2466
+    startLine: 2559
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nRuntime override for the maximum speed.\n"
+  example: []
   syntax:
     content: public float maxSpeedOverride
     return:
@@ -198,10 +210,12 @@ items:
   source:
     id: slowdownMultiplier
     path: ''
-    startLine: 2467
+    startLine: 2564
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nMultiplier for slowing down the player when exceeding max speed.\n"
+  example: []
   syntax:
     content: public float slowdownMultiplier
     return:
@@ -221,10 +235,12 @@ items:
   source:
     id: virtualAxisX
     path: ''
-    startLine: 2468
+    startLine: 2569
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nCurrent value of the horizontal movement axis.\n"
+  example: []
   syntax:
     content: public float virtualAxisX
     return:
@@ -244,10 +260,12 @@ items:
   source:
     id: virtualButtonJump
     path: ''
-    startLine: 2469
+    startLine: 2574
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nCurrent value of the jump button (pressed or not).\n"
+  example: []
   syntax:
     content: public float virtualButtonJump
     return:
@@ -267,10 +285,12 @@ items:
   source:
     id: virtualButtonJumpLastFrame
     path: ''
-    startLine: 2470
+    startLine: 2579
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nValue of the jump button in the previous frame.\n"
+  example: []
   syntax:
     content: public float virtualButtonJumpLastFrame
     return:
@@ -290,10 +310,12 @@ items:
   source:
     id: turnaroundMultiplier
     path: ''
-    startLine: 2471
+    startLine: 2584
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nMultiplier applied when turning around to adjust speed.\n"
+  example: []
   syntax:
     content: public float turnaroundMultiplier
     return:
@@ -313,10 +335,12 @@ items:
   source:
     id: walkSmooth
     path: ''
-    startLine: 2472
+    startLine: 2589
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nSmoothing factor for walking movement.\n"
+  example: []
   syntax:
     content: public float walkSmooth
     return:
@@ -336,10 +360,12 @@ items:
   source:
     id: secondsToFullSpeed
     path: ''
-    startLine: 2473
+    startLine: 2594
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nTime in seconds to reach full speed from rest.\n"
+  example: []
   syntax:
     content: public float secondsToFullSpeed
     return:
@@ -359,10 +385,12 @@ items:
   source:
     id: jumpSpeed
     path: ''
-    startLine: 2474
+    startLine: 2599
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nForce applied when jumping.\n"
+  example: []
   syntax:
     content: public float jumpSpeed
     return:
@@ -382,10 +410,12 @@ items:
   source:
     id: coyoteTime
     path: ''
-    startLine: 2475
+    startLine: 2604
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nTime window after leaving ground where jump is still allowed (coyote time).\n"
+  example: []
   syntax:
     content: public float coyoteTime
     return:
@@ -405,10 +435,12 @@ items:
   source:
     id: jumpLenience
     path: ''
-    startLine: 2476
+    startLine: 2609
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nTime window after pressing jump where jump is still buffered.\n"
+  example: []
   syntax:
     content: public float jumpLenience
     return:
@@ -428,10 +460,12 @@ items:
   source:
     id: timeUnableToBeDeclaredNotJumping
     path: ''
-    startLine: 2477
+    startLine: 2614
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nMinimum time before the player can be declared as not jumping.\n"
+  example: []
   syntax:
     content: public float timeUnableToBeDeclaredNotJumping
     return:
@@ -451,10 +485,12 @@ items:
   source:
     id: groundCheckDistance
     path: ''
-    startLine: 2478
+    startLine: 2619
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nDistance to check below the player for ground detection.\n"
+  example: []
   syntax:
     content: public float groundCheckDistance
     return:
@@ -474,14 +510,17 @@ items:
   source:
     id: IsBasicallyGrounded
     path: ''
-    startLine: 2660
+    startLine: 2883
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nChecks if the player is considered grounded, including coyote time.\n"
+  example: []
   syntax:
     content: public bool IsBasicallyGrounded()
     return:
       type: System.Boolean
+      description: True if the player is basically grounded, otherwise false.
     content.vb: Public Function IsBasicallyGrounded() As Boolean
   overload: Player.PlayerMovement.IsBasicallyGrounded*
 - uid: Player.PlayerMovement.IsPhysicallyGrounded
@@ -498,14 +537,17 @@ items:
   source:
     id: IsPhysicallyGrounded
     path: ''
-    startLine: 2675
+    startLine: 2902
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nChecks if the player is physically touching the ground using raycasts.\n"
+  example: []
   syntax:
     content: public bool IsPhysicallyGrounded()
     return:
       type: System.Boolean
+      description: True if the player is physically grounded, otherwise false.
     content.vb: Public Function IsPhysicallyGrounded() As Boolean
   overload: Player.PlayerMovement.IsPhysicallyGrounded*
 - uid: Player.PlayerMovement.GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)
@@ -522,21 +564,27 @@ items:
   source:
     id: GetPointInBoxCollider
     path: ''
-    startLine: 2689
+    startLine: 2923
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nGets a point on the BoxCollider2D based on horizontal and vertical multipliers.\n"
+  example: []
   syntax:
     content: public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical)
     parameters:
     - id: boxCollider2D
       type: Global.BoxCollider2D
+      description: The BoxCollider2D to use.
     - id: horizontal
       type: System.Single
+      description: Horizontal offset (-1 for left, 1 for right, 0 for center).
     - id: vertical
       type: System.Single
+      description: Vertical offset (-1 for bottom, 1 for top, 0 for center).
     return:
       type: Global.Vector2
+      description: The calculated point in world space.
     content.vb: Public Function GetPointInBoxCollider(boxCollider2D As BoxCollider2D, horizontal As Single, vertical As Single) As Vector2
   overload: Player.PlayerMovement.GetPointInBoxCollider*
   nameWithType.vb: PlayerMovement.GetPointInBoxCollider(BoxCollider2D, Single, Single)
@@ -556,10 +604,12 @@ items:
   source:
     id: StopVelocity
     path: ''
-    startLine: 2698
+    startLine: 2935
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nStops the player&apos;s velocity if grounded, removing inertia.\n"
+  example: []
   syntax:
     content: public void StopVelocity()
     content.vb: Public Sub StopVelocity()

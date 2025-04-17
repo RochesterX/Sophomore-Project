@@ -8,10 +8,14 @@ public class HatRespawn : MonoBehaviour
     public const float respawnTime = 10f;
     private bool isDropped;
 
+    public Vector2 initialSubhatPosition;
+
+
     public static bool canBePickedUp = true; // Flag to check if the hat can be picked up
 
     void Start()
     {
+        initialSubhatPosition = transform.GetChild(0).transform.localPosition;
         lastInteractionTime = Time.time;
         isDropped = false;
         transform.position = GameManager.Instance.hatSpawnPositions[Random.Range(0, GameManager.Instance.hatSpawnPositions.Count - 1)];
