@@ -38,21 +38,58 @@ public class HealthBarManager : MonoBehaviour
         {
             if (!playerHealthBars.ContainsKey(player))
             {
-                GameObject healthBar = Instantiate(healthBarPrefab);
-                healthBar.transform.localScale *= 1.5f;
-                healthBar.GetComponent<TerribleHealthBarScript>().SetPlayer(player);
-                playerHealthBars[player] = healthBar;
+                CreateHealthBar(player);
+
+                // Subscribe to the player's death and respawn events
+                var damageable = player.GetComponent<Damageable>();
+                damageable.OnPlayerDeath += HandlePlayerDeath;
+                damageable.OnPlayerRespawn += HandlePlayerRespawn;
             }
         }
     }
 
-    private void OnGameEnd() // Destroys the health bars when the game ends
+    private void HandlePlayerRespawn(GameObject player)
+    {
+        if (!playerHealthBars.ContainsKey(player))
+        {
+            CreateHealthBar(player);
+        }
+    }
+
+    private void CreateHealthBar(GameObject player)
+    {
+        GameObject healthBar = Instantiate(healthBarPrefab);
+        healthBar.transform.localScale *= 1.5f;
+        healthBar.GetComponent<TerribleHealthBarScript>().SetPlayer(player);
+        playerHealthBars[player] = healthBar;
+    }
+
+    private void HandlePlayerDeath(GameObject player)
+    {
+        if (playerHealthBars.TryGetValue(player, out GameObject healthBar))
+        {
+            Destroy(healthBar);
+            playerHealthBars.Remove(player);
+        }
+    }
+
+    private void OnGameEnd()
     {
         foreach (var kvp in playerHealthBars)
         {
             Destroy(kvp.Value);
         }
         playerHealthBars.Clear();
+
+        // Unsubscribe from all player events
+        foreach (GameObject player in GameManager.players)
+        {
+            if (player != null && player.TryGetComponent<Damageable>(out var damageable))
+            {
+                damageable.OnPlayerDeath -= HandlePlayerDeath;
+                damageable.OnPlayerRespawn -= HandlePlayerRespawn;
+            }
+        }
     }
 }
 }
