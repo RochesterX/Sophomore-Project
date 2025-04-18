@@ -51,6 +51,16 @@ namespace Player
         public event System.Action<GameObject> OnPlayerPunched;
 
         /// <summary>
+        /// Event triggered when a player dies.
+        /// </summary>
+        public event System.Action<GameObject> OnPlayerDeath;
+
+        /// <summary>
+        /// Event triggered when a player respawns.
+        /// </summary>
+        public event System.Action<GameObject> OnPlayerRespawn;
+
+        /// <summary>
         /// Unity Start method. Initializes the animator reference.
         /// </summary>
         private void Start()
@@ -172,6 +182,7 @@ namespace Player
                 dying = true;
 
                 AudioManager.Instance.PlaySound("Death Simple");
+                OnPlayerDeath?.Invoke(gameObject);
             }
         }
 
@@ -201,6 +212,7 @@ namespace Player
             {
                 damageable.ResetDamage();
             }
+            OnPlayerRespawn?.Invoke(gameObject);
         }
 
         /// <summary>

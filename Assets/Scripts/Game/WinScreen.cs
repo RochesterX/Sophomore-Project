@@ -21,8 +21,15 @@ public class WinScreen : MonoBehaviour
         }
     }
     
-    public void ShowWinScreen(int player) // Triggers the win screen to appear
+    public void ShowWinScreen(int player)
     {
+        Debug.Log($"ShowWinScreen called for Player {player}");
+        if (player - 1 < 0 || player - 1 >= GameManager.playerColors.Count)
+        {
+            Debug.LogError("Invalid player index or playerColors not initialized.");
+            return;
+        }
+
         foreach (TextMeshProUGUI playerText in playerTexts)
         {
             playerText.text = "Player " + player;
@@ -32,7 +39,15 @@ public class WinScreen : MonoBehaviour
             }
         }
 
-        GetComponent<Animator>().SetTrigger("win");
+        Animator animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator component missing on WinScreen.");
+            return;
+        }
+
+        animator.SetTrigger("win");
     }
+
 }
 }

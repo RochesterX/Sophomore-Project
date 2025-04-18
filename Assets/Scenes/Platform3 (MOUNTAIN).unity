@@ -718,6 +718,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 420457522849526093, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3332.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 420457522849526093, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1175.44
+      objectReference: {fileID: 0}
     - target: {fileID: 571414325634037365, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3337.9
@@ -725,6 +733,14 @@ PrefabInstance:
     - target: {fileID: 571414325634037365, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1195.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 912213889251959308, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3338.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 912213889251959308, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1187.96
       objectReference: {fileID: 0}
     - target: {fileID: 1044159204125992194, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: m_text
@@ -1090,12 +1106,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1757615392802054825, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 447660841}
-    - targetCorrespondingSourceObject: {fileID: 7624412048159175855, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 514716509}
-    - targetCorrespondingSourceObject: {fileID: 7624412048159175855, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 514716510}
   m_SourcePrefab: {fileID: 100100000, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
 --- !u!223 &447660837 stripped
 Canvas:
@@ -1217,78 +1227,6 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.8, y: 3}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!1 &514716508 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7624412048159175855, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
-  m_PrefabInstance: {fileID: 447660836}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &514716509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514716508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fc903d39ac3d24aab4ce7a68dba447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &514716510
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514716508}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -5154189640090123692, guid: 369526320a066164390f850cb941a5d8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.22, y: 2.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
