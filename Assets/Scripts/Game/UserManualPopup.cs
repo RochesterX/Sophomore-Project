@@ -45,15 +45,16 @@ public class UserManualPopup : MonoBehaviour
         userManualText.text += "<size=30>The player who wears the hat the longest wins.</size>\n\n";
 
         // Add the "Controls" section
-        userManualText.text += "<align=center><size=40><b>Controls</b></size></align>\n\n";
-        userManualText.text += "<size=30><b>Move:</b> <sprite=16> / <sprite=7><sprite=4><sprite=6><sprite=0></size>\n";
-        userManualText.text += "<size=30><b>Jump:</b> <sprite=8> / <sprite=10> / <sprite=14> / <sprite=5></size>\n";
-        userManualText.text += "<size=30><b>Punch:</b> <sprite=11> / <sprite=9> / <sprite=15> / <sprite=2></size>\n";
-        userManualText.text += "<size=30><b>Block:</b> <sprite=12></size>\n";
-        userManualText.text += "<size=30><b>Parry:</b> Let go of <sprite=12> at the right time</size>\n\n";
-        userManualText.text += "<align=center><size=40><b>Tips</b></size></align>\n\n";
+        userManualText.text += "<align=center><size=50><b>Controls</b></size></align>\n\n";
+        userManualText.text += "<size=40><b>Naviagation:</b></size><size=30> Use Left-Click to select and press <sprite=17> to exit</size>\n";
+        userManualText.text += "<size=40><b>Move:</b></size><size=30> <sprite=16> / <sprite=7><sprite=4><sprite=6><sprite=0></size>\n";
+        userManualText.text += "<size=40><b>Jump:</b></size><size=30> <sprite=8> / <sprite=10> / <sprite=14> / <sprite=5></size>\n";
+        userManualText.text += "<size=40><b>Punch:</b></size><size=30> <sprite=11> / <sprite=9> / <sprite=15> / <sprite=2></size>\n";
+        userManualText.text += "<size=40><b>Block:</b></size><size=30> <sprite=12></size>\n";
+        userManualText.text += "<size=40><b>Parry:</b></size><size=30> Let go of <sprite=12> at the right time</size>\n\n";
 
         // Add the "Tips" section
+        userManualText.text += "<align=center><size=50><b>Tips</b></size></align>\n\n";
         userManualText.text += "<size=30>Punches seem to hit you harder when you lose health.</size>\n\n";
         userManualText.text += "<size=30>Walk into your opponent to turn them around and push them.</size>\n\n";
         userManualText.text += "<size=30>Time your jumps to avoid falling (or hitting your head).</size>\n\n";

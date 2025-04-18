@@ -53,6 +53,9 @@ TextureImporter:
   - first:
       213: -77006150763170147
     second: buttons_16
+  - first:
+      213: 7174167584646727459
+    second: buttons_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -196,7 +199,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 415
+        y: 416
         width: 80
         height: 74
       alignment: 0
@@ -262,7 +265,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 106
-        y: 267
+        y: 266
         width: 240
         height: 98
       alignment: 0
@@ -349,7 +352,7 @@ TextureImporter:
       name: ps_cross
       rect:
         serializedVersion: 2
-        x: 203
+        x: 204
         y: 179
         width: 54
         height: 58
@@ -372,7 +375,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 269
-        y: 180
+        y: 181
         width: 54
         height: 58
       alignment: 0
@@ -393,8 +396,8 @@ TextureImporter:
       name: xb_x
       rect:
         serializedVersion: 2
-        x: 126
-        y: 117
+        x: 124
+        y: 118
         width: 54
         height: 58
       alignment: 0
@@ -434,13 +437,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rb
+      name: nin_y
       rect:
         serializedVersion: 2
-        x: 278
-        y: 111
-        width: 66
-        height: 54
+        x: 222
+        y: 95
+        width: 54
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,13 +459,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nin_y
+      name: rb
       rect:
         serializedVersion: 2
-        x: 121
-        y: 35
-        width: 54
-        height: 58
+        x: 278
+        y: 111
+        width: 66
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,6 +476,28 @@ TextureImporter:
       bones: []
       spriteID: a2431d5fe755f8b90800000000000000
       internalID: -7237472072382729174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: key_esc
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 11
+        width: 146
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3813c32622a9c80800000000000000
+      internalID: -8315295956674182197
       vertices: []
       indices: 
       edges: []
@@ -493,8 +518,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc3813c32622a9c80800000000000000
-      internalID: -8315295956674182197
+      spriteID: d96bd3a505b6eeef0800000000000000
+      internalID: -77006150763170147
       vertices: []
       indices: 
       edges: []
@@ -503,7 +528,7 @@ TextureImporter:
       name: nin_b
       rect:
         serializedVersion: 2
-        x: 277
+        x: 276
         y: 37
         width: 54
         height: 58
@@ -515,8 +540,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d96bd3a505b6eeef0800000000000000
-      internalID: -77006150763170147
+      spriteID: 3278df96863cf8360800000000000000
+      internalID: 7174167584646727459
       vertices: []
       indices: 
       edges: []
@@ -525,7 +550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 03c62d185f152ed45aafb1fcec16d223
+    spriteID: 96fd9859680f5e14abcb7b6bc0452e6b
     internalID: 0
     vertices: []
     indices: 
@@ -535,20 +560,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lstick: -8315295956674182197
+      Lstick: -77006150763170147
       key_a: 2958514102543403041
       key_d: -8191739510646017925
       key_e: -480254276019886394
       key_enter: 3713549098536957005
+      key_esc: -8315295956674182197
       key_s: -3219683103784253410
       key_shift: -6460607209241108654
       key_space: 1008705478319212569
       key_w: 5830344958925785552
-      nin_b: -77006150763170147
-      nin_y: -7237472072382729174
+      nin_b: 7174167584646727459
+      nin_y: -2986871994705294210
       ps_cross: 4009284081192125275
       ps_square: 8359661988393023892
-      rb: -2986871994705294210
+      rb: -7237472072382729174
       start: -9124727645642988533
       xb_a: 650656284835190746
       xb_x: -7138311499508957143
