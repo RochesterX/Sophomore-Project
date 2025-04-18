@@ -4555,7 +4555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: hatSpawnPositions.Array.data[0].x
-      value: 27.6
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2396754106601062846, guid: e3c570bb90d434e809aca2a339dadf5d, type: 3}
       propertyPath: hatSpawnPositions.Array.data[0].y

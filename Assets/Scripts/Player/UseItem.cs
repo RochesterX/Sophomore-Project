@@ -59,7 +59,7 @@ namespace Player
             item.transform.parent = head;
             item.transform.localRotation = Quaternion.identity;
             item.transform.localPosition = Vector3.zero;
-            item.transform.GetChild(0).transform.localPosition = item.GetComponent<HatRespawn>().initialSubhatPosition;
+            //item.transform.GetChild(0).transform.localPosition = item.GetComponent<HatRespawn>().initialSubhatPosition;
             if (!GameManager.playerHoldTimes.ContainsKey(gameObject))
             {
                 GameManager.playerHoldTimes[gameObject] = 0f;
@@ -79,7 +79,7 @@ namespace Player
                 StartCoroutine(WaitForInteractability());
                 heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 heldItem.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Random.Range(10f, 30f) + Vector2.right * Random.Range(-10, 10), ForceMode2D.Impulse);
-                heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-5, 5), ForceMode2D.Impulse);
+                heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1, 1), ForceMode2D.Impulse);
                 heldItem.GetComponent<HatRespawn>().OnHatDropped();
                 heldItem.transform.parent = GameManager.Instance.transform;
                 heldItem = null;
