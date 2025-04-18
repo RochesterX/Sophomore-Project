@@ -23,10 +23,8 @@ public class WinScreen : MonoBehaviour
     
     public void ShowWinScreen(int player)
     {
-        Debug.Log($"ShowWinScreen called for Player {player}");
         if (player - 1 < 0 || player - 1 >= GameManager.playerColors.Count)
         {
-            Debug.LogError("Invalid player index or playerColors not initialized.");
             return;
         }
 
@@ -42,7 +40,6 @@ public class WinScreen : MonoBehaviour
         Animator animator = GetComponent<Animator>();
         if (animator == null)
         {
-            Debug.LogError("Animator component missing on WinScreen.");
             return;
         }
 

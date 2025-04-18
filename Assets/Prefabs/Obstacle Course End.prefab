@@ -97,8 +97,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3508504517010197326}
   - component: {fileID: 2472279949341049392}
-  - component: {fileID: 1226630484593389857}
   - component: {fileID: 7175913768620688938}
+  - component: {fileID: 1226630484593389857}
+  - component: {fileID: 2402318339000397793}
   m_Layer: 0
   m_Name: Obstacle Course End
   m_TagString: Untagged
@@ -168,18 +169,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1226630484593389857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8429222029133414007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 746e2bd0f68be467eb1b2b19c7c513af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7175913768620688938
 Rigidbody2D:
   serializedVersion: 5
@@ -207,3 +196,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1226630484593389857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429222029133414007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 746e2bd0f68be467eb1b2b19c7c513af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2402318339000397793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8429222029133414007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fc903d39ac3d24aab4ce7a68dba447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

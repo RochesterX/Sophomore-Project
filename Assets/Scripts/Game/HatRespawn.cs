@@ -37,7 +37,7 @@ namespace Game
             if (GameManager.Instance.gameOver) GetComponent<BoxCollider2D>().enabled = false;
             if (isDropped && Time.time - lastInteractionTime > respawnTime)
             {
-                RespawnHat();
+                StartCoroutine(RespawnHat());
             }
         }
 
@@ -45,6 +45,7 @@ namespace Game
         {
             if (collision.gameObject.CompareTag("Platformer Hazard"))
             {
+                isDropped = true;
                 StartCoroutine(RespawnHat());
             }
         }

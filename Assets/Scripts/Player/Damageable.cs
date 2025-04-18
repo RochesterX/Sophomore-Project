@@ -191,7 +191,7 @@ namespace Player
         /// </summary>
         public void HandleDeath()
         {
-                            print("Player " + gameObject.name + " died");
+            print("Player " + gameObject.name + " died");
             GameManager.Instance.PlayerDied(this);
             animator.SetBool("die", false);
             dying = false;
