@@ -47,11 +47,6 @@ namespace Player
         public bool dying = false;
 
         /// <summary>
-        /// Event triggered when the player is punched.
-        /// </summary>
-        public event System.Action<GameObject> OnPlayerPunched;
-
-        /// <summary>
         /// Event triggered when a player dies.
         /// </summary>
         public event System.Action<GameObject> OnPlayerDeath;
