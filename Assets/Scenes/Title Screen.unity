@@ -4568,20 +4568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 364690973}
   userManualText: {fileID: 2055185872}
-  wSpriteAsset: {fileID: 11400000, guid: f5f77e182d3666c41aca55c4d05b6d4e, type: 2}
-  aSpriteAsset: {fileID: 11400000, guid: 7cfaff9d8d0751b409fcaf2618c1c04e, type: 2}
-  sSpriteAsset: {fileID: 11400000, guid: 6f111a09b056658428e50a0f1c5e462a, type: 2}
-  dSpriteAsset: {fileID: 11400000, guid: 58f7c9e33e37f12468674bd76a668624, type: 2}
-  enterSpriteAsset: {fileID: 11400000, guid: a6bada675240cf04fbc660d92e9d995b, type: 2}
-  startSpriteAsset: {fileID: 11400000, guid: fff8297afa5ec6242850db442b6e2ff6, type: 2}
-  lStickSpriteAsset: {fileID: 11400000, guid: c04154534a927fd40be0a8e24d78a48d, type: 2}
-  rbSpriteAsset: {fileID: 11400000, guid: 21118d39f3841e74ebcac06754a778e5, type: 2}
-  psCrossSpriteAsset: {fileID: 11400000, guid: e8fb23e8b5b969b448185e191f24e8c2, type: 2}
-  psSquareSpriteAsset: {fileID: 11400000, guid: 8a5e0388df7112843b6267552a44fcc3, type: 2}
-  xbXSpriteAsset: {fileID: 11400000, guid: 53e9b9b7128441d45956afc87e2b09ed, type: 2}
-  xbASpriteAsset: {fileID: 11400000, guid: 0e1ab2eca0f99eb4488578a13228e556, type: 2}
-  ninYSpriteAsset: {fileID: 11400000, guid: f39774587c562414da5462b58d95bef5, type: 2}
-  ninBSpriteAsset: {fileID: 11400000, guid: c4092f02148ae6045940305ed1643b9c, type: 2}
+  combinedSpriteAsset: {fileID: 11400000, guid: 89fcf5d9e9495d342b3793a48498f3cd, type: 2}
 --- !u!114 &1248852956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5877,7 +5864,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 3750}
+  m_SizeDelta: {x: 0, y: 2500}
   m_Pivot: {x: 0, y: 1}
 --- !u!23 &1883492125
 MeshRenderer:
@@ -6238,7 +6225,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 650, y: 3750}
+  m_SizeDelta: {x: 650, y: 2500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055185872
 MonoBehaviour:
