@@ -4,19 +4,22 @@ using UnityEngine;
 using Game;
 using Music;
 using Player;
+
 namespace Player
 {
-
+    /// <summary>
+    /// This class handles the player's ability to take damage, die, and respawn.
+    /// It also manages interactions like blocking, parrying, and dropping items when hit.
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(Collider2D))]
     [RequireComponent(typeof(RespawnOnTriggerEnter))]
     public class Damageable : MonoBehaviour
     {
-
         /// <summary>
         /// The force applied to the player when hit.
         /// </summary>
-        public float force = 50f; // Force applied when hit
+        public float force = 50f;
 
         /// <summary>
         /// The current accumulated damage of the player.
@@ -26,14 +29,12 @@ namespace Player
         /// <summary>
         /// The maximum damage the player can take before dying.
         /// </summary>
-        public float maxDamage = 1000f; // Set max health
+        public float maxDamage = 1000f;
 
         /// <summary>
         /// The number of lives the player has.
         /// </summary>
         public int lives = 0;
-
-        private Animator animator;
 
         /// <summary>
         /// If true, applies damage to self for debugging purposes.
@@ -61,7 +62,12 @@ namespace Player
         public event System.Action<GameObject> OnPlayerRespawn;
 
         /// <summary>
-        /// Unity Start method. Initializes the animator reference.
+        /// Reference to the player's animator component.
+        /// </summary>
+        private Animator animator;
+
+        /// <summary>
+        /// Initializes the animator reference.
         /// </summary>
         private void Start()
         {
@@ -69,7 +75,7 @@ namespace Player
         }
 
         /// <summary>
-        /// Unity Update method. Handles debug self-damage if enabled.
+        /// Handles debug self-damage if enabled.
         /// </summary>
         private void Update()
         {
@@ -81,7 +87,7 @@ namespace Player
         }
 
         /// <summary>
-        /// Unity OnTriggerEnter2D method. Applies damage when colliding with a punch hurtbox.
+        /// Applies damage when colliding with a punch hurtbox.
         /// </summary>
         /// <param name="collision">The collider that entered the trigger.</param>
         private void OnTriggerEnter2D(Collider2D collision)
@@ -99,33 +105,40 @@ namespace Player
         /// <param name="damageSource">The GameObject causing the damage.</param>
         private void Damage(GameObject damageSource)
         {
-            if (dying || damageSource.CompareTag("Hat")) return; // Exclude hat from taking damage
+            // Prevent damage if the player is dying or the damage source is a hat
+            if (dying || damageSource.CompareTag("Hat")) return;
 
             float actualForce = damageSource.GetComponent<Damageable>().force;
             Block blockComponent = GetComponent<Block>();
 
-            GetComponentInChildren<UseItem>().DropItem(); // Drops hat if held
+            // Drop the item if the player is holding one
+            GetComponentInChildren<UseItem>().DropItem();
 
             if (blockComponent != null && blockComponent.blocking)
             {
-                if (blockComponent.IsParrying()) // Player receives damage if punching a parrying player
+                if (blockComponent.IsParrying())
                 {
+                    // Handle parry logic
                     damageSource.GetComponent<Damageable>().SuccessfulParry(gameObject, actualForce);
                     AudioManager.Instance.PlaySound("Parry");
                     return;
                 }
-                else // Player does less damage if punching a blocking player
+                else
                 {
+                    // Reduce damage if the player is blocking
                     AudioManager.Instance.PlaySound("Punch");
                     actualForce /= 4;
                     GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce, ForceMode2D.Force);
                 }
             }
-            else // Player does full damage to a non-blocking player
+            else
             {
+                // Apply full damage if the player is not blocking
                 AudioManager.Instance.PlaySound("Punch");
                 GetComponent<Rigidbody2D>().AddForce(((transform.position - damageSource.transform.position).normalized + Vector3.up * 2) * actualForce * (1 + (damage / maxDamage) * 3), ForceMode2D.Force);
             }
+
+            // Update the player's damage and check if they should die
             damage += actualForce;
             damage = Mathf.Clamp(damage, 0f, maxDamage);
             if (damage >= maxDamage)
@@ -140,10 +153,8 @@ namespace Player
         /// <param name="damage">The amount of damage to add.</param>
         public void Damage(float damage)
         {
-            //if (GameManager.Instance.gameOver) return; // Prevent damage after game is over
-
             this.damage += damage;
-            if (damage >= maxDamage)
+            if (this.damage >= maxDamage)
             {
                 Die();
             }
@@ -171,13 +182,16 @@ namespace Player
         /// </summary>
         private void Die()
         {
-            if (GameManager.Instance != null) //&& !GameManager.Instance.gameOver) // Prevent death after game is over
+            if (GameManager.Instance != null)
             {
+                // Drop the item if the player is holding one
                 UseItem useItem = GetComponent<UseItem>();
                 if (useItem != null)
                 {
-                    useItem.DropItem(); // Ensure the player drops the item before the death animation
+                    useItem.DropItem();
                 }
+
+                // Trigger the death animation and mark the player as dying
                 animator.SetBool("die", true);
                 dying = true;
 
@@ -203,15 +217,17 @@ namespace Player
         public void Respawn()
         {
             transform.position = GameManager.Instance.spawnPosition;
+
+            // Reset the player's velocity
             if (TryGetComponent<Rigidbody2D>(out var rb))
             {
                 rb.linearVelocity = Vector2.zero;
                 rb.angularVelocity = 0f;
             }
-            if (TryGetComponent<Damageable>(out var damageable))
-            {
-                damageable.ResetDamage();
-            }
+
+            // Reset the player's damage
+            ResetDamage();
+
             OnPlayerRespawn?.Invoke(gameObject);
         }
 

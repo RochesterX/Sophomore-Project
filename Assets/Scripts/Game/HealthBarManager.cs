@@ -1,95 +1,143 @@
 using System.Collections.Generic;
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
+
 namespace Game
 {
-
-public class HealthBarManager : MonoBehaviour
-{
-    public GameObject healthBarPrefab;
-    private Dictionary<GameObject, GameObject> playerHealthBars = new Dictionary<GameObject, GameObject>();
-
-    void Start()
+    /// <summary>
+    /// This class manages the health bars for all players in the game.
+    /// It creates, updates, and removes health bars as needed.
+    /// </summary>
+    public class HealthBarManager : MonoBehaviour
     {
-        GameManager.Instance.StartGameEvent += OnGameStart;
-        GameManager.Instance.EndGameEvent += OnGameEnd;
-    }
+        /// <summary>
+        /// The template used to create new health bars.
+        /// </summary>
+        public GameObject healthBarPrefab;
 
-    void OnDestroy()
-    {
-        GameManager.Instance.StartGameEvent -= OnGameStart;
-        GameManager.Instance.EndGameEvent -= OnGameEnd;
-    }
+        /// <summary>
+        /// A dictionary that links each player to their health bar.
+        /// </summary>
+        private Dictionary<GameObject, GameObject> playerHealthBars = new Dictionary<GameObject, GameObject>();
 
-    void Update() // Updates position of health bars to follow each player
-    {
-        foreach (var kvp in playerHealthBars)
+        /// <summary>
+        /// Sets up event listeners for when the game starts and ends.
+        /// </summary>
+        private void Start()
         {
-            GameObject player = kvp.Key;
-            if (player == null) continue;
-
-            GameObject healthBar = kvp.Value;
-            healthBar.transform.SetPositionAndRotation(new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z), Quaternion.identity);
+            GameManager.Instance.StartGameEvent += OnGameStart;
+            GameManager.Instance.EndGameEvent += OnGameEnd;
         }
-    }
 
-    private void OnGameStart() // Creates health bars for each player
-    {
-        foreach (GameObject player in GameManager.players)
+        /// <summary>
+        /// Removes event listeners when this object is destroyed.
+        /// </summary>
+        private void OnDestroy()
+        {
+            GameManager.Instance.StartGameEvent -= OnGameStart;
+            GameManager.Instance.EndGameEvent -= OnGameEnd;
+        }
+
+        /// <summary>
+        /// Updates the position of each health bar to follow its player.
+        /// </summary>
+        private void Update()
+        {
+            foreach (var kvp in playerHealthBars)
+            {
+                GameObject player = kvp.Key;
+                if (player == null) continue;
+
+                GameObject healthBar = kvp.Value;
+
+                // Position the health bar slightly above the player
+                healthBar.transform.SetPositionAndRotation(
+                    new Vector3(player.transform.position.x, player.transform.position.y + 1.5f, player.transform.position.z),
+                    Quaternion.identity
+                );
+            }
+        }
+
+        /// <summary>
+        /// Creates health bars for all players when the game starts.
+        /// </summary>
+        private void OnGameStart()
+        {
+            foreach (GameObject player in GameManager.players)
+            {
+                if (!playerHealthBars.ContainsKey(player))
+                {
+                    CreateHealthBar(player);
+
+                    // Listen for the player's death and respawn events
+                    var damageable = player.GetComponent<Damageable>();
+                    damageable.OnPlayerDeath += HandlePlayerDeath;
+                    damageable.OnPlayerRespawn += HandlePlayerRespawn;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Creates a health bar for a specific player.
+        /// </summary>
+        /// <param name="player">The player to create a health bar for.</param>
+        private void CreateHealthBar(GameObject player)
+        {
+            // Create a new health bar and link it to the player
+            GameObject healthBar = Instantiate(healthBarPrefab);
+            healthBar.transform.localScale *= 1.5f; // Make the health bar slightly larger
+            healthBar.GetComponent<TerribleHealthBarScript>().SetPlayer(player);
+            playerHealthBars[player] = healthBar;
+        }
+
+        /// <summary>
+        /// Handles the player's respawn by recreating their health bar if needed.
+        /// </summary>
+        /// <param name="player">The player who respawned.</param>
+        private void HandlePlayerRespawn(GameObject player)
         {
             if (!playerHealthBars.ContainsKey(player))
             {
                 CreateHealthBar(player);
-
-                // Subscribe to the player's death and respawn events
-                var damageable = player.GetComponent<Damageable>();
-                damageable.OnPlayerDeath += HandlePlayerDeath;
-                damageable.OnPlayerRespawn += HandlePlayerRespawn;
             }
         }
-    }
 
-    private void HandlePlayerRespawn(GameObject player)
-    {
-        if (!playerHealthBars.ContainsKey(player))
+        /// <summary>
+        /// Handles the player's death by removing their health bar.
+        /// </summary>
+        /// <param name="player">The player who died.</param>
+        private void HandlePlayerDeath(GameObject player)
         {
-            CreateHealthBar(player);
-        }
-    }
-
-    private void CreateHealthBar(GameObject player)
-    {
-        GameObject healthBar = Instantiate(healthBarPrefab);
-        healthBar.transform.localScale *= 1.5f;
-        healthBar.GetComponent<TerribleHealthBarScript>().SetPlayer(player);
-        playerHealthBars[player] = healthBar;
-    }
-
-    private void HandlePlayerDeath(GameObject player)
-    {
-        if (playerHealthBars.TryGetValue(player, out GameObject healthBar))
-        {
-            Destroy(healthBar);
-            playerHealthBars.Remove(player);
-        }
-    }
-
-    private void OnGameEnd()
-    {
-        foreach (var kvp in playerHealthBars)
-        {
-            Destroy(kvp.Value);
-        }
-        playerHealthBars.Clear();
-
-        // Unsubscribe from all player events
-        foreach (GameObject player in GameManager.players)
-        {
-            if (player != null && player.TryGetComponent<Damageable>(out var damageable))
+            if (playerHealthBars.TryGetValue(player, out GameObject healthBar))
             {
-                damageable.OnPlayerDeath -= HandlePlayerDeath;
-                damageable.OnPlayerRespawn -= HandlePlayerRespawn;
+                Destroy(healthBar);
+                playerHealthBars.Remove(player);
+            }
+        }
+
+        /// <summary>
+        /// Cleans up all health bars and unsubscribes from player events when the game ends.
+        /// </summary>
+        private void OnGameEnd()
+        {
+            // Remove all health bars
+            foreach (var kvp in playerHealthBars)
+            {
+                Destroy(kvp.Value);
+            }
+            playerHealthBars.Clear();
+
+            // Unsubscribe from all player events
+            foreach (GameObject player in GameManager.players)
+            {
+                if (player != null && player.TryGetComponent<Damageable>(out var damageable))
+                {
+                    damageable.OnPlayerDeath -= HandlePlayerDeath;
+                    damageable.OnPlayerRespawn -= HandlePlayerRespawn;
+                }
             }
         }
     }
-}
 }

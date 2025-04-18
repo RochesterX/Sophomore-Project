@@ -1,21 +1,38 @@
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
 using UnityEngine.UI;
+
 namespace Game
 {
-
-public class MapSelect : MonoBehaviour
-{
-    private ToggleGroup maps;
-
-    private void Start()
+    /// <summary>
+    /// This class manages the map selection process by setting the selected map
+    /// based on the active toggle in the toggle group.
+    /// </summary>
+    public class MapSelect : MonoBehaviour
     {
-        maps = GetComponent<ToggleGroup>();
-    }
+        /// <summary>
+        /// The toggle group containing the map selection toggles.
+        /// </summary>
+        private ToggleGroup maps;
 
-    void Update() // Sets the map based on the selected toggle
-    {
-        Toggle toggle = maps.GetFirstActiveToggle();
-        GameManager.map = toggle.name;
+        /// <summary>
+        /// Initializes the toggle group for map selection.
+        /// </summary>
+        private void Start()
+        {
+            maps = GetComponent<ToggleGroup>();
+        }
+
+        /// <summary>
+        /// Updates the selected map in the game manager based on the active toggle.
+        /// </summary>
+        private void Update()
+        {
+            // Get the currently active toggle and set the selected map
+            Toggle toggle = maps.GetFirstActiveToggle();
+            GameManager.map = toggle.name;
+        }
     }
-}
 }

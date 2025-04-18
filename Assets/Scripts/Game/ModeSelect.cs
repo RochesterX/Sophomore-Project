@@ -1,32 +1,49 @@
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
 using UnityEngine.UI;
+
 namespace Game
 {
-
-public class ModeSelect : MonoBehaviour
-{
-    private ToggleGroup maps;
-
-    private void Start()
+    /// <summary>
+    /// This class manages the game mode selection process by setting the game mode
+    /// based on the active toggle in the toggle group.
+    /// </summary>
+    public class ModeSelect : MonoBehaviour
     {
-        maps = GetComponent<ToggleGroup>();
-    }
+        /// <summary>
+        /// The toggle group containing the game mode selection toggles.
+        /// </summary>
+        private ToggleGroup maps;
 
-    void Update() // Updates the game mode based on the selected toggle
-    {
-        Toggle toggle = maps.GetFirstActiveToggle();
-        if (toggle.name == "Free-For-All")
+        /// <summary>
+        /// Initializes the toggle group for game mode selection.
+        /// </summary>
+        private void Start()
         {
-            GameManager.gameMode = GameManager.GameMode.freeForAll;
+            maps = GetComponent<ToggleGroup>();
         }
-        else if (toggle.name == "Keep-Away")
+
+        /// <summary>
+        /// Updates the selected game mode in the game manager based on the active toggle.
+        /// </summary>
+        private void Update()
         {
-            GameManager.gameMode = GameManager.GameMode.keepAway;
-        }
-        else if (toggle.name == "Obstacle Course")
-        {
-            GameManager.gameMode = GameManager.GameMode.obstacleCourse;
+            // Get the currently active toggle and set the game mode
+            Toggle toggle = maps.GetFirstActiveToggle();
+            if (toggle.name == "Free-For-All")
+            {
+                GameManager.gameMode = GameManager.GameMode.freeForAll;
+            }
+            else if (toggle.name == "Keep-Away")
+            {
+                GameManager.gameMode = GameManager.GameMode.keepAway;
+            }
+            else if (toggle.name == "Obstacle Course")
+            {
+                GameManager.gameMode = GameManager.GameMode.obstacleCourse;
+            }
         }
     }
-}
 }

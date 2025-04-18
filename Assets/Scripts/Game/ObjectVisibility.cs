@@ -1,28 +1,44 @@
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
+
 namespace Game
 {
-public class ObjectVisibility : MonoBehaviour
-{
-    void Start()
+    /// <summary>
+    /// This class controls the visibility of an object based on the current game mode.
+    /// </summary>
+    public class ObjectVisibility : MonoBehaviour
     {
-        UpdateVisibility();
-    }
-
-    void Update()
-    {
-        UpdateVisibility();
-    }
-
-    private void UpdateVisibility() // Sets object visible if playing keep away mode
-    {
-        if (GameManager.gameMode == GameManager.GameMode.keepAway)
+        /// <summary>
+        /// Initializes the visibility of the object when the game starts.
+        /// </summary>
+        private void Start()
         {
-            gameObject.SetActive(true);
+            UpdateVisibility();
         }
-        else
+
+        /// <summary>
+        /// Updates the visibility of the object every frame.
+        /// </summary>
+        private void Update()
         {
-            gameObject.SetActive(false);
+            UpdateVisibility();
+        }
+
+        /// <summary>
+        /// Sets the object to be visible only if the game mode is "Keep Away".
+        /// </summary>
+        private void UpdateVisibility()
+        {
+            if (GameManager.gameMode == GameManager.GameMode.keepAway)
+            {
+                gameObject.SetActive(true);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
-}
 }

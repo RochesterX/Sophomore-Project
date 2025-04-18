@@ -1,14 +1,17 @@
 using System.Collections;
 using TMPro;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using Game;
 using Music;
 using Player;
 using UnityEngine.InputSystem;
+
 namespace Player
 {
-
+    /// <summary>
+    /// This class handles the player's movement, including walking, jumping, and animations.
+    /// It also manages input, physics, and interactions with the ground.
+    /// </summary>
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(PlayerInput))]
@@ -16,6 +19,7 @@ namespace Player
     [RequireComponent(typeof(Punch))]
     public class PlayerMovement : MonoBehaviour
     {
+        // --- Public Fields ---
 
         /// <summary>
         /// Layers considered as ground for the player.
@@ -28,10 +32,11 @@ namespace Player
         /// </summary>
         public TextMeshProUGUI playerText;
 
+        [Header("Movement")]
+
         /// <summary>
         /// Base walk speed of the player.
         /// </summary>
-        [Header("Movement")]
         public float walkSpeed;
 
         /// <summary>
@@ -109,6 +114,8 @@ namespace Player
         /// </summary>
         public float groundCheckDistance;
 
+        // --- Private Fields ---
+
         /// <summary>
         /// Reference to the Rigidbody2D component.
         /// </summary>
@@ -174,6 +181,8 @@ namespace Player
         /// </summary>
         private Vector3 positionLastFrame;
 
+        // --- Unity Methods ---
+
         /// <summary>
         /// Initializes player components and sets up initial values.
         /// </summary>
@@ -221,6 +230,8 @@ namespace Player
             Animate();
         }
 
+        // --- Movement Methods ---
+
         /// <summary>
         /// Updates the player's animation state based on movement and grounded status.
         /// </summary>
@@ -236,20 +247,10 @@ namespace Player
                     animationPlayer.SetState(AnimationPlayer.AnimationState.Idle);
             }
 
-            if (true)
-            {
-                if (virtualAxisX < -0.01f)
-                    animationPlayer.backwards = true;
-                else if (virtualAxisX > 0.01f)
-                    animationPlayer.backwards = false;
-            }
-            else
-            {
-                if (body.linearVelocityX < -0.1f)
-                    animationPlayer.backwards = true;
-                else if (body.linearVelocityX > 0.1f)
-                    animationPlayer.backwards = false;
-            }
+            if (virtualAxisX < -0.01f)
+                animationPlayer.backwards = true;
+            else if (virtualAxisX > 0.01f)
+                animationPlayer.backwards = false;
         }
 
         /// <summary>
@@ -427,6 +428,5 @@ namespace Player
         {
             if (IsPhysicallyGrounded()) body.linearVelocity = Vector2.zero;
         }
-
     }
 }

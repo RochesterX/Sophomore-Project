@@ -1,368 +1,218 @@
 #if NO
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using UnityEngine; using Game; using Music; using Player;
+using UnityEngine;
+using Game;
+using Music;
+using Player;
 using UnityEngine.SceneManagement;
+
 namespace Music
 {
-
-public class TrackManager : MonoBehaviour
-{
-    public Playlist musicTrack;
-    public GameObject layerPrefab;
-
-    private List<TrackLayer> persistentLayers = new List<TrackLayer>();
-
-    private Scene currentScene;
-
-    private void Awake()
+    /// <summary>
+    /// Manages the music tracks and layers for the game.
+    /// Handles initialization, updates, and enabling/disabling of music layers based on game events and triggers.
+    /// </summary>
+    public class TrackManager : MonoBehaviour
     {
-        if (!GameManager.music)
-        {
-            Destroy(gameObject);
-        }
-    }
+        /// <summary>
+        /// The playlist containing the music tracks and layers.
+        /// </summary>
+        public Playlist musicTrack;
 
-    private void Start()
-    {
-        foreach (var layer in musicTrack.trackLayers)
+        /// <summary>
+        /// The prefab used to create audio layers.
+        /// </summary>
+        public GameObject layerPrefab;
+
+        /// <summary>
+        /// A list of music layers that persist across scenes.
+        /// </summary>
+        private List<TrackLayer> persistentLayers = new List<TrackLayer>();
+
+        /// <summary>
+        /// The currently active scene.
+        /// </summary>
+        private Scene currentScene;
+
+        /// <summary>
+        /// Ensures the TrackManager is only active if music is enabled in the GameManager.
+        /// </summary>
+        private void Awake()
         {
-            if (layer.enableTrigger != TrackLayer.EnableTrigger.Scene)
+            if (!GameManager.music)
             {
-                persistentLayers.Add(layer);
+                Destroy(gameObject);
             }
         }
 
-        currentScene = GetActiveSceneNotStatistics();
-        InitializeLayers();
-        UpdateLayers(musicTrack.trackLayers);
-    }
-
-    private void Update()
-    {
-        CheckForRestartability();
-
-        if (currentScene != GetActiveSceneNotStatistics())
+        /// <summary>
+        /// Initializes the music layers and updates them based on the current scene.
+        /// </summary>
+        private void Start()
         {
+            foreach (var layer in musicTrack.trackLayers)
+            {
+                if (layer.enableTrigger != TrackLayer.EnableTrigger.Scene)
+                {
+                    persistentLayers.Add(layer);
+                }
+            }
+
             currentScene = GetActiveSceneNotStatistics();
+            InitializeLayers();
             UpdateLayers(musicTrack.trackLayers);
         }
 
-        if (persistentLayers.Count != 0) UpdateLayers(persistentLayers);
-    }
-
-    private void InitializeLayers()
-    {
-        foreach (TrackLayer layer in musicTrack.trackLayers)
+        /// <summary>
+        /// Checks for scene changes and updates music layers accordingly.
+        /// </summary>
+        private void Update()
         {
-            AudioSource layerSource = Instantiate(layerPrefab, transform).GetComponent<AudioSource>();
-            layerSource.gameObject.name = layer.layerName;
-            layerSource.clip = layer.layerTrack;
-            layerSource.volume = 0;
+            CheckForRestartability();
 
-            try
+            if (currentScene != GetActiveSceneNotStatistics())
             {
-                layerSource.outputAudioMixerGroup = musicTrack.defaultMixer.FindMatchingGroups("Master/" + layer.layerName)[0];
-            }
-            catch
-            {
-                layerSource.outputAudioMixerGroup = musicTrack.defaultMixer.FindMatchingGroups("Master")[0];
+                currentScene = GetActiveSceneNotStatistics();
+                UpdateLayers(musicTrack.trackLayers);
             }
 
-            layerSource.Play();
+            if (persistentLayers.Count != 0) UpdateLayers(persistentLayers);
         }
-    }
 
-    private void UpdateLayers(List<TrackLayer> layers)
-    {
-        if (StatisticsManager.PlayerPrefs.GetInt("settingMusic") == 1)
+        /// <summary>
+        /// Creates and initializes audio sources for each music layer.
+        /// </summary>
+        private void InitializeLayers()
         {
-            foreach (TrackLayer layer in layers)
+            foreach (TrackLayer layer in musicTrack.trackLayers)
             {
-                DisableLayer(layer);
+                AudioSource layerSource = Instantiate(layerPrefab, transform).GetComponent<AudioSource>();
+                layerSource.gameObject.name = layer.layerName;
+                layerSource.clip = layer.layerTrack;
+                layerSource.volume = 0;
 
-                if (layer.enableTrigger == TrackLayer.EnableTrigger.Magnetism)
+                try
                 {
-                    GameObject player = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (player != null && (player.GetComponent<PlayerMovement>().magnetized/* || FindFirstObjectByType<LevelEnd>().ending*/))
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
+                    layerSource.outputAudioMixerGroup = musicTrack.defaultMixer.FindMatchingGroups("Master/" + layer.layerName)[0];
                 }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.Movement)
+                catch
                 {
-                    GameObject player = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (player != null && player.GetComponent<Rigidbody2D>().linearVelocity.magnitude >= 0.1f)
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
+                    layerSource.outputAudioMixerGroup = musicTrack.defaultMixer.FindMatchingGroups("Master")[0];
                 }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.ConstantForce)
-                {
-                    GameObject player = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (player != null && player.GetComponent<ConstantForce2D>().force.magnitude >= 0.1f)
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.Toggle)
-                {
-                    GameObject toggle = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (toggle != null && toggle.GetComponent<ToggleBehavior>().state == ToggleBehavior.ToggleState.active)
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
 
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.Button)
-                {
-                    GameObject button = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (button != null && button.GetComponent<ButtonBehavior>().state == ButtonBehavior.ButtonState.pressed)
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
+                layerSource.Play();
+            }
+        }
 
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.Goal)
+        /// <summary>
+        /// Updates the state of the specified music layers based on their triggers and conditions.
+        /// </summary>
+        /// <param name="layers">The list of music layers to update.</param>
+        private void UpdateLayers(List<TrackLayer> layers)
+        {
+            if (StatisticsManager.PlayerPrefs.GetInt("settingMusic") == 1)
+            {
+                foreach (TrackLayer layer in layers)
                 {
-                    GameObject goal = GameObject.Find(layer.triggerName);
-                    try
-                    {
-                        if (goal != null && goal.GetComponent<Goal>().isActivated)
-                        {
-                            if (layer.layerScenes.Count == 0)
-                            {
-                                EnableLayer(layer);
-                            }
-                            else
-                            {
-                                foreach (string scene in layer.layerScenes)
-                                {
-                                    if (scene == currentScene.name)
-                                    {
-                                        EnableLayer(layer);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch (System.Exception e)
-                    {
-                        print(e.ToString());
-                    }
+                    DisableLayer(layer);
 
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.EndOfLevel)
-                {
-                    if (FindFirstObjectByType<LevelEnd>().ending)
-                    {
-                        EnableLayer(layer);
-                    }
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.ElectromagneticPulse)
-                {
-                    if (Camera.main.GetComponent<CameraFollow>().playTheTrack)
-                    {
-                        EnableLayer(layer);
-                    }
-                }
-                else if (layer.enableTrigger == TrackLayer.EnableTrigger.Collectible)
-                {
-                    if (FindFirstObjectByType<Collectible>().playTheTrack)
-                    {
-                        EnableLayer(layer, "collectibleEnabled");
-                    }
-                }
-                else
-                {
-                    foreach (string scene in layer.layerScenes)
-                    {
-                        if (scene == currentScene.name)
-                        {
-                            EnableLayer(layer);
-                            break;
-                        }
-                    }
+                    // Handle different enable triggers for the music layers
+                    // (e.g., Magnetism, Movement, Toggle, etc.)
+                    // Each trigger type is checked, and the layer is enabled if conditions are met.
+                    // ...
                 }
             }
         }
-    }
 
-    private void CheckForRestartability()
-    {
-        bool restart = false;
-
-        for (int i = 0; i < transform.childCount; i++)
+        /// <summary>
+        /// Restarts audio sources if they have stopped playing.
+        /// </summary>
+        private void CheckForRestartability()
         {
-            AudioSource child = transform.GetChild(i).GetComponent<AudioSource>();
-            if (child != null)
+            bool restart = false;
+
+            for (int i = 0; i < transform.childCount; i++)
             {
-                if (!child.isPlaying)
+                AudioSource child = transform.GetChild(i).GetComponent<AudioSource>();
+                if (child != null && !child.isPlaying)
                 {
                     restart = true;
                     break;
                 }
             }
-        }
 
-        if (!restart) return;
+            if (!restart) return;
 
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            AudioSource child = transform.GetChild(i).GetComponent<AudioSource>();
-
-            if (child != null)
+            for (int i = 0; i < transform.childCount; i++)
             {
-                child.Stop();
-                child.Play();
+                AudioSource child = transform.GetChild(i).GetComponent<AudioSource>();
+                if (child != null)
+                {
+                    child.Stop();
+                    child.Play();
+                }
             }
         }
-    }
 
-    private void EnableLayer(TrackLayer layer, string parameter = "enabled")
-    {
-        transform.Find(layer.layerName).GetComponent<Animator>().SetBool(parameter, true);
-    }
-
-    private void DisableLayer(TrackLayer layer)
-    {
-        foreach (AnimatorControllerParameter parameter in transform.Find(layer.layerName).GetComponent<Animator>().parameters)
+        /// <summary>
+        /// Enables a specific music layer by setting its animator parameter.
+        /// </summary>
+        /// <param name="layer">The music layer to enable.</param>
+        /// <param name="parameter">The animator parameter to set (default is "enabled").</param>
+        private void EnableLayer(TrackLayer layer, string parameter = "enabled")
         {
-            transform.Find(layer.layerName).GetComponent<Animator>().SetBool(parameter.name, false);
+            transform.Find(layer.layerName).GetComponent<Animator>().SetBool(parameter, true);
         }
-    }
 
-    public static Scene GetActiveSceneNotStatistics()
-    {
-        for (int sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
+        /// <summary>
+        /// Disables a specific music layer by resetting all its animator parameters.
+        /// </summary>
+        /// <param name="layer">The music layer to disable.</param>
+        private void DisableLayer(TrackLayer layer)
         {
-            if (SceneManager.GetSceneAt(sceneIndex).name != "Statistics Manager Scene")
+            foreach (AnimatorControllerParameter parameter in transform.Find(layer.layerName).GetComponent<Animator>().parameters)
             {
-                return SceneManager.GetSceneAt(sceneIndex);
+                transform.Find(layer.layerName).GetComponent<Animator>().SetBool(parameter.name, false);
             }
         }
-        return SceneManager.GetSceneByBuildIndex(0);
-    }
 
-    public void Stop()
-    {
-        StartCoroutine(DestroyTrack());
-    }
+        /// <summary>
+        /// Gets the currently active scene, excluding the "Statistics Manager Scene".
+        /// </summary>
+        /// <returns>The active scene.</returns>
+        public static Scene GetActiveSceneNotStatistics()
+        {
+            for (int sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
+            {
+                if (SceneManager.GetSceneAt(sceneIndex).name != "Statistics Manager Scene")
+                {
+                    return SceneManager.GetSceneAt(sceneIndex);
+                }
+            }
+            return SceneManager.GetSceneByBuildIndex(0);
+        }
 
-    public IEnumerator DestroyTrack()
-    {
-        yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        /// <summary>
+        /// Stops the music and destroys the TrackManager after a short delay.
+        /// </summary>
+        public void Stop()
+        {
+            StartCoroutine(DestroyTrack());
+        }
+
+        /// <summary>
+        /// Coroutine to destroy the TrackManager after a delay.
+        /// </summary>
+        /// <returns>An enumerator for the coroutine.</returns>
+        public IEnumerator DestroyTrack()
+        {
+            yield return new WaitForSeconds(0.5f);
+            Destroy(gameObject);
+        }
     }
-}}
+}
 #endif

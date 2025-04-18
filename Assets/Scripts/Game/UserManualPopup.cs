@@ -1,14 +1,30 @@
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// This class manages the user manual popup, including displaying instructions,
+/// game mode descriptions, controls, and tips for players.
+/// </summary>
 public class UserManualPopup : MonoBehaviour
 {
+    /// <summary>
+    /// The panel that contains the user manual popup.
+    /// </summary>
     public GameObject popupPanel;
+
+    /// <summary>
+    /// The text element used to display the user manual content.
+    /// </summary>
     public TextMeshProUGUI userManualText;
 
-    // Reference to the combined sprite asset
+    /// <summary>
+    /// The sprite asset used for embedding icons in the user manual text.
+    /// </summary>
     public TMP_SpriteAsset combinedSpriteAsset;
 
+    /// <summary>
+    /// Initializes the user manual content and assigns the sprite asset.
+    /// </summary>
     private void Start()
     {
         // Assign the combined sprite asset
@@ -61,14 +77,20 @@ public class UserManualPopup : MonoBehaviour
         userManualText.text += "<size=30>The hat has physics too! Don't punch it too hard.</size>";
     }
 
-    public void ShowPopup() // Show the popup
+    /// <summary>
+    /// Displays the user manual popup.
+    /// </summary>
+    public void ShowPopup()
     {
         popupPanel.SetActive(true);
         gameObject.SetActive(true);
         print("User manual opened");
     }
 
-    public void HidePopup() // Hide the popup
+    /// <summary>
+    /// Hides the user manual popup.
+    /// </summary>
+    public void HidePopup()
     {
         popupPanel.SetActive(false);
         gameObject.SetActive(false);
