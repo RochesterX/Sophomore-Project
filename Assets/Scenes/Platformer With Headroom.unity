@@ -1073,7 +1073,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DayNightSkyBackground
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4246696559647540517, guid: eea49ffcaef404cf0b373413357af83b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4464,7 +4465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2119246465}
   - component: {fileID: 2119246464}
-  - component: {fileID: 2119246466}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -4500,19 +4500,6 @@ Transform:
   - {fileID: 1866446469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2119246466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119246462}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bdf61cebccfdae4eb5dfde2875a6b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parallaxCamera: {fileID: 8682934954266721943}
 --- !u!1001 &6442071445436727402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4868,22 +4855,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6667330442232207831, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
---- !u!114 &8682934954266721943 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6667330442232207831, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}
-  m_PrefabInstance: {fileID: 8682934954266721942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ee5d10b5d7770438ac142d5edd40cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &8682934954266721944 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5308997821520447826, guid: e659ce6dc4d58ff4f9726fa05e1bab20, type: 3}

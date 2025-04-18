@@ -1611,6 +1611,7 @@ GameObject:
   - component: {fileID: 2989920920269489744}
   - component: {fileID: 6257918665144114279}
   - component: {fileID: 7403892811383598409}
+  - component: {fileID: 8022612332768548989}
   m_Layer: 5
   m_Name: TimerCanvas
   m_TagString: Untagged
@@ -1702,6 +1703,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8022612332768548989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757615392802054825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a52816a1c62984ea622bbf50849c68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1926495141273306167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,7 +3459,7 @@ MonoBehaviour:
   spawnPosition: {x: -10.25, y: 20}
   obstacleCourseSpawnPosition: {x: 0, y: 0}
   hatSpawnPositions: []
-  LeaderboardCanvas: {fileID: 0}
+  LeaderboardCanvas: {fileID: 8782109666150986860}
   TimerCanvas: {fileID: 2989920920269489744}
   hatObject: {fileID: 8102114527039450581}
 --- !u!114 &5255884573950249540

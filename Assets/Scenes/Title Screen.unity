@@ -4567,6 +4567,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 364690973}
+  userManualText: {fileID: 2055185872}
+  wSpriteAsset: {fileID: 11400000, guid: f5f77e182d3666c41aca55c4d05b6d4e, type: 2}
+  aSpriteAsset: {fileID: 11400000, guid: 7cfaff9d8d0751b409fcaf2618c1c04e, type: 2}
+  sSpriteAsset: {fileID: 11400000, guid: 6f111a09b056658428e50a0f1c5e462a, type: 2}
+  dSpriteAsset: {fileID: 11400000, guid: 58f7c9e33e37f12468674bd76a668624, type: 2}
+  enterSpriteAsset: {fileID: 11400000, guid: a6bada675240cf04fbc660d92e9d995b, type: 2}
+  startSpriteAsset: {fileID: 11400000, guid: fff8297afa5ec6242850db442b6e2ff6, type: 2}
+  lStickSpriteAsset: {fileID: 11400000, guid: c04154534a927fd40be0a8e24d78a48d, type: 2}
+  rbSpriteAsset: {fileID: 11400000, guid: 21118d39f3841e74ebcac06754a778e5, type: 2}
+  psCrossSpriteAsset: {fileID: 11400000, guid: e8fb23e8b5b969b448185e191f24e8c2, type: 2}
+  psSquareSpriteAsset: {fileID: 11400000, guid: 8a5e0388df7112843b6267552a44fcc3, type: 2}
+  xbXSpriteAsset: {fileID: 11400000, guid: 53e9b9b7128441d45956afc87e2b09ed, type: 2}
+  xbASpriteAsset: {fileID: 11400000, guid: 0e1ab2eca0f99eb4488578a13228e556, type: 2}
+  ninYSpriteAsset: {fileID: 11400000, guid: f39774587c562414da5462b58d95bef5, type: 2}
+  ninBSpriteAsset: {fileID: 11400000, guid: c4092f02148ae6045940305ed1643b9c, type: 2}
 --- !u!114 &1248852956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6245,20 +6260,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "User Manual \u2013 How to Play\r\n\r\nGetting Started\r\nLaunch the Game\r\n\r\n\r\nPress
-    the \u201CStart\u201D Button to connect and enter the main menu.\r\n\r\n\r\nChoose
-    Your Game Mode from the available options.\r\n\r\n\r\nSelect a Map to begin the
-    match.\r\n\r\n\r\n\r\nGame Modes\r\n1. Obstacle Course\r\nObjective: Race through
-    the course and be the first to finish.\r\n\r\n\r\nWinner: The player who crosses
-    the finish line first.\r\n\r\n\r\n2. Free For All\r\nObjective: Battle it out
-    with other players.\r\n\r\n\r\nLives: Each player starts with 5 lives.\r\n\r\n\r\nWinner:
-    The last player standing wins.\r\n\r\n\r\n3. Keep Away\r\nObjective: Grab the
-    hat and hold onto it for as long as possible.\r\n\r\n\r\nWinner: The player who
-    holds the hat the longest by the end of the match.\r\n\r\n\r\n\r\nControls\r\nMove:
-    Left Analog Stick\r\nJump: Press A\r\nPunch: Press X\r\nParry: Let go of RB at
-    the right time\r\n\r\n\r\n\r\nTips\r\nTime your jumps to avoid falling in obstacle
-    courses.\r\n\r\n\r\nUse punches and parries strategically in combat.\r\n\r\n\r\nIn
-    Keep Away, keep moving and avoid being surrounded!\r"
+  m_text: "User Manual \u2013 How to Play\r\n\r\nPress the 'Start' Button to enter
+    the main menu.\r\nUse 'Enter' on keyboard, or 'Start' on controller to add your
+    player.\nChoose your desired gamemode and map.\nPress 'Begin' to start the match.\r\n\r\nGame
+    Modes\n\r\nFree For All\r\nBattle it out with other players.\r\n\rEach player
+    starts with 5 lives.\r\n\rThe last player standing wins.\n\nObstacle Course\r\nPunch
+    and race your way through the course to reach the end.\r\n\rThe player who reaches
+    the flag first wins.\r\r\n\r\nKeep Away\r\nFight for the hat! You get 3 minutes.\nTouch
+    the hat to start wearing it.\nYou will drop the hat if you are hit or if you
+    died.\nThe player who wears the hat the longest wins.\r\n\r\nControls\n\r\nMove:
+    Left Analog Stick / WASD\r\nJump: A / Cross / Spacebar\r\nPunch: X / Square /
+    E\nBlock: RB / Shift\r\nParry: Let go of RB / Shift at the right time\n\r\nTips\n\r\nPunches
+    seem to hit you harder when you lose health. \nWalk into your opponent to turn
+    them around and push them.\n\rTime your jumps to avoid falling (or hitting your
+    head).\nThe hat has physics too! Don't punch it too hard."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4b6d771d01664138b2f3db447b45695, type: 2}
   m_sharedMaterial: {fileID: 560944918044722035, guid: f4b6d771d01664138b2f3db447b45695, type: 2}

@@ -30,8 +30,6 @@ public class AudioManager : MonoBehaviour
                 soundEffects.Add(soundEffect);
             }
         }
-
-        print(soundEffects);
     }
 
     public void PlaySound(string soundName)

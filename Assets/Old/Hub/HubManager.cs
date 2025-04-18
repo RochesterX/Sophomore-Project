@@ -21,20 +21,29 @@ public class HubManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("A HubManager already exists.");
             Destroy(this.gameObject);
+        }
+        if (hubCamera.GetComponent<AudioListener>() == null)
+        {
+            hubCamera.AddComponent<AudioListener>();
         }
         hubCamera.SetActive(true);
         MusicManager.Instance.StartPlaylist();
-    }
+        print("Game started");
+        }
 
     public void LoadScene(string sceneName)
     {
         UnloadGameScene();
         hubCamera.SetActive(false);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        var activeCamera = Camera.main;
+        if (activeCamera != null && activeCamera.GetComponent<AudioListener>() == null)
+        {
+            activeCamera.gameObject.AddComponent<AudioListener>();
+        }
         MusicManager.Instance.StartPlaylist();
-        print("Loading scene: playing solmg" + sceneName);
+        print("Loading scene: " + sceneName);
     }
 
     public void UnloadGameScene()
@@ -44,11 +53,7 @@ public class HubManager : MonoBehaviour
         {
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
         }
-        catch
-        {
-            Debug.Log("No game scene to unload");
-        }
-
+        catch {}
         ChangeGameButtonsInteractability(false);
     }
 
