@@ -21,8 +21,15 @@ namespace Game
 
         public PlayerJoinCard CreateCard() // Creates a player join card
         {
-            GameObject card = Instantiate(playerJoinCardPrefab, transform);
-            return card.GetComponent<PlayerJoinCard>();
+            try
+            {
+                GameObject card = Instantiate(playerJoinCardPrefab, transform);
+                return card.GetComponent<PlayerJoinCard>();
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

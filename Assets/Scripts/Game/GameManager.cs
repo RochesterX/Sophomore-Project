@@ -68,7 +68,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        MusicManager.Instance.StartPlaylist();
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.StartPlaylist();
+        }
         StartGame();
     }
 
@@ -124,8 +127,11 @@ public class GameManager : MonoBehaviour
         }
         if (gameMode == GameMode.keepAway)
         {
-            gameTimer.startTime = time;
-            gameTimer.StartTimer();
+            if (gameTimer != null)
+            {
+                gameTimer.startTime = time;
+                gameTimer.StartTimer();
+            }
             foreach (GameObject player in players)
             {
                 player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
@@ -203,11 +209,17 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        if (LeaderboardCanvas == null){}
         gameOver = true;
         EndGameEvent?.Invoke();
-        LeaderboardCanvas.gameObject.SetActive(false);
-        TimerCanvas.gameObject.SetActive(false);
-
+        if (LeaderboardCanvas != null)
+        {
+            LeaderboardCanvas.gameObject.SetActive(false);
+        }
+        if (TimerCanvas != null)
+        {
+            TimerCanvas.gameObject.SetActive(false);
+        }
         if (gameMode == GameMode.freeForAll)
         {
             GameObject winner = AlivePlayers()[0];
@@ -231,13 +243,24 @@ public class GameManager : MonoBehaviour
             if (winner != null)
             {
                 print(winner.name + " is the winner with " + maxHoldTime + " seconds!");
-                FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
+                var cameraMovement = FindFirstObjectByType<PlayerCameraMovement>();
+                if (cameraMovement != null)
+                {
+                    cameraMovement.WinScene(winner);
+                }
                 WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
-                FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();
+                var lifeDisplayManager = FindFirstObjectByType<LifeDisplayManager>();
+                if (lifeDisplayManager != null)
+                {
+                    lifeDisplayManager.HideLifeDisplay();
+                }
                 StartCoroutine(MoveHatToWinner(winner));
-                hatObject.SetActive(true);
-                hatObject.GetComponent<Collider2D>().enabled = true;
-                hatObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                if (hatObject != null)
+                {
+                    hatObject.SetActive(true);
+                    hatObject.GetComponent<Collider2D>().enabled = true;
+                    hatObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                }
             }
         }
         if (gameMode == GameMode.obstacleCourse)

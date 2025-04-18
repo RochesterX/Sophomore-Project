@@ -32,11 +32,23 @@ public class PlayerManager : MonoBehaviour
             Destroy(playerInput.gameObject);
             return;
         }
-        Debug.Log("Player joined");
+        print("Player joined");
         DontDestroyOnLoad(playerInput.gameObject);
+        if (PlayerCardCreator.Instance == null)
+        {
+            return;
+        }
         PlayerJoinCard card = PlayerCardCreator.Instance.CreateCard();
+        if (card == null)
+        {
+            return;
+        }
         card.playerNumber = GameManager.players.Count + 1;
         cards.Add(card);
+        if (GameManager.players == null)
+        {
+            GameManager.players = new List<GameObject>();
+        }
         GameManager.players.Add(playerInput.gameObject);
         Colorize(GameManager.players.Count - 1);
     }
@@ -46,7 +58,7 @@ public class PlayerManager : MonoBehaviour
     {
         Destroy(playerInput.gameObject);
         GameManager.players.Remove(playerInput.gameObject);
-        Debug.Log("Player left");
+        print("Player left");
     }
 
     private void Init()

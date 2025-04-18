@@ -52,31 +52,43 @@ public class HubManager : MonoBehaviour
         ChangeGameButtonsInteractability(false);
     }
 
-    private void Update()
+   private void Update()
     {
         if (InputSystem.GetDevice<Keyboard>().escapeKey.wasPressedThisFrame)
         {
             UnloadGameScene();
             ChangeGameButtonsInteractability(true);
-
-            foreach (GameObject player in GameManager.players.ToList())
+            if (GameManager.players != null)
             {
-                GameManager.players.Remove(player);
-                Destroy(player);
+                foreach (GameObject player in GameManager.players.ToList())
+                {
+                    GameManager.players.Remove(player);
+                    if (player != null)
+                    {
+                        Destroy(player);
+                    }
+                }
             }
-
-            MusicManager.Instance.StartPlaylist("Title Screen");
-
-            foreach (Camera camera in FindObjectsByType<Camera>(FindObjectsSortMode.None))
+            if (MusicManager.Instance != null)
             {
-                camera.enabled = false;
+                MusicManager.Instance.StartPlaylist("Title Screen");
             }
-
-            GameManager.players.Clear();
-            GameManager.playerColors.Clear();
-            GameManager.Instance.gameOver = false;
-
+            var cameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
+            if (cameras != null)
+            {
+                foreach (Camera camera in cameras)
+                {
+                    camera.enabled = false;
+                }
+            }
+            GameManager.players?.Clear();
+            GameManager.playerColors?.Clear();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.gameOver = false;
+            }
             SceneManager.LoadScene("Title Screen");
+
         }
     }
 
