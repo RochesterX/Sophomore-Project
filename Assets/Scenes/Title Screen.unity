@@ -3195,16 +3195,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Needs work:\nReset confirmation\nSound effects in game\nPlatform friction\nFacing
-    angle not velocity-based\nDead player constant velocity\n\nComplete:\n#Player
-    Join screen update (clarify map select)\n#Player card players\n#Join screen titles\n#Implement
-    music\n#Mountain music\n#Make city playable\n#One way platform mountain\n#Get
-    rid of placeholder start stop obstacle course\n#Respawn after game over (ALL
-    GAMEMODES)\n#Fix Time Left! text\n#Obstacle course end only works on correct
-    gamemode\n#Obstacle course end for mountain\n#Correct time limits for keep away
-    maps \n#Obstacle course flag\n#Health bar persists after death\n#Create white
-    border on hat sprite\n#Leaderboard scaling city obstacle course\n#Keep away map\n#User
-    guide in game\n#More comments on the code\n"
+  m_text: 'Needs work:
+
+    Reset confirmation'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

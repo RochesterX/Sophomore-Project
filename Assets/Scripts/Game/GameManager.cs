@@ -231,7 +231,14 @@ namespace Game
             {
                 foreach (GameObject player in players)
                 {
-                    player.transform.position = spawnPosition;
+                    if (obstacleCourseSpawnPosition == Vector2.zero)
+                    {
+                        obstacleCourseSpawnPosition = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                    }
+                    else
+                    {
+                        player.transform.position = obstacleCourseSpawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                    }
                     player.GetComponent<Damageable>().lives = 0;
                 }
             }
@@ -280,7 +287,15 @@ namespace Game
             RespawnOnTriggerEnter respawnScript = player.GetComponent<RespawnOnTriggerEnter>();
             if (respawnScript != null)
             {
-                player.transform.position = respawnScript.spawnPoint;
+                //player.transform.position = respawnScript.spawnPoint;
+                if (GameManager.gameMode == GameMode.obstacleCourse)
+                {
+                    player.transform.position = obstacleCourseSpawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                }
+                else
+                {
+                    player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                }
                 player.GetComponent<Damageable>().ResetDamage();
                 player.GetComponent<Damageable>().Respawn();
             }

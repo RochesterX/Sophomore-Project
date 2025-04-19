@@ -211,7 +211,7 @@ namespace Player
         /// </summary>
         public void Respawn()
         {
-            transform.position = GameManager.Instance.spawnPosition;
+            //transform.position = GameManager.Instance.spawnPosition;
 
             // Reset the player's velocity
             if (TryGetComponent<Rigidbody2D>(out var rb))

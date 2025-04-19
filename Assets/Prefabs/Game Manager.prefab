@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 180
-  offset: 1
+  offset: 0.5
   gameOver: 0
   gameTimer: {fileID: 4832072825095962115}
   spawnPosition: {x: -10.25, y: 20}
