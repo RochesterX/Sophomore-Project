@@ -210,7 +210,7 @@ namespace Game
             {
                 foreach (GameObject player in players)
                 {
-                    player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                    player.transform.position = spawnPosition + (offset * (int.Parse(player.name) - 1) * Vector2.right);
                     player.GetComponent<Damageable>().lives = 5;
                 }
             }
@@ -223,7 +223,7 @@ namespace Game
                 }
                 foreach (GameObject player in players)
                 {
-                    player.transform.position = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                    player.transform.position = spawnPosition + (offset * (int.Parse(player.name) - 1) * Vector2.right);
                     player.GetComponent<Damageable>().lives = 0;
                 }
             }
@@ -231,13 +231,14 @@ namespace Game
             {
                 foreach (GameObject player in players)
                 {
+                    print("processing player " + player.name);
                     if (obstacleCourseSpawnPosition == Vector2.zero)
                     {
-                        obstacleCourseSpawnPosition = spawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                        player.transform.position = spawnPosition + (offset * (int.Parse(player.name) - 1) * Vector2.right);
                     }
                     else
                     {
-                        player.transform.position = obstacleCourseSpawnPosition + (offset * players.IndexOf(player) * Vector2.right);
+                        player.transform.position = obstacleCourseSpawnPosition + (offset * (int.Parse(player.name) - 1) * Vector2.right);
                     }
                     player.GetComponent<Damageable>().lives = 0;
                 }
