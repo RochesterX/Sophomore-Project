@@ -13,7 +13,9 @@ items:
   - Player.Damageable.HandleDeath
   - Player.Damageable.lives
   - Player.Damageable.maxDamage
+  - Player.Damageable.OnPlayerDeath
   - Player.Damageable.OnPlayerPunched
+  - Player.Damageable.OnPlayerRespawn
   - Player.Damageable.ResetDamage
   - Player.Damageable.Respawn
   langs:
@@ -26,10 +28,12 @@ items:
   source:
     id: Damageable
     path: ''
-    startLine: 2005
+    startLine: 3145
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class handles the player&apos;s ability to take damage, die, and respawn.\nIt also manages interactions like blocking, parrying, and dropping items when hit.\n"
+  example: []
   syntax:
     content: 'public class Damageable : MonoBehaviour'
     content.vb: Public Class Damageable Inherits MonoBehaviour
@@ -49,7 +53,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 2014
+    startLine: 3153
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -74,7 +78,7 @@ items:
   source:
     id: damage
     path: ''
-    startLine: 2019
+    startLine: 3158
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -99,7 +103,7 @@ items:
   source:
     id: maxDamage
     path: ''
-    startLine: 2024
+    startLine: 3163
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -124,7 +128,7 @@ items:
   source:
     id: lives
     path: ''
-    startLine: 2029
+    startLine: 3168
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -149,7 +153,7 @@ items:
   source:
     id: damageSelfDebug
     path: ''
-    startLine: 2036
+    startLine: 3173
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -174,7 +178,7 @@ items:
   source:
     id: dying
     path: ''
-    startLine: 2041
+    startLine: 3178
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -199,7 +203,7 @@ items:
   source:
     id: OnPlayerPunched
     path: ''
-    startLine: 2046
+    startLine: 3183
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -210,6 +214,56 @@ items:
     return:
       type: System.Action{GameObject}
     content.vb: Public Event OnPlayerPunched As Action(Of GameObject)
+- uid: Player.Damageable.OnPlayerDeath
+  commentId: E:Player.Damageable.OnPlayerDeath
+  id: OnPlayerDeath
+  parent: Player.Damageable
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerDeath
+  nameWithType: Damageable.OnPlayerDeath
+  fullName: Player.Damageable.OnPlayerDeath
+  type: Event
+  source:
+    id: OnPlayerDeath
+    path: ''
+    startLine: 3188
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  summary: "\nEvent triggered when a player dies.\n"
+  example: []
+  syntax:
+    content: public event Action<GameObject> OnPlayerDeath
+    return:
+      type: System.Action{GameObject}
+    content.vb: Public Event OnPlayerDeath As Action(Of GameObject)
+- uid: Player.Damageable.OnPlayerRespawn
+  commentId: E:Player.Damageable.OnPlayerRespawn
+  id: OnPlayerRespawn
+  parent: Player.Damageable
+  langs:
+  - csharp
+  - vb
+  name: OnPlayerRespawn
+  nameWithType: Damageable.OnPlayerRespawn
+  fullName: Player.Damageable.OnPlayerRespawn
+  type: Event
+  source:
+    id: OnPlayerRespawn
+    path: ''
+    startLine: 3193
+  assemblies:
+  - cs.temp.dll
+  namespace: Player
+  summary: "\nEvent triggered when a player respawns.\n"
+  example: []
+  syntax:
+    content: public event Action<GameObject> OnPlayerRespawn
+    return:
+      type: System.Action{GameObject}
+    content.vb: Public Event OnPlayerRespawn As Action(Of GameObject)
 - uid: Player.Damageable.Damage(System.Single)
   commentId: M:Player.Damageable.Damage(System.Single)
   id: Damage(System.Single)
@@ -224,7 +278,7 @@ items:
   source:
     id: Damage
     path: ''
-    startLine: 2126
+    startLine: 3285
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -255,7 +309,7 @@ items:
   source:
     id: HandleDeath
     path: ''
-    startLine: 2176
+    startLine: 3337
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -279,7 +333,7 @@ items:
   source:
     id: Respawn
     path: ''
-    startLine: 2186
+    startLine: 3348
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -303,7 +357,7 @@ items:
   source:
     id: ResetDamage
     path: ''
-    startLine: 2203
+    startLine: 3368
   assemblies:
   - cs.temp.dll
   namespace: Player

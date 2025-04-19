@@ -19,10 +19,12 @@ items:
   source:
     id: TeleportPlatform
     path: ''
-    startLine: 2277
+    startLine: 3494
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class handles teleportation for platforms and players when they collide with the teleport trigger.\nIt can teleport either the platform itself or a player to a specified location.\n"
+  example: []
   syntax:
     content: 'public class TeleportPlatform : MonoBehaviour'
     content.vb: Public Class TeleportPlatform Inherits MonoBehaviour
@@ -42,10 +44,12 @@ items:
   source:
     id: teleportPoint
     path: ''
-    startLine: 2279
+    startLine: 3499
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe position where the platform or player will be teleported.\n"
+  example: []
   syntax:
     content: public Vector2 teleportPoint
     return:
@@ -65,10 +69,12 @@ items:
   source:
     id: teleportTag
     path: ''
-    startLine: 2280
+    startLine: 3504
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe tag used to identify objects (e.g., platforms) that can trigger teleportation.\n"
+  example: []
   syntax:
     content: public string teleportTag
     return:
@@ -88,10 +94,12 @@ items:
   source:
     id: playerTag
     path: ''
-    startLine: 2281
+    startLine: 3509
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe tag used to identify player objects.\n"
+  example: []
   syntax:
     content: public string playerTag
     return:
@@ -111,10 +119,12 @@ items:
   source:
     id: isPlatform
     path: ''
-    startLine: 2282
+    startLine: 3515
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nDetermines whether this script is handling a platform or a player.\nIf true, it teleports players. If false, it teleports the platform itself.\n"
+  example: []
   syntax:
     content: public bool isPlatform
     return:

@@ -83,7 +83,9 @@
 
   <h1 id="Music_AudioManager" data-uid="Music.AudioManager" class="text-break">Class AudioManager
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class manages the playback of sound effects in the game.
+It provides functionality to play specific sounds by name and ensures a singleton instance for global access.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,7 +103,8 @@
 
 
   <h4 id="Music_AudioManager_Instance" data-uid="Music.AudioManager.Instance">Instance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The singleton instance of the <a class="xref" href="Music.AudioManager.html">AudioManager</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -125,7 +128,8 @@
 
 
   <h4 id="Music_AudioManager_soundEffects" data-uid="Music.AudioManager.soundEffects">soundEffects</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of all sound effects managed by the AudioManager.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +156,8 @@
 
   <a id="Music_AudioManager_PlaySound_" data-uid="Music.AudioManager.PlaySound*"></a>
   <h4 id="Music_AudioManager_PlaySound_System_String_" data-uid="Music.AudioManager.PlaySound(System.String)">PlaySound(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Plays a sound effect by its name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -171,10 +176,15 @@
       <tr>
         <td><span class="xref">string</span></td>
         <td><span class="parametername">soundName</span></td>
-        <td></td>
+        <td><p>The name of the sound effect to play.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Music_AudioManager_PlaySound_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>If the sound name is &quot;Punch,&quot; it plays multiple punch-related sound effects.
+If the sound is not found, a warning is logged to the console.</p>
+</div>
 </article>
           </div>
 

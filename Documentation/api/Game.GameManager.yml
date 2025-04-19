@@ -39,11 +39,11 @@ items:
   source:
     id: GameManager
     path: ''
-    startLine: 1309
+    startLine: 1641
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nThe GameManager class manages the overall game logic, including game modes, player states, \ngame events, and game-over conditions. It ensures a single instance exists and provides \nfunctionality for starting, updating, and ending the game.\n"
+  summary: "\nThis class controls the main game logic, like starting the game, keeping track of players, \nhandling game modes, and deciding when the game ends.\n"
   example: []
   syntax:
     content: 'public class GameManager : MonoBehaviour'
@@ -64,10 +64,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 1311
+    startLine: 1646
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe single instance of this class that can be accessed from anywhere in the game.\n"
+  example: []
   syntax:
     content: public static GameManager Instance { get; }
     parameters: []
@@ -89,10 +91,12 @@ items:
   source:
     id: time
     path: ''
-    startLine: 1312
+    startLine: 1651
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe total time (in seconds) for the game to run.\n"
+  example: []
   syntax:
     content: public float time
     return:
@@ -112,10 +116,12 @@ items:
   source:
     id: StartGameEvent
     path: ''
-    startLine: 1314
+    startLine: 1661
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nEvent triggered when the game starts.\n"
+  example: []
   syntax:
     content: public event GameManager.GameEvent StartGameEvent
     return:
@@ -135,10 +141,12 @@ items:
   source:
     id: EndGameEvent
     path: ''
-    startLine: 1315
+    startLine: 1666
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nEvent triggered when the game ends.\n"
+  example: []
   syntax:
     content: public event GameManager.GameEvent EndGameEvent
     return:
@@ -158,10 +166,12 @@ items:
   source:
     id: players
     path: ''
-    startLine: 1316
+    startLine: 1671
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA list of all the players in the game.\n"
+  example: []
   syntax:
     content: public static List<GameObject> players
     return:
@@ -181,10 +191,12 @@ items:
   source:
     id: playerColors
     path: ''
-    startLine: 1317
+    startLine: 1676
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA list of colors assigned to each player.\n"
+  example: []
   syntax:
     content: public static List<Color> playerColors
     return:
@@ -204,10 +216,12 @@ items:
   source:
     id: offset
     path: ''
-    startLine: 1318
+    startLine: 1681
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe distance between players when they spawn.\n"
+  example: []
   syntax:
     content: public float offset
     return:
@@ -227,10 +241,12 @@ items:
   source:
     id: music
     path: ''
-    startLine: 1319
+    startLine: 1686
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nWhether the background music is turned on.\n"
+  example: []
   syntax:
     content: public static bool music
     return:
@@ -250,10 +266,12 @@ items:
   source:
     id: gameOver
     path: ''
-    startLine: 1320
+    startLine: 1691
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nWhether the game is currently over.\n"
+  example: []
   syntax:
     content: public bool gameOver
     return:
@@ -273,10 +291,12 @@ items:
   source:
     id: gameTimer
     path: ''
-    startLine: 1321
+    startLine: 1696
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA timer that counts down during the game.\n"
+  example: []
   syntax:
     content: public GameTimer gameTimer
     return:
@@ -296,10 +316,12 @@ items:
   source:
     id: playerHoldTimes
     path: ''
-    startLine: 1322
+    startLine: 1701
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nTracks how long each player has held an item in &quot;keep-away&quot; mode.\n"
+  example: []
   syntax:
     content: public static Dictionary<GameObject, float> playerHoldTimes
     return:
@@ -319,10 +341,12 @@ items:
   source:
     id: gameMode
     path: ''
-    startLine: 1323
+    startLine: 1706
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe current game mode (e.g., free-for-all, keep-away, or obstacle course).\n"
+  example: []
   syntax:
     content: public static GameManager.GameMode gameMode
     return:
@@ -342,10 +366,12 @@ items:
   source:
     id: map
     path: ''
-    startLine: 1324
+    startLine: 1711
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe name of the map being played.\n"
+  example: []
   syntax:
     content: public static string map
     return:
@@ -365,10 +391,12 @@ items:
   source:
     id: spawnPosition
     path: ''
-    startLine: 1325
+    startLine: 1716
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe position where players spawn at the start of the game.\n"
+  example: []
   syntax:
     content: public Vector2 spawnPosition
     return:
@@ -388,10 +416,12 @@ items:
   source:
     id: obstacleCourseSpawnPosition
     path: ''
-    startLine: 1326
+    startLine: 1721
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe position where players spawn in obstacle course mode.\n"
+  example: []
   syntax:
     content: public Vector2 obstacleCourseSpawnPosition
     return:
@@ -411,10 +441,12 @@ items:
   source:
     id: hatSpawnPositions
     path: ''
-    startLine: 1327
+    startLine: 1726
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nPositions where the hat can spawn in &quot;keep-away&quot; mode.\n"
+  example: []
   syntax:
     content: public List<Vector2> hatSpawnPositions
     return:
@@ -434,10 +466,12 @@ items:
   source:
     id: LeaderboardCanvas
     path: ''
-    startLine: 1328
+    startLine: 1731
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe canvas that shows the leaderboard during the game.\n"
+  example: []
   syntax:
     content: public Canvas LeaderboardCanvas
     return:
@@ -457,10 +491,12 @@ items:
   source:
     id: TimerCanvas
     path: ''
-    startLine: 1329
+    startLine: 1736
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe canvas that shows the timer during the game.\n"
+  example: []
   syntax:
     content: public Canvas TimerCanvas
     return:
@@ -480,10 +516,12 @@ items:
   source:
     id: hatObject
     path: ''
-    startLine: 1330
+    startLine: 1741
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe hat object used in &quot;keep-away&quot; mode.\n"
+  example: []
   syntax:
     content: public GameObject hatObject
     return:
@@ -503,11 +541,11 @@ items:
   source:
     id: StartGame
     path: ''
-    startLine: 1401
+    startLine: 1826
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nSets up the game based on the selected game mode.\n"
+  summary: "\nSets up the game based on the selected game mode. This includes spawning players and setting their lives.\n"
   example: []
   syntax:
     content: public void StartGame()
@@ -527,18 +565,18 @@ items:
   source:
     id: PlayerDied
     path: ''
-    startLine: 1440
+    startLine: 1868
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nHandles player deaths based on the current game mode.\n"
+  summary: "\nHandles what happens when a player dies, like respawning them or ending the game.\n"
   example: []
   syntax:
     content: public void PlayerDied(Damageable player)
     parameters:
     - id: player
       type: Player.Damageable
-      description: The player that died.
+      description: The player who died.
     content.vb: Public Sub PlayerDied(player As Damageable)
   overload: Game.GameManager.PlayerDied*
 - uid: Game.GameManager.GameOver
@@ -555,12 +593,14 @@ items:
   source:
     id: GameOver
     path: ''
-    startLine: 1495
+    startLine: 1930
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nEnds the game and determines the winner based on the game mode.\n"
-  example: []
+  summary: "\nEnds the game and determines the winner based on the current game mode.\n"
+  remarks: "\nThis method handles the end-of-game logic, such as stopping the timer, hiding UI elements,\nand determining the winner based on the <xref href=\"Game.GameManager.GameMode\" data-throw-if-not-resolved=\"false\"></xref>. It also triggers the \n<xref href=\"Game.GameManager.EndGameEvent\" data-throw-if-not-resolved=\"false\"></xref> for any subscribed listeners.\n\nIn &quot;free-for-all&quot; mode, the last alive player is declared the winner. In &quot;keep-away&quot; mode, \nthe player with the longest hold time wins. In &quot;obstacle course&quot; mode, the winner is determined \nby the <xref href=\"Game.ObstacleCourse\" data-throw-if-not-resolved=\"false\"></xref> logic.\n"
+  example:
+  - "\n<pre><code>GameManager.Instance.GameOver();</code></pre>\n"
   syntax:
     content: public void GameOver()
     content.vb: Public Sub GameOver()
@@ -579,17 +619,18 @@ items:
   source:
     id: AlivePlayers
     path: ''
-    startLine: 1564
+    startLine: 2056
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nReturns a list of all players that are currently alive.\n"
+  summary: "\nGets a list of all players who are still alive in the game.\n"
+  remarks: "\nThis method checks all players in the game and returns only those who are still active.\nA player is considered &quot;alive&quot; if their GameObject is active in the scene.\n"
   example: []
   syntax:
     content: public List<GameObject> AlivePlayers()
     return:
       type: Global.List{GameObject}
-      description: A list of alive player GameObjects.
+      description: A list of players who are still active in the game.
     content.vb: Public Function AlivePlayers() As List(Of GameObject)
   overload: Game.GameManager.AlivePlayers*
 - uid: Game.GameManager.UpdatePlayerHoldTime(GameObject,System.Single)
@@ -606,21 +647,22 @@ items:
   source:
     id: UpdatePlayerHoldTime
     path: ''
-    startLine: 1581
+    startLine: 2081
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nUpdates the player&apos;s hold time and updates the leaderboard.\n"
+  summary: "\nUpdates the hold time for a player and refreshes the leaderboard.\n"
+  remarks: "\nThis method updates the player&apos;s hold time in the dictionary and refreshes the leaderboard UI.\nIf the player&apos;s hold time is higher than before, the leaderboard is re-sorted.\n"
   example: []
   syntax:
     content: public void UpdatePlayerHoldTime(GameObject player, float holdTime)
     parameters:
     - id: player
       type: Global.GameObject
-      description: The player GameObject.
+      description: The player whose hold time is being updated.
     - id: holdTime
       type: System.Single
-      description: The hold time to update.
+      description: The new hold time for the player.
     content.vb: Public Sub UpdatePlayerHoldTime(player As GameObject, holdTime As Single)
   overload: Game.GameManager.UpdatePlayerHoldTime*
   nameWithType.vb: GameManager.UpdatePlayerHoldTime(GameObject, Single)
@@ -947,6 +989,14 @@ references:
   name: Player
   nameWithType: Player
   fullName: Player
+- uid: Game.GameManager.EndGameEvent
+  commentId: E:Game.GameManager.EndGameEvent
+  isExternal: true
+- uid: Game.ObstacleCourse
+  commentId: T:Game.ObstacleCourse
+  name: ObstacleCourse
+  nameWithType: ObstacleCourse
+  fullName: Game.ObstacleCourse
 - uid: Game.GameManager.GameOver*
   commentId: Overload:Game.GameManager.GameOver
   name: GameOver

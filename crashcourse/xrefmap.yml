@@ -389,6 +389,18 @@ references:
   commentId: F:Game.HatRespawn.canBePickedUp
   fullName: Game.HatRespawn.canBePickedUp
   nameWithType: HatRespawn.canBePickedUp
+- uid: Game.HatRespawn.initialScale
+  name: initialScale
+  href: api/Game.HatRespawn.html#Game_HatRespawn_initialScale
+  commentId: F:Game.HatRespawn.initialScale
+  fullName: Game.HatRespawn.initialScale
+  nameWithType: HatRespawn.initialScale
+- uid: Game.HatRespawn.initialSubhatPosition
+  name: initialSubhatPosition
+  href: api/Game.HatRespawn.html#Game_HatRespawn_initialSubhatPosition
+  commentId: F:Game.HatRespawn.initialSubhatPosition
+  fullName: Game.HatRespawn.initialSubhatPosition
+  nameWithType: HatRespawn.initialSubhatPosition
 - uid: Game.HatRespawn.Interact
   name: Interact()
   href: api/Game.HatRespawn.html#Game_HatRespawn_Interact
@@ -1309,12 +1321,24 @@ references:
   commentId: F:Player.Damageable.maxDamage
   fullName: Player.Damageable.maxDamage
   nameWithType: Damageable.maxDamage
+- uid: Player.Damageable.OnPlayerDeath
+  name: OnPlayerDeath
+  href: api/Player.Damageable.html#Player_Damageable_OnPlayerDeath
+  commentId: E:Player.Damageable.OnPlayerDeath
+  fullName: Player.Damageable.OnPlayerDeath
+  nameWithType: Damageable.OnPlayerDeath
 - uid: Player.Damageable.OnPlayerPunched
   name: OnPlayerPunched
   href: api/Player.Damageable.html#Player_Damageable_OnPlayerPunched
   commentId: E:Player.Damageable.OnPlayerPunched
   fullName: Player.Damageable.OnPlayerPunched
   nameWithType: Damageable.OnPlayerPunched
+- uid: Player.Damageable.OnPlayerRespawn
+  name: OnPlayerRespawn
+  href: api/Player.Damageable.html#Player_Damageable_OnPlayerRespawn
+  commentId: E:Player.Damageable.OnPlayerRespawn
+  fullName: Player.Damageable.OnPlayerRespawn
+  nameWithType: Damageable.OnPlayerRespawn
 - uid: Player.Damageable.ResetDamage
   name: ResetDamage()
   href: api/Player.Damageable.html#Player_Damageable_ResetDamage

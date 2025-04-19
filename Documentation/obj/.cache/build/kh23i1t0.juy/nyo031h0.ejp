@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Player
+ | Example Unity documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Player
+ | Example Unity documentation ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Player">
+
+  <h1 id="Player" data-uid="Player" class="text-break">Namespace Player
+</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+</h3>
+      <h4><a class="xref" href="Player.AnimationPlayer.html">AnimationPlayer</a></h4>
+      <section><p sourcefile="api/Player.AnimationPlayer.yml" sourcestartlinenumber="2">This class manages the player's animations, including setting animation states,
+handling directional changes, and triggering specific animations like punching.</p>
+</section>
+      <h4><a class="xref" href="Player.Block.html">Block</a></h4>
+      <section><p sourcefile="api/Player.Block.yml" sourcestartlinenumber="2">This class handles the player's ability to block and parry incoming attacks.
+Blocking reduces damage, while parrying reflects attacks if timed correctly.</p>
+</section>
+      <h4><a class="xref" href="Player.Damageable.html">Damageable</a></h4>
+      <section><p sourcefile="api/Player.Damageable.yml" sourcestartlinenumber="2">This class handles the player's ability to take damage, die, and respawn.
+It also manages interactions like blocking, parrying, and dropping items when hit.</p>
+</section>
+      <h4><a class="xref" href="Player.PlayerCameraMovement.html">PlayerCameraMovement</a></h4>
+      <section><p sourcefile="api/Player.PlayerCameraMovement.yml" sourcestartlinenumber="2">This class controls the movement of the camera to follow players during the game.
+It also handles special behavior for the camera in the win scene.</p>
+</section>
+      <h4><a class="xref" href="Player.PlayerManager.html">PlayerManager</a></h4>
+      <section><p sourcefile="api/Player.PlayerManager.yml" sourcestartlinenumber="2">This class manages player-related functionality, such as joining, leaving, and assigning colors.
+It also handles starting the game once players have joined.</p>
+</section>
+      <h4><a class="xref" href="Player.PlayerMovement.html">PlayerMovement</a></h4>
+      <section><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">This class handles the player's movement, including walking, jumping, and animations.
+It also manages input, physics, and interactions with the ground.</p>
+</section>
+      <h4><a class="xref" href="Player.Punch.html">Punch</a></h4>
+      <section><p sourcefile="api/Player.Punch.yml" sourcestartlinenumber="2">This class handles the punching mechanic for the player, including triggering animations,
+enabling and disabling the hurtbox, and managing player speed during a punch.</p>
+</section>
+      <h4><a class="xref" href="Player.TeleportPlatform.html">TeleportPlatform</a></h4>
+      <section><p sourcefile="api/Player.TeleportPlatform.yml" sourcestartlinenumber="2">This class handles teleportation for platforms and players when they collide with the teleport trigger.
+It can teleport either the platform itself or a player to a specified location.</p>
+</section>
+      <h4><a class="xref" href="Player.UseItem.html">UseItem</a></h4>
+      <section><p sourcefile="api/Player.UseItem.yml" sourcestartlinenumber="2">This class allows a player to pick up, hold, and drop items during the game.
+It is primarily used for managing interactions with the &quot;hat&quot; in &quot;keep-away&quot; mode.</p>
+</section>
+    <h3 id="enums">Enums
+</h3>
+      <h4><a class="xref" href="Player.AnimationPlayer.AnimationState.html">AnimationPlayer.AnimationState</a></h4>
+      <section><p sourcefile="api/Player.AnimationPlayer.AnimationState.yml" sourcestartlinenumber="2">Represents the different animation states the player can be in.</p>
+</section>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Example Unity documentation footer
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

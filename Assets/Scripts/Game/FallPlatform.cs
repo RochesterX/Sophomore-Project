@@ -78,6 +78,7 @@ namespace Game
             // Wait for the fall delay before making the platform fall
             yield return new WaitForSeconds(fallDelay);
             rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.angularVelocity = Random.Range(-30, 30);
 
             // Wait for the reset delay before resetting the platform
             yield return new WaitForSeconds(resetDelay);

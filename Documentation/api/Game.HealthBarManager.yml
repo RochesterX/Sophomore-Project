@@ -16,10 +16,12 @@ items:
   source:
     id: HealthBarManager
     path: ''
-    startLine: 1239
+    startLine: 1456
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the health bars for all players in the game.\nIt creates, updates, and removes health bars as needed.\n"
+  example: []
   syntax:
     content: 'public class HealthBarManager : MonoBehaviour'
     content.vb: Public Class HealthBarManager Inherits MonoBehaviour
@@ -39,10 +41,12 @@ items:
   source:
     id: healthBarPrefab
     path: ''
-    startLine: 1241
+    startLine: 1461
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe template used to create new health bars.\n"
+  example: []
   syntax:
     content: public GameObject healthBarPrefab
     return:

@@ -20,10 +20,12 @@ items:
   source:
     id: LifeDisplayManager
     path: ''
-    startLine: 1779
+    startLine: 2746
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the display of player lives, including creating life icons\nand updating them based on the player&apos;s remaining lives.\n"
+  example: []
   syntax:
     content: 'public class LifeDisplayManager : MonoBehaviour'
     content.vb: Public Class LifeDisplayManager Inherits MonoBehaviour
@@ -43,10 +45,12 @@ items:
   source:
     id: players
     path: ''
-    startLine: 1781
+    startLine: 2751
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe parent object that contains all player life displays.\n"
+  example: []
   syntax:
     content: public GameObject players
     return:
@@ -66,10 +70,12 @@ items:
   source:
     id: playerPrefab
     path: ''
-    startLine: 1782
+    startLine: 2756
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe prefab used to represent a player in the life display.\n"
+  example: []
   syntax:
     content: public GameObject playerPrefab
     return:
@@ -89,10 +95,12 @@ items:
   source:
     id: lifePrefab
     path: ''
-    startLine: 1783
+    startLine: 2761
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe prefab used to represent a single life icon.\n"
+  example: []
   syntax:
     content: public GameObject lifePrefab
     return:
@@ -112,10 +120,12 @@ items:
   source:
     id: lifeDisplays
     path: ''
-    startLine: 1784
+    startLine: 2767
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA dictionary mapping each player&apos;s <xref href=\"Player.Damageable\" data-throw-if-not-resolved=\"false\"></xref> component\nto their corresponding list of life icons.\n"
+  example: []
   syntax:
     content: public Dictionary<Damageable, List<GameObject>> lifeDisplays
     return:
@@ -135,10 +145,12 @@ items:
   source:
     id: HideLifeDisplay
     path: ''
-    startLine: 1816
+    startLine: 2817
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nHides the life display by deactivating the parent object.\n"
+  example: []
   syntax:
     content: public void HideLifeDisplay()
     content.vb: Public Sub HideLifeDisplay()
@@ -170,6 +182,12 @@ references:
   name: GameObject
   nameWithType: GameObject
   fullName: GameObject
+- uid: Player.Damageable
+  commentId: T:Player.Damageable
+  parent: Player
+  name: Damageable
+  nameWithType: Damageable
+  fullName: Player.Damageable
 - uid: Global.Dictionary{Player.Damageable,List{GameObject}}
   commentId: '!:Global.Dictionary{Player.Damageable,List{GameObject}}'
   definition: Global.Dictionary`2
@@ -219,6 +237,11 @@ references:
     isExternal: true
   - name: )
   - name: )
+- uid: Player
+  commentId: N:Player
+  name: Player
+  nameWithType: Player
+  fullName: Player
 - uid: Global.Dictionary`2
   isExternal: true
   name: Dictionary<, >

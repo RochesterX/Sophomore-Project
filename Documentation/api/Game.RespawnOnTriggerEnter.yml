@@ -18,10 +18,12 @@ items:
   source:
     id: RespawnOnTriggerEnter
     path: ''
-    startLine: 1726
+    startLine: 2549
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class handles respawning objects when they collide with a trigger tagged with a specific value.\n"
+  example: []
   syntax:
     content: 'public class RespawnOnTriggerEnter : MonoBehaviour'
     content.vb: Public Class RespawnOnTriggerEnter Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: spawnPoint
     path: ''
-    startLine: 1728
+    startLine: 2554
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe spawn point where the object will respawn.\n"
+  example: []
   syntax:
     content: public Vector2 spawnPoint
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: spawnPointIsInitialPosition
     path: ''
-    startLine: 1729
+    startLine: 2559
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nIf true, the spawn point is set to the object&apos;s initial position.\n"
+  example: []
   syntax:
     content: public bool spawnPointIsInitialPosition
     return:
@@ -87,10 +93,12 @@ items:
   source:
     id: respawnTag
     path: ''
-    startLine: 1730
+    startLine: 2564
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe tag of the trigger that causes the object to respawn.\n"
+  example: []
   syntax:
     content: public string respawnTag
     return:

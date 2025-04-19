@@ -16,10 +16,12 @@ items:
   source:
     id: ObstacleCourse
     path: ''
-    startLine: 318
+    startLine: 729
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class handles the logic for detecting when a player completes the obstacle course.\n"
+  example: []
   syntax:
     content: 'public class ObstacleCourse : MonoBehaviour'
     content.vb: Public Class ObstacleCourse Inherits MonoBehaviour
@@ -39,10 +41,12 @@ items:
   source:
     id: playerWon
     path: ''
-    startLine: 320
+    startLine: 734
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe player who successfully completes the obstacle course.\n"
+  example: []
   syntax:
     content: public static GameObject playerWon
     return:

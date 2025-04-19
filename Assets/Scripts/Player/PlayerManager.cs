@@ -100,6 +100,7 @@ namespace Player
                 GameManager.players = new List<GameObject>();
             }
 
+            playerInput.gameObject.name = card.playerNumber.ToString();
             // Add the player to the GameManager's player list and assign a color
             GameManager.players.Add(playerInput.gameObject);
             Colorize(GameManager.players.Count - 1);

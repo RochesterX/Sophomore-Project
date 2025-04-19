@@ -15,10 +15,12 @@ items:
   source:
     id: ObjectVisibility
     path: ''
-    startLine: 1098
+    startLine: 1088
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class controls the visibility of an object based on the current game mode.\n"
+  example: []
   syntax:
     content: 'public class ObjectVisibility : MonoBehaviour'
     content.vb: Public Class ObjectVisibility Inherits MonoBehaviour

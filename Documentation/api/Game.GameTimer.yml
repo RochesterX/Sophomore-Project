@@ -18,10 +18,12 @@ items:
   source:
     id: GameTimer
     path: ''
-    startLine: 1179
+    startLine: 1344
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the game&apos;s countdown timer.\nIt starts, updates, and stops the timer, and ends the game when time runs out.\n"
+  example: []
   syntax:
     content: 'public class GameTimer : MonoBehaviour'
     content.vb: Public Class GameTimer Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: startTime
     path: ''
-    startLine: 1181
+    startLine: 1349
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe starting time for the timer, in seconds.\n"
+  example: []
   syntax:
     content: public float startTime
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: timerText
     path: ''
-    startLine: 1185
+    startLine: 1364
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe UI text element that displays the timer.\n"
+  example: []
   syntax:
     content: public Text timerText
     return:
@@ -87,10 +93,12 @@ items:
   source:
     id: StartTimer
     path: ''
-    startLine: 1212
+    startLine: 1408
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nStarts the timer if it is not already running.\n"
+  example: []
   syntax:
     content: public void StartTimer()
     content.vb: Public Sub StartTimer()

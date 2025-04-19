@@ -20,10 +20,12 @@ items:
   source:
     id: Playlist
     path: ''
-    startLine: 918
+    startLine: 690
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nRepresents a playlist of music tracks.\nContains information about the tracks, their associated scenes, and playback settings.\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -53,10 +55,12 @@ items:
   source:
     id: trackName
     path: ''
-    startLine: 921
+    startLine: 696
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe name of the playlist.\n"
+  example: []
   syntax:
     content: public string trackName
     return:
@@ -76,10 +80,12 @@ items:
   source:
     id: trackScenes
     path: ''
-    startLine: 922
+    startLine: 701
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA list of scenes where this playlist is used.\n"
+  example: []
   syntax:
     content: public List<string> trackScenes
     return:
@@ -99,10 +105,12 @@ items:
   source:
     id: songs
     path: ''
-    startLine: 923
+    startLine: 706
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA list of audio clips included in this playlist.\n"
+  example: []
   syntax:
     content: public List<AudioClip> songs
     return:
@@ -122,10 +130,12 @@ items:
   source:
     id: shuffleTime
     path: ''
-    startLine: 924
+    startLine: 711
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe time interval (in seconds) between shuffling tracks in the playlist.\n"
+  example: []
   syntax:
     content: public float shuffleTime
     return:
@@ -145,10 +155,12 @@ items:
   source:
     id: volume
     path: ''
-    startLine: 925
+    startLine: 716
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe volume level for the playlist.\n"
+  example: []
   syntax:
     content: public float volume
     return:

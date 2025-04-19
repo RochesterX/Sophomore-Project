@@ -18,10 +18,12 @@ items:
   source:
     id: WinScreen
     path: ''
-    startLine: 983
+    startLine: 844
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nManages the win screen display for the game.\nDisplays the winning player&apos;s information and triggers the win screen animation.\n"
+  example: []
   syntax:
     content: 'public class WinScreen : MonoBehaviour'
     content.vb: Public Class WinScreen Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 985
+    startLine: 850
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA singleton instance of the <xref href=\"Game.WinScreen\" data-throw-if-not-resolved=\"false\"></xref> class.\nEnsures only one instance of the WinScreen exists at a time.\n"
+  example: []
   syntax:
     content: public static WinScreen Instance
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: playerTexts
     path: ''
-    startLine: 986
+    startLine: 855
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA list of text elements used to display player information on the win screen.\n"
+  example: []
   syntax:
     content: public List<TextMeshProUGUI> playerTexts
     return:
@@ -87,15 +93,18 @@ items:
   source:
     id: ShowWinScreen
     path: ''
-    startLine: 1000
+    startLine: 878
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nDisplays the win screen for the specified player.\nUpdates the text and color of the win screen to reflect the winning player.\n"
+  example: []
   syntax:
     content: public void ShowWinScreen(int player)
     parameters:
     - id: player
       type: System.Int32
+      description: The number of the winning player (1-based index).
     content.vb: Public Sub ShowWinScreen(player As Integer)
   overload: Game.WinScreen.ShowWinScreen*
   nameWithType.vb: WinScreen.ShowWinScreen(Integer)

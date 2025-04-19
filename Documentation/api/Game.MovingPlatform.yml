@@ -19,10 +19,12 @@ items:
   source:
     id: MovingPlatform
     path: ''
-    startLine: 1065
+    startLine: 1021
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class controls a platform that moves between specified points in a loop.\n"
+  example: []
   syntax:
     content: 'public class MovingPlatform : MonoBehaviour'
     content.vb: Public Class MovingPlatform Inherits MonoBehaviour
@@ -42,10 +44,12 @@ items:
   source:
     id: platform
     path: ''
-    startLine: 1067
+    startLine: 1026
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe platform object that will move.\n"
+  example: []
   syntax:
     content: public Transform platform
     return:
@@ -65,10 +69,12 @@ items:
   source:
     id: startPoint
     path: ''
-    startLine: 1068
+    startLine: 1031
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe index of the starting point for the platform.\n"
+  example: []
   syntax:
     content: public int startPoint
     return:
@@ -88,10 +94,12 @@ items:
   source:
     id: points
     path: ''
-    startLine: 1069
+    startLine: 1036
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nAn array of points that the platform will move between.\n"
+  example: []
   syntax:
     content: public Transform[] points
     return:
@@ -111,10 +119,12 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 1070
+    startLine: 1041
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe speed at which the platform moves.\n"
+  example: []
   syntax:
     content: public float speed
     return:

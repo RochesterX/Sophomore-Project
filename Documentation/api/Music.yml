@@ -20,17 +20,6 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: Music.AudioManager
-  commentId: T:Music.AudioManager
-  parent: Music
-  name: AudioManager
-  nameWithType: AudioManager
-  fullName: Music.AudioManager
-- uid: Music.SoundEffect
-  commentId: T:Music.SoundEffect
-  name: SoundEffect
-  nameWithType: SoundEffect
-  fullName: Music.SoundEffect
 - uid: Music.MusicManager
   commentId: T:Music.MusicManager
   parent: Music
@@ -65,6 +54,17 @@ references:
   name: Playlist
   nameWithType: Playlist
   fullName: Music.Playlist
+- uid: Music.AudioManager
+  commentId: T:Music.AudioManager
+  parent: Music
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: Music.AudioManager
+- uid: Music.SoundEffect
+  commentId: T:Music.SoundEffect
+  name: SoundEffect
+  nameWithType: SoundEffect
+  fullName: Music.SoundEffect
 - uid: Music
   commentId: N:Music
   name: Music

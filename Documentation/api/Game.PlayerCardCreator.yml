@@ -18,10 +18,12 @@ items:
   source:
     id: PlayerCardCreator
     path: ''
-    startLine: 1038
+    startLine: 957
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class is used to create cards for players when they join the game.\n"
+  example: []
   syntax:
     content: 'public class PlayerCardCreator : MonoBehaviour'
     content.vb: Public Class PlayerCardCreator Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 1040
+    startLine: 962
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA single instance of this class that can be accessed from anywhere.\n"
+  example: []
   syntax:
     content: public static PlayerCardCreator Instance
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: playerJoinCardPrefab
     path: ''
-    startLine: 1042
+    startLine: 967
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe template used to create new player cards.\n"
+  example: []
   syntax:
     content: public GameObject playerJoinCardPrefab
     return:
@@ -87,14 +93,17 @@ items:
   source:
     id: CreateCard
     path: ''
-    startLine: 1053
+    startLine: 990
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nCreates a new player card and returns it.\n"
+  example: []
   syntax:
     content: public PlayerJoinCard CreateCard()
     return:
       type: Game.PlayerJoinCard
+      description: The new player card, or nothing if it couldn&apos;t be created.
     content.vb: Public Function CreateCard() As PlayerJoinCard
   overload: Game.PlayerCardCreator.CreateCard*
 references:

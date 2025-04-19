@@ -83,9 +83,8 @@
 
   <h1 id="Game_GameManager" data-uid="Game.GameManager" class="text-break">Class GameManager
 </h1>
-  <div class="markdown level0 summary"><p>The GameManager class manages the overall game logic, including game modes, player states,
-game events, and game-over conditions. It ensures a single instance exists and provides
-functionality for starting, updating, and ending the game.</p>
+  <div class="markdown level0 summary"><p>This class controls the main game logic, like starting the game, keeping track of players,
+handling game modes, and deciding when the game ends.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -104,7 +103,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_gameMode" data-uid="Game.GameManager.gameMode">gameMode</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current game mode (e.g., free-for-all, keep-away, or obstacle course).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -128,7 +128,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_gameOver" data-uid="Game.GameManager.gameOver">gameOver</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the game is currently over.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +153,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_gameTimer" data-uid="Game.GameManager.gameTimer">gameTimer</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A timer that counts down during the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -176,7 +178,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_hatObject" data-uid="Game.GameManager.hatObject">hatObject</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The hat object used in &quot;keep-away&quot; mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -200,7 +203,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_hatSpawnPositions" data-uid="Game.GameManager.hatSpawnPositions">hatSpawnPositions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Positions where the hat can spawn in &quot;keep-away&quot; mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,7 +228,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_LeaderboardCanvas" data-uid="Game.GameManager.LeaderboardCanvas">LeaderboardCanvas</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The canvas that shows the leaderboard during the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -248,7 +253,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_map" data-uid="Game.GameManager.map">map</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the map being played.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -272,7 +278,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_music" data-uid="Game.GameManager.music">music</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the background music is turned on.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -296,7 +303,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_obstacleCourseSpawnPosition" data-uid="Game.GameManager.obstacleCourseSpawnPosition">obstacleCourseSpawnPosition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The position where players spawn in obstacle course mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -320,7 +328,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_offset" data-uid="Game.GameManager.offset">offset</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The distance between players when they spawn.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -344,7 +353,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_playerColors" data-uid="Game.GameManager.playerColors">playerColors</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of colors assigned to each player.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -368,7 +378,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_playerHoldTimes" data-uid="Game.GameManager.playerHoldTimes">playerHoldTimes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tracks how long each player has held an item in &quot;keep-away&quot; mode.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -392,7 +403,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_players" data-uid="Game.GameManager.players">players</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of all the players in the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -416,7 +428,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_spawnPosition" data-uid="Game.GameManager.spawnPosition">spawnPosition</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The position where players spawn at the start of the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -440,7 +453,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_time" data-uid="Game.GameManager.time">time</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The total time (in seconds) for the game to run.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -464,7 +478,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_TimerCanvas" data-uid="Game.GameManager.TimerCanvas">TimerCanvas</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The canvas that shows the timer during the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,7 +506,8 @@ functionality for starting, updating, and ending the game.</p>
 
   <a id="Game_GameManager_Instance_" data-uid="Game.GameManager.Instance*"></a>
   <h4 id="Game_GameManager_Instance" data-uid="Game.GameManager.Instance">Instance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The single instance of this class that can be accessed from anywhere in the game.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -518,7 +534,7 @@ functionality for starting, updating, and ending the game.</p>
 
   <a id="Game_GameManager_AlivePlayers_" data-uid="Game.GameManager.AlivePlayers*"></a>
   <h4 id="Game_GameManager_AlivePlayers" data-uid="Game.GameManager.AlivePlayers">AlivePlayers()</h4>
-  <div class="markdown level1 summary"><p>Returns a list of all players that are currently alive.</p>
+  <div class="markdown level1 summary"><p>Gets a list of all players who are still alive in the game.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -536,27 +552,42 @@ functionality for starting, updating, and ending the game.</p>
     <tbody>
       <tr>
         <td><span class="xref">List&lt;&gt;</span>&lt;<span class="xref">GameObject</span>&gt;</td>
-        <td><p>A list of alive player GameObjects.</p>
+        <td><p>A list of players who are still active in the game.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Game_GameManager_AlivePlayers_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method checks all players in the game and returns only those who are still active.
+A player is considered &quot;alive&quot; if their GameObject is active in the scene.</p>
+</div>
 
 
   <a id="Game_GameManager_GameOver_" data-uid="Game.GameManager.GameOver*"></a>
   <h4 id="Game_GameManager_GameOver" data-uid="Game.GameManager.GameOver">GameOver()</h4>
-  <div class="markdown level1 summary"><p>Ends the game and determines the winner based on the game mode.</p>
+  <div class="markdown level1 summary"><p>Ends the game and determines the winner based on the current game mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void GameOver()</code></pre>
   </div>
+  <h5 id="Game_GameManager_GameOver_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method handles the end-of-game logic, such as stopping the timer, hiding UI elements,
+and determining the winner based on the <a class="xref" href="Game.GameManager.GameMode.html">GameManager.GameMode</a>. It also triggers the
+<a class="xref" href="Game.GameManager.html#Game_GameManager_EndGameEvent">EndGameEvent</a> for any subscribed listeners.</p>
+<p>In &quot;free-for-all&quot; mode, the last alive player is declared the winner. In &quot;keep-away&quot; mode,
+the player with the longest hold time wins. In &quot;obstacle course&quot; mode, the winner is determined
+by the <a class="xref" href="Game.ObstacleCourse.html">ObstacleCourse</a> logic.</p>
+</div>
+  <h5 id="Game_GameManager_GameOver_examples">Examples</h5>
+  <pre><code>GameManager.Instance.GameOver();</code></pre>
+
 
 
   <a id="Game_GameManager_PlayerDied_" data-uid="Game.GameManager.PlayerDied*"></a>
   <h4 id="Game_GameManager_PlayerDied_Player_Damageable_" data-uid="Game.GameManager.PlayerDied(Player.Damageable)">PlayerDied(Damageable)</h4>
-  <div class="markdown level1 summary"><p>Handles player deaths based on the current game mode.</p>
+  <div class="markdown level1 summary"><p>Handles what happens when a player dies, like respawning them or ending the game.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -576,7 +607,7 @@ functionality for starting, updating, and ending the game.</p>
       <tr>
         <td><a class="xref" href="Player.Damageable.html">Damageable</a></td>
         <td><span class="parametername">player</span></td>
-        <td><p>The player that died.</p>
+        <td><p>The player who died.</p>
 </td>
       </tr>
     </tbody>
@@ -585,7 +616,7 @@ functionality for starting, updating, and ending the game.</p>
 
   <a id="Game_GameManager_StartGame_" data-uid="Game.GameManager.StartGame*"></a>
   <h4 id="Game_GameManager_StartGame" data-uid="Game.GameManager.StartGame">StartGame()</h4>
-  <div class="markdown level1 summary"><p>Sets up the game based on the selected game mode.</p>
+  <div class="markdown level1 summary"><p>Sets up the game based on the selected game mode. This includes spawning players and setting their lives.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -596,7 +627,7 @@ functionality for starting, updating, and ending the game.</p>
 
   <a id="Game_GameManager_UpdatePlayerHoldTime_" data-uid="Game.GameManager.UpdatePlayerHoldTime*"></a>
   <h4 id="Game_GameManager_UpdatePlayerHoldTime_GameObject_System_Single_" data-uid="Game.GameManager.UpdatePlayerHoldTime(GameObject,System.Single)">UpdatePlayerHoldTime(GameObject, float)</h4>
-  <div class="markdown level1 summary"><p>Updates the player's hold time and updates the leaderboard.</p>
+  <div class="markdown level1 summary"><p>Updates the hold time for a player and refreshes the leaderboard.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
@@ -616,23 +647,28 @@ functionality for starting, updating, and ending the game.</p>
       <tr>
         <td><span class="xref">GameObject</span></td>
         <td><span class="parametername">player</span></td>
-        <td><p>The player GameObject.</p>
+        <td><p>The player whose hold time is being updated.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">float</span></td>
         <td><span class="parametername">holdTime</span></td>
-        <td><p>The hold time to update.</p>
+        <td><p>The new hold time for the player.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Game_GameManager_UpdatePlayerHoldTime_GameObject_System_Single__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method updates the player's hold time in the dictionary and refreshes the leaderboard UI.
+If the player's hold time is higher than before, the leaderboard is re-sorted.</p>
+</div>
   <h3 id="events">Events
 </h3>
 
 
   <h4 id="Game_GameManager_EndGameEvent" data-uid="Game.GameManager.EndGameEvent">EndGameEvent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event triggered when the game ends.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -656,7 +692,8 @@ functionality for starting, updating, and ending the game.</p>
 
 
   <h4 id="Game_GameManager_StartGameEvent" data-uid="Game.GameManager.StartGameEvent">StartGameEvent</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Event triggered when the game starts.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">

@@ -43,12 +43,6 @@ references:
   name: DayNightCycle
   nameWithType: DayNightCycle
   fullName: Game.DayNightCycle
-- uid: Game.HubManager
-  commentId: T:Game.HubManager
-  parent: Game
-  name: HubManager
-  nameWithType: HubManager
-  fullName: Game.HubManager
 - uid: Game.ObstacleCourse
   commentId: T:Game.ObstacleCourse
   name: ObstacleCourse
@@ -160,6 +154,12 @@ references:
   name: FallPlatform
   nameWithType: FallPlatform
   fullName: Game.FallPlatform
+- uid: Game.HubManager
+  commentId: T:Game.HubManager
+  parent: Game
+  name: HubManager
+  nameWithType: HubManager
+  fullName: Game.HubManager
 - uid: Game.HatRespawn
   commentId: T:Game.HatRespawn
   name: HatRespawn

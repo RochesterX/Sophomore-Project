@@ -20,10 +20,12 @@ items:
   source:
     id: PlayerManager
     path: ''
-    startLine: 2320
+    startLine: 3571
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class manages player-related functionality, such as joining, leaving, and assigning colors.\nIt also handles starting the game once players have joined.\n"
+  example: []
   syntax:
     content: 'public class PlayerManager : MonoBehaviour'
     content.vb: Public Class PlayerManager Inherits MonoBehaviour
@@ -43,10 +45,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 2322
+    startLine: 3576
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe singleton instance of the <xref href=\"Player.PlayerManager\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
   syntax:
     content: public static PlayerManager Instance
     return:
@@ -66,10 +70,12 @@ items:
   source:
     id: cards
     path: ''
-    startLine: 2323
+    startLine: 3581
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nA list of player join cards, which represent players in the UI.\n"
+  example: []
   syntax:
     content: public List<PlayerJoinCard> cards
     return:
@@ -89,10 +95,12 @@ items:
   source:
     id: playerColors
     path: ''
-    startLine: 2325
+    startLine: 3591
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nA list of colors assigned to players for identification.\n"
+  example: []
   syntax:
     content: public List<Color> playerColors
     return:
@@ -112,10 +120,12 @@ items:
   source:
     id: playerSelect
     path: ''
-    startLine: 2326
+    startLine: 3596
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe UI element used for player selection.\n"
+  example: []
   syntax:
     content: public GameObject playerSelect
     return:
@@ -135,10 +145,12 @@ items:
   source:
     id: StartGame
     path: ''
-    startLine: 2376
+    startLine: 3694
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nStarts the game if at least one player has joined.\n"
+  example: []
   syntax:
     content: public void StartGame()
     content.vb: Public Sub StartGame()

@@ -117,6 +117,7 @@ namespace Game
         /// <returns>An IEnumerator for coroutine execution.</returns>
         private IEnumerator RespawnHat()
         {
+            lastInteractionTime = Time.time;
             // Play the respawn animation
             GetComponentInChildren<Animator>().SetTrigger("respawn");
 
@@ -128,7 +129,6 @@ namespace Game
             GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             GetComponent<Rigidbody2D>().angularVelocity = 0f;
             transform.rotation = Quaternion.identity;
-            lastInteractionTime = Time.time;
             isDropped = false;
         }
     }

@@ -15,10 +15,12 @@ items:
   source:
     id: GameEvent
     path: ''
-    startLine: 1313
+    startLine: 1656
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA type of event that happens during the game, like when it starts or ends.\n"
+  example: []
   syntax:
     content: public delegate void GameManager.GameEvent()
     content.vb: Public Delegate Sub GameManager.GameEvent()

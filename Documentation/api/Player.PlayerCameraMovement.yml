@@ -21,10 +21,12 @@ items:
   source:
     id: PlayerCameraMovement
     path: ''
-    startLine: 3048
+    startLine: 4608
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class controls the movement of the camera to follow players during the game.\nIt also handles special behavior for the camera in the win scene.\n"
+  example: []
   syntax:
     content: 'public class PlayerCameraMovement : MonoBehaviour'
     content.vb: Public Class PlayerCameraMovement Inherits MonoBehaviour
@@ -44,10 +46,12 @@ items:
   source:
     id: weight
     path: ''
-    startLine: 3052
+    startLine: 4623
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe weight used to blend between the camera&apos;s starting position and the players&apos; average position.\n"
+  example: []
   syntax:
     content: public float weight
     return:
@@ -67,10 +71,12 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 3053
+    startLine: 4628
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe speed at which the camera moves toward the target position.\n"
+  example: []
   syntax:
     content: public float speed
     return:
@@ -90,10 +96,12 @@ items:
   source:
     id: lowerBound
     path: ''
-    startLine: 3055
+    startLine: 4638
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe lowest vertical position the camera can move to.\n"
+  example: []
   syntax:
     content: public float lowerBound
     return:
@@ -113,10 +121,12 @@ items:
   source:
     id: winScene
     path: ''
-    startLine: 3056
+    startLine: 4643
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIndicates whether the camera is in the win scene mode.\n"
+  example: []
   syntax:
     content: public bool winScene
     return:
@@ -136,10 +146,12 @@ items:
   source:
     id: staticCamera
     path: ''
-    startLine: 3058
+    startLine: 4648
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIndicates whether the camera should remain static and not follow players.\n"
+  example: []
   syntax:
     content: public bool staticCamera
     return:
@@ -159,15 +171,18 @@ items:
   source:
     id: WinScene
     path: ''
-    startLine: 3113
+    startLine: 4733
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nActivates the win scene mode and focuses the camera on the winning player.\n"
+  example: []
   syntax:
     content: public void WinScene(GameObject player)
     parameters:
     - id: player
       type: Global.GameObject
+      description: The player who won the game.
     content.vb: Public Sub WinScene(player As GameObject)
   overload: Player.PlayerCameraMovement.WinScene*
 references:

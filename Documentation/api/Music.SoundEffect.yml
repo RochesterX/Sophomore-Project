@@ -18,10 +18,12 @@ items:
   source:
     id: SoundEffect
     path: ''
-    startLine: 391
+    startLine: 1210
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nRepresents a sound effect, including its name and associated AudioSource.\n"
+  example: []
   syntax:
     content: public class SoundEffect
     content.vb: Public Class SoundEffect
@@ -41,10 +43,12 @@ items:
   source:
     id: name
     path: ''
-    startLine: 393
+    startLine: 1215
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe name of the sound effect.\n"
+  example: []
   syntax:
     content: public string name
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 394
+    startLine: 1220
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe AudioSource component that plays the sound effect.\n"
+  example: []
   syntax:
     content: public AudioSource audioSource
     return:
@@ -87,17 +93,21 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 396
+    startLine: 1227
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nInitializes a new instance of the <xref href=\"Music.SoundEffect\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
   syntax:
     content: public SoundEffect(string name, AudioSource audioSource)
     parameters:
     - id: name
       type: System.String
+      description: The name of the sound effect.
     - id: audioSource
       type: Global.AudioSource
+      description: The AudioSource component for the sound effect.
     content.vb: Public Sub New(name As String, audioSource As AudioSource)
   overload: Music.SoundEffect.#ctor*
   nameWithType.vb: SoundEffect.New(String, AudioSource)
@@ -140,6 +150,11 @@ references:
   name: AudioSource
   nameWithType: AudioSource
   fullName: AudioSource
+- uid: Music.SoundEffect
+  commentId: T:Music.SoundEffect
+  name: SoundEffect
+  nameWithType: SoundEffect
+  fullName: Music.SoundEffect
 - uid: Music.SoundEffect.#ctor*
   commentId: Overload:Music.SoundEffect.#ctor
   name: SoundEffect

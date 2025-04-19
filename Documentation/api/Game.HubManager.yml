@@ -20,10 +20,12 @@ items:
   source:
     id: HubManager
     path: ''
-    startLine: 230
+    startLine: 2239
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the hub area of the game, including loading and unloading game scenes,\ncontrolling the hub camera, and managing game buttons.\n"
+  example: []
   syntax:
     content: 'public class HubManager : MonoBehaviour'
     content.vb: Public Class HubManager Inherits MonoBehaviour
@@ -43,10 +45,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 232
+    startLine: 2244
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA single instance of this class that can be accessed from anywhere.\n"
+  example: []
   syntax:
     content: public static HubManager Instance
     return:
@@ -66,10 +70,12 @@ items:
   source:
     id: hubCamera
     path: ''
-    startLine: 233
+    startLine: 2249
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe camera used in the hub area.\n"
+  example: []
   syntax:
     content: public GameObject hubCamera
     return:
@@ -89,10 +95,12 @@ items:
   source:
     id: gameButtonsParent
     path: ''
-    startLine: 234
+    startLine: 2254
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe parent object containing all game buttons in the hub.\n"
+  example: []
   syntax:
     content: public GameObject gameButtonsParent
     return:
@@ -112,15 +120,18 @@ items:
   source:
     id: LoadScene
     path: ''
-    startLine: 251
+    startLine: 2287
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nLoads a new game scene and disables the hub camera.\n"
+  example: []
   syntax:
     content: public void LoadScene(string sceneName)
     parameters:
     - id: sceneName
       type: System.String
+      description: The name of the scene to load.
     content.vb: Public Sub LoadScene(sceneName As String)
   overload: Game.HubManager.LoadScene*
   nameWithType.vb: HubManager.LoadScene(String)
@@ -140,10 +151,12 @@ items:
   source:
     id: UnloadGameScene
     path: ''
-    startLine: 260
+    startLine: 2311
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nUnloads the current game scene and reactivates the hub camera.\n"
+  example: []
   syntax:
     content: public void UnloadGameScene()
     content.vb: Public Sub UnloadGameScene()

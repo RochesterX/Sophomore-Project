@@ -83,7 +83,9 @@
 
   <h1 id="Game_HatRespawn" data-uid="Game.HatRespawn" class="text-break">Class HatRespawn
 </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>This class manages the behavior of the hat in the game, including its respawn logic.
+The hat can be picked up, dropped, and respawned after a certain amount of time.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -101,7 +103,8 @@
 
 
   <h4 id="Game_HatRespawn_canBePickedUp" data-uid="Game.HatRespawn.canBePickedUp">canBePickedUp</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A flag to check if the hat can be picked up.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -124,8 +127,59 @@
   </table>
 
 
+  <h4 id="Game_HatRespawn_initialScale" data-uid="Game.HatRespawn.initialScale">initialScale</h4>
+  <div class="markdown level1 summary"><p>The initial scale of the hat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 initialScale</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Game_HatRespawn_initialSubhatPosition" data-uid="Game.HatRespawn.initialSubhatPosition">initialSubhatPosition</h4>
+  <div class="markdown level1 summary"><p>The initial position of the subhat (if applicable).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 initialSubhatPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
   <h4 id="Game_HatRespawn_respawnTime" data-uid="Game.HatRespawn.respawnTime">respawnTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The amount of time (in seconds) before the hat respawns after being inactive.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -152,7 +206,8 @@
 
   <a id="Game_HatRespawn_Interact_" data-uid="Game.HatRespawn.Interact*"></a>
   <h4 id="Game_HatRespawn_Interact" data-uid="Game.HatRespawn.Interact">Interact()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Updates the last interaction time when a player interacts with the hat.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -162,7 +217,8 @@
 
   <a id="Game_HatRespawn_OnHatDropped_" data-uid="Game.HatRespawn.OnHatDropped*"></a>
   <h4 id="Game_HatRespawn_OnHatDropped" data-uid="Game.HatRespawn.OnHatDropped">OnHatDropped()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Marks the hat as dropped and resets the timer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">

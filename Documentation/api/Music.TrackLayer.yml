@@ -20,10 +20,12 @@ items:
   source:
     id: TrackLayer
     path: ''
-    startLine: 899
+    startLine: 619
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nRepresents a single layer of a music track.\nEach layer can be triggered and controlled independently based on game events or conditions.\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -53,10 +55,12 @@ items:
   source:
     id: layerName
     path: ''
-    startLine: 902
+    startLine: 625
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe name of the music layer.\n"
+  example: []
   syntax:
     content: public string layerName
     return:
@@ -76,10 +80,12 @@ items:
   source:
     id: layerTrack
     path: ''
-    startLine: 903
+    startLine: 630
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe audio clip associated with this music layer.\n"
+  example: []
   syntax:
     content: public AudioClip layerTrack
     return:
@@ -99,10 +105,12 @@ items:
   source:
     id: enableTrigger
     path: ''
-    startLine: 905
+    startLine: 662
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe trigger condition for enabling this layer.\n"
+  example: []
   syntax:
     content: public TrackLayer.EnableTrigger enableTrigger
     return:
@@ -122,10 +130,12 @@ items:
   source:
     id: layerScenes
     path: ''
-    startLine: 907
+    startLine: 668
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA list of scenes where this layer is active.\nIf empty, the layer is active in all scenes.\n"
+  example: []
   syntax:
     content: public List<string> layerScenes
     return:
@@ -145,10 +155,12 @@ items:
   source:
     id: triggerName
     path: ''
-    startLine: 908
+    startLine: 673
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe name of the object that triggers this layer.\n"
+  example: []
   syntax:
     content: public string triggerName
     return:

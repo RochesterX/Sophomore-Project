@@ -83,7 +83,20 @@ namespace Player
         private void OnCollisionEnter2D(Collision2D collision)
         {
             // Check if the collided object is a "hat" and the player is not already holding an item
-            if (collision.gameObject.CompareTag("Hat") && !isHoldingItem && !damageable.dying)
+            if (collision.gameObject.CompareTag(itemTag) && !isHoldingItem && !damageable.dying)
+            {
+                PickUpItem(collision.gameObject);
+            }
+        }
+
+        /// <summary>
+        /// Automatically picks up an item when the player enters its triggwer.
+        /// </summary>
+        /// <param name="collision">The collision data from the item.</param>
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            // Check if the collided object is a "hat" and the player is not already holding an item
+            if (collision.gameObject.CompareTag(itemTag) && !isHoldingItem && !damageable.dying)
             {
                 PickUpItem(collision.gameObject);
             }
@@ -103,7 +116,8 @@ namespace Player
             heldItem = item;
             isHoldingItem = true;
             holdStartTime = Time.time;
-            item.GetComponent<Collider2D>().enabled = false;
+            heldItem.GetComponent<Collider2D>().enabled = false;
+            heldItem.transform.Find("HatPhysical").GetComponent<Collider2D>().enabled = false;
             item.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             item.GetComponent<HatRespawn>().Interact();
             item.transform.parent = head;
@@ -133,13 +147,14 @@ namespace Player
             {
                 // Enable the item's collider and make it interactable after a short delay
                 heldItem.GetComponent<Collider2D>().enabled = true;
+                heldItem.transform.Find("HatPhysical").GetComponent<Collider2D>().enabled = true;
                 HatRespawn.canBePickedUp = false;
                 StartCoroutine(WaitForInteractability());
 
                 // Make the item dynamic and apply random force and torque to it
                 heldItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 heldItem.GetComponent<Rigidbody2D>().AddForce(Vector2.up * Random.Range(10f, 30f) + Vector2.right * Random.Range(-10, 10), ForceMode2D.Impulse);
-                heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-1, 1), ForceMode2D.Impulse);
+                heldItem.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-5, 5), ForceMode2D.Impulse);
 
                 // Notify the item that it has been dropped
                 heldItem.GetComponent<HatRespawn>().OnHatDropped();

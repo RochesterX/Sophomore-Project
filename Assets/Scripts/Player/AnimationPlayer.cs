@@ -111,6 +111,10 @@ namespace Player
         public void Punch()
         {
             animator.SetTrigger("punch");
+            if (!GetComponent<PlayerMovement>().IsPhysicallyGrounded())
+            {
+                AudioManager.Instance.PlaySound("Air Punch");
+            }
         }
     }
 }

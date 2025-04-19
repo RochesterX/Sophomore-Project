@@ -21,10 +21,12 @@ items:
   source:
     id: MusicManager
     path: ''
-    startLine: 412
+    startLine: 235
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nManages the music playlists for the game.\nHandles the initialization, playback, and shuffling of music tracks based on the active scene.\n"
+  example: []
   syntax:
     content: 'public class MusicManager : MonoBehaviour'
     content.vb: Public Class MusicManager Inherits MonoBehaviour
@@ -44,10 +46,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 414
+    startLine: 241
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA singleton instance of the <xref href=\"Music.MusicManager\" data-throw-if-not-resolved=\"false\"></xref> class.\nEnsures only one instance of the MusicManager exists at a time.\n"
+  example: []
   syntax:
     content: public static MusicManager Instance
     return:
@@ -67,10 +71,12 @@ items:
   source:
     id: playlists
     path: ''
-    startLine: 415
+    startLine: 246
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA list of playlists available in the game.\n"
+  example: []
   syntax:
     content: public List<Playlist> playlists
     return:
@@ -90,10 +96,12 @@ items:
   source:
     id: songPrefab
     path: ''
-    startLine: 417
+    startLine: 256
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe prefab used to create audio sources for playing songs.\n"
+  example: []
   syntax:
     content: public GameObject songPrefab
     return:
@@ -113,10 +121,12 @@ items:
   source:
     id: StartPlaylist
     path: ''
-    startLine: 439
+    startLine: 284
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nStarts the music playlist for the current active scene.\n"
+  example: []
   syntax:
     content: public void StartPlaylist()
     content.vb: Public Sub StartPlaylist()
@@ -135,15 +145,18 @@ items:
   source:
     id: StartPlaylist
     path: ''
-    startLine: 458
+    startLine: 308
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nStarts the music playlist for a specific scene.\n"
+  example: []
   syntax:
     content: public void StartPlaylist(string scene)
     parameters:
     - id: scene
       type: System.String
+      description: The name of the scene for which to start the playlist.
     content.vb: Public Sub StartPlaylist(scene As String)
   overload: Music.MusicManager.StartPlaylist*
   nameWithType.vb: MusicManager.StartPlaylist(String)
@@ -163,14 +176,17 @@ items:
   source:
     id: GetActiveSceneNotTitleScreen
     path: ''
-    startLine: 510
+    startLine: 373
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nGets the name of the currently active scene, excluding the &quot;Title Screen&quot;.\n"
+  example: []
   syntax:
     content: public static string GetActiveSceneNotTitleScreen()
     return:
       type: System.String
+      description: The name of the active scene, or &quot;Title Screen&quot; if no other scene is active.
     content.vb: Public Shared Function GetActiveSceneNotTitleScreen() As String
   overload: Music.MusicManager.GetActiveSceneNotTitleScreen*
 references:

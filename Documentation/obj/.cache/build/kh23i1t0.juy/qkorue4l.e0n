@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlayerMovement
+ | Example Unity documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlayerMovement
+ | Example Unity documentation ">
+    <meta name="generator" content="docfx ">
+  
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+  
+  <meta property="docfx:rel" content="../">
+  
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Player.PlayerMovement">
+
+
+  <h1 id="Player_PlayerMovement" data-uid="Player.PlayerMovement" class="text-break">Class PlayerMovement
+</h1>
+  <div class="markdown level0 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">This class handles the player's movement, including walking, jumping, and animations.
+It also manages input, physics, and interactions with the ground.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">object</span></div>
+    <div class="level1"><span class="xref">PlayerMovement</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Player.html">Player</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Player_PlayerMovement_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PlayerMovement : MonoBehaviour</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+
+
+  <h4 id="Player_PlayerMovement_coyoteTime" data-uid="Player.PlayerMovement.coyoteTime">coyoteTime</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Time window after leaving ground where jump is still allowed (coyote time).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float coyoteTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_ground" data-uid="Player.PlayerMovement.ground">ground</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Layers considered as ground for the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LayerMask ground</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LayerMask</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_groundCheckDistance" data-uid="Player.PlayerMovement.groundCheckDistance">groundCheckDistance</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Distance to check below the player for ground detection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float groundCheckDistance</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_jumpLenience" data-uid="Player.PlayerMovement.jumpLenience">jumpLenience</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Time window after pressing jump where jump is still buffered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float jumpLenience</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_jumpSpeed" data-uid="Player.PlayerMovement.jumpSpeed">jumpSpeed</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Force applied when jumping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float jumpSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_maxSpeed" data-uid="Player.PlayerMovement.maxSpeed">maxSpeed</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Maximum allowed horizontal speed for the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float maxSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_maxSpeedOverride" data-uid="Player.PlayerMovement.maxSpeedOverride">maxSpeedOverride</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Runtime override for the maximum speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float maxSpeedOverride</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_playerText" data-uid="Player.PlayerMovement.playerText">playerText</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Reference to the player's UI text displaying player index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextMeshProUGUI playerText</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TextMeshProUGUI</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_secondsToFullSpeed" data-uid="Player.PlayerMovement.secondsToFullSpeed">secondsToFullSpeed</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Time in seconds to reach full speed from rest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float secondsToFullSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_slowdownMultiplier" data-uid="Player.PlayerMovement.slowdownMultiplier">slowdownMultiplier</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Multiplier for slowing down the player when exceeding max speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float slowdownMultiplier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_timeUnableToBeDeclaredNotJumping" data-uid="Player.PlayerMovement.timeUnableToBeDeclaredNotJumping">timeUnableToBeDeclaredNotJumping</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Minimum time before the player can be declared as not jumping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float timeUnableToBeDeclaredNotJumping</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_turnaroundMultiplier" data-uid="Player.PlayerMovement.turnaroundMultiplier">turnaroundMultiplier</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Multiplier applied when turning around to adjust speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float turnaroundMultiplier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_virtualAxisX" data-uid="Player.PlayerMovement.virtualAxisX">virtualAxisX</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Current value of the horizontal movement axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float virtualAxisX</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_virtualButtonJump" data-uid="Player.PlayerMovement.virtualButtonJump">virtualButtonJump</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Current value of the jump button (pressed or not).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float virtualButtonJump</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_virtualButtonJumpLastFrame" data-uid="Player.PlayerMovement.virtualButtonJumpLastFrame">virtualButtonJumpLastFrame</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Value of the jump button in the previous frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float virtualButtonJumpLastFrame</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_walkSmooth" data-uid="Player.PlayerMovement.walkSmooth">walkSmooth</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Smoothing factor for walking movement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float walkSmooth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_walkSpeed" data-uid="Player.PlayerMovement.walkSpeed">walkSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float walkSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 id="Player_PlayerMovement_walkSpeedFactor" data-uid="Player.PlayerMovement.walkSpeedFactor">walkSpeedFactor</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Multiplier applied to walk speed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float walkSpeedFactor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="Player_PlayerMovement_GetPointInBoxCollider_" data-uid="Player.PlayerMovement.GetPointInBoxCollider*"></a>
+  <h4 id="Player_PlayerMovement_GetPointInBoxCollider_BoxCollider2D_System_Single_System_Single_" data-uid="Player.PlayerMovement.GetPointInBoxCollider(BoxCollider2D,System.Single,System.Single)">GetPointInBoxCollider(BoxCollider2D, float, float)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Gets a point on the BoxCollider2D based on horizontal and vertical multipliers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 GetPointInBoxCollider(BoxCollider2D boxCollider2D, float horizontal, float vertical)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BoxCollider2D</span></td>
+        <td><span class="parametername">boxCollider2D</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">The BoxCollider2D to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td><span class="parametername">horizontal</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">Horizontal offset (-1 for left, 1 for right, 0 for center).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">float</span></td>
+        <td><span class="parametername">vertical</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">Vertical offset (-1 for bottom, 1 for top, 0 for center).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">The calculated point in world space.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Player_PlayerMovement_IsBasicallyGrounded_" data-uid="Player.PlayerMovement.IsBasicallyGrounded*"></a>
+  <h4 id="Player_PlayerMovement_IsBasicallyGrounded" data-uid="Player.PlayerMovement.IsBasicallyGrounded">IsBasicallyGrounded()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Checks if the player is considered grounded, including coyote time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBasicallyGrounded()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">True if the player is basically grounded, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Player_PlayerMovement_IsPhysicallyGrounded_" data-uid="Player.PlayerMovement.IsPhysicallyGrounded*"></a>
+  <h4 id="Player_PlayerMovement_IsPhysicallyGrounded" data-uid="Player.PlayerMovement.IsPhysicallyGrounded">IsPhysicallyGrounded()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Checks if the player is physically touching the ground using raycasts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPhysicallyGrounded()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">bool</span></td>
+        <td><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="1">True if the player is physically grounded, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Player_PlayerMovement_StopVelocity_" data-uid="Player.PlayerMovement.StopVelocity*"></a>
+  <h4 id="Player_PlayerMovement_StopVelocity" data-uid="Player.PlayerMovement.StopVelocity">StopVelocity()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/Player.PlayerMovement.yml" sourcestartlinenumber="2">Stops the player's velocity if grounded, removing inertia.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopVelocity()</code></pre>
+  </div>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Example Unity documentation footer
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -6,6 +6,8 @@ items:
   parent: Game
   children:
   - Game.HatRespawn.canBePickedUp
+  - Game.HatRespawn.initialScale
+  - Game.HatRespawn.initialSubhatPosition
   - Game.HatRespawn.Interact
   - Game.HatRespawn.OnHatDropped
   - Game.HatRespawn.respawnTime
@@ -19,10 +21,12 @@ items:
   source:
     id: HatRespawn
     path: ''
-    startLine: 1668
+    startLine: 2412
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the behavior of the hat in the game, including its respawn logic.\nThe hat can be picked up, dropped, and respawned after a certain amount of time.\n"
+  example: []
   syntax:
     content: 'public class HatRespawn : MonoBehaviour'
     content.vb: Public Class HatRespawn Inherits MonoBehaviour
@@ -42,15 +46,42 @@ items:
   source:
     id: respawnTime
     path: ''
-    startLine: 1671
+    startLine: 2422
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe amount of time (in seconds) before the hat respawns after being inactive.\n"
+  example: []
   syntax:
     content: public const float respawnTime = 10
     return:
       type: System.Single
     content.vb: Public Const respawnTime As Single = 10
+- uid: Game.HatRespawn.initialSubhatPosition
+  commentId: F:Game.HatRespawn.initialSubhatPosition
+  id: initialSubhatPosition
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: initialSubhatPosition
+  nameWithType: HatRespawn.initialSubhatPosition
+  fullName: Game.HatRespawn.initialSubhatPosition
+  type: Field
+  source:
+    id: initialSubhatPosition
+    path: ''
+    startLine: 2432
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nThe initial position of the subhat (if applicable).\n"
+  example: []
+  syntax:
+    content: public Vector2 initialSubhatPosition
+    return:
+      type: Global.Vector2
+    content.vb: Public initialSubhatPosition As Vector2
 - uid: Game.HatRespawn.canBePickedUp
   commentId: F:Game.HatRespawn.canBePickedUp
   id: canBePickedUp
@@ -65,15 +96,42 @@ items:
   source:
     id: canBePickedUp
     path: ''
-    startLine: 1674
+    startLine: 2437
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA flag to check if the hat can be picked up.\n"
+  example: []
   syntax:
     content: public static bool canBePickedUp
     return:
       type: System.Boolean
     content.vb: Public Shared canBePickedUp As Boolean
+- uid: Game.HatRespawn.initialScale
+  commentId: F:Game.HatRespawn.initialScale
+  id: initialScale
+  parent: Game.HatRespawn
+  langs:
+  - csharp
+  - vb
+  name: initialScale
+  nameWithType: HatRespawn.initialScale
+  fullName: Game.HatRespawn.initialScale
+  type: Field
+  source:
+    id: initialScale
+    path: ''
+    startLine: 2442
+  assemblies:
+  - cs.temp.dll
+  namespace: Game
+  summary: "\nThe initial scale of the hat.\n"
+  example: []
+  syntax:
+    content: public Vector2 initialScale
+    return:
+      type: Global.Vector2
+    content.vb: Public initialScale As Vector2
 - uid: Game.HatRespawn.Interact
   commentId: M:Game.HatRespawn.Interact
   id: Interact
@@ -88,10 +146,12 @@ items:
   source:
     id: Interact
     path: ''
-    startLine: 1700
+    startLine: 2498
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nUpdates the last interaction time when a player interacts with the hat.\n"
+  example: []
   syntax:
     content: public void Interact()
     content.vb: Public Sub Interact()
@@ -110,10 +170,12 @@ items:
   source:
     id: OnHatDropped
     path: ''
-    startLine: 1706
+    startLine: 2507
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nMarks the hat as dropped and resets the timer.\n"
+  example: []
   syntax:
     content: public void OnHatDropped()
     content.vb: Public Sub OnHatDropped()
@@ -150,6 +212,11 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: Global.Vector2
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Vector2
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

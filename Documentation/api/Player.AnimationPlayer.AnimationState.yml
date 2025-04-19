@@ -19,10 +19,12 @@ items:
   source:
     id: AnimationState
     path: ''
-    startLine: 2419
+    startLine: 3773
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nRepresents the different animation states the player can be in.\n"
+  example: []
   syntax:
     content: public enum AnimationPlayer.AnimationState
     content.vb: Public Enum AnimationPlayer.AnimationState
@@ -40,10 +42,12 @@ items:
   source:
     id: Idle
     path: ''
-    startLine: 2419
+    startLine: 3778
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe idle state, when the player is not moving.\n"
+  example: []
   syntax:
     content: Idle = 0
     return:
@@ -62,10 +66,12 @@ items:
   source:
     id: Run
     path: ''
-    startLine: 2419
+    startLine: 3783
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe running state, when the player is moving quickly.\n"
+  example: []
   syntax:
     content: Run = 1
     return:
@@ -84,10 +90,12 @@ items:
   source:
     id: Jump
     path: ''
-    startLine: 2419
+    startLine: 3788
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe jumping state, when the player is in the air.\n"
+  example: []
   syntax:
     content: Jump = 2
     return:
@@ -106,10 +114,12 @@ items:
   source:
     id: Walk
     path: ''
-    startLine: 2419
+    startLine: 3793
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe walking state, when the player is moving slowly.\n"
+  example: []
   syntax:
     content: Walk = 3
     return:

@@ -21,10 +21,12 @@ items:
   source:
     id: AnimationPlayer
     path: ''
-    startLine: 2416
+    startLine: 3767
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class manages the player&apos;s animations, including setting animation states,\nhandling directional changes, and triggering specific animations like punching.\n"
+  example: []
   syntax:
     content: 'public class AnimationPlayer : MonoBehaviour'
     content.vb: Public Class AnimationPlayer Inherits MonoBehaviour
@@ -44,10 +46,12 @@ items:
   source:
     id: state
     path: ''
-    startLine: 2420
+    startLine: 3799
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe current animation state of the player.\n"
+  example: []
   syntax:
     content: public AnimationPlayer.AnimationState state
     return:
@@ -67,10 +71,12 @@ items:
   source:
     id: backwards
     path: ''
-    startLine: 2421
+    startLine: 3804
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIndicates whether the player is facing backwards.\n"
+  example: []
   syntax:
     content: public bool backwards
     return:
@@ -90,10 +96,12 @@ items:
   source:
     id: block
     path: ''
-    startLine: 2422
+    startLine: 3809
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nIndicates whether the player is currently blocking.\n"
+  example: []
   syntax:
     content: public bool block
     return:
@@ -113,10 +121,12 @@ items:
   source:
     id: clip
     path: ''
-    startLine: 2423
+    startLine: 3814
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe animation clip to play when the script starts.\n"
+  example: []
   syntax:
     content: public AnimationClip clip
     return:
@@ -136,15 +146,18 @@ items:
   source:
     id: SetState
     path: ''
-    startLine: 2439
+    startLine: 3858
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nSets the player&apos;s animation state.\n"
+  example: []
   syntax:
     content: public void SetState(AnimationPlayer.AnimationState state)
     parameters:
     - id: state
       type: Player.AnimationPlayer.AnimationState
+      description: The new animation state to set.
     content.vb: Public Sub SetState(state As AnimationPlayer.AnimationState)
   overload: Player.AnimationPlayer.SetState*
 - uid: Player.AnimationPlayer.Punch
@@ -161,10 +174,12 @@ items:
   source:
     id: Punch
     path: ''
-    startLine: 2444
+    startLine: 3866
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nTriggers the punch animation.\n"
+  example: []
   syntax:
     content: public void Punch()
     content.vb: Public Sub Punch()

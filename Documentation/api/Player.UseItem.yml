@@ -20,10 +20,12 @@ items:
   source:
     id: UseItem
     path: ''
-    startLine: 2947
+    startLine: 4428
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class allows a player to pick up, hold, and drop items during the game.\nIt is primarily used for managing interactions with the &quot;hat&quot; in &quot;keep-away&quot; mode.\n"
+  example: []
   syntax:
     content: 'public class UseItem : MonoBehaviour'
     content.vb: Public Class UseItem Inherits MonoBehaviour
@@ -43,10 +45,12 @@ items:
   source:
     id: holdTime
     path: ''
-    startLine: 2953
+    startLine: 4453
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe total time the player has held the item.\n"
+  example: []
   syntax:
     content: public float holdTime
     return:
@@ -66,10 +70,12 @@ items:
   source:
     id: head
     path: ''
-    startLine: 2956
+    startLine: 4463
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThe position where the item will be held (e.g., above the player&apos;s head).\n"
+  example: []
   syntax:
     content: public Transform head
     return:
@@ -89,15 +95,18 @@ items:
   source:
     id: PickUpItem
     path: ''
-    startLine: 2986
+    startLine: 4511
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nAllows the player to pick up an item and start the hold timer.\n"
+  example: []
   syntax:
     content: public void PickUpItem(GameObject item)
     parameters:
     - id: item
       type: Global.GameObject
+      description: The item to pick up.
     content.vb: Public Sub PickUpItem(item As GameObject)
   overload: Player.UseItem.PickUpItem*
 - uid: Player.UseItem.DropItem
@@ -114,10 +123,12 @@ items:
   source:
     id: DropItem
     path: ''
-    startLine: 3008
+    startLine: 4542
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nAllows the player to drop the item they are holding.\n"
+  example: []
   syntax:
     content: public void DropItem()
     content.vb: Public Sub DropItem()
@@ -136,14 +147,17 @@ items:
   source:
     id: IsHoldingItem
     path: ''
-    startLine: 3037
+    startLine: 4589
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nChecks if the player is currently holding an item.\n"
+  example: []
   syntax:
     content: public bool IsHoldingItem()
     return:
       type: System.Boolean
+      description: True if the player is holding an item, false otherwise.
     content.vb: Public Function IsHoldingItem() As Boolean
   overload: Player.UseItem.IsHoldingItem*
 references:

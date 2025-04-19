@@ -25,10 +25,12 @@ items:
   source:
     id: EnableTrigger
     path: ''
-    startLine: 904
+    startLine: 635
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nDefines the conditions under which this layer is enabled.\n"
+  example: []
   syntax:
     content: public enum TrackLayer.EnableTrigger
     content.vb: Public Enum TrackLayer.EnableTrigger
@@ -46,10 +48,12 @@ items:
   source:
     id: Scene
     path: ''
-    startLine: 904
+    startLine: 638
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a specific scene is active.
+  example: []
   syntax:
     content: Scene = 0
     return:
@@ -68,10 +72,12 @@ items:
   source:
     id: Magnetism
     path: ''
-    startLine: 904
+    startLine: 640
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when the player is magnetized.
+  example: []
   syntax:
     content: Magnetism = 1
     return:
@@ -90,10 +96,12 @@ items:
   source:
     id: Goal
     path: ''
-    startLine: 904
+    startLine: 642
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a goal is activated.
+  example: []
   syntax:
     content: Goal = 2
     return:
@@ -112,10 +120,12 @@ items:
   source:
     id: Button
     path: ''
-    startLine: 904
+    startLine: 644
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a button is pressed.
+  example: []
   syntax:
     content: Button = 3
     return:
@@ -134,10 +144,12 @@ items:
   source:
     id: Toggle
     path: ''
-    startLine: 904
+    startLine: 646
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a toggle is active.
+  example: []
   syntax:
     content: Toggle = 4
     return:
@@ -156,10 +168,12 @@ items:
   source:
     id: Movement
     path: ''
-    startLine: 904
+    startLine: 648
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when the player is moving.
+  example: []
   syntax:
     content: Movement = 5
     return:
@@ -178,10 +192,12 @@ items:
   source:
     id: ConstantForce
     path: ''
-    startLine: 904
+    startLine: 650
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a constant force is applied to the player.
+  example: []
   syntax:
     content: ConstantForce = 6
     return:
@@ -200,10 +216,12 @@ items:
   source:
     id: EndOfLevel
     path: ''
-    startLine: 904
+    startLine: 652
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled at the end of a level.
+  example: []
   syntax:
     content: EndOfLevel = 7
     return:
@@ -222,10 +240,12 @@ items:
   source:
     id: ElectromagneticPulse
     path: ''
-    startLine: 904
+    startLine: 654
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled during an electromagnetic pulse event.
+  example: []
   syntax:
     content: ElectromagneticPulse = 8
     return:
@@ -244,10 +264,12 @@ items:
   source:
     id: Collectible
     path: ''
-    startLine: 904
+    startLine: 656
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: Enabled when a collectible is interacted with.
+  example: []
   syntax:
     content: Collectible = 9
     return:

@@ -25,10 +25,12 @@ items:
   source:
     id: TerribleHealthBarScript
     path: ''
-    startLine: 1829
+    startLine: 2837
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the health bar visuals for a player, including updating\nthe health bar&apos;s size, position, and color based on the player&apos;s current health.\n"
+  example: []
   syntax:
     content: 'public class TerribleHealthBarScript : MonoBehaviour'
     content.vb: Public Class TerribleHealthBarScript Inherits MonoBehaviour
@@ -48,10 +50,12 @@ items:
   source:
     id: fullHealthColor
     path: ''
-    startLine: 1831
+    startLine: 2842
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe color of the health bar when the player is at full health.\n"
+  example: []
   syntax:
     content: public Color fullHealthColor
     return:
@@ -71,10 +75,12 @@ items:
   source:
     id: fullDeathColor
     path: ''
-    startLine: 1832
+    startLine: 2847
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe color of the health bar when the player is at zero health.\n"
+  example: []
   syntax:
     content: public Color fullDeathColor
     return:
@@ -94,10 +100,12 @@ items:
   source:
     id: subtractionColor
     path: ''
-    startLine: 1833
+    startLine: 2852
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe color used to represent health subtraction.\n"
+  example: []
   syntax:
     content: public Color subtractionColor
     return:
@@ -117,10 +125,12 @@ items:
   source:
     id: healthVisual
     path: ''
-    startLine: 1834
+    startLine: 2857
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe visual representation of the health bar.\n"
+  example: []
   syntax:
     content: public GameObject healthVisual
     return:
@@ -140,10 +150,12 @@ items:
   source:
     id: actualHealthVisual
     path: ''
-    startLine: 1835
+    startLine: 2862
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe actual health bar that reflects the player&apos;s current health.\n"
+  example: []
   syntax:
     content: public GameObject actualHealthVisual
     return:
@@ -163,10 +175,12 @@ items:
   source:
     id: deathVisual
     path: ''
-    startLine: 1836
+    startLine: 2867
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe visual representation of the player&apos;s death state.\n"
+  example: []
   syntax:
     content: public GameObject deathVisual
     return:
@@ -186,10 +200,12 @@ items:
   source:
     id: smoothSpeed
     path: ''
-    startLine: 1837
+    startLine: 2872
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe speed at which the health bar updates smoothly.\n"
+  example: []
   syntax:
     content: public float smoothSpeed
     return:
@@ -209,10 +225,12 @@ items:
   source:
     id: text
     path: ''
-    startLine: 1838
+    startLine: 2877
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe text element displaying the player&apos;s current and maximum health.\n"
+  example: []
   syntax:
     content: public TextMeshProUGUI text
     return:
@@ -232,10 +250,12 @@ items:
   source:
     id: player
     path: ''
-    startLine: 1847
+    startLine: 2912
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe player associated with this health bar.\n"
+  example: []
   syntax:
     content: public GameObject player
     return:
@@ -255,15 +275,18 @@ items:
   source:
     id: SetPlayer
     path: ''
-    startLine: 1875
+    startLine: 2953
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSets the player associated with this health bar.\n"
+  example: []
   syntax:
     content: public void SetPlayer(GameObject player)
     parameters:
     - id: player
       type: Global.GameObject
+      description: The player to associate with this health bar.
     content.vb: Public Sub SetPlayer(player As GameObject)
   overload: Game.TerribleHealthBarScript.SetPlayer*
 references:

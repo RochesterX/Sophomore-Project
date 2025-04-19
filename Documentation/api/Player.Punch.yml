@@ -21,10 +21,12 @@ items:
   source:
     id: Punch
     path: ''
-    startLine: 2215
+    startLine: 3386
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nThis class handles the punching mechanic for the player, including triggering animations,\nenabling and disabling the hurtbox, and managing player speed during a punch.\n"
+  example: []
   syntax:
     content: 'public class Punch : MonoBehaviour'
     content.vb: Public Class Punch Inherits MonoBehaviour
@@ -44,10 +46,12 @@ items:
   source:
     id: cancelable
     path: ''
-    startLine: 2219
+    startLine: 3393
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nDetermines whether the player can cancel their punch action.\n"
+  example: []
   syntax:
     content: public bool cancelable
     return:
@@ -67,10 +71,12 @@ items:
   source:
     id: EnableHurtbox
     path: ''
-    startLine: 2246
+    startLine: 3444
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nEnables the hurtbox, allowing the punch to interact with other objects.\n"
+  example: []
   syntax:
     content: public void EnableHurtbox()
     content.vb: Public Sub EnableHurtbox()
@@ -89,10 +95,12 @@ items:
   source:
     id: DisableHurtbox
     path: ''
-    startLine: 2251
+    startLine: 3452
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nDisables the hurtbox, preventing the punch from interacting with other objects.\n"
+  example: []
   syntax:
     content: public void DisableHurtbox()
     content.vb: Public Sub DisableHurtbox()
@@ -111,10 +119,12 @@ items:
   source:
     id: DisableCancellation
     path: ''
-    startLine: 2256
+    startLine: 3460
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nDisables the ability to cancel the punch action.\n"
+  example: []
   syntax:
     content: public void DisableCancellation()
     content.vb: Public Sub DisableCancellation()
@@ -133,10 +143,12 @@ items:
   source:
     id: EnableCancellation
     path: ''
-    startLine: 2261
+    startLine: 3468
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nEnables the ability to cancel the punch action.\n"
+  example: []
   syntax:
     content: public void EnableCancellation()
     content.vb: Public Sub EnableCancellation()
@@ -155,10 +167,12 @@ items:
   source:
     id: ReturnToMaxSpeed
     path: ''
-    startLine: 2266
+    startLine: 3476
   assemblies:
   - cs.temp.dll
   namespace: Player
+  summary: "\nResets the player&apos;s movement speed to its maximum value after the punch is complete.\n"
+  example: []
   syntax:
     content: public void ReturnToMaxSpeed()
     content.vb: Public Sub ReturnToMaxSpeed()

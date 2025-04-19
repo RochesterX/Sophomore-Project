@@ -17,10 +17,12 @@ items:
   source:
     id: GameManagerHelper
     path: ''
-    startLine: 1151
+    startLine: 1296
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class helps manage positions for the GameManager during development.\nIt allows adding hat spawn positions and player spawn positions directly in the editor.\n"
+  example: []
   syntax:
     content: 'public class GameManagerHelper : MonoBehaviour'
     content.vb: Public Class GameManagerHelper Inherits MonoBehaviour
@@ -40,10 +42,12 @@ items:
   source:
     id: addHatPosition
     path: ''
-    startLine: 1154
+    startLine: 1302
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nIf true, adds the current position of the &quot;HELPER&quot; object to the hat spawn positions in the GameManager.\n"
+  example: []
   syntax:
     content: public bool addHatPosition
     return:
@@ -63,10 +67,12 @@ items:
   source:
     id: addSpawnPosition
     path: ''
-    startLine: 1155
+    startLine: 1307
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nIf true, sets the current position of the &quot;HELPER&quot; object as the player spawn position in the GameManager.\n"
+  example: []
   syntax:
     content: public bool addSpawnPosition
     return:

@@ -15,10 +15,12 @@ items:
   source:
     id: ModeSelect
     path: ''
-    startLine: 950
+    startLine: 794
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the game mode selection process by setting the game mode\nbased on the active toggle in the toggle group.\n"
+  example: []
   syntax:
     content: 'public class ModeSelect : MonoBehaviour'
     content.vb: Public Class ModeSelect Inherits MonoBehaviour

@@ -18,10 +18,12 @@ items:
   source:
     id: AudioManager
     path: ''
-    startLine: 338
+    startLine: 1134
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThis class manages the playback of sound effects in the game.\nIt provides functionality to play specific sounds by name and ensures a singleton instance for global access.\n"
+  example: []
   syntax:
     content: 'public class AudioManager : MonoBehaviour'
     content.vb: Public Class AudioManager Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: soundEffects
     path: ''
-    startLine: 340
+    startLine: 1139
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nA list of all sound effects managed by the AudioManager.\n"
+  example: []
   syntax:
     content: public List<SoundEffect> soundEffects
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 342
+    startLine: 1144
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nThe singleton instance of the <xref href=\"Music.AudioManager\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
   syntax:
     content: public static AudioManager Instance
     return:
@@ -87,15 +93,19 @@ items:
   source:
     id: PlaySound
     path: ''
-    startLine: 368
+    startLine: 1181
   assemblies:
   - cs.temp.dll
   namespace: Music
+  summary: "\nPlays a sound effect by its name.\n"
+  remarks: "\nIf the sound name is &quot;Punch,&quot; it plays multiple punch-related sound effects.\nIf the sound is not found, a warning is logged to the console.\n"
+  example: []
   syntax:
     content: public void PlaySound(string soundName)
     parameters:
     - id: soundName
       type: System.String
+      description: The name of the sound effect to play.
     content.vb: Public Sub PlaySound(soundName As String)
   overload: Music.AudioManager.PlaySound*
   nameWithType.vb: AudioManager.PlaySound(String)

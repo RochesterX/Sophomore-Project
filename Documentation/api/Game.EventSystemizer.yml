@@ -15,10 +15,12 @@ items:
   source:
     id: EventSystemizer
     path: ''
-    startLine: 933
+    startLine: 763
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class makes sure there is only one EventSystem in the game at any time.\n"
+  example: []
   syntax:
     content: 'public class EventSystemizer : MonoBehaviour'
     content.vb: Public Class EventSystemizer Inherits MonoBehaviour

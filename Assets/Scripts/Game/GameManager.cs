@@ -6,6 +6,7 @@ using Music;
 using Player;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 namespace Game
 {
@@ -324,12 +325,13 @@ namespace Game
             if (gameMode == GameMode.freeForAll)
             {
                 // In free-for-all mode, the last alive player is the winner
-                GameObject winner = AlivePlayers()[0];
+                GameObject winner = FindFirstObjectByType<PlayerMovement>().gameObject;//AlivePlayers()[0];
                 print(winner.name + " is the winner");
 
                 // Show the winner's scene and update the win screen
                 FindFirstObjectByType<PlayerCameraMovement>().WinScene(winner);
-                WinScreen.Instance.ShowWinScreen(players.IndexOf(winner) + 1);
+                print($"Player {int.Parse(winner.name)} won");
+                WinScreen.Instance.ShowWinScreen(int.Parse(winner.name));
 
                 // Hide the life display UI
                 FindFirstObjectByType<LifeDisplayManager>().HideLifeDisplay();

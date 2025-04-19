@@ -18,11 +18,11 @@ items:
   source:
     id: GameMode
     path: ''
-    startLine: 1335
+    startLine: 1746
   assemblies:
   - cs.temp.dll
   namespace: Game
-  summary: "\nEnum representing the different game modes.\n"
+  summary: "\nThe different game modes players can choose from.\n"
   example: []
   syntax:
     content: public enum GameManager.GameMode
@@ -41,10 +41,12 @@ items:
   source:
     id: freeForAll
     path: ''
-    startLine: 1337
+    startLine: 1751
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nPlayers compete individually to be the last one standing.\n"
+  example: []
   syntax:
     content: freeForAll = 0
     return:
@@ -63,10 +65,12 @@ items:
   source:
     id: keepAway
     path: ''
-    startLine: 1338
+    startLine: 1756
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nPlayers compete to hold an item (like a hat) for the longest time.\n"
+  example: []
   syntax:
     content: keepAway = 1
     return:
@@ -85,10 +89,12 @@ items:
   source:
     id: obstacleCourse
     path: ''
-    startLine: 1339
+    startLine: 1761
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nPlayers race to complete an obstacle course.\n"
+  example: []
   syntax:
     content: obstacleCourse = 2
     return:

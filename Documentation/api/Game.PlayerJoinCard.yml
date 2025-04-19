@@ -18,10 +18,12 @@ items:
   source:
     id: PlayerJoinCard
     path: ''
-    startLine: 1020
+    startLine: 919
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class represents a player join card, displaying the player&apos;s number\nand preview in the game lobby.\n"
+  example: []
   syntax:
     content: 'public class PlayerJoinCard : MonoBehaviour'
     content.vb: Public Class PlayerJoinCard Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: playerPreview
     path: ''
-    startLine: 1022
+    startLine: 924
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe preview object representing the player.\n"
+  example: []
   syntax:
     content: public GameObject playerPreview
     return:
@@ -64,10 +68,12 @@ items:
   source:
     id: playerNumber
     path: ''
-    startLine: 1023
+    startLine: 929
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe number assigned to the player.\n"
+  example: []
   syntax:
     content: public int playerNumber
     return:
@@ -87,10 +93,12 @@ items:
   source:
     id: playerNumberText
     path: ''
-    startLine: 1024
+    startLine: 934
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThe text element displaying the player&apos;s number.\n"
+  example: []
   syntax:
     content: public TextMeshProUGUI playerNumberText
     return:

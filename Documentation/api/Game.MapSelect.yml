@@ -15,10 +15,12 @@ items:
   source:
     id: MapSelect
     path: ''
-    startLine: 1757
+    startLine: 2608
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the map selection process by setting the selected map\nbased on the active toggle in the toggle group.\n"
+  example: []
   syntax:
     content: 'public class MapSelect : MonoBehaviour'
     content.vb: Public Class MapSelect Inherits MonoBehaviour

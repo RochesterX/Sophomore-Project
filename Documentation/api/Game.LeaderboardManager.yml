@@ -18,10 +18,12 @@ items:
   source:
     id: LeaderboardManager
     path: ''
-    startLine: 1912
+    startLine: 3007
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nThis class manages the leaderboard, including initializing player icons,\nupdating player positions, and displaying hold times.\n"
+  example: []
   syntax:
     content: 'public class LeaderboardManager : MonoBehaviour'
     content.vb: Public Class LeaderboardManager Inherits MonoBehaviour
@@ -41,10 +43,12 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 1914
+    startLine: 3012
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nA single instance of this class that can be accessed from anywhere.\n"
+  example: []
   syntax:
     content: public static LeaderboardManager Instance { get; }
     parameters: []
@@ -66,10 +70,12 @@ items:
   source:
     id: UpdateLeaderboard
     path: ''
-    startLine: 1953
+    startLine: 3082
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nUpdates the leaderboard by sorting players based on their hold times\nand adjusting their positions.\n"
+  example: []
   syntax:
     content: public void UpdateLeaderboard()
     content.vb: Public Sub UpdateLeaderboard()
@@ -88,17 +94,21 @@ items:
   source:
     id: UpdatePlayerHoldTimeText
     path: ''
-    startLine: 1976
+    startLine: 3112
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nUpdates the hold time text for a specific player on the leaderboard.\n"
+  example: []
   syntax:
     content: public void UpdatePlayerHoldTimeText(GameObject player, float holdTime)
     parameters:
     - id: player
       type: Global.GameObject
+      description: The player whose hold time is being updated.
     - id: holdTime
       type: System.Single
+      description: The new hold time to display.
     content.vb: Public Sub UpdatePlayerHoldTimeText(player As GameObject, holdTime As Single)
   overload: Game.LeaderboardManager.UpdatePlayerHoldTimeText*
   nameWithType.vb: LeaderboardManager.UpdatePlayerHoldTimeText(GameObject, Single)
