@@ -39,7 +39,7 @@ items:
   source:
     id: GameManager
     path: ''
-    startLine: 1641
+    startLine: 1713
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -64,7 +64,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 1646
+    startLine: 1718
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -91,7 +91,7 @@ items:
   source:
     id: time
     path: ''
-    startLine: 1651
+    startLine: 1723
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -116,7 +116,7 @@ items:
   source:
     id: StartGameEvent
     path: ''
-    startLine: 1661
+    startLine: 1733
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -141,7 +141,7 @@ items:
   source:
     id: EndGameEvent
     path: ''
-    startLine: 1666
+    startLine: 1738
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -166,7 +166,7 @@ items:
   source:
     id: players
     path: ''
-    startLine: 1671
+    startLine: 1743
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -191,7 +191,7 @@ items:
   source:
     id: playerColors
     path: ''
-    startLine: 1676
+    startLine: 1748
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -216,7 +216,7 @@ items:
   source:
     id: offset
     path: ''
-    startLine: 1681
+    startLine: 1753
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -241,7 +241,7 @@ items:
   source:
     id: music
     path: ''
-    startLine: 1686
+    startLine: 1758
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -266,7 +266,7 @@ items:
   source:
     id: gameOver
     path: ''
-    startLine: 1691
+    startLine: 1763
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -291,7 +291,7 @@ items:
   source:
     id: gameTimer
     path: ''
-    startLine: 1696
+    startLine: 1768
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -316,7 +316,7 @@ items:
   source:
     id: playerHoldTimes
     path: ''
-    startLine: 1701
+    startLine: 1773
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -341,7 +341,7 @@ items:
   source:
     id: gameMode
     path: ''
-    startLine: 1706
+    startLine: 1778
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -366,7 +366,7 @@ items:
   source:
     id: map
     path: ''
-    startLine: 1711
+    startLine: 1783
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -391,7 +391,7 @@ items:
   source:
     id: spawnPosition
     path: ''
-    startLine: 1716
+    startLine: 1788
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -416,7 +416,7 @@ items:
   source:
     id: obstacleCourseSpawnPosition
     path: ''
-    startLine: 1721
+    startLine: 1793
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -441,7 +441,7 @@ items:
   source:
     id: hatSpawnPositions
     path: ''
-    startLine: 1726
+    startLine: 1798
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -466,7 +466,7 @@ items:
   source:
     id: LeaderboardCanvas
     path: ''
-    startLine: 1731
+    startLine: 1803
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -491,7 +491,7 @@ items:
   source:
     id: TimerCanvas
     path: ''
-    startLine: 1736
+    startLine: 1808
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -516,7 +516,7 @@ items:
   source:
     id: hatObject
     path: ''
-    startLine: 1741
+    startLine: 1813
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -541,7 +541,7 @@ items:
   source:
     id: StartGame
     path: ''
-    startLine: 1826
+    startLine: 1898
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -565,7 +565,7 @@ items:
   source:
     id: PlayerDied
     path: ''
-    startLine: 1868
+    startLine: 1948
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -593,7 +593,7 @@ items:
   source:
     id: GameOver
     path: ''
-    startLine: 1930
+    startLine: 2018
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -619,7 +619,7 @@ items:
   source:
     id: AlivePlayers
     path: ''
-    startLine: 2056
+    startLine: 2145
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -647,7 +647,7 @@ items:
   source:
     id: UpdatePlayerHoldTime
     path: ''
-    startLine: 2081
+    startLine: 2170
   assemblies:
   - cs.temp.dll
   namespace: Game

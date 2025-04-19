@@ -16,7 +16,7 @@ items:
   source:
     id: HealthBarManager
     path: ''
-    startLine: 1456
+    startLine: 1527
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -41,7 +41,7 @@ items:
   source:
     id: healthBarPrefab
     path: ''
-    startLine: 1461
+    startLine: 1532
   assemblies:
   - cs.temp.dll
   namespace: Game

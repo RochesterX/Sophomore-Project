@@ -20,7 +20,7 @@ items:
   source:
     id: Playlist
     path: ''
-    startLine: 690
+    startLine: 761
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -55,7 +55,7 @@ items:
   source:
     id: trackName
     path: ''
-    startLine: 696
+    startLine: 767
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -80,7 +80,7 @@ items:
   source:
     id: trackScenes
     path: ''
-    startLine: 701
+    startLine: 772
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -105,7 +105,7 @@ items:
   source:
     id: songs
     path: ''
-    startLine: 706
+    startLine: 777
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -130,7 +130,7 @@ items:
   source:
     id: shuffleTime
     path: ''
-    startLine: 711
+    startLine: 782
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -155,7 +155,7 @@ items:
   source:
     id: volume
     path: ''
-    startLine: 716
+    startLine: 787
   assemblies:
   - cs.temp.dll
   namespace: Music

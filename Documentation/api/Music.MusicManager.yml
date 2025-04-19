@@ -21,7 +21,7 @@ items:
   source:
     id: MusicManager
     path: ''
-    startLine: 235
+    startLine: 306
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -46,7 +46,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 241
+    startLine: 312
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -71,7 +71,7 @@ items:
   source:
     id: playlists
     path: ''
-    startLine: 246
+    startLine: 317
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -96,7 +96,7 @@ items:
   source:
     id: songPrefab
     path: ''
-    startLine: 256
+    startLine: 327
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -121,7 +121,7 @@ items:
   source:
     id: StartPlaylist
     path: ''
-    startLine: 284
+    startLine: 355
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -145,7 +145,7 @@ items:
   source:
     id: StartPlaylist
     path: ''
-    startLine: 308
+    startLine: 379
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -176,7 +176,7 @@ items:
   source:
     id: GetActiveSceneNotTitleScreen
     path: ''
-    startLine: 373
+    startLine: 444
   assemblies:
   - cs.temp.dll
   namespace: Music

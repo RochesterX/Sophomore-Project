@@ -18,7 +18,7 @@ items:
   source:
     id: GameMode
     path: ''
-    startLine: 1746
+    startLine: 1818
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -41,7 +41,7 @@ items:
   source:
     id: freeForAll
     path: ''
-    startLine: 1751
+    startLine: 1823
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -65,7 +65,7 @@ items:
   source:
     id: keepAway
     path: ''
-    startLine: 1756
+    startLine: 1828
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -89,7 +89,7 @@ items:
   source:
     id: obstacleCourse
     path: ''
-    startLine: 1761
+    startLine: 1833
   assemblies:
   - cs.temp.dll
   namespace: Game

@@ -37,7 +37,7 @@ items:
   source:
     id: PlayerMovement
     path: ''
-    startLine: 3997
+    startLine: 4087
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -62,7 +62,7 @@ items:
   source:
     id: ground
     path: ''
-    startLine: 4010
+    startLine: 4100
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -87,7 +87,7 @@ items:
   source:
     id: playerText
     path: ''
-    startLine: 4015
+    startLine: 4105
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -112,7 +112,7 @@ items:
   source:
     id: walkSpeed
     path: ''
-    startLine: 4022
+    startLine: 4112
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -135,7 +135,7 @@ items:
   source:
     id: walkSpeedFactor
     path: ''
-    startLine: 4027
+    startLine: 4117
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -160,7 +160,7 @@ items:
   source:
     id: maxSpeed
     path: ''
-    startLine: 4032
+    startLine: 4122
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -185,7 +185,7 @@ items:
   source:
     id: maxSpeedOverride
     path: ''
-    startLine: 4037
+    startLine: 4127
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -210,7 +210,7 @@ items:
   source:
     id: slowdownMultiplier
     path: ''
-    startLine: 4042
+    startLine: 4132
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -235,7 +235,7 @@ items:
   source:
     id: virtualAxisX
     path: ''
-    startLine: 4047
+    startLine: 4137
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -260,7 +260,7 @@ items:
   source:
     id: virtualButtonJump
     path: ''
-    startLine: 4052
+    startLine: 4142
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -285,7 +285,7 @@ items:
   source:
     id: virtualButtonJumpLastFrame
     path: ''
-    startLine: 4057
+    startLine: 4147
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -310,7 +310,7 @@ items:
   source:
     id: turnaroundMultiplier
     path: ''
-    startLine: 4062
+    startLine: 4152
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -335,7 +335,7 @@ items:
   source:
     id: walkSmooth
     path: ''
-    startLine: 4067
+    startLine: 4157
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -360,7 +360,7 @@ items:
   source:
     id: secondsToFullSpeed
     path: ''
-    startLine: 4072
+    startLine: 4162
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -385,7 +385,7 @@ items:
   source:
     id: jumpSpeed
     path: ''
-    startLine: 4077
+    startLine: 4167
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -410,7 +410,7 @@ items:
   source:
     id: coyoteTime
     path: ''
-    startLine: 4082
+    startLine: 4172
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -435,7 +435,7 @@ items:
   source:
     id: jumpLenience
     path: ''
-    startLine: 4087
+    startLine: 4177
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -460,7 +460,7 @@ items:
   source:
     id: timeUnableToBeDeclaredNotJumping
     path: ''
-    startLine: 4092
+    startLine: 4182
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -485,7 +485,7 @@ items:
   source:
     id: groundCheckDistance
     path: ''
-    startLine: 4097
+    startLine: 4187
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -510,7 +510,7 @@ items:
   source:
     id: IsBasicallyGrounded
     path: ''
-    startLine: 4357
+    startLine: 4447
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -537,7 +537,7 @@ items:
   source:
     id: IsPhysicallyGrounded
     path: ''
-    startLine: 4376
+    startLine: 4466
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -564,7 +564,7 @@ items:
   source:
     id: GetPointInBoxCollider
     path: ''
-    startLine: 4397
+    startLine: 4487
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -604,7 +604,7 @@ items:
   source:
     id: StopVelocity
     path: ''
-    startLine: 4409
+    startLine: 4499
   assemblies:
   - cs.temp.dll
   namespace: Player

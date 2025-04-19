@@ -17,7 +17,7 @@ items:
   source:
     id: GameManagerHelper
     path: ''
-    startLine: 1296
+    startLine: 1367
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -42,7 +42,7 @@ items:
   source:
     id: addHatPosition
     path: ''
-    startLine: 1302
+    startLine: 1373
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -67,7 +67,7 @@ items:
   source:
     id: addSpawnPosition
     path: ''
-    startLine: 1307
+    startLine: 1378
   assemblies:
   - cs.temp.dll
   namespace: Game

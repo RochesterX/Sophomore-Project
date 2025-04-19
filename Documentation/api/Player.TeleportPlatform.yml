@@ -19,7 +19,7 @@ items:
   source:
     id: TeleportPlatform
     path: ''
-    startLine: 3494
+    startLine: 3579
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -44,7 +44,7 @@ items:
   source:
     id: teleportPoint
     path: ''
-    startLine: 3499
+    startLine: 3584
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -69,7 +69,7 @@ items:
   source:
     id: teleportTag
     path: ''
-    startLine: 3504
+    startLine: 3589
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -94,7 +94,7 @@ items:
   source:
     id: playerTag
     path: ''
-    startLine: 3509
+    startLine: 3594
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -119,7 +119,7 @@ items:
   source:
     id: isPlatform
     path: ''
-    startLine: 3515
+    startLine: 3600
   assemblies:
   - cs.temp.dll
   namespace: Player

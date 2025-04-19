@@ -18,7 +18,7 @@ items:
   source:
     id: SoundEffect
     path: ''
-    startLine: 1210
+    startLine: 1281
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -43,7 +43,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 1215
+    startLine: 1286
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -68,7 +68,7 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 1220
+    startLine: 1291
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -93,7 +93,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1227
+    startLine: 1298
   assemblies:
   - cs.temp.dll
   namespace: Music

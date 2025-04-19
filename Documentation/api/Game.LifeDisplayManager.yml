@@ -20,7 +20,7 @@ items:
   source:
     id: LifeDisplayManager
     path: ''
-    startLine: 2746
+    startLine: 2836
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -45,7 +45,7 @@ items:
   source:
     id: players
     path: ''
-    startLine: 2751
+    startLine: 2841
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -70,7 +70,7 @@ items:
   source:
     id: playerPrefab
     path: ''
-    startLine: 2756
+    startLine: 2846
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -95,7 +95,7 @@ items:
   source:
     id: lifePrefab
     path: ''
-    startLine: 2761
+    startLine: 2851
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -120,7 +120,7 @@ items:
   source:
     id: lifeDisplays
     path: ''
-    startLine: 2767
+    startLine: 2857
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -145,7 +145,7 @@ items:
   source:
     id: HideLifeDisplay
     path: ''
-    startLine: 2817
+    startLine: 2907
   assemblies:
   - cs.temp.dll
   namespace: Game

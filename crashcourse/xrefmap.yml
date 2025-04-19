@@ -1327,12 +1327,6 @@ references:
   commentId: E:Player.Damageable.OnPlayerDeath
   fullName: Player.Damageable.OnPlayerDeath
   nameWithType: Damageable.OnPlayerDeath
-- uid: Player.Damageable.OnPlayerPunched
-  name: OnPlayerPunched
-  href: api/Player.Damageable.html#Player_Damageable_OnPlayerPunched
-  commentId: E:Player.Damageable.OnPlayerPunched
-  fullName: Player.Damageable.OnPlayerPunched
-  nameWithType: Damageable.OnPlayerPunched
 - uid: Player.Damageable.OnPlayerRespawn
   name: OnPlayerRespawn
   href: api/Player.Damageable.html#Player_Damageable_OnPlayerRespawn

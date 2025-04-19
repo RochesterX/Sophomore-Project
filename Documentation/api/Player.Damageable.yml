@@ -14,7 +14,6 @@ items:
   - Player.Damageable.lives
   - Player.Damageable.maxDamage
   - Player.Damageable.OnPlayerDeath
-  - Player.Damageable.OnPlayerPunched
   - Player.Damageable.OnPlayerRespawn
   - Player.Damageable.ResetDamage
   - Player.Damageable.Respawn
@@ -28,7 +27,7 @@ items:
   source:
     id: Damageable
     path: ''
-    startLine: 3145
+    startLine: 3235
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -53,7 +52,7 @@ items:
   source:
     id: force
     path: ''
-    startLine: 3153
+    startLine: 3243
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -78,7 +77,7 @@ items:
   source:
     id: damage
     path: ''
-    startLine: 3158
+    startLine: 3248
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -103,7 +102,7 @@ items:
   source:
     id: maxDamage
     path: ''
-    startLine: 3163
+    startLine: 3253
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -128,7 +127,7 @@ items:
   source:
     id: lives
     path: ''
-    startLine: 3168
+    startLine: 3258
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -153,7 +152,7 @@ items:
   source:
     id: damageSelfDebug
     path: ''
-    startLine: 3173
+    startLine: 3263
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -178,7 +177,7 @@ items:
   source:
     id: dying
     path: ''
-    startLine: 3178
+    startLine: 3268
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -189,31 +188,6 @@ items:
     return:
       type: System.Boolean
     content.vb: Public dying As Boolean
-- uid: Player.Damageable.OnPlayerPunched
-  commentId: E:Player.Damageable.OnPlayerPunched
-  id: OnPlayerPunched
-  parent: Player.Damageable
-  langs:
-  - csharp
-  - vb
-  name: OnPlayerPunched
-  nameWithType: Damageable.OnPlayerPunched
-  fullName: Player.Damageable.OnPlayerPunched
-  type: Event
-  source:
-    id: OnPlayerPunched
-    path: ''
-    startLine: 3183
-  assemblies:
-  - cs.temp.dll
-  namespace: Player
-  summary: "\nEvent triggered when the player is punched.\n"
-  example: []
-  syntax:
-    content: public event Action<GameObject> OnPlayerPunched
-    return:
-      type: System.Action{GameObject}
-    content.vb: Public Event OnPlayerPunched As Action(Of GameObject)
 - uid: Player.Damageable.OnPlayerDeath
   commentId: E:Player.Damageable.OnPlayerDeath
   id: OnPlayerDeath
@@ -228,7 +202,7 @@ items:
   source:
     id: OnPlayerDeath
     path: ''
-    startLine: 3188
+    startLine: 3273
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -253,7 +227,7 @@ items:
   source:
     id: OnPlayerRespawn
     path: ''
-    startLine: 3193
+    startLine: 3278
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -278,7 +252,7 @@ items:
   source:
     id: Damage
     path: ''
-    startLine: 3285
+    startLine: 3370
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -309,7 +283,7 @@ items:
   source:
     id: HandleDeath
     path: ''
-    startLine: 3337
+    startLine: 3422
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -333,7 +307,7 @@ items:
   source:
     id: Respawn
     path: ''
-    startLine: 3348
+    startLine: 3433
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -357,7 +331,7 @@ items:
   source:
     id: ResetDamage
     path: ''
-    startLine: 3368
+    startLine: 3453
   assemblies:
   - cs.temp.dll
   namespace: Player

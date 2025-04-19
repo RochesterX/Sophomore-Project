@@ -16,7 +16,7 @@ items:
   source:
     id: ObstacleCourse
     path: ''
-    startLine: 729
+    startLine: 800
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -41,7 +41,7 @@ items:
   source:
     id: playerWon
     path: ''
-    startLine: 734
+    startLine: 805
   assemblies:
   - cs.temp.dll
   namespace: Game

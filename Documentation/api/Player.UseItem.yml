@@ -20,7 +20,7 @@ items:
   source:
     id: UseItem
     path: ''
-    startLine: 4428
+    startLine: 4518
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -45,7 +45,7 @@ items:
   source:
     id: holdTime
     path: ''
-    startLine: 4453
+    startLine: 4543
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -70,7 +70,7 @@ items:
   source:
     id: head
     path: ''
-    startLine: 4463
+    startLine: 4553
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -95,7 +95,7 @@ items:
   source:
     id: PickUpItem
     path: ''
-    startLine: 4511
+    startLine: 4614
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -123,7 +123,7 @@ items:
   source:
     id: DropItem
     path: ''
-    startLine: 4542
+    startLine: 4646
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -147,7 +147,7 @@ items:
   source:
     id: IsHoldingItem
     path: ''
-    startLine: 4589
+    startLine: 4694
   assemblies:
   - cs.temp.dll
   namespace: Player

@@ -25,7 +25,7 @@ items:
   source:
     id: TerribleHealthBarScript
     path: ''
-    startLine: 2837
+    startLine: 2927
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -50,7 +50,7 @@ items:
   source:
     id: fullHealthColor
     path: ''
-    startLine: 2842
+    startLine: 2932
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -75,7 +75,7 @@ items:
   source:
     id: fullDeathColor
     path: ''
-    startLine: 2847
+    startLine: 2937
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -100,7 +100,7 @@ items:
   source:
     id: subtractionColor
     path: ''
-    startLine: 2852
+    startLine: 2942
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -125,7 +125,7 @@ items:
   source:
     id: healthVisual
     path: ''
-    startLine: 2857
+    startLine: 2947
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -150,7 +150,7 @@ items:
   source:
     id: actualHealthVisual
     path: ''
-    startLine: 2862
+    startLine: 2952
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -175,7 +175,7 @@ items:
   source:
     id: deathVisual
     path: ''
-    startLine: 2867
+    startLine: 2957
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -200,7 +200,7 @@ items:
   source:
     id: smoothSpeed
     path: ''
-    startLine: 2872
+    startLine: 2962
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -225,7 +225,7 @@ items:
   source:
     id: text
     path: ''
-    startLine: 2877
+    startLine: 2967
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -250,7 +250,7 @@ items:
   source:
     id: player
     path: ''
-    startLine: 2912
+    startLine: 3002
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -275,7 +275,7 @@ items:
   source:
     id: SetPlayer
     path: ''
-    startLine: 2953
+    startLine: 3043
   assemblies:
   - cs.temp.dll
   namespace: Game

@@ -25,7 +25,7 @@ items:
   source:
     id: EnableTrigger
     path: ''
-    startLine: 635
+    startLine: 706
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -48,7 +48,7 @@ items:
   source:
     id: Scene
     path: ''
-    startLine: 638
+    startLine: 709
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -72,7 +72,7 @@ items:
   source:
     id: Magnetism
     path: ''
-    startLine: 640
+    startLine: 711
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -96,7 +96,7 @@ items:
   source:
     id: Goal
     path: ''
-    startLine: 642
+    startLine: 713
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -120,7 +120,7 @@ items:
   source:
     id: Button
     path: ''
-    startLine: 644
+    startLine: 715
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -144,7 +144,7 @@ items:
   source:
     id: Toggle
     path: ''
-    startLine: 646
+    startLine: 717
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -168,7 +168,7 @@ items:
   source:
     id: Movement
     path: ''
-    startLine: 648
+    startLine: 719
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -192,7 +192,7 @@ items:
   source:
     id: ConstantForce
     path: ''
-    startLine: 650
+    startLine: 721
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -216,7 +216,7 @@ items:
   source:
     id: EndOfLevel
     path: ''
-    startLine: 652
+    startLine: 723
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -240,7 +240,7 @@ items:
   source:
     id: ElectromagneticPulse
     path: ''
-    startLine: 654
+    startLine: 725
   assemblies:
   - cs.temp.dll
   namespace: Music
@@ -264,7 +264,7 @@ items:
   source:
     id: Collectible
     path: ''
-    startLine: 656
+    startLine: 727
   assemblies:
   - cs.temp.dll
   namespace: Music

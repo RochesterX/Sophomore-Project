@@ -21,7 +21,7 @@ items:
   source:
     id: PlayerCameraMovement
     path: ''
-    startLine: 4608
+    startLine: 4713
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -46,7 +46,7 @@ items:
   source:
     id: weight
     path: ''
-    startLine: 4623
+    startLine: 4728
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -71,7 +71,7 @@ items:
   source:
     id: speed
     path: ''
-    startLine: 4628
+    startLine: 4733
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -96,7 +96,7 @@ items:
   source:
     id: lowerBound
     path: ''
-    startLine: 4638
+    startLine: 4743
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -121,7 +121,7 @@ items:
   source:
     id: winScene
     path: ''
-    startLine: 4643
+    startLine: 4748
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -146,7 +146,7 @@ items:
   source:
     id: staticCamera
     path: ''
-    startLine: 4648
+    startLine: 4753
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -171,7 +171,7 @@ items:
   source:
     id: WinScene
     path: ''
-    startLine: 4733
+    startLine: 4838
   assemblies:
   - cs.temp.dll
   namespace: Player

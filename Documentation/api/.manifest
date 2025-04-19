@@ -184,7 +184,6 @@
   "Player.Damageable.lives": "Player.Damageable.yml",
   "Player.Damageable.maxDamage": "Player.Damageable.yml",
   "Player.Damageable.OnPlayerDeath": "Player.Damageable.yml",
-  "Player.Damageable.OnPlayerPunched": "Player.Damageable.yml",
   "Player.Damageable.OnPlayerRespawn": "Player.Damageable.yml",
   "Player.Damageable.ResetDamage": "Player.Damageable.yml",
   "Player.Damageable.Respawn": "Player.Damageable.yml",

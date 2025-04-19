@@ -21,7 +21,7 @@ items:
   source:
     id: Punch
     path: ''
-    startLine: 3386
+    startLine: 3471
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -46,7 +46,7 @@ items:
   source:
     id: cancelable
     path: ''
-    startLine: 3393
+    startLine: 3478
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -71,7 +71,7 @@ items:
   source:
     id: EnableHurtbox
     path: ''
-    startLine: 3444
+    startLine: 3529
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -95,7 +95,7 @@ items:
   source:
     id: DisableHurtbox
     path: ''
-    startLine: 3452
+    startLine: 3537
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -119,7 +119,7 @@ items:
   source:
     id: DisableCancellation
     path: ''
-    startLine: 3460
+    startLine: 3545
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -143,7 +143,7 @@ items:
   source:
     id: EnableCancellation
     path: ''
-    startLine: 3468
+    startLine: 3553
   assemblies:
   - cs.temp.dll
   namespace: Player
@@ -167,7 +167,7 @@ items:
   source:
     id: ReturnToMaxSpeed
     path: ''
-    startLine: 3476
+    startLine: 3561
   assemblies:
   - cs.temp.dll
   namespace: Player

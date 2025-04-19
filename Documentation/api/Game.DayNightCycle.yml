@@ -26,10 +26,12 @@ items:
   source:
     id: DayNightCycle
     path: ''
-    startLine: 5
+    startLine: 11
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nManages the day-night cycle by transitioning between different sky and cloud sprites.\n"
+  example: []
   syntax:
     content: 'public class DayNightCycle : MonoBehaviour'
     content.vb: Public Class DayNightCycle Inherits MonoBehaviour
@@ -49,10 +51,12 @@ items:
   source:
     id: daySky
     path: ''
-    startLine: 7
+    startLine: 16
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the sky during the day.\n"
+  example: []
   syntax:
     content: public SpriteRenderer daySky
     return:
@@ -72,10 +76,12 @@ items:
   source:
     id: eveningSky
     path: ''
-    startLine: 7
+    startLine: 21
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the sky during the evening.\n"
+  example: []
   syntax:
     content: public SpriteRenderer eveningSky
     return:
@@ -95,10 +101,12 @@ items:
   source:
     id: nightSky
     path: ''
-    startLine: 7
+    startLine: 26
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the sky during the night.\n"
+  example: []
   syntax:
     content: public SpriteRenderer nightSky
     return:
@@ -118,10 +126,12 @@ items:
   source:
     id: dayBackClouds
     path: ''
-    startLine: 8
+    startLine: 31
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the back clouds during the day.\n"
+  example: []
   syntax:
     content: public SpriteRenderer dayBackClouds
     return:
@@ -141,10 +151,12 @@ items:
   source:
     id: eveningBackClouds
     path: ''
-    startLine: 8
+    startLine: 36
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the back clouds during the evening.\n"
+  example: []
   syntax:
     content: public SpriteRenderer eveningBackClouds
     return:
@@ -164,10 +176,12 @@ items:
   source:
     id: nightBackClouds
     path: ''
-    startLine: 8
+    startLine: 41
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the back clouds during the night.\n"
+  example: []
   syntax:
     content: public SpriteRenderer nightBackClouds
     return:
@@ -187,10 +201,12 @@ items:
   source:
     id: dayFrontClouds
     path: ''
-    startLine: 9
+    startLine: 46
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the front clouds during the day.\n"
+  example: []
   syntax:
     content: public SpriteRenderer dayFrontClouds
     return:
@@ -210,10 +226,12 @@ items:
   source:
     id: eveningFrontClouds
     path: ''
-    startLine: 9
+    startLine: 51
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the front clouds during the evening.\n"
+  example: []
   syntax:
     content: public SpriteRenderer eveningFrontClouds
     return:
@@ -233,10 +251,12 @@ items:
   source:
     id: nightFrontClouds
     path: ''
-    startLine: 9
+    startLine: 56
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nSprite representing the front clouds during the night.\n"
+  example: []
   syntax:
     content: public SpriteRenderer nightFrontClouds
     return:
@@ -256,10 +276,12 @@ items:
   source:
     id: transitionDuration
     path: ''
-    startLine: 11
+    startLine: 61
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nDuration of the transition between different phases of the day-night cycle.\n"
+  example: []
   syntax:
     content: public float transitionDuration
     return:
@@ -279,10 +301,12 @@ items:
   source:
     id: cycleDuration
     path: ''
-    startLine: 12
+    startLine: 66
   assemblies:
   - cs.temp.dll
   namespace: Game
+  summary: "\nDuration of each phase (day, evening, night) before transitioning to the next phase.\n"
+  example: []
   syntax:
     content: public float cycleDuration
     return:

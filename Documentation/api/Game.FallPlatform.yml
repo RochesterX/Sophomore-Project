@@ -17,7 +17,7 @@ items:
   source:
     id: FallPlatform
     path: ''
-    startLine: 2125
+    startLine: 2214
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -42,7 +42,7 @@ items:
   source:
     id: fallDelay
     path: ''
-    startLine: 2130
+    startLine: 2219
   assemblies:
   - cs.temp.dll
   namespace: Game
@@ -67,7 +67,7 @@ items:
   source:
     id: resetDelay
     path: ''
-    startLine: 2135
+    startLine: 2224
   assemblies:
   - cs.temp.dll
   namespace: Game

@@ -15,7 +15,7 @@ items:
   source:
     id: ObjectVisibility
     path: ''
-    startLine: 1088
+    startLine: 1159
   assemblies:
   - cs.temp.dll
   namespace: Game
