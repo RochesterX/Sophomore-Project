@@ -1,4 +1,4 @@
-[![Crash Course](https://raw.githubusercontent.com/RochesterX/rochesterx.github.io/refs/heads/main/assets/images/crashcourse.png "Logo Title Text 1")
+<a href="https://rochesterx.games/crashcourse/"><img src="https://raw.githubusercontent.com/RochesterX/rochesterx.github.io/refs/heads/main/assets/images/crashcourse.png" align="left" height="200" width="200"></a>
 
 This is **Crash Course**, a 2D PVP game developed by five students for a sophomore project.
 
