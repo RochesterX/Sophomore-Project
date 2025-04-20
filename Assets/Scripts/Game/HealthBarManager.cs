@@ -25,10 +25,12 @@ namespace Game
         /// <summary>
         /// Sets up event listeners for when the game starts and ends.
         /// </summary>
-        private void Start()
+        private void Awake()
         {
+            print("Doing event stuff");
             GameManager.Instance.StartGameEvent += OnGameStart;
             GameManager.Instance.EndGameEvent += OnGameEnd;
+            print("Done event stuff");
         }
 
         /// <summary>
@@ -65,6 +67,7 @@ namespace Game
         /// </summary>
         private void OnGameStart()
         {
+            print("Ongame start called");
             foreach (GameObject player in GameManager.players)
             {
                 if (!playerHealthBars.ContainsKey(player))
@@ -122,6 +125,7 @@ namespace Game
         /// </summary>
         private void OnGameEnd()
         {
+            print("Ongame end called");
             // Remove all health bars
             foreach (var kvp in playerHealthBars)
             {

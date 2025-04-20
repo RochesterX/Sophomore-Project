@@ -205,6 +205,7 @@ namespace Game
             if (GameManager.players.Count == 0) return;
 
             StartGameEvent?.Invoke();
+                        print("invoked startgameevent");
             print("Starting game with mode: " + gameMode + " and map: " + map);
             if (gameMode == GameMode.freeForAll)
             {
@@ -326,6 +327,7 @@ namespace Game
 
             // Trigger the end game event for any listeners
             EndGameEvent?.Invoke();
+            print("invoked engameeveevt");
 
             // Hide the leaderboard and timer UI if they exist
             if (LeaderboardCanvas != null)
