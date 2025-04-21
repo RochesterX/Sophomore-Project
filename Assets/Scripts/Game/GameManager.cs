@@ -201,6 +201,7 @@ namespace Game
         /// </summary>
         public void StartGame()
         {
+            Instance = this;
             GameManager.playerHoldTimes.Clear();
             if (GameManager.players.Count == 0) return;
 

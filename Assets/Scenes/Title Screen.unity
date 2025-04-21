@@ -1133,7 +1133,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1633102601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.48836005}
+  m_AnchorMin: {x: 0, y: 0.44999993}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4070,9 +4070,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Needs work:
-
-    Reset confirmation'
+  m_text: "Needs work:\nUser gude in game\\nMore comments on the code?\nReset confirmation\n#Player
+    Join screen update (clarify map select)\\nSound effects in game\n#Player card
+    players\nKeep away map\n#Join screen titles\\n#Implement music\n#Mountain music\n#Make
+    city playable\n#One way platform mountain\\nLeaderboard scaling city obstacle
+    course\n#Get rid of placeholder start stop obstacle course\\nPlatform friction\nFacing
+    angle not velocity-based\\nDead player constant velocity\n\nDylan will do:\nFix
+    Time Left! text\nObstacle course end only works on correct gamemode\\nObstacle
+    course end for mountain\nCorrect time limits for keep away maps\\nRespawn after
+    game over (keep away)\nWill try to complete: \nObstacle course flag\nHealth bar
+    persists after death"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5236,7 +5243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -984, y: -569}
+  m_AnchoredPosition: {x: -984.00006, y: -569}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1167340110
@@ -5397,7 +5404,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 213491789}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.51163995
+  m_Size: 0.5500001
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
