@@ -6,7 +6,7 @@ public class LightCycle : MonoBehaviour
 {
     public List<Color> colors;
 
-    public int targetColorIndex = 0;
+    public int targetColorIndex = 1;
 
     public float speed = 1.0f;
 
