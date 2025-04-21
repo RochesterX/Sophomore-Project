@@ -4019,8 +4019,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571414325634037365}
+  - component: {fileID: 9129504218682800899}
   m_Layer: 0
-  m_Name: HELPER
+  m_Name: Shadow Updater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4041,6 +4042,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7676803003410367555}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9129504218682800899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8381021705028531765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restrictSelfShadows: 0
 --- !u!1 &8469954012767375169
 GameObject:
   m_ObjectHideFlags: 0

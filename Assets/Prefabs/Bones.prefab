@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 1675952325475866362}
   - component: {fileID: 5602021945915386438}
   - component: {fileID: 7534722831291326672}
+  - component: {fileID: 5427974671276056944}
   m_Layer: 0
   m_Name: Arm L L
   m_TagString: Untagged
@@ -450,6 +451,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &5427974671276056944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648017802882051395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1792259794085692571
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +474,7 @@ GameObject:
   - component: {fileID: 1718132792713490460}
   - component: {fileID: 7028381425298949789}
   - component: {fileID: 5741861126398270076}
+  - component: {fileID: 6146484583174117006}
   m_Layer: 0
   m_Name: Leg R L
   m_TagString: Untagged
@@ -584,6 +598,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &6146484583174117006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792259794085692571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1936916972718023967
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +723,7 @@ GameObject:
   - component: {fileID: 7290594200745798336}
   - component: {fileID: 5653647541318480273}
   - component: {fileID: 507076518380907171}
+  - component: {fileID: 5964119156635578031}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -825,6 +852,59 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &5964119156635578031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3572452013539030063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 12
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: d9cb880bb5aa40dc7f30f0760536e9b1000000005b1db26cc5506199835ec75c8d5b9a5d
+  m_ShapePath:
+  - {x: -2.375, y: 0, z: 0}
+  - {x: -2.375, y: 16, z: 0}
+  - {x: 2.375, y: 16, z: 0}
+  - {x: 2.375, y: 0, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 507076518380907171}
+  m_ShadowShape2DProvider:
+    rid: 3182682018230304871
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: -8, z: 0}
+      m_Extent: {x: 2.3679962, y: 7.992996, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.007
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.007
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 507076518380907171}
+  references:
+    version: 2
+    RefIds:
+    - rid: 3182682018230304871
+      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!1 &3999993024726141628
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +916,7 @@ GameObject:
   - component: {fileID: 6473071301151420235}
   - component: {fileID: 6334212293757716143}
   - component: {fileID: 1962952166224815875}
+  - component: {fileID: 4450546717236230376}
   m_Layer: 0
   m_Name: Leg L U
   m_TagString: Untagged
@@ -960,6 +1041,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4450546717236230376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999993024726141628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4053418163071482318
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +1064,7 @@ GameObject:
   - component: {fileID: 1315511404573068819}
   - component: {fileID: 3666712602053540788}
   - component: {fileID: 2707422942191181157}
+  - component: {fileID: 2542361287495711119}
   m_Layer: 0
   m_Name: Leg L L
   m_TagString: Untagged
@@ -1094,6 +1188,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &2542361287495711119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4053418163071482318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4559249486922240447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1211,7 @@ GameObject:
   - component: {fileID: 4818486997278545909}
   - component: {fileID: 1251171065512708809}
   - component: {fileID: 3957321655599357379}
+  - component: {fileID: 5915231076542771838}
   m_Layer: 0
   m_Name: Arm L
   m_TagString: Untagged
@@ -1229,6 +1336,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &5915231076542771838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4559249486922240447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5246451624517682053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1359,7 @@ GameObject:
   - component: {fileID: 7969993128652732868}
   - component: {fileID: 4523631935514373873}
   - component: {fileID: 291340910524836895}
+  - component: {fileID: 3725089604310709450}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1354,7 +1474,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.75, y: 0.75, z: 0.75, w: 0.75}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 16, y: 16}
     newSize: {x: 0.8125, y: 0.5625}
@@ -1364,6 +1484,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &3725089604310709450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246451624517682053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5600043765235685887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1507,7 @@ GameObject:
   - component: {fileID: 6565447060195665550}
   - component: {fileID: 1263635959652575642}
   - component: {fileID: 7356053835466163623}
+  - component: {fileID: 7813972936538407843}
   m_Layer: 0
   m_Name: Arm R L
   m_TagString: Untagged
@@ -1498,6 +1631,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &7813972936538407843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600043765235685887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5636889232707595368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1654,7 @@ GameObject:
   - component: {fileID: 3359136527054329610}
   - component: {fileID: 3115818513466967182}
   - component: {fileID: 2445128439726600428}
+  - component: {fileID: 1854724153792164225}
   m_Layer: 0
   m_Name: Arm R
   m_TagString: Untagged
@@ -1633,6 +1779,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1854724153792164225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5636889232707595368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7049027663970876467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1838,7 @@ GameObject:
   - component: {fileID: 2573475224850089075}
   - component: {fileID: 6698132186857891945}
   - component: {fileID: 5617465441188228127}
+  - component: {fileID: 6243613198384436507}
   m_Layer: 0
   m_Name: Leg R U
   m_TagString: Untagged
@@ -1804,6 +1963,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0625, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &6243613198384436507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131227584641296005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3871383343b4284b9d8087163409b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7570979957438438421
 GameObject:
   m_ObjectHideFlags: 0

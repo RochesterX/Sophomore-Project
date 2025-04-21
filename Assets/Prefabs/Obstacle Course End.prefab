@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 5570812365709827257}
   - component: {fileID: 2766066568066700019}
   - component: {fileID: 1699482403280908675}
+  - component: {fileID: 6923611706426467293}
   m_Layer: 0
   m_Name: FlagAnimation
   m_TagString: Untagged
@@ -331,3 +332,61 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6923611706426467293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9061918012566291544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: -90
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: d9cb880bb5aa40dc7f30f0760536e9b1000000005b1db26cc5506199835ec75c8d5b9a5d
+  m_ShapePath:
+  - {x: -0.15796219, y: -0.24074014, z: 0}
+  - {x: -0.1398286, y: -0.21913965, z: 0}
+  - {x: -0.14953637, y: 0.23351777, z: 0}
+  - {x: -0.1128786, y: 0.2491665, z: 0}
+  - {x: -0.09649374, y: 0.19133647, z: 0}
+  - {x: 0.15388429, y: 0.19254002, z: 0}
+  - {x: 0.16592167, y: 0.014386319, z: 0}
+  - {x: -0.10853113, y: 0.017997673, z: 0}
+  - {x: -0.109735146, y: -0.21673207, z: 0}
+  - {x: -0.08760027, y: -0.24435149, z: 0}
+  m_ShapePathHash: -842320553
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 0}
+  m_ShadowShape2DProvider:
+    rid: -2
+  m_ShadowCastingSource: 1
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0.0039797425, y: 0.002407506, z: 0}
+      m_Extent: {x: 0.16194193, y: 0.246759, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.07
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.07
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.07
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 1
+  m_PreviousShadowShape2DSource: {fileID: 2766066568066700019}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

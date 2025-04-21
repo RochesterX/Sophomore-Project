@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 4590635260469379635}
   - component: {fileID: 1037730178915337047}
   - component: {fileID: 7521904584238437368}
+  - component: {fileID: 4652644946276666806}
   m_Layer: 6
   m_Name: Falling Platform Mountain
   m_TagString: Untagged
@@ -252,6 +253,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4652644946276666806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4956608553155427697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: d9cb880bb5aa40dc7f30f0760536e9b1000000005b1db26cc5506199835ec75c8d5b9a5d
+  m_ShapePath:
+  - {x: -0.32889318, y: -0.3505273, z: 0}
+  - {x: -0.42356205, y: -0.2901044, z: 0}
+  - {x: -0.46486378, y: -0.23110247, z: 0}
+  - {x: -0.50124884, y: -0.1602993, z: 0}
+  - {x: -0.5, y: 0.4685321, z: 0}
+  - {x: -0.40881157, y: 0.6578598, z: 0}
+  - {x: -0.3291583, y: 0.7758646, z: 0}
+  - {x: -0.20328665, y: 0.9056697, z: 0}
+  - {x: 0.14187717, y: 0.9096031, z: 0}
+  - {x: 0.26774836, y: 0.84273577, z: 0}
+  - {x: 0.37788582, y: 0.77979994, z: 0}
+  - {x: 0.42312098, y: 0.7050638, z: 0}
+  - {x: 0.49901628, y: 0.46066523, z: 0}
+  - {x: 0.5, y: -0.22858906, z: 0}
+  - {x: 0.48704004, y: -0.29010916, z: 0}
+  - {x: 0.43787193, y: -0.36090803, z: 0}
+  - {x: 0.37591934, y: -0.41991425, z: 0}
+  - {x: 0.07894087, y: -0.4710493, z: 0}
+  - {x: -0.15608501, y: -0.48284626, z: 0}
+  - {x: -0.2672062, y: -0.41597605, z: 0}
+  m_ShapePathHash: 1365322989
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 0}
+  m_ShadowShape2DProvider:
+    rid: -2
+  m_ShadowCastingSource: 1
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: -0.00062441826, y: 0.21337843, z: 0}
+      m_Extent: {x: 0.5006244, y: 0.6962247, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.05
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0.05
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.05
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 1
+  m_PreviousShadowShape2DSource: {fileID: 5199515583029483998}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &6999848185513355934
 GameObject:
   m_ObjectHideFlags: 0
